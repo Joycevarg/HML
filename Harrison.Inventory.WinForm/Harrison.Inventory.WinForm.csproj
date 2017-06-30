@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42D26040-2AF0-49A1-B91D-D64E58AD0EDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Harrison.Inventory.WinForm</RootNamespace>
+    <AssemblyName>Harrison.Inventory.WinForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Harrison.Inventory.WinForm.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank.designer.cs">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Branch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Branch.designer.cs">
+      <DependentUpon>Branch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cluster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cluster.designer.cs">
+      <DependentUpon>Cluster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinancialYear.Designer.cs">
+      <DependentUpon>FinancialYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Info.designer.cs">
+      <DependentUpon>Payment Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase Form.designer.cs">
+      <DependentUpon>Purchase Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPS.designer.cs">
+      <DependentUpon>RPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StateForm.Designer.cs">
+      <DependentUpon>StateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tax Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tax Details.designer.cs">
+      <DependentUpon>Tax Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendors.designer.cs">
+      <DependentUpon>Vendors.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bank.resx">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branch.resx">
+      <DependentUpon>Branch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cluster.resx">
+      <DependentUpon>Cluster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinancialYear.resx">
+      <DependentUpon>FinancialYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Info.resx">
+      <DependentUpon>Payment Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Purchase Form.resx">
+      <DependentUpon>Purchase Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPS.resx">
+      <DependentUpon>RPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StateForm.resx">
+      <DependentUpon>StateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tax Details.resx">
+      <DependentUpon>Tax Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendors.resx">
+      <DependentUpon>Vendors.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Harrison.Inventory.Data.Model\Harrison.Inventory.Data.Model.csproj">
+      <Project>{7D310007-6526-4592-AB78-C0B779CD912F}</Project>
+      <Name>Harrison.Inventory.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Harrison.Inventory.Data.SqlClient\Harrison.Inventory.Data.SqlClient.csproj">
+      <Project>{5828CF92-5DB7-42D4-B485-2471B64FF653}</Project>
+      <Name>Harrison.Inventory.Data.SqlClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Harrison.Inventory.Presenter\Harrison.Inventory.Presenter.csproj">
+      <Project>{49FD6EB6-DEAA-47DA-A5D4-EB5DCA6DD943}</Project>
+      <Name>Harrison.Inventory.Presenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Harrison.Inventory.Service\Harrison.Inventory.Service.csproj">
+      <Project>{303C816A-CDD2-4635-BDCF-ACC3544C5D0A}</Project>
+      <Name>Harrison.Inventory.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
