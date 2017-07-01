@@ -62,6 +62,11 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
+
+        private void FinancialYear_Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
      
     }
 }

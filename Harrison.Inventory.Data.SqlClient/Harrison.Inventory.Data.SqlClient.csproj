@@ -44,7 +44,9 @@
   <ItemGroup>
     <Compile Include="BankData.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="DistrictData.cs" />
     <Compile Include="FinancialYearsDAL.cs" />
+    <Compile Include="Interfaces\IDistrictData.cs" />
     <Compile Include="Interfaces\IFinancialYearsDAL.cs" />
     <Compile Include="Interfaces\IBankData.cs" />
     <Compile Include="Interfaces\IStateData.cs" />

@@ -15,10 +15,11 @@ namespace Harrison.Inventory.WinForm
 {
     public partial class bankDetails : Form,IBankView
     {
+        private IBankPresenter _bankpresenter;
         public bankDetails()
         {
             InitializeComponent();
-            IBankPresenter _bankpresenter = new BankPresenter(this, new BankServices(new BankData()));
+            _bankpresenter = new BankPresenter(this, new BankServices(new BankData()));
             _bankpresenter.DefaultBankOrder();
 
         }

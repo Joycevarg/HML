@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankServices.cs" />
+    <Compile Include="DistrictServices.cs" />
     <Compile Include="FinancialYearsService.cs" />
+    <Compile Include="Interfaces\IDistrictServices.cs" />
     <Compile Include="Interfaces\IFinancialYearsService.cs" />
     <Compile Include="Interfaces\IBankServices.cs" />
     <Compile Include="Interfaces\IStateServices.cs" />

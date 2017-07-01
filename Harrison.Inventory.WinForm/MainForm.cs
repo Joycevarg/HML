@@ -74,6 +74,12 @@ namespace Harrison.Inventory.WinForm
         {
             StateForm statefrm = new StateForm();
             statefrm.Show();
+        }
+
+        private void districtsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DistrictForm district = new DistrictForm();
+            district.Show();
         }       
     }
 }

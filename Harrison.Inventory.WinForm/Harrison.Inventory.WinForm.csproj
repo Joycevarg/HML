@@ -67,6 +67,12 @@
     <Compile Include="Cluster.designer.cs">
       <DependentUpon>Cluster.cs</DependentUpon>
     </Compile>
+    <Compile Include="DistrictForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DistrictForm.Designer.cs">
+      <DependentUpon>DistrictForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FinancialYear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <EmbeddedResource Include="Cluster.resx">
       <DependentUpon>Cluster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DistrictForm.resx">
+      <DependentUpon>DistrictForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FinancialYear.resx">
       <DependentUpon>FinancialYear.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +169,7 @@
       <DependentUpon>Vendors.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\DistrictForm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -93,6 +93,7 @@
             this.districtsToolStripMenuItem.Name = "districtsToolStripMenuItem";
             this.districtsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
             this.districtsToolStripMenuItem.Text = "Districts";
+            this.districtsToolStripMenuItem.Click += new System.EventHandler(this.districtsToolStripMenuItem_Click);
             // 
             // bankToolStripMenuItem
             // 
