@@ -7,8 +7,10 @@ namespace Harrison.Inventory.Data.Model
 {
     public class District
     {
-        public int DISTRICT_ID, STATE_ID;
-        public string DISTRICT_NAME;
+        public int DISTRICT_ID{get;set;}        
+        public string DISTRICT_NAME{get;set;}
+        public int STATE_ID{get;set;}
+
         public District(int Did, string Dname, int Sid)
         {
             this.DISTRICT_ID = Did;
