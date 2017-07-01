@@ -32,12 +32,17 @@ namespace Harrison.Inventory.WinForm
         }
         public void givearrdata(List<District> districts)
         {
-            dist.DataSource = districts;
+            districtgrid.DataSource = districts;
         }
 
         private void DistrictGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

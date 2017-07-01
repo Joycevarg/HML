@@ -32,8 +32,11 @@
             this.clustertxt = new System.Windows.Forms.TextBox();
             this.donebtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
-            this.districtselect = new System.Windows.Forms.CheckedListBox();
-            this.districtlbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.clustergrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.clustergrid)).BeginInit();
             this.SuspendLayout();
             // 
             // clusterlbl
@@ -54,59 +57,76 @@
             // 
             // donebtn
             // 
-            this.donebtn.Location = new System.Drawing.Point(15, 235);
+            this.donebtn.Location = new System.Drawing.Point(15, 101);
             this.donebtn.Name = "donebtn";
-            this.donebtn.Size = new System.Drawing.Size(113, 27);
+            this.donebtn.Size = new System.Drawing.Size(94, 29);
             this.donebtn.TabIndex = 6;
-            this.donebtn.Text = "Save";
+            this.donebtn.Text = "Add";
             this.donebtn.UseVisualStyleBackColor = true;
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(217, 235);
+            this.cancelbtn.Location = new System.Drawing.Point(124, 101);
             this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(113, 27);
+            this.cancelbtn.Size = new System.Drawing.Size(94, 29);
             this.cancelbtn.TabIndex = 7;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
-            // districtselect
+            // label1
             // 
-            this.districtselect.FormattingEnabled = true;
-            this.districtselect.Items.AddRange(new object[] {
-            "Thrissur",
-            "Thriuvanathapuram ",
-            "Kozhikode",
-            "Ernakulam",
-            "Kottayam"});
-            this.districtselect.Location = new System.Drawing.Point(115, 81);
-            this.districtselect.Name = "districtselect";
-            this.districtselect.Size = new System.Drawing.Size(190, 123);
-            this.districtselect.TabIndex = 8;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "State:";
             // 
-            // districtlbl
+            // comboBox1
             // 
-            this.districtlbl.AutoSize = true;
-            this.districtlbl.Location = new System.Drawing.Point(12, 81);
-            this.districtlbl.Name = "districtlbl";
-            this.districtlbl.Size = new System.Drawing.Size(55, 17);
-            this.districtlbl.TabIndex = 9;
-            this.districtlbl.Text = "District:";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(115, 66);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 24);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(236, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // clustergrid
+            // 
+            this.clustergrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clustergrid.Location = new System.Drawing.Point(15, 147);
+            this.clustergrid.Name = "clustergrid";
+            this.clustergrid.RowTemplate.Height = 24;
+            this.clustergrid.Size = new System.Drawing.Size(315, 113);
+            this.clustergrid.TabIndex = 13;
             // 
             // clusterMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 292);
-            this.Controls.Add(this.districtlbl);
-            this.Controls.Add(this.districtselect);
+            this.ClientSize = new System.Drawing.Size(343, 277);
+            this.Controls.Add(this.clustergrid);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.donebtn);
             this.Controls.Add(this.clustertxt);
             this.Controls.Add(this.clusterlbl);
             this.Name = "clusterMaster";
             this.Text = "Cluster Master";
+            this.Load += new System.EventHandler(this.clusterMaster_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.clustergrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,7 +138,9 @@
         private System.Windows.Forms.TextBox clustertxt;
         private System.Windows.Forms.Button donebtn;
         private System.Windows.Forms.Button cancelbtn;
-        private System.Windows.Forms.CheckedListBox districtselect;
-        private System.Windows.Forms.Label districtlbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView clustergrid;
     }
 }

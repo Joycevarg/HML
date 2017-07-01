@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bank.cs" />
+    <Compile Include="Cluster.cs" />
     <Compile Include="District.cs" />
     <Compile Include="Enum\SortFieldType.cs" />
     <Compile Include="Enum\SortType.cs" />

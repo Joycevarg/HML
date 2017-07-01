@@ -41,8 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankPresenter.cs" />
+    <Compile Include="ClusterPresenter.cs" />
     <Compile Include="DistrictPresenter.cs" />
     <Compile Include="FinancialYearsPresenter.cs" />
+    <Compile Include="ViewInterfaces\IClusterView.cs" />
+    <Compile Include="Interfaces\IClusterPresenter.cs" />
     <Compile Include="Interfaces\IDistrictPresenter.cs" />
     <Compile Include="ViewInterfaces\IDistrictView.cs" />
     <Compile Include="Interfaces\IBankPresenter.cs" />

@@ -43,10 +43,12 @@
     <Compile Include="BankServices.cs" />
     <Compile Include="DistrictServices.cs" />
     <Compile Include="FinancialYearsService.cs" />
+    <Compile Include="Interfaces\IClusterServices.cs" />
     <Compile Include="Interfaces\IDistrictServices.cs" />
     <Compile Include="Interfaces\IFinancialYearsService.cs" />
     <Compile Include="Interfaces\IBankServices.cs" />
     <Compile Include="Interfaces\IStateServices.cs" />
+    <Compile Include="ClusterService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateService.cs" />
   </ItemGroup>

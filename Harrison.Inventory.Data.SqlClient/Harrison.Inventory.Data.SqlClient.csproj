@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankData.cs" />
+    <Compile Include="ClusterData.cs" />
+    <Compile Include="Interfaces\IClusterData.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="DistrictData.cs" />
     <Compile Include="FinancialYearsDAL.cs" />

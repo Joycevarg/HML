@@ -6,8 +6,8 @@ using Harrison.Inventory.Data.Model;
 
 namespace Harrison.Inventory.Data.SqlClient
 {
-    public interface IDistrictData
+    public interface IClusterData
     {
-        List<District> GetDistrictDetails();
+        List<Cluster> GetClusterDetails();
     }
 }
