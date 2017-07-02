@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 using Harrison.Inventory.Data.Model;
 
 namespace Harrison.Inventory.Data.SqlClient
 {
     public class DistrictData:IDistrictData
     {
-        public List<District> GetDistrictDetails()
+        public DataTable GetDistrictDetails()
         {
-            return new List<District>{
-            new District(1,"state1",1),
-            new District(2,"state2",2)
-            };
+            Connection con = new Connection();
+            SqlConnection conn = con.sqlconnection();
+            string cmd = "SELECT * FROM DISTRICT";
+            SqlCommand com = new SqlCommand(cmd, conn);
+            DataTable dt = new DataTable();
+            dt.Load(com.ExecuteReader());
+            return dt;
         }
     }
 }

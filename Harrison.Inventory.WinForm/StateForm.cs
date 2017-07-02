@@ -23,7 +23,7 @@ namespace Harrison.Inventory.WinForm
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
-        public void givearrdata(List<State> states)
+        public void givearrdata(DataTable states)
         {
             stategrid.DataSource = states;
         }

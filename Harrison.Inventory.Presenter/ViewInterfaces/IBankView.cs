@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data;
 using System.Text;
 using Harrison.Inventory.Data.Model;
 
@@ -10,6 +11,6 @@ namespace Harrison.Inventory.Presenter
     {
         SortType SortDirection { get; set; }
         SortFieldType SortField { get; set; }
-        void givearrdata(List<Bank> banks);
+        void givearrdata(DataTable banks);
     }
 }

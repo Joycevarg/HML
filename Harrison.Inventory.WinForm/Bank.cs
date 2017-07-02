@@ -61,7 +61,7 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
-        public void givearrdata(List<Bank> banks)
+        public void givearrdata(DataTable banks)
         {
             bankgrid.DataSource = banks;
         }

@@ -30,7 +30,7 @@ namespace Harrison.Inventory.WinForm
         {
             this.Close();
         }
-        public void givearrdata(List<Cluster> districts)
+        public void givearrdata(DataTable districts)
         {
             clustergrid.DataSource = districts;
         }

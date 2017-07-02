@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 using Harrison.Inventory.Data.Model;
 
 namespace Harrison.Inventory.Data.SqlClient
 {
     public class ClusterData : IClusterData
     {
-        public List<Cluster> GetClusterDetails()
+        public DataTable GetClusterDetails()
         {
-            return new List<Cluster>{
-            new Cluster(1,"cluster1",1),
-            new Cluster(2,"cluster2",2)
-            };
+            Connection con = new Connection();
+            SqlConnection conn = con.sqlconnection();
+            string cmd = "SELECT * FROM CLUSTER";
+            SqlCommand com = new SqlCommand(cmd, conn);
+            DataTable dt = new DataTable();
+            dt.Load(com.ExecuteReader());
+            return dt;
         }
     }
 }

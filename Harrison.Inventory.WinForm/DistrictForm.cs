@@ -30,7 +30,7 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
-        public void givearrdata(List<District> districts)
+        public void givearrdata(DataTable districts)
         {
             districtgrid.DataSource = districts;
         }

@@ -38,7 +38,7 @@ namespace Harrison.Inventory.WinForm
             get;
             set;
         }
-        public void OrderFinancialYearbyFieldAndDirection(List<Harrison.Inventory.Data.Model.FinancialYears> financialYears)
+        public void OrderFinancialYearbyFieldAndDirection(DataTable financialYears)
         {
           //  dgvStocks.DataSource = stocks;
             FinancialYear_Grid.DataSource = financialYears;
