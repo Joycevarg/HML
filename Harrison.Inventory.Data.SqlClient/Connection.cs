@@ -6,25 +6,30 @@ using System.Data.SqlClient;
 
 namespace Harrison.Inventory.Data.SqlClient
 {
-    class Connection
+    public class DBConnection
     {
-        string userid,password,datasource,database;
-        public Connection() {
-            database = "HML_PURCHASE";
-            datasource = "(local)";
-            userid = "Joyce";
-            password = "tiger1234";
-
-        }
-        public SqlConnection sqlconnection()
+        public SqlDataAdapter Sqlconnection(String sql)
         {
-            string conquery = "Data Source="+this.datasource+";Initial Catalog="+this.database+";User ID=" + this.userid + ";Password=" + this.password;
-           SqlConnection con = new SqlConnection(conquery);
-           con.Open();
-           return con;
-
+            SqlConnection cnn;
+            string connetionString = null;
+            connetionString = "Data Source=(local);Initial Catalog=HML_PURCHASE;User ID=Joyce;Password=tiger1234";
+            cnn = new SqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+                SqlCommand myCommand = new SqlCommand(sql, cnn);
+                SqlDataAdapter da = new SqlDataAdapter(myCommand);
+                return (da);
+                //da.Fill(dt);                
+                //return (dt);
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+                Console.WriteLine("Database not connected");
+                Console.Read();
+                return (null);
+            }
         }
-
-
     }
 }

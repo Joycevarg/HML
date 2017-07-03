@@ -10,15 +10,18 @@ namespace Harrison.Inventory.Data.SqlClient
 {
     public class ClusterData : IClusterData
     {
+        String Sql;
+        DataTable dt = new DataTable();
+        SqlDataAdapter da;
+
         public DataTable GetClusterDetails()
         {
-            Connection con = new Connection();
-            SqlConnection conn = con.sqlconnection();
-            string cmd = "SELECT * FROM CLUSTER";
-            SqlCommand com = new SqlCommand(cmd, conn);
-            DataTable dt = new DataTable();
-            dt.Load(com.ExecuteReader());
-            return dt;
+            DBConnection Dbcon = new DBConnection();
+            Sql = "Select * from CLUSTER";
+            da = Dbcon.Sqlconnection(Sql);
+            da.Fill(dt);
+            return (dt);
         }
+        
     }
 }
