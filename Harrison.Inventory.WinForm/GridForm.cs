@@ -6,21 +6,26 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Harrison.Inventory.Presenter;
 
 namespace Harrison.Inventory.WinForm
 {
-    public partial class branchDetails : Form
+    public partial class GridForm : Form
     {
-        public branchDetails()
+        public GridForm(DataTable vendors)
         {
             InitializeComponent();
+            GridView.DataSource = vendors;
         }
+       
 
-        private void branchDetails_Load(object sender, EventArgs e)
+        private void GridForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         
+
+      
     }
 }

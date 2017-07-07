@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.branchlst = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.newbranchtxt = new System.Windows.Forms.TextBox();
-            this.rmvbtn = new System.Windows.Forms.Button();
             this.savebtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.banklst = new System.Windows.Forms.ComboBox();
@@ -41,26 +39,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.gridbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 37);
+            this.label1.Location = new System.Drawing.Point(70, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bank:";
-            // 
-            // branchlst
-            // 
-            this.branchlst.FormattingEnabled = true;
-            this.branchlst.ItemHeight = 16;
-            this.branchlst.Location = new System.Drawing.Point(144, 84);
-            this.branchlst.Name = "branchlst";
-            this.branchlst.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.branchlst.Size = new System.Drawing.Size(160, 68);
-            this.branchlst.TabIndex = 2;
             // 
             // label3
             // 
@@ -73,7 +62,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 161);
+            this.label4.Location = new System.Drawing.Point(0, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 17);
             this.label4.TabIndex = 4;
@@ -81,23 +70,14 @@
             // 
             // newbranchtxt
             // 
-            this.newbranchtxt.Location = new System.Drawing.Point(144, 158);
+            this.newbranchtxt.Location = new System.Drawing.Point(123, 54);
             this.newbranchtxt.Name = "newbranchtxt";
-            this.newbranchtxt.Size = new System.Drawing.Size(160, 22);
+            this.newbranchtxt.Size = new System.Drawing.Size(245, 22);
             this.newbranchtxt.TabIndex = 5;
-            // 
-            // rmvbtn
-            // 
-            this.rmvbtn.Location = new System.Drawing.Point(310, 103);
-            this.rmvbtn.Name = "rmvbtn";
-            this.rmvbtn.Size = new System.Drawing.Size(68, 27);
-            this.rmvbtn.TabIndex = 6;
-            this.rmvbtn.Text = "Remove";
-            this.rmvbtn.UseVisualStyleBackColor = true;
             // 
             // savebtn
             // 
-            this.savebtn.Location = new System.Drawing.Point(34, 317);
+            this.savebtn.Location = new System.Drawing.Point(17, 229);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(104, 33);
             this.savebtn.TabIndex = 7;
@@ -106,7 +86,7 @@
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(264, 317);
+            this.cancelbtn.Location = new System.Drawing.Point(144, 229);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(104, 33);
             this.cancelbtn.TabIndex = 8;
@@ -117,7 +97,7 @@
             // 
             this.banklst.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.banklst.FormattingEnabled = true;
-            this.banklst.Location = new System.Drawing.Point(144, 34);
+            this.banklst.Location = new System.Drawing.Point(123, 23);
             this.banklst.Name = "banklst";
             this.banklst.Size = new System.Drawing.Size(245, 24);
             this.banklst.TabIndex = 9;
@@ -125,16 +105,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 197);
+            this.label2.Location = new System.Drawing.Point(36, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "IFSC Code:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 233);
+            this.label5.Location = new System.Drawing.Point(14, 117);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 17);
             this.label5.TabIndex = 11;
@@ -142,24 +123,35 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 194);
+            this.textBox1.Location = new System.Drawing.Point(123, 82);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
+            this.textBox1.Size = new System.Drawing.Size(245, 22);
             this.textBox1.TabIndex = 12;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 233);
+            this.textBox2.Location = new System.Drawing.Point(123, 114);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 65);
+            this.textBox2.Size = new System.Drawing.Size(245, 75);
             this.textBox2.TabIndex = 13;
+            // 
+            // gridbtn
+            // 
+            this.gridbtn.Location = new System.Drawing.Point(275, 229);
+            this.gridbtn.Name = "gridbtn";
+            this.gridbtn.Size = new System.Drawing.Size(104, 33);
+            this.gridbtn.TabIndex = 14;
+            this.gridbtn.Text = "View Grid";
+            this.gridbtn.UseVisualStyleBackColor = true;
+            this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
             // 
             // branchDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 366);
+            this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
@@ -167,11 +159,9 @@
             this.Controls.Add(this.banklst);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.savebtn);
-            this.Controls.Add(this.rmvbtn);
             this.Controls.Add(this.newbranchtxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.branchlst);
             this.Controls.Add(this.label1);
             this.Name = "branchDetails";
             this.Text = "Branch Details";
@@ -184,11 +174,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox branchlst;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox newbranchtxt;
-        private System.Windows.Forms.Button rmvbtn;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.ComboBox banklst;
@@ -196,5 +184,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button gridbtn;
     }
 }

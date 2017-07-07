@@ -62,6 +62,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.box = new System.Windows.Forms.GroupBox();
+            this.estatetxt = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cstNotxt = new System.Windows.Forms.TextBox();
@@ -69,7 +70,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.estatetxt = new System.Windows.Forms.ComboBox();
+            this.gridbtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.box.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -415,6 +416,15 @@
             this.box.TabIndex = 37;
             this.box.TabStop = false;
             // 
+            // estatetxt
+            // 
+            this.estatetxt.FormattingEnabled = true;
+            this.estatetxt.Location = new System.Drawing.Point(519, 106);
+            this.estatetxt.Margin = new System.Windows.Forms.Padding(4);
+            this.estatetxt.Name = "estatetxt";
+            this.estatetxt.Size = new System.Drawing.Size(261, 24);
+            this.estatetxt.TabIndex = 33;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -504,20 +514,22 @@
             this.groupBox4.TabIndex = 44;
             this.groupBox4.TabStop = false;
             // 
-            // estatetxt
+            // gridbtn
             // 
-            this.estatetxt.FormattingEnabled = true;
-            this.estatetxt.Location = new System.Drawing.Point(519, 106);
-            this.estatetxt.Margin = new System.Windows.Forms.Padding(4);
-            this.estatetxt.Name = "estatetxt";
-            this.estatetxt.Size = new System.Drawing.Size(261, 24);
-            this.estatetxt.TabIndex = 33;
+            this.gridbtn.Location = new System.Drawing.Point(696, 723);
+            this.gridbtn.Name = "gridbtn";
+            this.gridbtn.Size = new System.Drawing.Size(113, 28);
+            this.gridbtn.TabIndex = 45;
+            this.gridbtn.Text = "View Grid";
+            this.gridbtn.UseVisualStyleBackColor = true;
+            this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
             // 
             // Vendors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 757);
+            this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -585,6 +597,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox estatetxt;
+        private System.Windows.Forms.Button gridbtn;
     }
 }
 

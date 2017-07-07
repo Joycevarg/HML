@@ -44,6 +44,9 @@
     <Compile Include="ClusterPresenter.cs" />
     <Compile Include="DistrictPresenter.cs" />
     <Compile Include="FinancialYearsPresenter.cs" />
+    <Compile Include="Interfaces\IVendorPresenter.cs" />
+    <Compile Include="VendorPresenter.cs" />
+    <Compile Include="ViewInterfaces\IVendorView.cs" />
     <Compile Include="ViewInterfaces\IClusterView.cs" />
     <Compile Include="Interfaces\IClusterPresenter.cs" />
     <Compile Include="Interfaces\IDistrictPresenter.cs" />
