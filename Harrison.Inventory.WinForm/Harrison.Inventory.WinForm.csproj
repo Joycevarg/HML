@@ -49,23 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bank.cs">
+    <Compile Include="BankForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bank.designer.cs">
-      <DependentUpon>Bank.cs</DependentUpon>
+    <Compile Include="BankForm.designer.cs">
+      <DependentUpon>BankForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Branch.cs">
+    <Compile Include="BranchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Branch.designer.cs">
-      <DependentUpon>Branch.cs</DependentUpon>
+    <Compile Include="BranchForm.designer.cs">
+      <DependentUpon>BranchForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cluster.cs">
+    <Compile Include="ClusterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cluster.designer.cs">
-      <DependentUpon>Cluster.cs</DependentUpon>
+    <Compile Include="ClusterForm.designer.cs">
+      <DependentUpon>ClusterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DistrictForm.cs">
       <SubType>Form</SubType>
@@ -129,14 +129,14 @@
     <Compile Include="Vendors.designer.cs">
       <DependentUpon>Vendors.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Bank.resx">
-      <DependentUpon>Bank.cs</DependentUpon>
+    <EmbeddedResource Include="BankForm.resx">
+      <DependentUpon>BankForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Branch.resx">
-      <DependentUpon>Branch.cs</DependentUpon>
+    <EmbeddedResource Include="BranchForm.resx">
+      <DependentUpon>BranchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cluster.resx">
-      <DependentUpon>Cluster.cs</DependentUpon>
+    <EmbeddedResource Include="ClusterForm.resx">
+      <DependentUpon>ClusterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DistrictForm.resx">
       <DependentUpon>DistrictForm.cs</DependentUpon>

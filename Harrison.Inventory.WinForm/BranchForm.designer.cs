@@ -92,6 +92,7 @@
             this.cancelbtn.TabIndex = 8;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // banklst
             // 
@@ -110,7 +111,6 @@
             this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "IFSC Code:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 

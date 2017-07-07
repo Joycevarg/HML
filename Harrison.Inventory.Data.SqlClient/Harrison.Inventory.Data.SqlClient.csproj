@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankData.cs" />
+    <Compile Include="BranchData.cs" />
     <Compile Include="ClusterData.cs" />
+    <Compile Include="Interfaces\IBranchData.cs" />
     <Compile Include="Interfaces\IClusterData.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="DistrictData.cs" />

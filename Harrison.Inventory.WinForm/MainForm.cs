@@ -80,6 +80,12 @@ namespace Harrison.Inventory.WinForm
         {
             DistrictForm district = new DistrictForm();
             district.Show();
+        }
+
+        private void branchsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            branchDetails branchform = new branchDetails();
+            branchform.Show();
         }       
     }
 }

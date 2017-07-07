@@ -47,6 +47,7 @@
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateFrrReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.branchsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +77,8 @@
             this.rPSVendorMappingToolStripMenuItem,
             this.clusterDistrictMappingToolStripMenuItem,
             this.stateToolStripMenuItem,
-            this.financialYearToolStripMenuItem});
+            this.financialYearToolStripMenuItem,
+            this.branchsToolStripMenuItem});
             this.mastersToolStripMenuItem.Name = "mastersToolStripMenuItem";
             this.mastersToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.mastersToolStripMenuItem.Text = "Masters";
@@ -200,6 +202,13 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // branchsToolStripMenuItem
+            // 
+            this.branchsToolStripMenuItem.Name = "branchsToolStripMenuItem";
+            this.branchsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.branchsToolStripMenuItem.Text = "Branchs";
+            this.branchsToolStripMenuItem.Click += new System.EventHandler(this.branchsToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,5 +249,6 @@
         private System.Windows.Forms.ToolStripMenuItem transationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem generateFrrReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem financialYearToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem branchsToolStripMenuItem;
     }
 }
