@@ -39,7 +39,7 @@
             this.remarklbl = new System.Windows.Forms.Label();
             this.remarktxt = new System.Windows.Forms.TextBox();
             this.donebtn = new System.Windows.Forms.Button();
-            this.clearbtn = new System.Windows.Forms.Button();
+            this.gridbtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ventorIDlst = new System.Windows.Forms.ComboBox();
@@ -71,7 +71,6 @@
             this.contactNamelbl.Size = new System.Drawing.Size(101, 17);
             this.contactNamelbl.TabIndex = 2;
             this.contactNamelbl.Text = "Contact Name:";
-            this.contactNamelbl.Click += new System.EventHandler(this.contactNamelbl_Click);
             // 
             // contactNametxt
             // 
@@ -95,7 +94,6 @@
             this.contactNotxt.Name = "contactNotxt";
             this.contactNotxt.Size = new System.Drawing.Size(261, 22);
             this.contactNotxt.TabIndex = 6;
-            this.contactNotxt.TextChanged += new System.EventHandler(this.contactNotxt_TextChanged);
             // 
             // routeDetlslbl
             // 
@@ -141,15 +139,16 @@
             this.donebtn.Text = "Save";
             this.donebtn.UseVisualStyleBackColor = true;
             // 
-            // clearbtn
+            // gridbtn
             // 
-            this.clearbtn.BackColor = System.Drawing.SystemColors.Control;
-            this.clearbtn.Location = new System.Drawing.Point(442, 414);
-            this.clearbtn.Name = "clearbtn";
-            this.clearbtn.Size = new System.Drawing.Size(144, 43);
-            this.clearbtn.TabIndex = 16;
-            this.clearbtn.Text = "Edit";
-            this.clearbtn.UseVisualStyleBackColor = true;
+            this.gridbtn.BackColor = System.Drawing.SystemColors.Control;
+            this.gridbtn.Location = new System.Drawing.Point(442, 414);
+            this.gridbtn.Name = "gridbtn";
+            this.gridbtn.Size = new System.Drawing.Size(144, 43);
+            this.gridbtn.TabIndex = 16;
+            this.gridbtn.Text = "View Grid";
+            this.gridbtn.UseVisualStyleBackColor = true;
+            this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
             // 
             // cancelbtn
             // 
@@ -187,7 +186,7 @@
             this.Controls.Add(this.ventorIDlst);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelbtn);
-            this.Controls.Add(this.clearbtn);
+            this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.donebtn);
             this.Controls.Add(this.remarktxt);
             this.Controls.Add(this.remarklbl);
@@ -220,7 +219,7 @@
         private System.Windows.Forms.Label remarklbl;
         private System.Windows.Forms.TextBox remarktxt;
         private System.Windows.Forms.Button donebtn;
-        private System.Windows.Forms.Button clearbtn;
+        private System.Windows.Forms.Button gridbtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ventorIDlst;

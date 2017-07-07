@@ -6,29 +6,33 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Harrison.Inventory.Data.Model;
+using Harrison.Inventory.Data.SqlClient;
+using Harrison.Inventory.Presenter;
+using Harrison.Inventory.Service;
 
 namespace Harrison.Inventory.WinForm
 {
-    public partial class RPSdetails : Form
+    public partial class RPSdetails : Form,IRPSView
     {
+        private IRPSPresenter rpspresenter;
+        GridForm gridfrm;
         public RPSdetails()
         {
             InitializeComponent();
+            rpspresenter = new RPSPresenter(this, new RPSServices(new RPSData()));
         }
 
         private void RPS_Load(object sender, EventArgs e)
         {
 
         }
+        public SortType SortDirection { get; set; }
+        public SortFieldType SortField { get; set; }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void givearrdata(DataTable rpss)
         {
-
-        }
-
-        private void contactNotxt_TextChanged(object sender, EventArgs e)
-        {
-
+            gridfrm = new GridForm(rpss);
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)
@@ -36,9 +40,14 @@ namespace Harrison.Inventory.WinForm
             this.Close();
         }
 
-        private void contactNamelbl_Click(object sender, EventArgs e)
+        private void gridbtn_Click(object sender, EventArgs e)
         {
-
+            rpspresenter.DefaultRPSOrder();
+            gridfrm.Show();
+           
         }
+
+     
+       
     }
 }

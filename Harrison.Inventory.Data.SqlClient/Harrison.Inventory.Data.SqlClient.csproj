@@ -55,7 +55,9 @@
     <Compile Include="Interfaces\IBankData.cs" />
     <Compile Include="Interfaces\IStateData.cs" />
     <Compile Include="Interfaces\IVendorData.cs" />
+    <Compile Include="Interfaces\IRPSData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPSData.cs" />
     <Compile Include="StateData.cs" />
     <Compile Include="VendorData.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

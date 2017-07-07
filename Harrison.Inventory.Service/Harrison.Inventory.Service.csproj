@@ -52,7 +52,9 @@
     <Compile Include="Interfaces\IStateServices.cs" />
     <Compile Include="ClusterService.cs" />
     <Compile Include="Interfaces\IVendorServices.cs" />
+    <Compile Include="Interfaces\IRPSServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPSService.cs" />
     <Compile Include="StateService.cs" />
     <Compile Include="VendorServices.cs" />
   </ItemGroup>
