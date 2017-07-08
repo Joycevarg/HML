@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.paidDatelbl = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.invoicedatetxt = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.namecombo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.paidFromlbl = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.invoicenotxt = new System.Windows.Forms.Label();
             this.donebtn = new System.Windows.Forms.Button();
             this.clrbtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
@@ -62,12 +62,12 @@
             this.paidDatelbl.TabIndex = 0;
             this.paidDatelbl.Text = "Paid Date:";
             // 
-            // dateTimePicker1
+            // invoicedatetxt
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(196, 76);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 1;
+            this.invoicedatetxt.Location = new System.Drawing.Point(196, 76);
+            this.invoicedatetxt.Name = "invoicedatetxt";
+            this.invoicedatetxt.Size = new System.Drawing.Size(200, 22);
+            this.invoicedatetxt.TabIndex = 1;
             // 
             // label2
             // 
@@ -78,14 +78,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Vendor Name:";
             // 
-            // comboBox1
+            // namecombo
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(196, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 24);
-            this.comboBox1.TabIndex = 3;
+            this.namecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.namecombo.FormattingEnabled = true;
+            this.namecombo.Location = new System.Drawing.Point(196, 121);
+            this.namecombo.Name = "namecombo";
+            this.namecombo.Size = new System.Drawing.Size(257, 24);
+            this.namecombo.TabIndex = 3;
             // 
             // label3
             // 
@@ -214,15 +214,15 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Invoice no:";
             // 
-            // label4
+            // invoicenotxt
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(193, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "label4";
+            this.invoicenotxt.AutoSize = true;
+            this.invoicenotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invoicenotxt.Location = new System.Drawing.Point(193, 34);
+            this.invoicenotxt.Name = "invoicenotxt";
+            this.invoicenotxt.Size = new System.Drawing.Size(53, 20);
+            this.invoicenotxt.TabIndex = 23;
+            this.invoicenotxt.Text = "label4";
             // 
             // donebtn
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.clrbtn);
             this.Controls.Add(this.donebtn);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.invoicenotxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
@@ -276,9 +276,9 @@
             this.Controls.Add(this.paidFromlbl);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.namecombo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.invoicedatetxt);
             this.Controls.Add(this.paidDatelbl);
             this.Name = "paymentInfo";
             this.Text = "Payment Details";
@@ -290,9 +290,9 @@
         #endregion
 
         private System.Windows.Forms.Label paidDatelbl;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker invoicedatetxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox namecombo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label paidFromlbl;
@@ -308,7 +308,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label invoicenotxt;
         private System.Windows.Forms.Button donebtn;
         private System.Windows.Forms.Button clrbtn;
         private System.Windows.Forms.Button cancelbtn;

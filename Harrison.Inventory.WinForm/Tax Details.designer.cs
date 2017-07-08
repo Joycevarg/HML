@@ -37,8 +37,8 @@
             this.vattxt = new System.Windows.Forms.TextBox();
             this.cesstxt = new System.Windows.Forms.TextBox();
             this.savebtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cancelbtn = new System.Windows.Forms.Button();
+            this.editbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // finYeartxt
@@ -68,7 +68,6 @@
             this.effectDate.Name = "effectDate";
             this.effectDate.Size = new System.Drawing.Size(307, 22);
             this.effectDate.TabIndex = 2;
-            
             // 
             // label2
             // 
@@ -127,34 +126,34 @@
             this.savebtn.UseVisualStyleBackColor = true;
             this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
-            // button2
+            // cancelbtn
             // 
-            this.button2.Location = new System.Drawing.Point(249, 196);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 28);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.cancelbtn.Location = new System.Drawing.Point(249, 196);
+            this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.Size = new System.Drawing.Size(85, 28);
+            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.Text = "Cancel";
+            this.cancelbtn.UseVisualStyleBackColor = true;
+            this.cancelbtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // editbtn
             // 
-            this.button3.Location = new System.Drawing.Point(344, 196);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 28);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.editbtn.Location = new System.Drawing.Point(344, 196);
+            this.editbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.editbtn.Name = "editbtn";
+            this.editbtn.Size = new System.Drawing.Size(88, 28);
+            this.editbtn.TabIndex = 11;
+            this.editbtn.Text = "Edit";
+            this.editbtn.UseVisualStyleBackColor = true;
             // 
             // Tax_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 268);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.editbtn);
+            this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.cesstxt);
             this.Controls.Add(this.vattxt);
@@ -184,7 +183,7 @@
         private System.Windows.Forms.TextBox vattxt;
         private System.Windows.Forms.TextBox cesstxt;
         private System.Windows.Forms.Button savebtn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button cancelbtn;
+        private System.Windows.Forms.Button editbtn;
     }
 }

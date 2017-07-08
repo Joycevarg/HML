@@ -1,6 +1,6 @@
 ﻿namespace Harrison.Inventory.WinForm
 {
-    partial class Purchase_Form
+    partial class InvoiceForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.InvoiceNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.VendorName = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.VendorNamecombo = new System.Windows.Forms.ComboBox();
+            this.RPScombo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.commcombo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.commCodecombo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Datetxt = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,38 +49,38 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.barrelqty = new System.Windows.Forms.TextBox();
+            this.barrelqtytxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lumpqtytxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.emptyqtytxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.wetwttxt = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.drctxt = new System.Windows.Forms.TextBox();
+            this.ratetxt = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.spotContractCombo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.codetxt = new System.Windows.Forms.TextBox();
+            this.calbtn = new System.Windows.Forms.Button();
+            this.clrfldbtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.tamnttxt = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.cesstxt = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.vattxt = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.amnttxt = new System.Windows.Forms.TextBox();
+            this.drywttxt = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Save_bttn = new System.Windows.Forms.Button();
+            this.Savebtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.invoicebtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -113,23 +113,25 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Vendor name:";
             // 
-            // VendorName
+            // VendorNamecombo
             // 
-            this.VendorName.FormattingEnabled = true;
-            this.VendorName.Location = new System.Drawing.Point(124, 86);
-            this.VendorName.Margin = new System.Windows.Forms.Padding(4);
-            this.VendorName.Name = "VendorName";
-            this.VendorName.Size = new System.Drawing.Size(343, 24);
-            this.VendorName.TabIndex = 3;
+            this.VendorNamecombo.FormattingEnabled = true;
+            this.VendorNamecombo.Location = new System.Drawing.Point(124, 86);
+            this.VendorNamecombo.Margin = new System.Windows.Forms.Padding(4);
+            this.VendorNamecombo.Name = "VendorNamecombo";
+            this.VendorNamecombo.Size = new System.Drawing.Size(343, 24);
+            this.VendorNamecombo.TabIndex = 3;
+            this.VendorNamecombo.Text = "<select>";
             // 
-            // comboBox2
+            // RPScombo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(549, 89);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(401, 24);
-            this.comboBox2.TabIndex = 4;
+            this.RPScombo.FormattingEnabled = true;
+            this.RPScombo.Location = new System.Drawing.Point(549, 89);
+            this.RPScombo.Margin = new System.Windows.Forms.Padding(4);
+            this.RPScombo.Name = "RPScombo";
+            this.RPScombo.Size = new System.Drawing.Size(401, 24);
+            this.RPScombo.TabIndex = 4;
+            this.RPScombo.Text = "<select>";
             // 
             // label3
             // 
@@ -139,16 +141,16 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "RPC:";
+            this.label3.Text = "RPS:";
             // 
-            // comboBox3
+            // commcombo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(124, 134);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(343, 24);
-            this.comboBox3.TabIndex = 6;
+            this.commcombo.FormattingEnabled = true;
+            this.commcombo.Location = new System.Drawing.Point(124, 134);
+            this.commcombo.Margin = new System.Windows.Forms.Padding(4);
+            this.commcombo.Name = "commcombo";
+            this.commcombo.Size = new System.Drawing.Size(343, 24);
+            this.commcombo.TabIndex = 6;
             // 
             // label4
             // 
@@ -160,14 +162,14 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Commodity:";
             // 
-            // comboBox4
+            // commCodecombo
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(716, 134);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(235, 24);
-            this.comboBox4.TabIndex = 8;
+            this.commCodecombo.FormattingEnabled = true;
+            this.commCodecombo.Location = new System.Drawing.Point(716, 134);
+            this.commCodecombo.Margin = new System.Windows.Forms.Padding(4);
+            this.commCodecombo.Name = "commCodecombo";
+            this.commCodecombo.Size = new System.Drawing.Size(235, 24);
+            this.commCodecombo.TabIndex = 8;
             // 
             // label5
             // 
@@ -189,7 +191,6 @@
             this.Datetxt.Name = "Datetxt";
             this.Datetxt.Size = new System.Drawing.Size(265, 22);
             this.Datetxt.TabIndex = 10;
-           
             // 
             // label6
             // 
@@ -287,13 +288,13 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Barrel Qty:";
             // 
-            // barrelqty
+            // barrelqtytxt
             // 
-            this.barrelqty.Location = new System.Drawing.Point(107, 22);
-            this.barrelqty.Margin = new System.Windows.Forms.Padding(4);
-            this.barrelqty.Name = "barrelqty";
-            this.barrelqty.Size = new System.Drawing.Size(132, 22);
-            this.barrelqty.TabIndex = 1;
+            this.barrelqtytxt.Location = new System.Drawing.Point(107, 22);
+            this.barrelqtytxt.Margin = new System.Windows.Forms.Padding(4);
+            this.barrelqtytxt.Name = "barrelqtytxt";
+            this.barrelqtytxt.Size = new System.Drawing.Size(132, 22);
+            this.barrelqtytxt.TabIndex = 1;
             // 
             // label11
             // 
@@ -305,13 +306,13 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "LumbQty:";
             // 
-            // textBox6
+            // lumpqtytxt
             // 
-            this.textBox6.Location = new System.Drawing.Point(396, 25);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 22);
-            this.textBox6.TabIndex = 3;
+            this.lumpqtytxt.Location = new System.Drawing.Point(396, 25);
+            this.lumpqtytxt.Margin = new System.Windows.Forms.Padding(4);
+            this.lumpqtytxt.Name = "lumpqtytxt";
+            this.lumpqtytxt.Size = new System.Drawing.Size(132, 22);
+            this.lumpqtytxt.TabIndex = 3;
             // 
             // label12
             // 
@@ -323,13 +324,13 @@
             this.label12.TabIndex = 4;
             this.label12.Text = "Empty Qty:";
             // 
-            // textBox7
+            // emptyqtytxt
             // 
-            this.textBox7.Location = new System.Drawing.Point(732, 25);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(132, 22);
-            this.textBox7.TabIndex = 5;
+            this.emptyqtytxt.Location = new System.Drawing.Point(732, 25);
+            this.emptyqtytxt.Margin = new System.Windows.Forms.Padding(4);
+            this.emptyqtytxt.Name = "emptyqtytxt";
+            this.emptyqtytxt.Size = new System.Drawing.Size(132, 22);
+            this.emptyqtytxt.TabIndex = 5;
             // 
             // label13
             // 
@@ -359,21 +360,21 @@
             this.label14.TabIndex = 23;
             this.label14.Text = "DRC (in %):";
             // 
-            // textBox9
+            // drctxt
             // 
-            this.textBox9.Location = new System.Drawing.Point(423, 350);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(132, 22);
-            this.textBox9.TabIndex = 24;
+            this.drctxt.Location = new System.Drawing.Point(423, 350);
+            this.drctxt.Margin = new System.Windows.Forms.Padding(4);
+            this.drctxt.Name = "drctxt";
+            this.drctxt.Size = new System.Drawing.Size(132, 22);
+            this.drctxt.TabIndex = 24;
             // 
-            // textBox10
+            // ratetxt
             // 
-            this.textBox10.Location = new System.Drawing.Point(749, 346);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(201, 22);
-            this.textBox10.TabIndex = 25;
+            this.ratetxt.Location = new System.Drawing.Point(749, 346);
+            this.ratetxt.Margin = new System.Windows.Forms.Padding(4);
+            this.ratetxt.Name = "ratetxt";
+            this.ratetxt.Size = new System.Drawing.Size(201, 22);
+            this.ratetxt.TabIndex = 25;
             // 
             // label15
             // 
@@ -385,14 +386,14 @@
             this.label15.TabIndex = 26;
             this.label15.Text = "Rate per Kg:";
             // 
-            // comboBox5
+            // spotContractCombo
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(136, 396);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(160, 24);
-            this.comboBox5.TabIndex = 27;
+            this.spotContractCombo.FormattingEnabled = true;
+            this.spotContractCombo.Location = new System.Drawing.Point(136, 396);
+            this.spotContractCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.spotContractCombo.Name = "spotContractCombo";
+            this.spotContractCombo.Size = new System.Drawing.Size(160, 24);
+            this.spotContractCombo.TabIndex = 27;
             // 
             // label16
             // 
@@ -414,46 +415,46 @@
             this.label17.TabIndex = 29;
             this.label17.Text = "Code No:";
             // 
-            // textBox11
+            // codetxt
             // 
-            this.textBox11.Location = new System.Drawing.Point(423, 399);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(132, 22);
-            this.textBox11.TabIndex = 30;
+            this.codetxt.Location = new System.Drawing.Point(423, 399);
+            this.codetxt.Margin = new System.Windows.Forms.Padding(4);
+            this.codetxt.Name = "codetxt";
+            this.codetxt.Size = new System.Drawing.Size(132, 22);
+            this.codetxt.TabIndex = 30;
             // 
-            // button1
+            // calbtn
             // 
-            this.button1.Location = new System.Drawing.Point(852, 396);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Calculate";
-            this.button1.UseVisualStyleBackColor = true;
+            this.calbtn.Location = new System.Drawing.Point(852, 396);
+            this.calbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.calbtn.Name = "calbtn";
+            this.calbtn.Size = new System.Drawing.Size(100, 28);
+            this.calbtn.TabIndex = 31;
+            this.calbtn.Text = "Calculate";
+            this.calbtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // clrfldbtn
             // 
-            this.button2.Location = new System.Drawing.Point(744, 398);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Clear Fields";
-            this.button2.UseVisualStyleBackColor = true;
+            this.clrfldbtn.Location = new System.Drawing.Point(744, 398);
+            this.clrfldbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.clrfldbtn.Name = "clrfldbtn";
+            this.clrfldbtn.Size = new System.Drawing.Size(100, 28);
+            this.clrfldbtn.TabIndex = 32;
+            this.clrfldbtn.Text = "Clear Fields";
+            this.clrfldbtn.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.textBox16);
+            this.panel1.Controls.Add(this.tamnttxt);
             this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.textBox15);
+            this.panel1.Controls.Add(this.cesstxt);
             this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.textBox14);
+            this.panel1.Controls.Add(this.vattxt);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.textBox13);
-            this.panel1.Controls.Add(this.textBox12);
+            this.panel1.Controls.Add(this.amnttxt);
+            this.panel1.Controls.Add(this.drywttxt);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Location = new System.Drawing.Point(17, 446);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -461,13 +462,13 @@
             this.panel1.Size = new System.Drawing.Size(961, 123);
             this.panel1.TabIndex = 33;
             // 
-            // textBox16
+            // tamnttxt
             // 
-            this.textBox16.Location = new System.Drawing.Point(279, 69);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(417, 22);
-            this.textBox16.TabIndex = 9;
+            this.tamnttxt.Location = new System.Drawing.Point(279, 69);
+            this.tamnttxt.Margin = new System.Windows.Forms.Padding(4);
+            this.tamnttxt.Name = "tamnttxt";
+            this.tamnttxt.Size = new System.Drawing.Size(417, 22);
+            this.tamnttxt.TabIndex = 9;
             // 
             // label22
             // 
@@ -479,13 +480,13 @@
             this.label22.TabIndex = 8;
             this.label22.Text = "Total Amount:";
             // 
-            // textBox15
+            // cesstxt
             // 
-            this.textBox15.Location = new System.Drawing.Point(789, 24);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(132, 22);
-            this.textBox15.TabIndex = 7;
+            this.cesstxt.Location = new System.Drawing.Point(789, 24);
+            this.cesstxt.Margin = new System.Windows.Forms.Padding(4);
+            this.cesstxt.Name = "cesstxt";
+            this.cesstxt.Size = new System.Drawing.Size(132, 22);
+            this.cesstxt.TabIndex = 7;
             // 
             // label21
             // 
@@ -497,13 +498,13 @@
             this.label21.TabIndex = 6;
             this.label21.Text = "Cess:";
             // 
-            // textBox14
+            // vattxt
             // 
-            this.textBox14.Location = new System.Drawing.Point(568, 24);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(132, 22);
-            this.textBox14.TabIndex = 5;
+            this.vattxt.Location = new System.Drawing.Point(568, 24);
+            this.vattxt.Margin = new System.Windows.Forms.Padding(4);
+            this.vattxt.Name = "vattxt";
+            this.vattxt.Size = new System.Drawing.Size(132, 22);
+            this.vattxt.TabIndex = 5;
             // 
             // label20
             // 
@@ -525,21 +526,21 @@
             this.label19.TabIndex = 3;
             this.label19.Text = "Amount:";
             // 
-            // textBox13
+            // amnttxt
             // 
-            this.textBox13.Location = new System.Drawing.Point(355, 24);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(132, 22);
-            this.textBox13.TabIndex = 2;
+            this.amnttxt.Location = new System.Drawing.Point(355, 24);
+            this.amnttxt.Margin = new System.Windows.Forms.Padding(4);
+            this.amnttxt.Name = "amnttxt";
+            this.amnttxt.Size = new System.Drawing.Size(132, 22);
+            this.amnttxt.TabIndex = 2;
             // 
-            // textBox12
+            // drywttxt
             // 
-            this.textBox12.Location = new System.Drawing.Point(119, 24);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(132, 22);
-            this.textBox12.TabIndex = 1;
+            this.drywttxt.Location = new System.Drawing.Point(119, 24);
+            this.drywttxt.Margin = new System.Windows.Forms.Padding(4);
+            this.drywttxt.Name = "drywttxt";
+            this.drywttxt.Size = new System.Drawing.Size(132, 22);
+            this.drywttxt.TabIndex = 1;
             // 
             // label18
             // 
@@ -555,27 +556,26 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.emptyqtytxt);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.barrelqty);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.barrelqtytxt);
+            this.panel2.Controls.Add(this.lumpqtytxt);
             this.panel2.Location = new System.Drawing.Point(17, 236);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(961, 81);
             this.panel2.TabIndex = 34;
             // 
-            // Save_bttn
+            // Savebtn
             // 
-            this.Save_bttn.Location = new System.Drawing.Point(497, 582);
-            this.Save_bttn.Margin = new System.Windows.Forms.Padding(4);
-            this.Save_bttn.Name = "Save_bttn";
-            this.Save_bttn.Size = new System.Drawing.Size(100, 28);
-            this.Save_bttn.TabIndex = 35;
-            this.Save_bttn.Text = "Save";
-            this.Save_bttn.UseVisualStyleBackColor = true;
-            this.Save_bttn.Click += new System.EventHandler(this.Save_bttn_Click);
+            this.Savebtn.Location = new System.Drawing.Point(497, 582);
+            this.Savebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.Savebtn.Name = "Savebtn";
+            this.Savebtn.Size = new System.Drawing.Size(100, 28);
+            this.Savebtn.TabIndex = 35;
+            this.Savebtn.Text = "Save";
+            this.Savebtn.UseVisualStyleBackColor = true;
             // 
             // closebtn
             // 
@@ -588,36 +588,34 @@
             this.closebtn.UseVisualStyleBackColor = true;
             this.closebtn.Click += new System.EventHandler(this.button4_Click);
             // 
-            // checkBox3
+            // invoicebtn
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(203, 587);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(107, 21);
-            this.checkBox3.TabIndex = 37;
-            this.checkBox3.Text = "View Invoice";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.invoicebtn.Location = new System.Drawing.Point(103, 584);
+            this.invoicebtn.Name = "invoicebtn";
+            this.invoicebtn.Size = new System.Drawing.Size(125, 41);
+            this.invoicebtn.TabIndex = 37;
+            this.invoicebtn.Text = "View Invoice";
+            this.invoicebtn.UseVisualStyleBackColor = true;
             // 
-            // Purchase_Form
+            // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 637);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.invoicebtn);
             this.Controls.Add(this.closebtn);
-            this.Controls.Add(this.Save_bttn);
+            this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.clrfldbtn);
+            this.Controls.Add(this.calbtn);
+            this.Controls.Add(this.codetxt);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.spotContractCombo);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.ratetxt);
+            this.Controls.Add(this.drctxt);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.wetwttxt);
             this.Controls.Add(this.label13);
@@ -632,18 +630,19 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Datetxt);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.commCodecombo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.commcombo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.VendorName);
+            this.Controls.Add(this.RPScombo);
+            this.Controls.Add(this.VendorNamecombo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.InvoiceNo);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Purchase_Form";
-            this.Text = "Purchase_Form";
+            this.Name = "InvoiceForm";
+            this.Text = "InvoiceForm";
+            this.Load += new System.EventHandler(this.InvoiceForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -658,12 +657,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox InvoiceNo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox VendorName;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox VendorNamecombo;
+        private System.Windows.Forms.ComboBox RPScombo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox commcombo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox commCodecombo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker Datetxt;
         private System.Windows.Forms.Label label6;
@@ -675,38 +674,38 @@
         private System.Windows.Forms.TextBox lpcNotxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox emptyqtytxt;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox lumpqtytxt;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox barrelqty;
+        private System.Windows.Forms.TextBox barrelqtytxt;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox wetwttxt;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox drctxt;
+        private System.Windows.Forms.TextBox ratetxt;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox spotContractCombo;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox codetxt;
+        private System.Windows.Forms.Button calbtn;
+        private System.Windows.Forms.Button clrfldbtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox tamnttxt;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox cesstxt;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox vattxt;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox amnttxt;
+        private System.Windows.Forms.TextBox drywttxt;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button Save_bttn;
+        private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button closebtn;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Button invoicebtn;
     }
 }

@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.finYeartxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Add_Fin_Year_Bttn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.editbtn = new System.Windows.Forms.Button();
+            this.Cancelbtn = new System.Windows.Forms.Button();
             this.FinancialYear_Grid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.FinancialYear_Grid)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // finYeartxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 41);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 22);
-            this.textBox1.TabIndex = 0;
+            this.finYeartxt.Location = new System.Drawing.Point(128, 41);
+            this.finYeartxt.Margin = new System.Windows.Forms.Padding(4);
+            this.finYeartxt.Name = "finYeartxt";
+            this.finYeartxt.Size = new System.Drawing.Size(227, 22);
+            this.finYeartxt.TabIndex = 0;
             // 
             // label1
             // 
@@ -66,26 +66,26 @@
             this.Add_Fin_Year_Bttn.UseVisualStyleBackColor = true;
             this.Add_Fin_Year_Bttn.Click += new System.EventHandler(this.Add_Fin_Year_Bttn_Click);
             // 
-            // button2
+            // editbtn
             // 
-            this.button2.Location = new System.Drawing.Point(267, 85);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 37);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.editbtn.Location = new System.Drawing.Point(267, 85);
+            this.editbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.editbtn.Name = "editbtn";
+            this.editbtn.Size = new System.Drawing.Size(91, 37);
+            this.editbtn.TabIndex = 3;
+            this.editbtn.Text = "Edit";
+            this.editbtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Cancelbtn
             // 
-            this.button3.Location = new System.Drawing.Point(150, 85);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 37);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Cancelbtn.Location = new System.Drawing.Point(150, 85);
+            this.Cancelbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancelbtn.Name = "Cancelbtn";
+            this.Cancelbtn.Size = new System.Drawing.Size(91, 37);
+            this.Cancelbtn.TabIndex = 4;
+            this.Cancelbtn.Text = "Cancel";
+            this.Cancelbtn.UseVisualStyleBackColor = true;
+            this.Cancelbtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // FinancialYear_Grid
             // 
@@ -103,11 +103,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 318);
             this.Controls.Add(this.FinancialYear_Grid);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Cancelbtn);
+            this.Controls.Add(this.editbtn);
             this.Controls.Add(this.Add_Fin_Year_Bttn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.finYeartxt);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FinancialYear";
             this.Text = "FinancialYear";
@@ -120,11 +120,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox finYeartxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Add_Fin_Year_Bttn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button editbtn;
+        private System.Windows.Forms.Button Cancelbtn;
         private System.Windows.Forms.DataGridView FinancialYear_Grid;
     }
 }

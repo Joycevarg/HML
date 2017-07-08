@@ -15,7 +15,7 @@ namespace Harrison.Inventory.WinForm
         public GridForm(DataTable vendors)
         {
             InitializeComponent();
-            GridView.DataSource = vendors;
+            grid.DataSource = vendors;
         }
        
 

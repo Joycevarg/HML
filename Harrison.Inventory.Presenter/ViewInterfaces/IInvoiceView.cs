@@ -5,10 +5,10 @@ using System.Text;
 using System.Data;
 using Harrison.Inventory.Data.Model;
 
-namespace Harrison.Inventory.Service
+namespace Harrison.Inventory.Presenter
 {
-    public interface IClusterServices
+    public interface IInvoiceView
     {
-        DataTable ArrangeCluster(SortType sortType, SortFieldType sortField);
+        void setVendorNames(DataTable vendors);
     }
 }

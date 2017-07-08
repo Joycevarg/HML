@@ -1,6 +1,6 @@
 ﻿namespace Harrison.Inventory.WinForm
 {
-    partial class Vendors
+    partial class VendorsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.ventorNametxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rgstrchkbox = new System.Windows.Forms.CheckBox();
             this.homeAddresstxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             this.oEmailtxt = new System.Windows.Forms.TextBox();
             this.TinNotxt = new System.Windows.Forms.TextBox();
             this.tapperNotxt = new System.Windows.Forms.TextBox();
-            this.dealerbtn = new System.Windows.Forms.RadioButton();
-            this.growerbtn = new System.Windows.Forms.RadioButton();
+            this.dealerRbtn = new System.Windows.Forms.RadioButton();
+            this.growerRbtn = new System.Windows.Forms.RadioButton();
             this.oAddresstxt = new System.Windows.Forms.TextBox();
             this.LNotxt = new System.Windows.Forms.TextBox();
             this.remarktxt = new System.Windows.Forms.TextBox();
@@ -66,9 +66,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cstNotxt = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.savebtn = new System.Windows.Forms.Button();
+            this.cancelbtn = new System.Windows.Forms.Button();
+            this.editbtn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.gridbtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -95,16 +95,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Vendor Name";
             // 
-            // checkBox1
+            // rgstrchkbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(111, 18);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(351, 21);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "                       Registered (UnTick if UnRegistered)";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.rgstrchkbox.AutoSize = true;
+            this.rgstrchkbox.Location = new System.Drawing.Point(111, 18);
+            this.rgstrchkbox.Margin = new System.Windows.Forms.Padding(4);
+            this.rgstrchkbox.Name = "rgstrchkbox";
+            this.rgstrchkbox.Size = new System.Drawing.Size(351, 21);
+            this.rgstrchkbox.TabIndex = 2;
+            this.rgstrchkbox.Text = "                       Registered (UnTick if UnRegistered)";
+            this.rgstrchkbox.UseVisualStyleBackColor = true;
             // 
             // homeAddresstxt
             // 
@@ -199,7 +199,7 @@
             // 
             // TinNotxt
             // 
-            this.TinNotxt.Location = new System.Drawing.Point(356, 43);
+            this.TinNotxt.Location = new System.Drawing.Point(354, 50);
             this.TinNotxt.Margin = new System.Windows.Forms.Padding(4);
             this.TinNotxt.Name = "TinNotxt";
             this.TinNotxt.Size = new System.Drawing.Size(180, 22);
@@ -213,29 +213,29 @@
             this.tapperNotxt.Size = new System.Drawing.Size(231, 22);
             this.tapperNotxt.TabIndex = 14;
             // 
-            // dealerbtn
+            // dealerRbtn
             // 
-            this.dealerbtn.AutoSize = true;
-            this.dealerbtn.Location = new System.Drawing.Point(213, 16);
-            this.dealerbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.dealerbtn.Name = "dealerbtn";
-            this.dealerbtn.Size = new System.Drawing.Size(71, 21);
-            this.dealerbtn.TabIndex = 15;
-            this.dealerbtn.TabStop = true;
-            this.dealerbtn.Text = "Dealer";
-            this.dealerbtn.UseVisualStyleBackColor = true;
+            this.dealerRbtn.AutoSize = true;
+            this.dealerRbtn.Location = new System.Drawing.Point(213, 16);
+            this.dealerRbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.dealerRbtn.Name = "dealerRbtn";
+            this.dealerRbtn.Size = new System.Drawing.Size(71, 21);
+            this.dealerRbtn.TabIndex = 15;
+            this.dealerRbtn.TabStop = true;
+            this.dealerRbtn.Text = "Dealer";
+            this.dealerRbtn.UseVisualStyleBackColor = true;
             // 
-            // growerbtn
+            // growerRbtn
             // 
-            this.growerbtn.AutoSize = true;
-            this.growerbtn.Location = new System.Drawing.Point(120, 16);
-            this.growerbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.growerbtn.Name = "growerbtn";
-            this.growerbtn.Size = new System.Drawing.Size(75, 21);
-            this.growerbtn.TabIndex = 16;
-            this.growerbtn.TabStop = true;
-            this.growerbtn.Text = "Grower";
-            this.growerbtn.UseVisualStyleBackColor = true;
+            this.growerRbtn.AutoSize = true;
+            this.growerRbtn.Location = new System.Drawing.Point(120, 16);
+            this.growerRbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.growerRbtn.Name = "growerRbtn";
+            this.growerRbtn.Size = new System.Drawing.Size(75, 21);
+            this.growerRbtn.TabIndex = 16;
+            this.growerRbtn.TabStop = true;
+            this.growerRbtn.Text = "Grower";
+            this.growerRbtn.UseVisualStyleBackColor = true;
             // 
             // oAddresstxt
             // 
@@ -248,7 +248,7 @@
             // 
             // LNotxt
             // 
-            this.LNotxt.Location = new System.Drawing.Point(120, 48);
+            this.LNotxt.Location = new System.Drawing.Point(119, 50);
             this.LNotxt.Margin = new System.Windows.Forms.Padding(4);
             this.LNotxt.Name = "LNotxt";
             this.LNotxt.Size = new System.Drawing.Size(167, 22);
@@ -306,7 +306,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(545, 47);
+            this.label10.Location = new System.Drawing.Point(548, 53);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 17);
@@ -316,7 +316,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(296, 49);
+            this.label11.Location = new System.Drawing.Point(295, 53);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 17);
@@ -326,7 +326,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(7, 118);
+            this.label12.Location = new System.Drawing.Point(35, 90);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 17);
@@ -389,7 +389,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.homeAddresstxt);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.rgstrchkbox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.ventorNametxt);
             this.groupBox1.Location = new System.Drawing.Point(19, 2);
@@ -457,42 +457,42 @@
             // 
             // cstNotxt
             // 
-            this.cstNotxt.Location = new System.Drawing.Point(613, 41);
+            this.cstNotxt.Location = new System.Drawing.Point(613, 50);
             this.cstNotxt.Margin = new System.Windows.Forms.Padding(4);
             this.cstNotxt.Name = "cstNotxt";
             this.cstNotxt.Size = new System.Drawing.Size(177, 22);
             this.cstNotxt.TabIndex = 40;
             // 
-            // button1
+            // savebtn
             // 
-            this.button1.Location = new System.Drawing.Point(232, 722);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.savebtn.Location = new System.Drawing.Point(232, 722);
+            this.savebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(100, 28);
+            this.savebtn.TabIndex = 41;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // cancelbtn
             // 
-            this.button2.Location = new System.Drawing.Point(375, 722);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.cancelbtn.Location = new System.Drawing.Point(375, 722);
+            this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.Size = new System.Drawing.Size(100, 28);
+            this.cancelbtn.TabIndex = 42;
+            this.cancelbtn.Text = "Cancel";
+            this.cancelbtn.UseVisualStyleBackColor = true;
+            this.cancelbtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // editbtn
             // 
-            this.button3.Location = new System.Drawing.Point(511, 722);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
-            this.button3.TabIndex = 43;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.editbtn.Location = new System.Drawing.Point(511, 722);
+            this.editbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.editbtn.Name = "editbtn";
+            this.editbtn.Size = new System.Drawing.Size(100, 28);
+            this.editbtn.TabIndex = 43;
+            this.editbtn.Text = "Edit";
+            this.editbtn.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -503,8 +503,8 @@
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.remarktxt);
             this.groupBox4.Controls.Add(this.LNotxt);
-            this.groupBox4.Controls.Add(this.growerbtn);
-            this.groupBox4.Controls.Add(this.dealerbtn);
+            this.groupBox4.Controls.Add(this.growerRbtn);
+            this.groupBox4.Controls.Add(this.dealerRbtn);
             this.groupBox4.Controls.Add(this.TinNotxt);
             this.groupBox4.Location = new System.Drawing.Point(19, 558);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -531,9 +531,9 @@
             this.ClientSize = new System.Drawing.Size(836, 757);
             this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.editbtn);
+            this.Controls.Add(this.cancelbtn);
+            this.Controls.Add(this.savebtn);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.box);
             this.Controls.Add(this.groupBox1);
@@ -557,7 +557,7 @@
 
         private System.Windows.Forms.TextBox ventorNametxt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox rgstrchkbox;
         private System.Windows.Forms.TextBox homeAddresstxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -570,8 +570,8 @@
         private System.Windows.Forms.TextBox oEmailtxt;
         private System.Windows.Forms.TextBox TinNotxt;
         private System.Windows.Forms.TextBox tapperNotxt;
-        private System.Windows.Forms.RadioButton dealerbtn;
-        private System.Windows.Forms.RadioButton growerbtn;
+        private System.Windows.Forms.RadioButton dealerRbtn;
+        private System.Windows.Forms.RadioButton growerRbtn;
         private System.Windows.Forms.TextBox oAddresstxt;
         private System.Windows.Forms.TextBox LNotxt;
         private System.Windows.Forms.TextBox remarktxt;
@@ -592,9 +592,9 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox cstNotxt;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button savebtn;
+        private System.Windows.Forms.Button cancelbtn;
+        private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox estatetxt;
         private System.Windows.Forms.Button gridbtn;

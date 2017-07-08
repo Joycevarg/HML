@@ -28,36 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
+            this.grid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
-            // GridView
+            // grid
             // 
-            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridView.Location = new System.Drawing.Point(12, 12);
-            this.GridView.Name = "GridView";
-            this.GridView.RowTemplate.Height = 24;
-            this.GridView.Size = new System.Drawing.Size(741, 285);
-            this.GridView.TabIndex = 0;
-           
+            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid.Location = new System.Drawing.Point(12, 12);
+            this.grid.Name = "grid";
+            this.grid.RowTemplate.Height = 24;
+            this.grid.Size = new System.Drawing.Size(741, 285);
+            this.grid.TabIndex = 0;
             // 
             // GridForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 349);
-            this.Controls.Add(this.GridView);
+            this.Controls.Add(this.grid);
             this.Name = "GridForm";
             this.Text = "GridForm";
             this.Load += new System.EventHandler(this.GridForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView GridView;
+        private System.Windows.Forms.DataGridView grid;
     }
 }

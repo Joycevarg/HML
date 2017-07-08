@@ -43,13 +43,13 @@ namespace Harrison.Inventory.WinForm
 
         private void vendorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Vendors vendorform = new Vendors();
+            VendorsForm vendorform = new VendorsForm();
             vendorform.Show();
         }
 
         private void invoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Purchase_Form invoice = new Purchase_Form();
+            InvoiceForm invoice = new InvoiceForm();
             invoice.Show();
         }
 

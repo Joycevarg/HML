@@ -30,11 +30,11 @@
         {
             this.clusterlbl = new System.Windows.Forms.Label();
             this.clustertxt = new System.Windows.Forms.TextBox();
-            this.donebtn = new System.Windows.Forms.Button();
+            this.addbtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.statecombo = new System.Windows.Forms.ComboBox();
+            this.editbtn = new System.Windows.Forms.Button();
             this.clustergrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.clustergrid)).BeginInit();
             this.SuspendLayout();
@@ -55,14 +55,14 @@
             this.clustertxt.Size = new System.Drawing.Size(215, 22);
             this.clustertxt.TabIndex = 3;
             // 
-            // donebtn
+            // addbtn
             // 
-            this.donebtn.Location = new System.Drawing.Point(15, 101);
-            this.donebtn.Name = "donebtn";
-            this.donebtn.Size = new System.Drawing.Size(94, 29);
-            this.donebtn.TabIndex = 6;
-            this.donebtn.Text = "Add";
-            this.donebtn.UseVisualStyleBackColor = true;
+            this.addbtn.Location = new System.Drawing.Point(15, 101);
+            this.addbtn.Name = "addbtn";
+            this.addbtn.Size = new System.Drawing.Size(94, 29);
+            this.addbtn.TabIndex = 6;
+            this.addbtn.Text = "Add";
+            this.addbtn.UseVisualStyleBackColor = true;
             // 
             // cancelbtn
             // 
@@ -83,23 +83,23 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "State:";
             // 
-            // comboBox1
+            // statecombo
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(115, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 24);
-            this.comboBox1.TabIndex = 11;
+            this.statecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statecombo.FormattingEnabled = true;
+            this.statecombo.Location = new System.Drawing.Point(115, 66);
+            this.statecombo.Name = "statecombo";
+            this.statecombo.Size = new System.Drawing.Size(215, 24);
+            this.statecombo.TabIndex = 11;
             // 
-            // button1
+            // editbtn
             // 
-            this.button1.Location = new System.Drawing.Point(236, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.editbtn.Location = new System.Drawing.Point(236, 101);
+            this.editbtn.Name = "editbtn";
+            this.editbtn.Size = new System.Drawing.Size(94, 29);
+            this.editbtn.TabIndex = 12;
+            this.editbtn.Text = "Edit";
+            this.editbtn.UseVisualStyleBackColor = true;
             // 
             // clustergrid
             // 
@@ -116,11 +116,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 277);
             this.Controls.Add(this.clustergrid);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.editbtn);
+            this.Controls.Add(this.statecombo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelbtn);
-            this.Controls.Add(this.donebtn);
+            this.Controls.Add(this.addbtn);
             this.Controls.Add(this.clustertxt);
             this.Controls.Add(this.clusterlbl);
             this.Name = "clusterMaster";
@@ -136,11 +136,11 @@
 
         private System.Windows.Forms.Label clusterlbl;
         private System.Windows.Forms.TextBox clustertxt;
-        private System.Windows.Forms.Button donebtn;
+        private System.Windows.Forms.Button addbtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox statecombo;
+        private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.DataGridView clustergrid;
     }
 }

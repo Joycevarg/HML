@@ -34,11 +34,11 @@
             this.newbranchtxt = new System.Windows.Forms.TextBox();
             this.savebtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
-            this.banklst = new System.Windows.Forms.ComboBox();
+            this.bankcombo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ifsctxt = new System.Windows.Forms.TextBox();
+            this.bankaddresstxt = new System.Windows.Forms.TextBox();
             this.gridbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -94,14 +94,14 @@
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
-            // banklst
+            // bankcombo
             // 
-            this.banklst.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.banklst.FormattingEnabled = true;
-            this.banklst.Location = new System.Drawing.Point(123, 23);
-            this.banklst.Name = "banklst";
-            this.banklst.Size = new System.Drawing.Size(245, 24);
-            this.banklst.TabIndex = 9;
+            this.bankcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bankcombo.FormattingEnabled = true;
+            this.bankcombo.Location = new System.Drawing.Point(123, 23);
+            this.bankcombo.Name = "bankcombo";
+            this.bankcombo.Size = new System.Drawing.Size(245, 24);
+            this.bankcombo.TabIndex = 9;
             // 
             // label2
             // 
@@ -121,20 +121,20 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Bank Address:";
             // 
-            // textBox1
+            // ifsctxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 22);
-            this.textBox1.TabIndex = 12;
+            this.ifsctxt.Location = new System.Drawing.Point(123, 82);
+            this.ifsctxt.Name = "ifsctxt";
+            this.ifsctxt.Size = new System.Drawing.Size(245, 22);
+            this.ifsctxt.TabIndex = 12;
             // 
-            // textBox2
+            // bankaddresstxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 114);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 75);
-            this.textBox2.TabIndex = 13;
+            this.bankaddresstxt.Location = new System.Drawing.Point(123, 114);
+            this.bankaddresstxt.Multiline = true;
+            this.bankaddresstxt.Name = "bankaddresstxt";
+            this.bankaddresstxt.Size = new System.Drawing.Size(245, 75);
+            this.bankaddresstxt.TabIndex = 13;
             // 
             // gridbtn
             // 
@@ -152,11 +152,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 366);
             this.Controls.Add(this.gridbtn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.bankaddresstxt);
+            this.Controls.Add(this.ifsctxt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.banklst);
+            this.Controls.Add(this.bankcombo);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.savebtn);
             this.Controls.Add(this.newbranchtxt);
@@ -179,11 +179,11 @@
         private System.Windows.Forms.TextBox newbranchtxt;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button cancelbtn;
-        private System.Windows.Forms.ComboBox banklst;
+        private System.Windows.Forms.ComboBox bankcombo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ifsctxt;
+        private System.Windows.Forms.TextBox bankaddresstxt;
         private System.Windows.Forms.Button gridbtn;
     }
 }

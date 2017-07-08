@@ -45,8 +45,11 @@
     <Compile Include="ClusterPresenter.cs" />
     <Compile Include="DistrictPresenter.cs" />
     <Compile Include="FinancialYearsPresenter.cs" />
+    <Compile Include="Interfaces\IInvoicePresenter.cs" />
+    <Compile Include="ViewInterfaces\IInvoiceView.cs" />
     <Compile Include="Interfaces\IBranchPresenter.cs" />
     <Compile Include="Interfaces\IRPSPresenter.cs" />
+    <Compile Include="InvoicePresenter.cs" />
     <Compile Include="ViewInterfaces\IRPSView.cs" />
     <Compile Include="RPSPresenter.cs" />
     <Compile Include="ViewInterfaces\IBranchView.cs" />

@@ -13,12 +13,12 @@ using Harrison.Inventory.Service;
 
 namespace Harrison.Inventory.WinForm
 {
-    public partial class Vendors : Form,IVendorView
+    public partial class VendorsForm : Form,IVendorView
     {
         private IVendorPresenter vendorpresenter;
         GridForm gridfrm;
             
-            public Vendors()
+            public VendorsForm()
         {
             InitializeComponent();
             vendorpresenter = new VendorPresenter(this, new VendorService(new VendorData()));
