@@ -22,7 +22,7 @@ namespace Harrison.Inventory.WinForm
         {
             InitializeComponent();
             branchpresenter = new BranchPresenter(this, new BranchServices(new BranchData()));
-            
+            branchpresenter.setBankNames();
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
@@ -32,6 +32,16 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
+        public void setBankValues(DataTable banks)
+        {
+          
+            bankcombo.ValueMember="BANK_ID";
+            bankcombo.DisplayMember = "BANK_NAME";
+            bankcombo.DataSource = banks; 
+
+        
+        }
+
         public void givearrdata(DataTable branchs)
         {
             gridfrm = new GridForm(branchs);

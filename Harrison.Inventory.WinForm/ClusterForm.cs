@@ -21,7 +21,15 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             _iclusterpresenter = new ClusterPresenter(this, new ClusterServices(new ClusterData()));
             _iclusterpresenter.DefaultClusterOrder();
+            _iclusterpresenter.setStateValues();
             
+        }
+        public void setStateNames(DataTable states)
+        {
+            statecombo.ValueMember = "STATE_ID";
+            statecombo.DisplayMember="STATE_NAME";
+            statecombo.DataSource = states;
+ 
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
@@ -33,6 +41,10 @@ namespace Harrison.Inventory.WinForm
         public void givearrdata(DataTable districts)
         {
             clustergrid.DataSource = districts;
+        }
+        public void setDistrictsValues(DataTable districts)
+        { 
+            
         }
         private void clusterMaster_Load(object sender, EventArgs e)
         {

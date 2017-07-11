@@ -34,8 +34,8 @@
             this.homeAddresstxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.hdistricttxt = new System.Windows.Forms.ComboBox();
-            this.hstatetxt = new System.Windows.Forms.ComboBox();
+            this.hdistrictcombo = new System.Windows.Forms.ComboBox();
+            this.hstatecombo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.oPhNotxt = new System.Windows.Forms.TextBox();
@@ -57,12 +57,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.estateAddresstxt = new System.Windows.Forms.TextBox();
-            this.eDistricttxt = new System.Windows.Forms.ComboBox();
+            this.eDistrictcombo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.box = new System.Windows.Forms.GroupBox();
-            this.estatetxt = new System.Windows.Forms.ComboBox();
+            this.estatecombo = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cstNotxt = new System.Windows.Forms.TextBox();
@@ -88,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 47);
+            this.label1.Location = new System.Drawing.Point(14, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 17);
@@ -98,7 +98,7 @@
             // rgstrchkbox
             // 
             this.rgstrchkbox.AutoSize = true;
-            this.rgstrchkbox.Location = new System.Drawing.Point(111, 18);
+            this.rgstrchkbox.Location = new System.Drawing.Point(115, 18);
             this.rgstrchkbox.Margin = new System.Windows.Forms.Padding(4);
             this.rgstrchkbox.Name = "rgstrchkbox";
             this.rgstrchkbox.Size = new System.Drawing.Size(351, 21);
@@ -108,7 +108,7 @@
             // 
             // homeAddresstxt
             // 
-            this.homeAddresstxt.Location = new System.Drawing.Point(117, 79);
+            this.homeAddresstxt.Location = new System.Drawing.Point(115, 77);
             this.homeAddresstxt.Margin = new System.Windows.Forms.Padding(4);
             this.homeAddresstxt.Multiline = true;
             this.homeAddresstxt.Name = "homeAddresstxt";
@@ -128,35 +128,36 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 199);
+            this.label3.Location = new System.Drawing.Point(409, 203);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "District";
             // 
-            // hdistricttxt
+            // hdistrictcombo
             // 
-            this.hdistricttxt.FormattingEnabled = true;
-            this.hdistricttxt.Location = new System.Drawing.Point(120, 196);
-            this.hdistricttxt.Margin = new System.Windows.Forms.Padding(4);
-            this.hdistricttxt.Name = "hdistricttxt";
-            this.hdistricttxt.Size = new System.Drawing.Size(312, 24);
-            this.hdistricttxt.TabIndex = 6;
+            this.hdistrictcombo.FormattingEnabled = true;
+            this.hdistrictcombo.Location = new System.Drawing.Point(468, 200);
+            this.hdistrictcombo.Margin = new System.Windows.Forms.Padding(4);
+            this.hdistrictcombo.Name = "hdistrictcombo";
+            this.hdistrictcombo.Size = new System.Drawing.Size(312, 24);
+            this.hdistrictcombo.TabIndex = 6;
             // 
-            // hstatetxt
+            // hstatecombo
             // 
-            this.hstatetxt.FormattingEnabled = true;
-            this.hstatetxt.Location = new System.Drawing.Point(520, 196);
-            this.hstatetxt.Margin = new System.Windows.Forms.Padding(4);
-            this.hstatetxt.Name = "hstatetxt";
-            this.hstatetxt.Size = new System.Drawing.Size(253, 24);
-            this.hstatetxt.TabIndex = 7;
+            this.hstatecombo.FormattingEnabled = true;
+            this.hstatecombo.Location = new System.Drawing.Point(115, 200);
+            this.hstatecombo.Margin = new System.Windows.Forms.Padding(4);
+            this.hstatecombo.Name = "hstatecombo";
+            this.hstatecombo.Size = new System.Drawing.Size(253, 24);
+            this.hstatecombo.TabIndex = 7;
+            this.hstatecombo.SelectedIndexChanged += new System.EventHandler(this.hstatecombo_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(457, 199);
+            this.label4.Location = new System.Drawing.Point(66, 203);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
@@ -352,19 +353,19 @@
             this.estateAddresstxt.Size = new System.Drawing.Size(660, 79);
             this.estateAddresstxt.TabIndex = 31;
             // 
-            // eDistricttxt
+            // eDistrictcombo
             // 
-            this.eDistricttxt.FormattingEnabled = true;
-            this.eDistricttxt.Location = new System.Drawing.Point(120, 106);
-            this.eDistricttxt.Margin = new System.Windows.Forms.Padding(4);
-            this.eDistricttxt.Name = "eDistricttxt";
-            this.eDistricttxt.Size = new System.Drawing.Size(333, 24);
-            this.eDistricttxt.TabIndex = 32;
+            this.eDistrictcombo.FormattingEnabled = true;
+            this.eDistrictcombo.Location = new System.Drawing.Point(468, 109);
+            this.eDistrictcombo.Margin = new System.Windows.Forms.Padding(4);
+            this.eDistrictcombo.Name = "eDistrictcombo";
+            this.eDistrictcombo.Size = new System.Drawing.Size(312, 24);
+            this.eDistrictcombo.TabIndex = 32;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(51, 106);
+            this.label14.Location = new System.Drawing.Point(405, 112);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(51, 17);
@@ -374,7 +375,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(471, 110);
+            this.label15.Location = new System.Drawing.Point(61, 112);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 17);
@@ -384,8 +385,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.hstatetxt);
-            this.groupBox1.Controls.Add(this.hdistricttxt);
+            this.groupBox1.Controls.Add(this.hstatecombo);
+            this.groupBox1.Controls.Add(this.hdistrictcombo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.homeAddresstxt);
@@ -406,8 +407,8 @@
             this.box.Controls.Add(this.label13);
             this.box.Controls.Add(this.label14);
             this.box.Controls.Add(this.label15);
-            this.box.Controls.Add(this.eDistricttxt);
-            this.box.Controls.Add(this.estatetxt);
+            this.box.Controls.Add(this.eDistrictcombo);
+            this.box.Controls.Add(this.estatecombo);
             this.box.Location = new System.Drawing.Point(19, 242);
             this.box.Margin = new System.Windows.Forms.Padding(4);
             this.box.Name = "box";
@@ -416,14 +417,14 @@
             this.box.TabIndex = 37;
             this.box.TabStop = false;
             // 
-            // estatetxt
+            // estatecombo
             // 
-            this.estatetxt.FormattingEnabled = true;
-            this.estatetxt.Location = new System.Drawing.Point(519, 106);
-            this.estatetxt.Margin = new System.Windows.Forms.Padding(4);
-            this.estatetxt.Name = "estatetxt";
-            this.estatetxt.Size = new System.Drawing.Size(261, 24);
-            this.estatetxt.TabIndex = 33;
+            this.estatecombo.FormattingEnabled = true;
+            this.estatecombo.Location = new System.Drawing.Point(115, 109);
+            this.estatecombo.Margin = new System.Windows.Forms.Padding(4);
+            this.estatecombo.Name = "estatecombo";
+            this.estatecombo.Size = new System.Drawing.Size(253, 24);
+            this.estatecombo.TabIndex = 33;
             // 
             // label16
             // 
@@ -524,7 +525,7 @@
             this.gridbtn.UseVisualStyleBackColor = true;
             this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
             // 
-            // Vendors
+            // VendorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -538,7 +539,7 @@
             this.Controls.Add(this.box);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Vendors";
+            this.Name = "VendorsForm";
             this.Text = "Vendors";
             this.Load += new System.EventHandler(this.Vendors_Load);
             this.groupBox1.ResumeLayout(false);
@@ -561,8 +562,8 @@
         private System.Windows.Forms.TextBox homeAddresstxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox hdistricttxt;
-        private System.Windows.Forms.ComboBox hstatetxt;
+        private System.Windows.Forms.ComboBox hdistrictcombo;
+        private System.Windows.Forms.ComboBox hstatecombo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox oPhNotxt;
@@ -584,7 +585,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox estateAddresstxt;
-        private System.Windows.Forms.ComboBox eDistricttxt;
+        private System.Windows.Forms.ComboBox eDistrictcombo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -596,7 +597,7 @@
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox estatetxt;
+        private System.Windows.Forms.ComboBox estatecombo;
         private System.Windows.Forms.Button gridbtn;
     }
 }

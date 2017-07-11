@@ -21,7 +21,8 @@ namespace Harrison.Inventory.WinForm
         {
             InitializeComponent();
             _invoicepresenter= new InvoicePresenter(this,new InvoiceServices(new InvoiceData()));
-            _invoicepresenter.SetVendorValues();
+            _invoicepresenter.SetVendorNames();
+           
         }
 
 
@@ -31,18 +32,28 @@ namespace Harrison.Inventory.WinForm
             this.Close();
         }
 
-        public void setVendorNames(DataTable vendors)
+        public void setVendorValues(DataTable vendors)
         {
-          VendorNamecombo.DataSource=vendors;
-          VendorNamecombo.DisplayMember="VENDOR_NAME";
-          VendorNamecombo.ValueMember="VENDOR_ID";
+            VendorNamecombo.ValueMember="VENDOR_ID";
+            VendorNamecombo.DisplayMember="VENDOR_NAME";         
+            VendorNamecombo.DataSource=vendors;
+           
+          
 
+        }
+        public void setRPSValues(DataTable rpss)
+        {
+            RPScombo.ValueMember = "RPS_ID";
+            RPScombo.DisplayMember = "RPS_NAME";
+            RPScombo.DataSource = rpss;
         }
 
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
         
         }
+
+
 
         private void wetwttxt_TextChanged(object sender, EventArgs e)
         {
@@ -91,6 +102,12 @@ namespace Harrison.Inventory.WinForm
                 rate = float.Parse(this.ratetxt.Text);
             amnt = dwt * rate;
             amnttxt.Text = amnt.ToString();
+        }
+
+        private void VendorNamecombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            _invoicepresenter.SetRPSNames(VendorNamecombo.SelectedValue);
         }
 
        

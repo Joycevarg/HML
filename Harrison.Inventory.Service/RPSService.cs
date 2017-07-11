@@ -10,8 +10,8 @@ namespace Harrison.Inventory.Service
 {
     public class RPSServices : IRPSServices
     {
-        private RPSData _rpsdata;
-        public RPSServices(RPSData RPSdata)
+        private IRPSData _rpsdata;
+        public RPSServices(IRPSData RPSdata)
         {
             _rpsdata = RPSdata;
         }
@@ -29,5 +29,11 @@ namespace Harrison.Inventory.Service
             return rpss;
 
         }
+        public DataTable RpswithVendor(object vendorid)
+        {
+            DataTable rpss = _rpsdata.SelectRPS(vendorid);
+            return rpss;
+        }
+
     }
 }

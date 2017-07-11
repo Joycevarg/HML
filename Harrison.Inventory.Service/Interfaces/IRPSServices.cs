@@ -10,6 +10,6 @@ namespace Harrison.Inventory.Service
     public interface IRPSServices
     {
         DataTable ArrangeRPS(SortType sortType, SortFieldType sortField);
-
+        DataTable RpswithVendor(object vendorid);
     }
 }

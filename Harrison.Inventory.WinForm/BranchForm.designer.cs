@@ -77,7 +77,7 @@
             // 
             // savebtn
             // 
-            this.savebtn.Location = new System.Drawing.Point(17, 229);
+            this.savebtn.Location = new System.Drawing.Point(12, 211);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(104, 33);
             this.savebtn.TabIndex = 7;
@@ -86,7 +86,7 @@
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(144, 229);
+            this.cancelbtn.Location = new System.Drawing.Point(140, 211);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(104, 33);
             this.cancelbtn.TabIndex = 8;
@@ -138,7 +138,7 @@
             // 
             // gridbtn
             // 
-            this.gridbtn.Location = new System.Drawing.Point(275, 229);
+            this.gridbtn.Location = new System.Drawing.Point(275, 211);
             this.gridbtn.Name = "gridbtn";
             this.gridbtn.Size = new System.Drawing.Size(104, 33);
             this.gridbtn.TabIndex = 14;
@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 366);
+            this.ClientSize = new System.Drawing.Size(401, 268);
             this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.bankaddresstxt);
             this.Controls.Add(this.ifsctxt);

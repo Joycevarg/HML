@@ -29,5 +29,12 @@ namespace Harrison.Inventory.Service
             return districts; 
 
         }
+        public DataTable DistrictwithState(object stateid)
+        {
+            DataTable states = _districtdata.SelectDistricts(stateid);
+            return states;
+        
+        }
+      
     }
 }

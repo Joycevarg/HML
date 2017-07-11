@@ -10,5 +10,6 @@ namespace Harrison.Inventory.Presenter
     {
         void DefaultRPSOrder();
         void ChangeRPSOrder(SortType sortType, SortFieldType sortField);
+        void setVendorValues();
     }
 }

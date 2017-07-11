@@ -16,6 +16,7 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public DataTable GetStateDetails()
         {
+            dt.Clear();
             DBConnection Dbcon = new DBConnection();
             Sql = "Select * from STATE";
             da = Dbcon.Sqlconnection(Sql);

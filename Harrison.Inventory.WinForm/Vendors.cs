@@ -22,6 +22,8 @@ namespace Harrison.Inventory.WinForm
         {
             InitializeComponent();
             vendorpresenter = new VendorPresenter(this, new VendorService(new VendorData()));
+            vendorpresenter.setHstateNames();
+
             
         }
 
@@ -32,8 +34,7 @@ namespace Harrison.Inventory.WinForm
             {
                  gridfrm = new GridForm(vendors);
             }
-
-
+          
 
         private void Vendors_Load(object sender, EventArgs e)
         {
@@ -49,9 +50,28 @@ namespace Harrison.Inventory.WinForm
         {
             vendorpresenter.DefaultVendorOrder();
             gridfrm.Show();
-           
+
         }
 
+        public void setHStateValues(DataTable states)
+        {
+            hstatecombo.ValueMember = "STATE_ID";
+            hstatecombo.DisplayMember = "STATE_NAME";
+            hstatecombo.DataSource = states;
+        }
+        public void setHDistrictValues(DataTable districts)
+        {
+            hdistrictcombo.ValueMember = "DISTRICT_ID";
+            hdistrictcombo.DisplayMember = "DISTRICT_NAME";
+            hdistrictcombo.DataSource = districts;
+        }
+
+        private void hstatecombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          vendorpresenter.setHdistrictNames(hstatecombo.SelectedValue);
+        }
+
+        
        
     }
 }

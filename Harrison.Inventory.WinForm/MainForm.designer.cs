@@ -40,6 +40,7 @@
             this.clusterDistrictMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financialYearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.branchsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,6 @@
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateFrrReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.branchsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,6 +151,13 @@
             this.financialYearToolStripMenuItem.Text = "Financial Year";
             this.financialYearToolStripMenuItem.Click += new System.EventHandler(this.financialYearToolStripMenuItem_Click);
             // 
+            // branchsToolStripMenuItem
+            // 
+            this.branchsToolStripMenuItem.Name = "branchsToolStripMenuItem";
+            this.branchsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.branchsToolStripMenuItem.Text = "Branchs";
+            this.branchsToolStripMenuItem.Click += new System.EventHandler(this.branchsToolStripMenuItem_Click);
+            // 
             // transationsToolStripMenuItem
             // 
             this.transationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -202,13 +209,6 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // branchsToolStripMenuItem
-            // 
-            this.branchsToolStripMenuItem.Name = "branchsToolStripMenuItem";
-            this.branchsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.branchsToolStripMenuItem.Text = "Branchs";
-            this.branchsToolStripMenuItem.Click += new System.EventHandler(this.branchsToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -221,6 +221,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

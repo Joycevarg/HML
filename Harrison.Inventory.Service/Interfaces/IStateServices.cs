@@ -9,7 +9,7 @@ namespace Harrison.Inventory.Service
 {
     public interface IStateServices
     {
-       DataTable ArrangeState(SortType sortType, SortFieldType sortField);
+        DataTable ArrangeState(SortType sortType, SortFieldType sortField);
 
     }
 }

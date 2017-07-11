@@ -8,6 +8,7 @@ namespace Harrison.Inventory.Presenter
 {
     public interface IInvoicePresenter
     {
-        void SetVendorValues();
+        void SetVendorNames();
+        void SetRPSNames(object vendorid);
     }
 }

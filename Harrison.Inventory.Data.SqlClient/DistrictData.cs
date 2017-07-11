@@ -16,12 +16,23 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public DataTable GetDistrictDetails()
         {
+            
             DBConnection Dbcon = new DBConnection();
             Sql = "Select * from DISTRICT";
             da = Dbcon.Sqlconnection(Sql);
             da.Fill(dt);
             return (dt);
         }
-        
+
+        public DataTable SelectDistricts(object stateid)
+        {
+            dt.Clear();
+            DBConnection Dbcon = new DBConnection();
+            Sql = "Select * from DISTRICT WHERE STATE_ID =" + stateid.ToString();
+            da = Dbcon.Sqlconnection(Sql);
+            da.Fill(dt);
+            return (dt);
+        }
+
     }
 }

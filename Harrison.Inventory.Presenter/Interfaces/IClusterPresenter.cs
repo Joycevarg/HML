@@ -9,6 +9,7 @@ namespace Harrison.Inventory.Presenter
     public interface IClusterPresenter
     {
         void DefaultClusterOrder();
-        void ChangeClusterOrder(SortType sortType, SortFieldType sortField); 
+        void ChangeClusterOrder(SortType sortType, SortFieldType sortField);
+        void setStateValues();
     }
 }

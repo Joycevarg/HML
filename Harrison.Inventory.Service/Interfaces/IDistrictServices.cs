@@ -10,6 +10,6 @@ namespace Harrison.Inventory.Service
     public interface IDistrictServices
     {
         DataTable ArrangeDistrict(SortType sortType, SortFieldType sortField);
-
+        DataTable DistrictwithState(object stateid);
     }
 }

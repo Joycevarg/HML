@@ -86,6 +86,11 @@ namespace Harrison.Inventory.WinForm
         {
             branchDetails branchform = new branchDetails();
             branchform.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }       
     }
 }

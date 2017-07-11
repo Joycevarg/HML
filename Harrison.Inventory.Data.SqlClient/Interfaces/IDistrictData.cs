@@ -10,5 +10,6 @@ namespace Harrison.Inventory.Data.SqlClient
     public interface IDistrictData
     {
         DataTable GetDistrictDetails();
+        DataTable SelectDistricts(object stateid);
     }
 }

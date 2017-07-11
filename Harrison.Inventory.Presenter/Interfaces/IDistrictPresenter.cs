@@ -9,6 +9,7 @@ namespace Harrison.Inventory.Presenter
     public interface IDistrictPresenter
     {
         void DefaultDistrictOrder();
-        void ChangeDistrictOrder(SortType sortType, SortFieldType sortField); 
+        void ChangeDistrictOrder(SortType sortType, SortFieldType sortField);
+        void setStateNames();
     }
 }

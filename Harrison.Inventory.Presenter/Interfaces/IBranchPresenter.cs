@@ -10,5 +10,6 @@ namespace Harrison.Inventory.Presenter
     {
         void DefaultBranchOrder();
         void ChangeBranchOrder(SortType sortType, SortFieldType sortField);
+        void setBankNames();
     }
 }

@@ -10,8 +10,8 @@ namespace Harrison.Inventory.Service
 {
     public interface IVendorServices
     {
-        
-            DataTable ArrangeVendor(SortType sortType, SortFieldType sortField);
+
+        DataTable ArrangeVendor(SortType sortType, SortFieldType sortField);
         
     }
 }

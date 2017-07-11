@@ -10,5 +10,7 @@ namespace Harrison.Inventory.Presenter
     {
         void DefaultVendorOrder();
         void ChangeVendorOrder(SortType sortType, SortFieldType sortField);
+        void setHstateNames();
+        void setHdistrictNames(object stateid);
     }
 }

@@ -11,7 +11,7 @@ namespace Harrison.Inventory.Data.SqlClient
     public class RPSData : IRPSData
     {
         String Sql;
-        DataTable dt = new DataTable();
+        DataTable dt;
         SqlDataAdapter da;
 
         public DataTable GetRPSDetails()
@@ -22,6 +22,18 @@ namespace Harrison.Inventory.Data.SqlClient
             da.Fill(dt);
             return (dt);
         }
+        public DataTable SelectRPS(object vendorid)
+        {
+            dt = new DataTable();
+            dt.Clear();
+            DBConnection Dbcon = new DBConnection();
+            Sql = "Select * from RPS WHERE VENDOR_ID=" + vendorid.ToString();
+            da = Dbcon.Sqlconnection(Sql);            
+            da.Fill(dt);
+            return (dt);
+        }
+
 
     }
+
 }

@@ -21,11 +21,19 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             _idistrictpresenter= new DistrictPresenter(this,new DistrictServices(new DistrictData()));
             _idistrictpresenter.DefaultDistrictOrder();
+            _idistrictpresenter.setStateNames();
             
 
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
+        public void setStateValues(DataTable states)
+        {
+            statecombo.ValueMember = "STATE_ID";
+            statecombo.DisplayMember = "STATE_NAME";
+            statecombo.DataSource = states;
+
+        }
         private void DistrictForm_Load(object sender, EventArgs e)
         {
 

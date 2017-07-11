@@ -106,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 89);
+            this.label2.Location = new System.Drawing.Point(19, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 17);
@@ -116,27 +116,28 @@
             // VendorNamecombo
             // 
             this.VendorNamecombo.FormattingEnabled = true;
-            this.VendorNamecombo.Location = new System.Drawing.Point(124, 86);
+            this.VendorNamecombo.Location = new System.Drawing.Point(124, 89);
             this.VendorNamecombo.Margin = new System.Windows.Forms.Padding(4);
             this.VendorNamecombo.Name = "VendorNamecombo";
             this.VendorNamecombo.Size = new System.Drawing.Size(343, 24);
             this.VendorNamecombo.TabIndex = 3;
             this.VendorNamecombo.Text = "<select>";
+            this.VendorNamecombo.SelectedIndexChanged += new System.EventHandler(this.VendorNamecombo_SelectedIndexChanged);
             // 
             // RPScombo
             // 
             this.RPScombo.FormattingEnabled = true;
-            this.RPScombo.Location = new System.Drawing.Point(549, 89);
+            this.RPScombo.Location = new System.Drawing.Point(593, 89);
             this.RPScombo.Margin = new System.Windows.Forms.Padding(4);
             this.RPScombo.Name = "RPScombo";
-            this.RPScombo.Size = new System.Drawing.Size(401, 24);
+            this.RPScombo.Size = new System.Drawing.Size(357, 24);
             this.RPScombo.TabIndex = 4;
             this.RPScombo.Text = "<select>";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(505, 92);
+            this.label3.Location = new System.Drawing.Point(545, 92);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
@@ -168,7 +169,7 @@
             this.commCodecombo.Location = new System.Drawing.Point(716, 134);
             this.commCodecombo.Margin = new System.Windows.Forms.Padding(4);
             this.commCodecombo.Name = "commCodecombo";
-            this.commCodecombo.Size = new System.Drawing.Size(235, 24);
+            this.commCodecombo.Size = new System.Drawing.Size(234, 24);
             this.commCodecombo.TabIndex = 8;
             // 
             // label5
@@ -263,7 +264,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(713, 196);
+            this.label9.Location = new System.Drawing.Point(723, 195);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 17);
@@ -272,7 +273,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(770, 194);
+            this.textBox4.Location = new System.Drawing.Point(769, 192);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(181, 22);

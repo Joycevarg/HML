@@ -42,7 +42,7 @@
             this.gridbtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.ventorIDcombo = new System.Windows.Forms.ComboBox();
+            this.VentorNameCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // rpsNamelbl
@@ -169,21 +169,21 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Ventor Name:";
             // 
-            // ventorIDcombo
+            // VentorNameCombo
             // 
-            this.ventorIDcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ventorIDcombo.FormattingEnabled = true;
-            this.ventorIDcombo.Location = new System.Drawing.Point(160, 30);
-            this.ventorIDcombo.Name = "ventorIDcombo";
-            this.ventorIDcombo.Size = new System.Drawing.Size(309, 24);
-            this.ventorIDcombo.TabIndex = 19;
+            this.VentorNameCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VentorNameCombo.FormattingEnabled = true;
+            this.VentorNameCombo.Location = new System.Drawing.Point(160, 30);
+            this.VentorNameCombo.Name = "VentorNameCombo";
+            this.VentorNameCombo.Size = new System.Drawing.Size(309, 24);
+            this.VentorNameCombo.TabIndex = 19;
             // 
             // RPSdetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 490);
-            this.Controls.Add(this.ventorIDcombo);
+            this.Controls.Add(this.VentorNameCombo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.gridbtn);
@@ -222,7 +222,7 @@
         private System.Windows.Forms.Button gridbtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox ventorIDcombo;
+        private System.Windows.Forms.ComboBox VentorNameCombo;
 
     }
 }

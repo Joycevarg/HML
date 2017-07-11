@@ -10,6 +10,6 @@ namespace Harrison.Inventory.Service
     public interface IFinancialYearsService
     {
 
-        DataTable GetAllFinancialYears(SortType sortType, SortFieldType sortTypeField);
+        DataTable GetAllFinancialYears(SortType sortType, SortFieldType sortField);
     }
 }
