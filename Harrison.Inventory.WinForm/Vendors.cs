@@ -23,7 +23,7 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             vendorpresenter = new VendorPresenter(this, new VendorService(new VendorData()));
             vendorpresenter.setHstateNames();
-
+            vendorpresenter.setEstateNames();
             
         }
 
@@ -59,17 +59,37 @@ namespace Harrison.Inventory.WinForm
             hstatecombo.DisplayMember = "STATE_NAME";
             hstatecombo.DataSource = states;
         }
+        public void setEStateValues(DataTable states)
+        {
+            estatecombo.ValueMember = "STATE_ID";
+            estatecombo.DisplayMember = "STATE_NAME";
+            estatecombo.DataSource = states;
+        }
         public void setHDistrictValues(DataTable districts)
         {
             hdistrictcombo.ValueMember = "DISTRICT_ID";
             hdistrictcombo.DisplayMember = "DISTRICT_NAME";
             hdistrictcombo.DataSource = districts;
         }
+        public void setEDistrictValues(DataTable districts)
+        {
+            edistrictcombo.ValueMember = "DISTRICT_ID";
+            edistrictcombo.DisplayMember = "DISTRICT_NAME";
+            edistrictcombo.DataSource = districts;
+            
+        }
 
         private void hstatecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
           vendorpresenter.setHdistrictNames(hstatecombo.SelectedValue);
         }
+
+        private void estatecombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            vendorpresenter.setEdistrictNames(estatecombo.SelectedValue);
+        }
+
+       
 
         
        

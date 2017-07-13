@@ -13,6 +13,8 @@ namespace Harrison.Inventory.Presenter
         SortFieldType SortField { get; set; }
         void givearrdata(DataTable vendors);
         void setHStateValues(DataTable states);
+        void setEStateValues(DataTable states);
         void setHDistrictValues(DataTable districts);
+        void setEDistrictValues(DataTable districts);
     }
 }

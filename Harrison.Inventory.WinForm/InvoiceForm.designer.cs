@@ -350,6 +350,7 @@
             this.wetwttxt.Name = "wetwttxt";
             this.wetwttxt.Size = new System.Drawing.Size(160, 22);
             this.wetwttxt.TabIndex = 22;
+            this.wetwttxt.TextChanged += new System.EventHandler(this.wetwttxt_TextChanged);
             // 
             // label14
             // 
@@ -368,6 +369,7 @@
             this.drctxt.Name = "drctxt";
             this.drctxt.Size = new System.Drawing.Size(132, 22);
             this.drctxt.TabIndex = 24;
+            this.drctxt.TextChanged += new System.EventHandler(this.drctxt_TextChanged);
             // 
             // ratetxt
             // 
@@ -376,6 +378,7 @@
             this.ratetxt.Name = "ratetxt";
             this.ratetxt.Size = new System.Drawing.Size(201, 22);
             this.ratetxt.TabIndex = 25;
+            this.ratetxt.TextChanged += new System.EventHandler(this.ratetxt_TextChanged);
             // 
             // label15
             // 

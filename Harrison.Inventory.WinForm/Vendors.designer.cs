@@ -57,7 +57,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.estateAddresstxt = new System.Windows.Forms.TextBox();
-            this.eDistrictcombo = new System.Windows.Forms.ComboBox();
+            this.edistrictcombo = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -353,14 +353,14 @@
             this.estateAddresstxt.Size = new System.Drawing.Size(660, 79);
             this.estateAddresstxt.TabIndex = 31;
             // 
-            // eDistrictcombo
+            // edistrictcombo
             // 
-            this.eDistrictcombo.FormattingEnabled = true;
-            this.eDistrictcombo.Location = new System.Drawing.Point(468, 109);
-            this.eDistrictcombo.Margin = new System.Windows.Forms.Padding(4);
-            this.eDistrictcombo.Name = "eDistrictcombo";
-            this.eDistrictcombo.Size = new System.Drawing.Size(312, 24);
-            this.eDistrictcombo.TabIndex = 32;
+            this.edistrictcombo.FormattingEnabled = true;
+            this.edistrictcombo.Location = new System.Drawing.Point(468, 109);
+            this.edistrictcombo.Margin = new System.Windows.Forms.Padding(4);
+            this.edistrictcombo.Name = "edistrictcombo";
+            this.edistrictcombo.Size = new System.Drawing.Size(312, 24);
+            this.edistrictcombo.TabIndex = 32;
             // 
             // label14
             // 
@@ -407,7 +407,7 @@
             this.box.Controls.Add(this.label13);
             this.box.Controls.Add(this.label14);
             this.box.Controls.Add(this.label15);
-            this.box.Controls.Add(this.eDistrictcombo);
+            this.box.Controls.Add(this.edistrictcombo);
             this.box.Controls.Add(this.estatecombo);
             this.box.Location = new System.Drawing.Point(19, 242);
             this.box.Margin = new System.Windows.Forms.Padding(4);
@@ -425,6 +425,7 @@
             this.estatecombo.Name = "estatecombo";
             this.estatecombo.Size = new System.Drawing.Size(253, 24);
             this.estatecombo.TabIndex = 33;
+            this.estatecombo.SelectedIndexChanged += new System.EventHandler(this.estatecombo_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -585,7 +586,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox estateAddresstxt;
-        private System.Windows.Forms.ComboBox eDistrictcombo;
+        private System.Windows.Forms.ComboBox edistrictcombo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox1;

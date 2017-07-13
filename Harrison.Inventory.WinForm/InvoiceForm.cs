@@ -55,6 +55,16 @@ namespace Harrison.Inventory.WinForm
 
 
 
+       
+
+        
+
+        private void VendorNamecombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            _invoicepresenter.SetRPSNames(VendorNamecombo.SelectedValue);
+        }
+
         private void wetwttxt_TextChanged(object sender, EventArgs e)
         {
             float wetwt, drywt, drc;
@@ -72,24 +82,20 @@ namespace Harrison.Inventory.WinForm
 
         private void drctxt_TextChanged(object sender, EventArgs e)
         {
-             float wetwt,drywt,drc;
-             if (this.drctxt.Text == "")
-                 drc = 0;
-             else
-             {
-                 drc = float.Parse(this.drctxt.Text);
-                
-             }
-             if (this.wetwttxt.Text == "")
-                 wetwt = 0;
-             else
-                 wetwt = float.Parse(this.wetwttxt.Text);
-             drywt = drc * wetwt / 100;
-             drywttxt.Text = drywt.ToString();
-             
+            float wetwt, drywt, drc;
+            if (this.drctxt.Text == "")
+                drc = 0;
+            else
+                drc = float.Parse(this.drctxt.Text);
+            if (this.wetwttxt.Text == "")
+                wetwt = 0;
+            else
+                wetwt = float.Parse(this.wetwttxt.Text);
+            drywt = drc * wetwt / 100;
+            drywttxt.Text = drywt.ToString();
         }
 
-        private void ratekg_TextChanged(object sender, EventArgs e)
+        private void ratetxt_TextChanged(object sender, EventArgs e)
         {
             float rate, dwt, amnt;
             if (this.drywttxt.Text == "")
@@ -102,12 +108,6 @@ namespace Harrison.Inventory.WinForm
                 rate = float.Parse(this.ratetxt.Text);
             amnt = dwt * rate;
             amnttxt.Text = amnt.ToString();
-        }
-
-        private void VendorNamecombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            _invoicepresenter.SetRPSNames(VendorNamecombo.SelectedValue);
         }
 
        
