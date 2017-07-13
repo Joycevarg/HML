@@ -19,8 +19,8 @@ namespace Harrison.Inventory.Data.SqlClient
             
             DBConnection Dbcon = new DBConnection();
             Sql = "Select * from DISTRICT";
-            da = Dbcon.Sqlconnection(Sql);
-            da.Fill(dt);
+            dt = Dbcon.Sqlconnection(Sql, "Select");
+            //da.Fill(dt);
             return (dt);
         }
 
@@ -29,8 +29,8 @@ namespace Harrison.Inventory.Data.SqlClient
             dt.Clear();
             DBConnection Dbcon = new DBConnection();
             Sql = "Select * from DISTRICT WHERE STATE_ID =" + stateid.ToString();
-            da = Dbcon.Sqlconnection(Sql);
-            da.Fill(dt);
+            dt = Dbcon.Sqlconnection(Sql, "Select");
+            //da.Fill(dt);
             return (dt);
         }
 

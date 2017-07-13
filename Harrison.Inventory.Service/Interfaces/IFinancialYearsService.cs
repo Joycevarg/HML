@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Service
     {
 
         DataTable GetAllFinancialYears(SortType sortType, SortFieldType sortField);
+        void AddFinancialYears(String FinYear);
     }
 }

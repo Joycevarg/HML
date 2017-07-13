@@ -11,6 +11,7 @@ using Harrison.Inventory.Data;
 using Harrison.Inventory.Service;
 using Harrison.Inventory.Data.SqlClient;
 using Harrison.Inventory.Data.Model;
+using System.Text.RegularExpressions;
 
 namespace Harrison.Inventory.WinForm
 {
@@ -19,14 +20,38 @@ namespace Harrison.Inventory.WinForm
 
         #region//Presenter
         private IFinancialYearsPresenter _iFinancialYearsPresenter;
+        static bool n = true;
         #endregion
 
         public FinancialYear()
         {
+           
             InitializeComponent();
             _iFinancialYearsPresenter = new FinancialYearsPresenter(this,new FinancialYearsService(new FinancialYearsDAL()));
             _iFinancialYearsPresenter.init();
+           
+           this.finYeartxt.TextChanged+=new EventHandler(finYeartxt_TextChanged);
+
+            
          }
+        private void finYeartxt_TextChanged(object sender, EventArgs e)
+        {
+            
+            finYeartxt.MaxLength = 9;
+          
+            if (finYeartxt.TextLength == 4&&n)
+            {
+                finYeartxt.Text += "-";
+                finYeartxt.SelectionStart = finYeartxt.TextLength;
+                n = false;
+            }
+            else if (finYeartxt.TextLength == 3)
+                n = true;
+           
+            
+        
+        }
+      
         public SortType SortDirection
         {
             get;
@@ -44,13 +69,30 @@ namespace Harrison.Inventory.WinForm
             FinancialYear_Grid.DataSource = financialYears;
         }
 
+
+
+
         private void Add_Fin_Year_Bttn_Click(object sender, EventArgs e)
         {
+            Regex r = new Regex("^[0-9-]{9}$");
+            String FinyearText = finYeartxt.Text;
+            if (string.IsNullOrEmpty(FinyearText))
+                MessageBox.Show("Enter a value");
+            
+            else if(!r.IsMatch(finYeartxt.Text))
+            {
+                MessageBox.Show("Invalid Characters.Only [0-9],- are allowed");
+            }
+            else if (finYeartxt.Text[4] != '-')
 
+                MessageBox.Show("Invalid Format.[YYYY-YYYY]");
+            else
+            {
+                _iFinancialYearsPresenter.AddFinancialYears(FinyearText);
+                _iFinancialYearsPresenter.init();
+                MessageBox.Show("Financial Year added!");
+            }
         }
-
-       
-      
 
         private void button3_Click(object sender, EventArgs e)
         {

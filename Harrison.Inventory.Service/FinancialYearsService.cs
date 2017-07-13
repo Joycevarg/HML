@@ -29,6 +29,12 @@ namespace Harrison.Inventory.Service
             */
             return financialYears;
         }
+        public void AddFinancialYears(String FinYear)
+        {
+
+            _iFinancialYearsDAL.AddFinancialYears(FinYear);
+
+        }
     }
    
 }

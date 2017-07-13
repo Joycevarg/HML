@@ -12,5 +12,7 @@ namespace Harrison.Inventory.Presenter
         SortType SortDirection{get;set;}
         SortFieldType SortField { get; set; }
         void OrderFinancialYearbyFieldAndDirection(DataTable financialyears);
+     //   void AddFinancialYear(String FinyearText);
+
     }
 }

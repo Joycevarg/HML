@@ -10,16 +10,23 @@ namespace Harrison.Inventory.Data.SqlClient
     public class FinancialYearsDAL:IFinancialYearsDAL
     {
         String Sql;
+        DBConnection Dbcon = new DBConnection();
         DataTable dt = new DataTable();
-        SqlDataAdapter da;
 
         public DataTable GetAllFinancialYears()
         {
-            DBConnection Dbcon = new DBConnection();
             Sql = "Select * from FIN_YEAR";
-            da = Dbcon.Sqlconnection(Sql);
-            da.Fill(dt);
+            dt = Dbcon.Sqlconnection(Sql, "Select");
+            // da.Fill(dt);
             return (dt);
+        }
+
+        public void AddFinancialYears(String FinYear)
+        {
+            Sql = "Insert into FIN_YEAR (FIN_YEAR_NAME) values( '" + FinYear + "');";
+            dt = Dbcon.Sqlconnection(Sql, "Insert");
+
+
         }
         
     }

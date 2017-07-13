@@ -18,6 +18,13 @@ namespace Harrison.Inventory.Presenter
             
         }
 
+        public void AddFinancialYears(String FinYear)
+        {
+            
+            _iFinacialYearsService.AddFinancialYears( FinYear);
+
+        }
+
         public void init()
         {
             _iFinancialYearsView.OrderFinancialYearbyFieldAndDirection(_iFinacialYearsService.GetAllFinancialYears(SortType.Ascending,SortFieldType.Id));

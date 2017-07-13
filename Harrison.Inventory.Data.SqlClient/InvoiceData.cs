@@ -18,9 +18,9 @@ namespace Harrison.Inventory.Data.SqlClient
         {
             DBConnection Dbcon = new DBConnection();
             Sql = "Select * from VENDOR";
-            da = Dbcon.Sqlconnection(Sql);
-            da.Fill(dt);
-            return dt;
+            dt = Dbcon.Sqlconnection(Sql, "Select");
+            //da.Fill(dt);
+            return (dt);
         }
     }
 }

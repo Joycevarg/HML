@@ -9,5 +9,6 @@ namespace Harrison.Inventory.Data.SqlClient
     public interface IFinancialYearsDAL
     {
         DataTable GetAllFinancialYears();
+        void AddFinancialYears(String FinYear);
     }
 }
