@@ -42,23 +42,25 @@
             // 
             this.addbtn.Location = new System.Drawing.Point(413, 27);
             this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(75, 23);
+            this.addbtn.Size = new System.Drawing.Size(92, 23);
             this.addbtn.TabIndex = 0;
-            this.addbtn.Text = "Add";
+            this.addbtn.Text = "Add District";
             this.addbtn.UseVisualStyleBackColor = true;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
             // savebtn
             // 
-            this.savebtn.Location = new System.Drawing.Point(15, 214);
+            this.savebtn.Location = new System.Drawing.Point(25, 214);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(107, 38);
             this.savebtn.TabIndex = 1;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // rmvbtn
             // 
-            this.rmvbtn.Location = new System.Drawing.Point(193, 214);
+            this.rmvbtn.Location = new System.Drawing.Point(201, 214);
             this.rmvbtn.Name = "rmvbtn";
             this.rmvbtn.Size = new System.Drawing.Size(105, 38);
             this.rmvbtn.TabIndex = 2;
@@ -67,7 +69,7 @@
             // 
             // cnclbtn
             // 
-            this.cnclbtn.Location = new System.Drawing.Point(360, 214);
+            this.cnclbtn.Location = new System.Drawing.Point(383, 214);
             this.cnclbtn.Name = "cnclbtn";
             this.cnclbtn.Size = new System.Drawing.Size(106, 38);
             this.cnclbtn.TabIndex = 3;
@@ -103,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 279);
+            this.ClientSize = new System.Drawing.Size(516, 279);
             this.Controls.Add(this.statetxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.stategrid);

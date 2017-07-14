@@ -10,6 +10,7 @@ namespace Harrison.Inventory.Service
     public interface IStateServices
     {
         DataTable ArrangeState(SortType sortType, SortFieldType sortField);
+        void AddState(String StateName);
 
     }
 }

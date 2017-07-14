@@ -24,5 +24,11 @@ namespace Harrison.Inventory.Presenter
         {
             _istateview.givearrdata(_istateservice.ArrangeState(srttype, srtfield));
         }
+        public void AddState(String StateName)
+        {
+
+            _istateservice.AddState(StateName);
+
+        }
     }
 }

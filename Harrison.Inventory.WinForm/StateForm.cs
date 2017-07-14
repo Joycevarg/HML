@@ -15,10 +15,11 @@ namespace Harrison.Inventory.WinForm
 {
     public partial class StateForm : Form,IStateView
     {
+        IStatePresenter _statepresenter;
         public StateForm()
         {
             InitializeComponent();
-            IStatePresenter _statepresenter = new StatePresenter(this, new StateServices(new StateData()));
+            _statepresenter = new StatePresenter(this, new StateServices(new StateData()));
             _statepresenter.DefaultStateOrder();
         }
         public SortType SortDirection { get; set; }
@@ -30,6 +31,26 @@ namespace Harrison.Inventory.WinForm
         private void StateForm_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(statetxt.Text))
+                MessageBox.Show("Enter a Name");
+            else
+            {
+                _statepresenter.AddState(statetxt.Text);
+                MessageBox.Show("State added");
+                _statepresenter.DefaultStateOrder();
+
+
+            }
+        }
+
+        private void addbtn_Click(object sender, EventArgs e)
+        {
+            DistrictForm district = new DistrictForm();
+            district.Show();
         }
     }
 }

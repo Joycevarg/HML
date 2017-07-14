@@ -9,5 +9,6 @@ namespace Harrison.Inventory.Data.SqlClient
     public interface IStateData
     {
         DataTable GetStateDetails();
+        void AddState(string StateName);
     }
 }

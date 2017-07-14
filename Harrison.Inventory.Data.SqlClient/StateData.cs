@@ -12,16 +12,23 @@ namespace Harrison.Inventory.Data.SqlClient
     {
         String Sql;
         DataTable dt = new DataTable();
-        SqlDataAdapter da;
+        DBConnection Dbcon = new DBConnection();
 
         public DataTable GetStateDetails()
         {
            
-            DBConnection Dbcon = new DBConnection();
+            
             Sql = "Select * from STATE";
             dt = Dbcon.Sqlconnection(Sql,"Select");
             //da.Fill(dt);
             return (dt);
+        }
+        public void AddState(String StateName)
+        {
+            Sql = "Insert into STATE (STATE_NAME) values( '" + StateName + "');";
+            dt = Dbcon.Sqlconnection(Sql, "Insert");
+
+
         }
         
 

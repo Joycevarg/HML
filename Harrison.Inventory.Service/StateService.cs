@@ -10,7 +10,7 @@ namespace Harrison.Inventory.Service
 {
     public class StateServices : IStateServices
     {
-        private StateData _statedata;
+        private IStateData _statedata;
         public StateServices(StateData Statedata)
         {
             _statedata = Statedata;
@@ -30,6 +30,11 @@ namespace Harrison.Inventory.Service
 
 
         }
+        public void AddState(String StateName)
+        {
 
+            _statedata.AddState(StateName);
+                
+        }
     }
 }

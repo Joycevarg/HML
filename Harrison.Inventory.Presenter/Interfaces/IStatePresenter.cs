@@ -9,6 +9,7 @@ namespace Harrison.Inventory.Presenter
      public interface IStatePresenter
     {
         void DefaultStateOrder();
-        void ChangeStateOrder(SortType sortType, SortFieldType sortField); 
+        void ChangeStateOrder(SortType sortType, SortFieldType sortField);
+        void AddState(String StateName);
     }
 }
