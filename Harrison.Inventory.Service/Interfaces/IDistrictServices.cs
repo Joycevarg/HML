@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Service
     {
         DataTable ArrangeDistrict(SortType sortType, SortFieldType sortField);
         DataTable DistrictwithState(object stateid);
+        void AddDistrict(string districtname, int stateid);
     }
 }

@@ -35,6 +35,12 @@ namespace Harrison.Inventory.Service
             return states;
         
         }
+        public void AddDistrict(string districtname,int stateid)
+        {
+            District district = new District(0, districtname, stateid);
+            _districtdata.AddDistrict(district);
+
+        }
       
     }
 }

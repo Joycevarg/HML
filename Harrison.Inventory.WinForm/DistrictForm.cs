@@ -52,5 +52,17 @@ namespace Harrison.Inventory.WinForm
         {
             this.Close();
         }
+
+        private void addbtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(districttxt.Text))
+                MessageBox.Show("Enter a name");
+            else {
+                _idistrictpresenter.AddDistrict(districttxt.Text, int.Parse(statecombo.SelectedValue.ToString()));
+                MessageBox.Show("District Added");
+                _idistrictpresenter.DefaultDistrictOrder();
+
+            }
+        }
     }
 }

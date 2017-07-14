@@ -32,5 +32,11 @@ namespace Harrison.Inventory.Presenter
             _idistrictview.setStateValues(_istateservice.ArrangeState(SortType.Ascending, SortFieldType.Id));
 
         }
+        public void AddDistrict(String DistrictName,int stateid)
+        {
+
+            _idistrictservice.AddDistrict(DistrictName, stateid);
+
+        }
     }
 }

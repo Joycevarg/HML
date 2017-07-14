@@ -12,12 +12,12 @@ namespace Harrison.Inventory.Data.SqlClient
     {
         String Sql;
         DataTable dt = new DataTable();
-        SqlDataAdapter da;
+        DBConnection Dbcon = new DBConnection();
 
         public DataTable GetDistrictDetails()
         {
             
-            DBConnection Dbcon = new DBConnection();
+            
             Sql = "Select * from DISTRICT";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
@@ -26,12 +26,15 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public DataTable SelectDistricts(object stateid)
         {
-            dt.Clear();
-            DBConnection Dbcon = new DBConnection();
             Sql = "Select * from DISTRICT WHERE STATE_ID =" + stateid.ToString();
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);
+        }
+        public void AddDistrict(District district)
+        {
+            Sql = "Insert into DISTRICT (DISTRICT_NAME,STATE_ID) values( '" + district.DISTRICT_NAME + "','" + district.STATE_ID.ToString() + "')";
+            dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
 
     }

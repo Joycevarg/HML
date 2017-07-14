@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Data.SqlClient
     {
         DataTable GetDistrictDetails();
         DataTable SelectDistricts(object stateid);
+        void AddDistrict(District district);
     }
 }
