@@ -52,21 +52,22 @@
             // 
             this.clustertxt.Location = new System.Drawing.Point(115, 33);
             this.clustertxt.Name = "clustertxt";
-            this.clustertxt.Size = new System.Drawing.Size(215, 22);
+            this.clustertxt.Size = new System.Drawing.Size(273, 22);
             this.clustertxt.TabIndex = 3;
             // 
             // addbtn
             // 
-            this.addbtn.Location = new System.Drawing.Point(15, 101);
+            this.addbtn.Location = new System.Drawing.Point(15, 96);
             this.addbtn.Name = "addbtn";
             this.addbtn.Size = new System.Drawing.Size(94, 29);
             this.addbtn.TabIndex = 6;
             this.addbtn.Text = "Add";
             this.addbtn.UseVisualStyleBackColor = true;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(124, 101);
+            this.cancelbtn.Location = new System.Drawing.Point(155, 96);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(94, 29);
             this.cancelbtn.TabIndex = 7;
@@ -89,12 +90,12 @@
             this.statecombo.FormattingEnabled = true;
             this.statecombo.Location = new System.Drawing.Point(115, 66);
             this.statecombo.Name = "statecombo";
-            this.statecombo.Size = new System.Drawing.Size(215, 24);
+            this.statecombo.Size = new System.Drawing.Size(273, 24);
             this.statecombo.TabIndex = 11;
             // 
             // editbtn
             // 
-            this.editbtn.Location = new System.Drawing.Point(236, 101);
+            this.editbtn.Location = new System.Drawing.Point(294, 96);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(94, 29);
             this.editbtn.TabIndex = 12;
@@ -107,14 +108,14 @@
             this.clustergrid.Location = new System.Drawing.Point(15, 147);
             this.clustergrid.Name = "clustergrid";
             this.clustergrid.RowTemplate.Height = 24;
-            this.clustergrid.Size = new System.Drawing.Size(315, 113);
+            this.clustergrid.Size = new System.Drawing.Size(373, 139);
             this.clustergrid.TabIndex = 13;
             // 
             // clusterMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 277);
+            this.ClientSize = new System.Drawing.Size(400, 295);
             this.Controls.Add(this.clustergrid);
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.statecombo);

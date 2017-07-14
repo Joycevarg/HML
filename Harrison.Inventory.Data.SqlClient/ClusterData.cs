@@ -12,15 +12,21 @@ namespace Harrison.Inventory.Data.SqlClient
     {
         String Sql;
         DataTable dt = new DataTable();
-        SqlDataAdapter da;
+        DBConnection Dbcon = new DBConnection();
 
         public DataTable GetClusterDetails()
         {
-            DBConnection Dbcon = new DBConnection();
+            
             Sql = "Select * from CLUSTER";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);
+        }
+
+        public void AddCluster(Cluster cluster)
+        {
+            Sql = "Insert into CLUSTER (CLUSTER_NAME,STATE_ID) values( '" + cluster.CLUSTER_NAME + "','" + cluster.STATE_ID.ToString() + "')";
+            dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
         
     }

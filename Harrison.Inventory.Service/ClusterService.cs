@@ -27,9 +27,13 @@ namespace Harrison.Inventory.Service
                 clusters = clusters.OrderByDescending(p => p.CLUSTER_ID).ToList();
             } */
             return clusters;
-
-
         }
 
+        public void AddCluster(string clustername, int stateid)
+        {
+            Cluster cluster = new Cluster(0, clustername, stateid);
+            _clusterdata.AddCluster(cluster);
+
+        }
     }
 }

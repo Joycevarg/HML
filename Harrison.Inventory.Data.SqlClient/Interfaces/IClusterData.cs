@@ -10,5 +10,6 @@ namespace Harrison.Inventory.Data.SqlClient
     public interface IClusterData
     {
         DataTable GetClusterDetails();
+        void AddCluster(Cluster cluster);
     }
 }

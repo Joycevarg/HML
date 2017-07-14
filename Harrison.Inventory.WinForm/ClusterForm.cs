@@ -42,13 +42,23 @@ namespace Harrison.Inventory.WinForm
         {
             clustergrid.DataSource = districts;
         }
-        public void setDistrictsValues(DataTable districts)
-        { 
-            
-        }
+     
         private void clusterMaster_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void addbtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(clustertxt.Text))
+                MessageBox.Show("Enter a name");
+            else
+            {
+                _iclusterpresenter.AddCluster(clustertxt.Text, int.Parse(statecombo.SelectedValue.ToString()));
+                MessageBox.Show("Cluster added");
+                _iclusterpresenter.DefaultClusterOrder();
+
+            }
         }
     }
 }
