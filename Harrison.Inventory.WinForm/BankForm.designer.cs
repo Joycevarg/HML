@@ -95,6 +95,7 @@
             this.addbtn.TabIndex = 15;
             this.addbtn.Text = "Add Branch";
             this.addbtn.UseVisualStyleBackColor = true;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
             // edtbtn
             // 

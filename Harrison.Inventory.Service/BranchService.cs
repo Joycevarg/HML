@@ -29,5 +29,10 @@ namespace Harrison.Inventory.Service
             return branchs;
 
         }
+        public void AddBranch(string branchname, int bankid,string ifsc,string address,string contact)
+        {
+            Branch branch = new Branch(0, branchname, bankid, ifsc, address, contact);
+            _branchdata.AddBranch(branch);
+        }
     }
 }

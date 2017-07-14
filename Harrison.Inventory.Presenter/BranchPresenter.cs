@@ -29,5 +29,9 @@ namespace Harrison.Inventory.Presenter
         {
             _ibranchview.setBankValues(_ibankservice.Arrangebank(SortType.Ascending, SortFieldType.Id));
         }
+        public void AddBranch(string branchname, int bankid, string ifsc, string address, string contact)
+        {
+            _ibranchservice.AddBranch(branchname, bankid, ifsc, address, contact);
+        }
     }
 }

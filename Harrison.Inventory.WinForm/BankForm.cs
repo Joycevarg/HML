@@ -75,6 +75,14 @@ namespace Harrison.Inventory.WinForm
             bankgrid.DataSource = banks;
         }
 
+        private void addbtn_Click(object sender, EventArgs e)
+        {
+            branchDetails branchform = new branchDetails();
+            branchform.Show();
+   
+
+        }
+
        
     }
 }

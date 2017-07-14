@@ -57,6 +57,20 @@ namespace Harrison.Inventory.WinForm
             this.Close();
         }
 
-        
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(branchnametxt.Text))
+                MessageBox.Show("Enter a name");
+            else if (string.IsNullOrWhiteSpace(ifsctxt.Text))
+                MessageBox.Show("Enter the ifsc code");
+            else
+            {
+                branchpresenter.AddBranch(branchnametxt.Text, int.Parse(bankcombo.SelectedValue.ToString()), ifsctxt.Text, bankaddresstxt.Text, contacttxt.Text);
+                MessageBox.Show("Branch added");
+              
+
+            }
+
+        }
     }
 }

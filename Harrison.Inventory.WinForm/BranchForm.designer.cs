@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.newbranchtxt = new System.Windows.Forms.TextBox();
+            this.branchnametxt = new System.Windows.Forms.TextBox();
             this.savebtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.bankcombo = new System.Windows.Forms.ComboBox();
@@ -40,6 +40,8 @@
             this.ifsctxt = new System.Windows.Forms.TextBox();
             this.bankaddresstxt = new System.Windows.Forms.TextBox();
             this.gridbtn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.contacttxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -68,25 +70,26 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Add new branch:";
             // 
-            // newbranchtxt
+            // branchnametxt
             // 
-            this.newbranchtxt.Location = new System.Drawing.Point(123, 54);
-            this.newbranchtxt.Name = "newbranchtxt";
-            this.newbranchtxt.Size = new System.Drawing.Size(245, 22);
-            this.newbranchtxt.TabIndex = 5;
+            this.branchnametxt.Location = new System.Drawing.Point(123, 54);
+            this.branchnametxt.Name = "branchnametxt";
+            this.branchnametxt.Size = new System.Drawing.Size(245, 22);
+            this.branchnametxt.TabIndex = 5;
             // 
             // savebtn
             // 
-            this.savebtn.Location = new System.Drawing.Point(12, 211);
+            this.savebtn.Location = new System.Drawing.Point(10, 246);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(104, 33);
             this.savebtn.TabIndex = 7;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(140, 211);
+            this.cancelbtn.Location = new System.Drawing.Point(141, 246);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(104, 33);
             this.cancelbtn.TabIndex = 8;
@@ -133,12 +136,12 @@
             this.bankaddresstxt.Location = new System.Drawing.Point(123, 114);
             this.bankaddresstxt.Multiline = true;
             this.bankaddresstxt.Name = "bankaddresstxt";
-            this.bankaddresstxt.Size = new System.Drawing.Size(245, 75);
+            this.bankaddresstxt.Size = new System.Drawing.Size(245, 69);
             this.bankaddresstxt.TabIndex = 13;
             // 
             // gridbtn
             // 
-            this.gridbtn.Location = new System.Drawing.Point(275, 211);
+            this.gridbtn.Location = new System.Drawing.Point(275, 246);
             this.gridbtn.Name = "gridbtn";
             this.gridbtn.Size = new System.Drawing.Size(104, 33);
             this.gridbtn.TabIndex = 14;
@@ -146,11 +149,29 @@
             this.gridbtn.UseVisualStyleBackColor = true;
             this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(32, 198);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Contact No:";
+            // 
+            // contacttxt
+            // 
+            this.contacttxt.Location = new System.Drawing.Point(120, 195);
+            this.contacttxt.Name = "contacttxt";
+            this.contacttxt.Size = new System.Drawing.Size(248, 22);
+            this.contacttxt.TabIndex = 16;
+            // 
             // branchDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 268);
+            this.ClientSize = new System.Drawing.Size(401, 307);
+            this.Controls.Add(this.contacttxt);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.bankaddresstxt);
             this.Controls.Add(this.ifsctxt);
@@ -159,7 +180,7 @@
             this.Controls.Add(this.bankcombo);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.savebtn);
-            this.Controls.Add(this.newbranchtxt);
+            this.Controls.Add(this.branchnametxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -176,7 +197,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox newbranchtxt;
+        private System.Windows.Forms.TextBox branchnametxt;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.ComboBox bankcombo;
@@ -185,5 +206,7 @@
         private System.Windows.Forms.TextBox ifsctxt;
         private System.Windows.Forms.TextBox bankaddresstxt;
         private System.Windows.Forms.Button gridbtn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox contacttxt;
     }
 }
