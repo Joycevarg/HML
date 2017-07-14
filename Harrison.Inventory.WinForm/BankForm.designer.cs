@@ -34,7 +34,7 @@
             this.savebtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.addbtn = new System.Windows.Forms.Button();
-            this.rmwbtn = new System.Windows.Forms.Button();
+            this.edtbtn = new System.Windows.Forms.Button();
             this.bankgrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bankgrid)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +79,7 @@
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(389, 275);
+            this.cancelbtn.Location = new System.Drawing.Point(213, 275);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(143, 41);
             this.cancelbtn.TabIndex = 14;
@@ -96,14 +96,14 @@
             this.addbtn.Text = "Add Branch";
             this.addbtn.UseVisualStyleBackColor = true;
             // 
-            // rmwbtn
+            // edtbtn
             // 
-            this.rmwbtn.Location = new System.Drawing.Point(207, 275);
-            this.rmwbtn.Name = "rmwbtn";
-            this.rmwbtn.Size = new System.Drawing.Size(136, 41);
-            this.rmwbtn.TabIndex = 16;
-            this.rmwbtn.Text = "Remove";
-            this.rmwbtn.UseVisualStyleBackColor = true;
+            this.edtbtn.Location = new System.Drawing.Point(396, 275);
+            this.edtbtn.Name = "edtbtn";
+            this.edtbtn.Size = new System.Drawing.Size(136, 41);
+            this.edtbtn.TabIndex = 16;
+            this.edtbtn.Text = "Edit";
+            this.edtbtn.UseVisualStyleBackColor = true;
             // 
             // bankgrid
             // 
@@ -120,7 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 348);
             this.Controls.Add(this.bankgrid);
-            this.Controls.Add(this.rmwbtn);
+            this.Controls.Add(this.edtbtn);
             this.Controls.Add(this.addbtn);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.savebtn);
@@ -144,7 +144,7 @@
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Button addbtn;
-        private System.Windows.Forms.Button rmwbtn;
+        private System.Windows.Forms.Button edtbtn;
         private System.Windows.Forms.DataGridView bankgrid;
     }
 }

@@ -54,7 +54,16 @@ namespace Harrison.Inventory.WinForm
 
         private void donebtn_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(bankNametxt.Text))
+                MessageBox.Show("Enter a Name");
+            else
+            {
+                _bankpresenter.AddBank(bankNametxt.Text);
+                 MessageBox.Show("Bank added");
+                _bankpresenter.DefaultBankOrder();
+                
+            
+            }
         }
 
         private void bankDetails_Load(object sender, EventArgs e)

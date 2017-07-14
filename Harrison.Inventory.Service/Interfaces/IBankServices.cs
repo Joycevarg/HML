@@ -11,6 +11,6 @@ namespace Harrison.Inventory.Service
     public interface IBankServices
     {
         DataTable Arrangebank(SortType sortType, SortFieldType sortField);
-        
+        void AddBank(String BankName);
     }
 }

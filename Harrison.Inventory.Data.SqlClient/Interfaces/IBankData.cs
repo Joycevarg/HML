@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Data.SqlClient
 
     {
         DataTable GetBankDetails();
+        void AddBank(String BankName);
     }
 }

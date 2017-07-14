@@ -20,7 +20,7 @@ namespace Harrison.Inventory.WinForm
 
         #region//Presenter
         private IFinancialYearsPresenter _iFinancialYearsPresenter;
-        static bool n = true;
+        static bool flag = true;
         #endregion
 
         public FinancialYear()
@@ -38,15 +38,16 @@ namespace Harrison.Inventory.WinForm
         {
             
             finYeartxt.MaxLength = 9;
-          
-            if (finYeartxt.TextLength == 4&&n)
+
+            if (finYeartxt.TextLength == 4 && flag)
             {
                 finYeartxt.Text += "-";
                 finYeartxt.SelectionStart = finYeartxt.TextLength;
-                n = false;
+                      flag = false;
             }
             else if (finYeartxt.TextLength == 3)
-                n = true;
+                    flag = true;
+                
            
             
         
@@ -79,7 +80,7 @@ namespace Harrison.Inventory.WinForm
             if (string.IsNullOrEmpty(FinyearText))
                 MessageBox.Show("Enter a value");
             
-            else if(!r.IsMatch(finYeartxt.Text))
+            else if(!r.IsMatch(FinyearText))
             {
                 MessageBox.Show("Invalid Characters.Only [0-9],- are allowed");
             }

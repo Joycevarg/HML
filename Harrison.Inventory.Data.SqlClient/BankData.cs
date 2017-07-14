@@ -12,17 +12,24 @@ namespace Harrison.Inventory.Data.SqlClient
     {   
         String Sql;
         DataTable dt = new DataTable();
-        SqlDataAdapter da;
+        DBConnection Dbcon = new DBConnection();
        
 
 
         public DataTable GetBankDetails()
         {
-            DBConnection Dbcon = new DBConnection();
+            
             Sql = "Select * from BANK";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);
+        }
+        public void AddBank(String BankName)
+        {
+            Sql = "Insert into BANK (BANK_NAME) values( '" + BankName + "');";
+            dt = Dbcon.Sqlconnection(Sql, "Insert");
+
+
         }
         
         

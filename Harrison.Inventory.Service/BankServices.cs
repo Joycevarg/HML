@@ -11,7 +11,7 @@ namespace Harrison.Inventory.Service
     public class BankServices:IBankServices
 
     {
-        private BankData _bankdata;
+        private IBankData _bankdata;
         public BankServices(BankData Bankdata)
         {
             _bankdata = Bankdata;
@@ -30,6 +30,12 @@ namespace Harrison.Inventory.Service
             return banks;
         
         
+        }
+        public void AddBank(String BankName)
+        {
+
+            _bankdata.AddBank(BankName);
+
         }
        
     }

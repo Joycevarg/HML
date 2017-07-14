@@ -24,5 +24,11 @@ namespace Harrison.Inventory.Presenter
         {
             _ibankview.givearrdata(_ibankservice.Arrangebank(srttype, srtfield));
         }
+        public void AddBank(String BankName)
+        {
+
+            _ibankservice.AddBank(BankName);
+
+        }
     }
 }

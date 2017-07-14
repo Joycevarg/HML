@@ -9,6 +9,7 @@ namespace Harrison.Inventory.Presenter
     public interface IBankPresenter
     {
         void DefaultBankOrder();
-        void ChangeBankOrder(SortType sortType, SortFieldType sortField); 
+        void ChangeBankOrder(SortType sortType, SortFieldType sortField);
+        void AddBank(String Bank);
     }
 }
