@@ -13,6 +13,8 @@ namespace Harrison.Inventory.Presenter
         private IStateServices _ihstateservice,_iestateservice;
         private IVendorServices _ivendorservice;
         private IDistrictServices _ihdistrictservice,_iedistrictservice;
+        private IBranchServices _ibranchservices;
+        private IBankServices _ibankservices;
         public VendorPresenter(IVendorView vendorview, IVendorServices vendorservice)
         {
             _ivendorservice = vendorservice;
@@ -21,6 +23,9 @@ namespace Harrison.Inventory.Presenter
             _iestateservice = new StateServices(new StateData());
             _ihdistrictservice = new DistrictServices(new DistrictData());
             _iedistrictservice = new DistrictServices(new DistrictData());
+            _ibranchservices = new BranchServices(new BranchData());
+            _ibankservices= new BankServices(new BankData());
+
         }
         public void DefaultVendorOrder()
         {
@@ -29,6 +34,14 @@ namespace Harrison.Inventory.Presenter
         public void ChangeVendorOrder(SortType srttype, SortFieldType srtfield)
         {
             _ivendorview.givearrdata(_ivendorservice.ArrangeVendor(srttype, srtfield));
+        }
+        public void setBankNames()
+        {
+            _ivendorview.setBankValues(_ibankservices.Arrangebank(SortType.Ascending,SortFieldType.Id));
+        }
+        public void setBranchNames(object bankid)
+        {
+            _ivendorview.setBranchValues(_ibranchservices.BranchwithBank(bankid));
         }
         public void setHstateNames()
         {
@@ -45,6 +58,14 @@ namespace Harrison.Inventory.Presenter
         public void setEstateNames()
         {
             _ivendorview.setEStateValues(_iestateservice.ArrangeState(SortType.Ascending, SortFieldType.Id));
+        }
+        
+        public void AddVendor(string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat, int bankid, int branchid, string branchname,string accno, int register)
+        
+        {
+            _ivendorservice.AddVendor(vendorname, homeaddr, homedist, homestat, estateaddr, estatdist, estatstat, owneraddr, tappno, occup, ownerno, dealgrow, licenno, tinno, cstno, remark, vendcrdate, vendupdate, vendstat, bankid, branchid, branchname,accno, register);
+        
+
         }
     }
 }

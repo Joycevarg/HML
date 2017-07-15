@@ -10,6 +10,7 @@ namespace Harrison.Inventory.Data.SqlClient
     public interface IBranchData
     {
         DataTable GetBranchDetails();
+        DataTable SelectBranchs(object branchid);
         void AddBranch(Branch branch);
     }
 }

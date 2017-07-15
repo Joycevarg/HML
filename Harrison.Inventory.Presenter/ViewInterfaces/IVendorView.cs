@@ -16,5 +16,7 @@ namespace Harrison.Inventory.Presenter
         void setEStateValues(DataTable states);
         void setHDistrictValues(DataTable districts);
         void setEDistrictValues(DataTable districts);
+        void setBranchValues(DataTable branchs);
+        void setBankValues(DataTable banks);
     }
 }

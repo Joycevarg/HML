@@ -24,6 +24,7 @@ namespace Harrison.Inventory.WinForm
             vendorpresenter = new VendorPresenter(this, new VendorService(new VendorData()));
             vendorpresenter.setHstateNames();
             vendorpresenter.setEstateNames();
+            vendorpresenter.setBankNames();
             
         }
 
@@ -78,6 +79,19 @@ namespace Harrison.Inventory.WinForm
             edistrictcombo.DataSource = districts;
             
         }
+        public void setBankValues(DataTable banks)
+        {
+            Bankcombo.ValueMember = "BANK_ID";
+            Bankcombo.DisplayMember = "BANK_NAME";
+            Bankcombo.DataSource = banks;
+
+        }
+        public void setBranchValues(DataTable branchs)
+        {
+            Branchcombo.ValueMember = "BRANCH_ID";
+            Branchcombo.DisplayMember = "BRANCH_NAME";
+            Branchcombo.DataSource = branchs;
+        }
 
         private void hstatecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -87,6 +101,19 @@ namespace Harrison.Inventory.WinForm
         private void estatecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             vendorpresenter.setEdistrictNames(estatecombo.SelectedValue);
+            
+        }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            vendorpresenter.AddVendor(ventorNametxt.Text, homeAddresstxt.Text, int.Parse(hdistrictcombo.SelectedValue.ToString()), int.Parse(hstatecombo.SelectedValue.ToString()), estateAddresstxt.Text, int.Parse(edistrictcombo.SelectedValue.ToString()), int.Parse(estatecombo.SelectedValue.ToString()), oAddresstxt.Text, tapperNotxt.Text, occuptxt.Text, ownerNotxt.Text, 1, LNotxt.Text, TinNotxt.Text, cstNotxt.Text, remarktxt.Text, DateTime.Now.Date.ToString("yyyy-MM-dd"), DateTime.Now.Date.ToString("yyyy-MM-dd"), "notnow", int.Parse(Bankcombo.SelectedValue.ToString()), int.Parse(Branchcombo.SelectedValue.ToString()), Branchcombo.SelectedText, acctxt.Text, 1);
+               
+
+        }
+
+        private void Bankcombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            vendorpresenter.setBranchNames(Bankcombo.SelectedValue);
         }
 
        

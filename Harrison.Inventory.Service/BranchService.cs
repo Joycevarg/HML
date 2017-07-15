@@ -34,5 +34,11 @@ namespace Harrison.Inventory.Service
             Branch branch = new Branch(0, branchname, bankid, ifsc, address, contact);
             _branchdata.AddBranch(branch);
         }
+        public DataTable BranchwithBank(object bankid)
+        {
+            DataTable branchs = _branchdata.SelectBranchs(bankid);
+            return branchs;
+
+        }
     }
 }

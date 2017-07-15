@@ -9,5 +9,6 @@ namespace Harrison.Inventory.Service
     public interface IInvoiceServices
     {
         DataTable ArrangeVendorData();
+       
     }
 }

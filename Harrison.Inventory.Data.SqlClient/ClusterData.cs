@@ -25,7 +25,7 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public void AddCluster(Cluster cluster)
         {
-            Sql = "Insert into CLUSTER (CLUSTER_NAME,STATE_ID) values( '" + cluster.CLUSTER_NAME + "','" + cluster.STATE_ID.ToString() + "')";
+            Sql = "Insert into CLUSTER (CLUSTER_NAME,STATE_ID) values( '" + cluster.CLUSTER_NAME + "'," + cluster.STATE_ID.ToString() + ")";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
         

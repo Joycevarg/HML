@@ -14,5 +14,9 @@ namespace Harrison.Inventory.Presenter
         void setEstateNames();
         void setHdistrictNames(object stateid);
         void setEdistrictNames(object stateid);
+        void setBankNames();
+        void setBranchNames(object branchid);
+        void AddVendor(string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat, int bankid, int branchid,string branchname,string accno, int register);
+        
     }
 }

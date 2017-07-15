@@ -27,10 +27,12 @@ namespace Harrison.Inventory.Data.Model
         public string VENDOR_CR_DATE { get; set; }
         public string VENDOR_UP_DATE { get; set; }
         public string VENDOR_STATUS { get; set; }
+        public int BANK_ID { get; set; }
+        public string ACCOUNT_NO { get; set; }
         public string BRANCH_NAME { get; set; }
-        public string BRANCH_ID { get; set; }
+        public int BRANCH_ID { get; set; }
         public int REGISTERED { get; set; }
-        public Vendor(string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat, string branchid, string branchname, int register)
+        public Vendor(string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat,int bankid, int branchid, string branchname,string accno, int register)
         {
             this.VENDOR_ID = 0;
             this.VENDOR_NAME = vendorname;
@@ -52,8 +54,10 @@ namespace Harrison.Inventory.Data.Model
             this.VENDOR_CR_DATE = vendcrdate;
             this.VENDOR_UP_DATE = vendupdate;
             this.VENDOR_STATUS = vendstat;
+            this.BANK_ID = bankid;
             this.BRANCH_ID = branchid;
             this.BRANCH_NAME = branchname;
+            this.ACCOUNT_NO = accno;
             this.REGISTERED = register;
         }
     }

@@ -38,7 +38,7 @@
             this.hstatecombo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.oPhNotxt = new System.Windows.Forms.TextBox();
+            this.ownerNotxt = new System.Windows.Forms.TextBox();
             this.occuptxt = new System.Windows.Forms.TextBox();
             this.oEmailtxt = new System.Windows.Forms.TextBox();
             this.TinNotxt = new System.Windows.Forms.TextBox();
@@ -71,10 +71,18 @@
             this.editbtn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.gridbtn = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Bankcombo = new System.Windows.Forms.ComboBox();
+            this.Branchcombo = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.acctxt = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.box.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ventorNametxt
@@ -137,6 +145,7 @@
             // 
             // hdistrictcombo
             // 
+            this.hdistrictcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hdistrictcombo.FormattingEnabled = true;
             this.hdistrictcombo.Location = new System.Drawing.Point(468, 200);
             this.hdistrictcombo.Margin = new System.Windows.Forms.Padding(4);
@@ -146,6 +155,7 @@
             // 
             // hstatecombo
             // 
+            this.hstatecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hstatecombo.FormattingEnabled = true;
             this.hstatecombo.Location = new System.Drawing.Point(115, 200);
             this.hstatecombo.Margin = new System.Windows.Forms.Padding(4);
@@ -174,13 +184,13 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Owner Phone no";
             // 
-            // oPhNotxt
+            // ownerNotxt
             // 
-            this.oPhNotxt.Location = new System.Drawing.Point(560, 54);
-            this.oPhNotxt.Margin = new System.Windows.Forms.Padding(4);
-            this.oPhNotxt.Name = "oPhNotxt";
-            this.oPhNotxt.Size = new System.Drawing.Size(231, 22);
-            this.oPhNotxt.TabIndex = 10;
+            this.ownerNotxt.Location = new System.Drawing.Point(560, 54);
+            this.ownerNotxt.Margin = new System.Windows.Forms.Padding(4);
+            this.ownerNotxt.Name = "ownerNotxt";
+            this.ownerNotxt.Size = new System.Drawing.Size(231, 22);
+            this.ownerNotxt.TabIndex = 10;
             // 
             // occuptxt
             // 
@@ -355,6 +365,7 @@
             // 
             // edistrictcombo
             // 
+            this.edistrictcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.edistrictcombo.FormattingEnabled = true;
             this.edistrictcombo.Location = new System.Drawing.Point(468, 109);
             this.edistrictcombo.Margin = new System.Windows.Forms.Padding(4);
@@ -419,6 +430,7 @@
             // 
             // estatecombo
             // 
+            this.estatecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.estatecombo.FormattingEnabled = true;
             this.estatecombo.Location = new System.Drawing.Point(115, 109);
             this.estatecombo.Margin = new System.Windows.Forms.Padding(4);
@@ -446,7 +458,7 @@
             this.groupBox3.Controls.Add(this.tapperNotxt);
             this.groupBox3.Controls.Add(this.oEmailtxt);
             this.groupBox3.Controls.Add(this.occuptxt);
-            this.groupBox3.Controls.Add(this.oPhNotxt);
+            this.groupBox3.Controls.Add(this.ownerNotxt);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(19, 400);
@@ -467,17 +479,18 @@
             // 
             // savebtn
             // 
-            this.savebtn.Location = new System.Drawing.Point(232, 722);
+            this.savebtn.Location = new System.Drawing.Point(36, 848);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(100, 28);
             this.savebtn.TabIndex = 41;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(375, 722);
+            this.cancelbtn.Location = new System.Drawing.Point(232, 848);
             this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(100, 28);
@@ -488,7 +501,7 @@
             // 
             // editbtn
             // 
-            this.editbtn.Location = new System.Drawing.Point(511, 722);
+            this.editbtn.Location = new System.Drawing.Point(478, 848);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(100, 28);
@@ -518,7 +531,7 @@
             // 
             // gridbtn
             // 
-            this.gridbtn.Location = new System.Drawing.Point(696, 723);
+            this.gridbtn.Location = new System.Drawing.Point(674, 848);
             this.gridbtn.Name = "gridbtn";
             this.gridbtn.Size = new System.Drawing.Size(113, 28);
             this.gridbtn.TabIndex = 45;
@@ -526,11 +539,80 @@
             this.gridbtn.UseVisualStyleBackColor = true;
             this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(55, 21);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(44, 17);
+            this.label17.TabIndex = 46;
+            this.label17.Text = "Bank:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(429, 20);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(57, 17);
+            this.label18.TabIndex = 47;
+            this.label18.Text = "Branch:";
+            // 
+            // Bankcombo
+            // 
+            this.Bankcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Bankcombo.FormattingEnabled = true;
+            this.Bankcombo.Location = new System.Drawing.Point(113, 17);
+            this.Bankcombo.Name = "Bankcombo";
+            this.Bankcombo.Size = new System.Drawing.Size(255, 24);
+            this.Bankcombo.TabIndex = 48;
+            this.Bankcombo.SelectedIndexChanged += new System.EventHandler(this.Bankcombo_SelectedIndexChanged);
+            // 
+            // Branchcombo
+            // 
+            this.Branchcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Branchcombo.FormattingEnabled = true;
+            this.Branchcombo.Location = new System.Drawing.Point(492, 18);
+            this.Branchcombo.Name = "Branchcombo";
+            this.Branchcombo.Size = new System.Drawing.Size(261, 24);
+            this.Branchcombo.TabIndex = 49;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(14, 77);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 17);
+            this.label19.TabIndex = 50;
+            this.label19.Text = "Account No:";
+            // 
+            // acctxt
+            // 
+            this.acctxt.Location = new System.Drawing.Point(113, 74);
+            this.acctxt.Name = "acctxt";
+            this.acctxt.Size = new System.Drawing.Size(321, 22);
+            this.acctxt.TabIndex = 51;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.acctxt);
+            this.groupBox2.Controls.Add(this.Bankcombo);
+            this.groupBox2.Controls.Add(this.Branchcombo);
+            this.groupBox2.Location = new System.Drawing.Point(19, 723);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(800, 117);
+            this.groupBox2.TabIndex = 52;
+            this.groupBox2.TabStop = false;
+            // 
             // VendorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 757);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(836, 889);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.editbtn);
@@ -551,6 +633,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -567,7 +651,7 @@
         private System.Windows.Forms.ComboBox hstatecombo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox oPhNotxt;
+        private System.Windows.Forms.TextBox ownerNotxt;
         private System.Windows.Forms.TextBox occuptxt;
         private System.Windows.Forms.TextBox oEmailtxt;
         private System.Windows.Forms.TextBox TinNotxt;
@@ -600,6 +684,13 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox estatecombo;
         private System.Windows.Forms.Button gridbtn;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox Bankcombo;
+        private System.Windows.Forms.ComboBox Branchcombo;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox acctxt;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 

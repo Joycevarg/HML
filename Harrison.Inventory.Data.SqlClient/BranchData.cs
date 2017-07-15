@@ -27,5 +27,12 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Insert into BRANCH (BRANCH_NAME,BANK_ID,IFSC_CODE,BRANCH_ADDRESS,CONTACT_NO) values( '" + branch.BRANCH_NAME+ "','"+branch.BANK_ID.ToString()+"','"+branch.IFSC_CODE+"','"+branch.BRANCH_ADDRESS+"','"+branch.CONTACT_NO+"')";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
+        public DataTable SelectBranchs(object bankid)
+        {
+            Sql = "Select * from BRANCH WHERE BANK_ID =" + bankid.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Select");
+            //da.Fill(dt);
+            return dt;
+        }
     }
 }
