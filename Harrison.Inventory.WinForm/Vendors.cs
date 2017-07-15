@@ -10,6 +10,8 @@ using Harrison.Inventory.Data.Model;
 using Harrison.Inventory.Data.SqlClient;
 using Harrison.Inventory.Presenter;
 using Harrison.Inventory.Service;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace Harrison.Inventory.WinForm
 {
@@ -25,6 +27,7 @@ namespace Harrison.Inventory.WinForm
             vendorpresenter.setHstateNames();
             vendorpresenter.setEstateNames();
             vendorpresenter.setBankNames();
+            ownerNotxt.MaxLength = 10;
             
         }
 
@@ -106,8 +109,28 @@ namespace Harrison.Inventory.WinForm
 
         private void savebtn_Click(object sender, EventArgs e)
         {
-            vendorpresenter.AddVendor(ventorNametxt.Text, homeAddresstxt.Text, int.Parse(hdistrictcombo.SelectedValue.ToString()), int.Parse(hstatecombo.SelectedValue.ToString()), estateAddresstxt.Text, int.Parse(edistrictcombo.SelectedValue.ToString()), int.Parse(estatecombo.SelectedValue.ToString()), oAddresstxt.Text, tapperNotxt.Text, occuptxt.Text, ownerNotxt.Text, 1, LNotxt.Text, TinNotxt.Text, cstNotxt.Text, remarktxt.Text, DateTime.Now.Date.ToString("yyyy-MM-dd"), DateTime.Now.Date.ToString("yyyy-MM-dd"), "notnow", int.Parse(Bankcombo.SelectedValue.ToString()), int.Parse(Branchcombo.SelectedValue.ToString()), Branchcombo.SelectedText, acctxt.Text, 1);
-               
+            int dealer_grower,register;//if dealer-2,grower-1
+            Regex phone = new Regex("^[0-9]{10}$");
+           
+            if (growerRbtn.Checked == true)
+                dealer_grower = 1;
+            else
+                dealer_grower = 2;
+            if (rgstrchkbox.Checked == true)
+                register = 1;
+            else
+                register = 0;
+            if (string.IsNullOrWhiteSpace(ventorNametxt.Text))
+                MessageBox.Show("Enter the Name");
+            else if (phone.IsMatch(ownerNotxt.Text))
+                MessageBox.Show("Owner phone number has insufficient digits");
+            else if (phone.IsMatch(tapperNotxt.Text))
+                MessageBox.Show("Tapper phone number has insufficient digits");
+            else
+            {
+                vendorpresenter.AddVendor(ventorNametxt.Text, homeAddresstxt.Text, int.Parse(hdistrictcombo.SelectedValue.ToString()), int.Parse(hstatecombo.SelectedValue.ToString()), estateAddresstxt.Text, int.Parse(edistrictcombo.SelectedValue.ToString()), int.Parse(estatecombo.SelectedValue.ToString()), oAddresstxt.Text, tapperNotxt.Text, occuptxt.Text, ownerNotxt.Text, dealer_grower, LNotxt.Text, TinNotxt.Text, cstNotxt.Text, remarktxt.Text, DateTime.Now.Date.ToString("yyyy-MM-dd"), DateTime.Now.Date.ToString("yyyy-MM-dd"), "notnow", int.Parse(Bankcombo.SelectedValue.ToString()), int.Parse(Branchcombo.SelectedValue.ToString()), acctxt.Text, register);
+                MessageBox.Show("Vendor added");
+            }  
 
         }
 

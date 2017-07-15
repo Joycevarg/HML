@@ -109,9 +109,9 @@
             this.rgstrchkbox.Location = new System.Drawing.Point(115, 18);
             this.rgstrchkbox.Margin = new System.Windows.Forms.Padding(4);
             this.rgstrchkbox.Name = "rgstrchkbox";
-            this.rgstrchkbox.Size = new System.Drawing.Size(351, 21);
+            this.rgstrchkbox.Size = new System.Drawing.Size(279, 21);
             this.rgstrchkbox.TabIndex = 2;
-            this.rgstrchkbox.Text = "                       Registered (UnTick if UnRegistered)";
+            this.rgstrchkbox.Text = "     Registered (UnTick if UnRegistered)";
             this.rgstrchkbox.UseVisualStyleBackColor = true;
             // 
             // homeAddresstxt
@@ -232,13 +232,13 @@
             this.dealerRbtn.Name = "dealerRbtn";
             this.dealerRbtn.Size = new System.Drawing.Size(71, 21);
             this.dealerRbtn.TabIndex = 15;
-            this.dealerRbtn.TabStop = true;
             this.dealerRbtn.Text = "Dealer";
             this.dealerRbtn.UseVisualStyleBackColor = true;
             // 
             // growerRbtn
             // 
             this.growerRbtn.AutoSize = true;
+            this.growerRbtn.Checked = true;
             this.growerRbtn.Location = new System.Drawing.Point(120, 16);
             this.growerRbtn.Margin = new System.Windows.Forms.Padding(4);
             this.growerRbtn.Name = "growerRbtn";
