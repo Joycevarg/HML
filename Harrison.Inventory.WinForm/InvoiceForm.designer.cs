@@ -184,7 +184,7 @@
             // 
             // Datetxt
             // 
-            this.Datetxt.CustomFormat = "11/22/3214";
+            this.Datetxt.CustomFormat = "2012-07-18";
             this.Datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Datetxt.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Datetxt.Location = new System.Drawing.Point(685, 46);

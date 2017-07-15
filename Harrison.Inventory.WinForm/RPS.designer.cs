@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.rpsNamelbl = new System.Windows.Forms.Label();
-            this.rpsNametxt = new System.Windows.Forms.ComboBox();
             this.contactNamelbl = new System.Windows.Forms.Label();
             this.contactNametxt = new System.Windows.Forms.TextBox();
             this.contactNolbl = new System.Windows.Forms.Label();
@@ -42,7 +41,8 @@
             this.gridbtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.VentorNameCombo = new System.Windows.Forms.ComboBox();
+            this.VendorNameCombo = new System.Windows.Forms.ComboBox();
+            this.rpsNametxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // rpsNamelbl
@@ -53,15 +53,6 @@
             this.rpsNamelbl.Size = new System.Drawing.Size(81, 17);
             this.rpsNamelbl.TabIndex = 0;
             this.rpsNamelbl.Text = "RPS Name:";
-            // 
-            // rpsNametxt
-            // 
-            this.rpsNametxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.rpsNametxt.FormattingEnabled = true;
-            this.rpsNametxt.Location = new System.Drawing.Point(160, 79);
-            this.rpsNametxt.Name = "rpsNametxt";
-            this.rpsNametxt.Size = new System.Drawing.Size(426, 24);
-            this.rpsNametxt.TabIndex = 4;
             // 
             // contactNamelbl
             // 
@@ -138,6 +129,7 @@
             this.donebtn.TabIndex = 10;
             this.donebtn.Text = "Save";
             this.donebtn.UseVisualStyleBackColor = true;
+            this.donebtn.Click += new System.EventHandler(this.donebtn_Click);
             // 
             // gridbtn
             // 
@@ -169,21 +161,29 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Ventor Name:";
             // 
-            // VentorNameCombo
+            // VendorNameCombo
             // 
-            this.VentorNameCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VentorNameCombo.FormattingEnabled = true;
-            this.VentorNameCombo.Location = new System.Drawing.Point(160, 30);
-            this.VentorNameCombo.Name = "VentorNameCombo";
-            this.VentorNameCombo.Size = new System.Drawing.Size(309, 24);
-            this.VentorNameCombo.TabIndex = 19;
+            this.VendorNameCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VendorNameCombo.FormattingEnabled = true;
+            this.VendorNameCombo.Location = new System.Drawing.Point(160, 30);
+            this.VendorNameCombo.Name = "VendorNameCombo";
+            this.VendorNameCombo.Size = new System.Drawing.Size(309, 24);
+            this.VendorNameCombo.TabIndex = 19;
+            // 
+            // rpsNametxt
+            // 
+            this.rpsNametxt.Location = new System.Drawing.Point(160, 83);
+            this.rpsNametxt.Name = "rpsNametxt";
+            this.rpsNametxt.Size = new System.Drawing.Size(309, 22);
+            this.rpsNametxt.TabIndex = 20;
             // 
             // RPSdetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 490);
-            this.Controls.Add(this.VentorNameCombo);
+            this.Controls.Add(this.rpsNametxt);
+            this.Controls.Add(this.VendorNameCombo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.gridbtn);
@@ -196,7 +196,6 @@
             this.Controls.Add(this.contactNolbl);
             this.Controls.Add(this.contactNametxt);
             this.Controls.Add(this.contactNamelbl);
-            this.Controls.Add(this.rpsNametxt);
             this.Controls.Add(this.rpsNamelbl);
             this.Name = "RPSdetails";
             this.Text = "RPS";
@@ -209,7 +208,6 @@
         #endregion
 
         private System.Windows.Forms.Label rpsNamelbl;
-        private System.Windows.Forms.ComboBox rpsNametxt;
         private System.Windows.Forms.Label contactNamelbl;
         private System.Windows.Forms.TextBox contactNametxt;
         private System.Windows.Forms.Label contactNolbl;
@@ -222,7 +220,8 @@
         private System.Windows.Forms.Button gridbtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox VentorNameCombo;
+        private System.Windows.Forms.ComboBox VendorNameCombo;
+        private System.Windows.Forms.TextBox rpsNametxt;
 
     }
 }

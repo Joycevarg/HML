@@ -34,6 +34,9 @@ namespace Harrison.Inventory.Service
             DataTable rpss = _rpsdata.SelectRPS(vendorid);
             return rpss;
         }
-
+        public void AddRPS(RPS rps)
+        {
+            _rpsdata.AddRPS(rps);
+        }
     }
 }

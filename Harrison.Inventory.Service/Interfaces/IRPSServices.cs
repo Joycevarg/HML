@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Service
     {
         DataTable ArrangeRPS(SortType sortType, SortFieldType sortField);
         DataTable RpswithVendor(object vendorid);
+        void AddRPS(RPS rps);
     }
 }

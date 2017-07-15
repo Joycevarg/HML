@@ -13,7 +13,7 @@ using Harrison.Inventory.Service;
 
 namespace Harrison.Inventory.WinForm
 {
-    public partial class RPSdetails : Form,IRPSView
+    public partial class RPSdetails : Form, IRPSView
     {
         private IRPSPresenter rpspresenter;
         GridForm gridfrm;
@@ -30,10 +30,10 @@ namespace Harrison.Inventory.WinForm
         }
         public void setVendorNames(DataTable vendors)
         {
-            VentorNameCombo.ValueMember = "VENDOR_ID";
-            VentorNameCombo.DisplayMember = "VENDOR_NAME";            
-            VentorNameCombo.DataSource = vendors;
-          
+            VendorNameCombo.ValueMember = "VENDOR_ID";
+            VendorNameCombo.DisplayMember = "VENDOR_NAME";
+            VendorNameCombo.DataSource = vendors;
+
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
@@ -52,10 +52,21 @@ namespace Harrison.Inventory.WinForm
         {
             rpspresenter.DefaultRPSOrder();
             gridfrm.Show();
-           
+
         }
 
-     
-       
+        private void donebtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(rpsNametxt.Text))
+                MessageBox.Show("Enter a name");
+            else
+            {
+                rpspresenter.AddRPS(int.Parse(VendorNameCombo.SelectedValue.ToString()), rpsNametxt.Text, contactNametxt.Text, contactNotxt.Text, routeDetlstxt.Text, remarktxt.Text);
+                MessageBox.Show("RPS added");
+            }
+
+
+
+        }
     }
 }
