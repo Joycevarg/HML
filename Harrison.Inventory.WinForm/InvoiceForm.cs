@@ -110,9 +110,50 @@ namespace Harrison.Inventory.WinForm
             amnttxt.Text = amnt.ToString();
         }
 
-       
+        private void lumpqtytxt_TextChanged(object sender, EventArgs e)
+        {
+            float lumb, price,amnt;
+            if (lumpqtytxt.Text == "")
+                lumb = 0;
+            else
+            lumb = float.Parse(lumpqtytxt.Text);
+            if (LumbPricetxt.Text == "")
+                price = 0;
+            else
+                price = float.Parse(LumbPricetxt.Text);
+            amnt = lumb * price;
+            LumbAmnttxt.Text = amnt.ToString();
+
+        }
+
+        private void LumbPricetxt_TextChanged(object sender, EventArgs e)
+        {
+            float lumb, price, amnt;
+            if (lumpqtytxt.Text == "")
+                lumb = 0;
+            else
+                lumb = float.Parse(lumpqtytxt.Text);
+            if (LumbPricetxt.Text == "")
+                price = 0;
+            else
+                price = float.Parse(LumbPricetxt.Text);
+            amnt = lumb * price;
+            LumbAmnttxt.Text = amnt.ToString();
+
+        }
+
+        private void Savebtn_Click(object sender, EventArgs e)
+        {
+            int moved=0,traded=0,spot_contract=0;
+            if(movedcb.Checked==true)
+                moved=1;
+            if(tradedcb.Checked==true)
+                traded=1;
+            
+            _invoicepresenter.AddInvoice(moved, Datetxt.Text, int.Parse(VendorNamecombo.SelectedValue.ToString()), int.Parse(RPScombo.SelectedValue.ToString()), commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, float.Parse(barrelqtytxt.Text), float.Parse(lumpqtytxt.Text), float.Parse(emptyqtytxt.Text), float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spot_contract.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text), float.Parse(tamnttxt.Text));
+            MessageBox.Show("Invoice added");
+        }   
+    }
 }
-        
-            }
 
     

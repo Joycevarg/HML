@@ -28,5 +28,10 @@ namespace Harrison.Inventory.Presenter
         {
             _iinvoiceview.setRPSValues(_irpsservice.RpswithVendor(vendorid));
         }
+        public void AddInvoice(int moved, string date, int vid, int rid, string comm, int trade, string commcode, string frr, string lpc, string vfa, float bqty, float lqty, float eqty, float wwt, float drc, float ratekg, int spot_contract, string code, float dwt, float amnt, float cgst, float sgst, float tamnt)
+        {
+            _iinvoiceservice.AddInvoice(0, moved, date, vid, rid, comm, trade, commcode, frr, lpc, vfa, bqty, lqty, eqty, wwt, drc, ratekg, spot_contract, code, dwt, amnt, cgst, sgst, tamnt);
+
+        }
     }
 }

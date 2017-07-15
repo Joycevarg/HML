@@ -11,16 +11,23 @@ namespace Harrison.Inventory.Data.SqlClient
     public class InvoiceData : IInvoiceData
     {
         String Sql;
-        DataTable dt = new DataTable();
-        SqlDataAdapter da;
+        DataTable dt = new DataTable(); 
+        DBConnection Dbcon = new DBConnection();
+       
    
         public DataTable GetVendorDetails()
         {
-            DBConnection Dbcon = new DBConnection();
+          
             Sql = "Select * from VENDOR";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);
         }
+        public void AddInvoice(Invoice invoice)
+        {
+            Sql = "Insert into INVOICE (MOVED_RECIEPT,INVOICE_DATE,VENDOR_ID,RPS_ID,COMMODITY,TRADED,COMMODITY_CODE,FRR_NO,LPC,VFA,BARREL_QTY,LUMB_QTY,EMPTY_QTY,WET_WT,DRC,RATE_KG,SPOT_CONTRACT,CODE_NO,DRY_WT,AMOUNT,VAT,CESS,TOTAL_AMOUNT) values( '" + invoice.MOVED_RECIEPT.ToString() + "','" + invoice.INVOICE_DATE + "','" + invoice.VENDOR_ID.ToString() + "','" + invoice.RPS_ID.ToString() + "','" + invoice.COMMODITY + "','" + invoice.TRADED.ToString() + "','" + invoice.COMMODITY_CODE + "','" + invoice.FRR_NO + "','" + invoice.LPC + "','" + invoice.VFA + "','" + invoice.BARREL_QTY.ToString() + "','" + invoice.LUMB_QTY.ToString() + "','" + invoice.EMPTY_QTY.ToString() + "','" + invoice.WET_WT.ToString() + "','" + invoice.DRC.ToString() + "','" + invoice.RATE_KG.ToString() + "','" + invoice.SPOT_CONTRACT.ToString() + "','" + invoice.CODE_NO + "','" + invoice.DRY_WT.ToString() + "','" + invoice.AMOUNT.ToString() + "','" + invoice.CGST.ToString() + "','" + invoice.SGST.ToString() + "','" + invoice.TOTAL_AMOUNT.ToString() + "')";
+            dt = Dbcon.Sqlconnection(Sql, "Insert");
+        }
+
     }
 }
