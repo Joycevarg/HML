@@ -15,6 +15,14 @@ namespace Harrison.Inventory.Presenter
         private IInvoiceServices _iinvoiceservice;
         private IVendorServices _ivendorservice = new VendorService(new VendorData());
         private IRPSServices _irpsservice = new RPSServices(new RPSData());
+        public void DefaultInvoiceOrder()
+        {
+            _iinvoiceview.givearrdata(_iinvoiceservice.ArrangeInvoices(SortType.Ascending, SortFieldType.Id));
+        }
+        public void ChangeInvoiceOrder(SortType srttype, SortFieldType srtfield)
+        {
+            _iinvoiceview.givearrdata(_iinvoiceservice.ArrangeInvoices(srttype, srtfield));
+        }
         public InvoicePresenter(IInvoiceView invoiceview, IInvoiceServices invoiceservice)
         {
             _iinvoiceservice = invoiceservice;

@@ -34,15 +34,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.vattxt = new System.Windows.Forms.TextBox();
-            this.cesstxt = new System.Windows.Forms.TextBox();
+            this.CGSTtxt = new System.Windows.Forms.TextBox();
+            this.SGSTtxt = new System.Windows.Forms.TextBox();
             this.savebtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.editbtn = new System.Windows.Forms.Button();
+            this.gridview = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // finYeartxt
             // 
+            this.finYeartxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.finYeartxt.FormattingEnabled = true;
             this.finYeartxt.Location = new System.Drawing.Point(147, 31);
             this.finYeartxt.Margin = new System.Windows.Forms.Padding(4);
@@ -62,6 +64,7 @@
             // 
             // effectDate
             // 
+            this.effectDate.CustomFormat = "yyyy-MM-dd";
             this.effectDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.effectDate.Location = new System.Drawing.Point(147, 64);
             this.effectDate.Margin = new System.Windows.Forms.Padding(4);
@@ -82,12 +85,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 110);
+            this.label3.Location = new System.Drawing.Point(57, 111);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.Size = new System.Drawing.Size(83, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "VAT in(%)";
+            this.label3.Text = "CGST in(%)";
             // 
             // label4
             // 
@@ -95,32 +98,32 @@
             this.label4.Location = new System.Drawing.Point(57, 145);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 17);
+            this.label4.Size = new System.Drawing.Size(83, 17);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Cess in (%)";
+            this.label4.Text = "SGST in(%)";
             // 
-            // vattxt
+            // CGSTtxt
             // 
-            this.vattxt.Location = new System.Drawing.Point(147, 106);
-            this.vattxt.Margin = new System.Windows.Forms.Padding(4);
-            this.vattxt.Name = "vattxt";
-            this.vattxt.Size = new System.Drawing.Size(307, 22);
-            this.vattxt.TabIndex = 6;
+            this.CGSTtxt.Location = new System.Drawing.Point(147, 108);
+            this.CGSTtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.CGSTtxt.Name = "CGSTtxt";
+            this.CGSTtxt.Size = new System.Drawing.Size(307, 22);
+            this.CGSTtxt.TabIndex = 6;
             // 
-            // cesstxt
+            // SGSTtxt
             // 
-            this.cesstxt.Location = new System.Drawing.Point(147, 145);
-            this.cesstxt.Margin = new System.Windows.Forms.Padding(4);
-            this.cesstxt.Name = "cesstxt";
-            this.cesstxt.Size = new System.Drawing.Size(307, 22);
-            this.cesstxt.TabIndex = 7;
+            this.SGSTtxt.Location = new System.Drawing.Point(147, 145);
+            this.SGSTtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.SGSTtxt.Name = "SGSTtxt";
+            this.SGSTtxt.Size = new System.Drawing.Size(307, 22);
+            this.SGSTtxt.TabIndex = 7;
             // 
             // savebtn
             // 
-            this.savebtn.Location = new System.Drawing.Point(159, 196);
+            this.savebtn.Location = new System.Drawing.Point(13, 196);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(83, 28);
+            this.savebtn.Size = new System.Drawing.Size(95, 48);
             this.savebtn.TabIndex = 8;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
@@ -128,10 +131,10 @@
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(249, 196);
+            this.cancelbtn.Location = new System.Drawing.Point(287, 196);
             this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(85, 28);
+            this.cancelbtn.Size = new System.Drawing.Size(85, 48);
             this.cancelbtn.TabIndex = 9;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
@@ -139,24 +142,35 @@
             // 
             // editbtn
             // 
-            this.editbtn.Location = new System.Drawing.Point(344, 196);
+            this.editbtn.Location = new System.Drawing.Point(398, 196);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
-            this.editbtn.Size = new System.Drawing.Size(88, 28);
+            this.editbtn.Size = new System.Drawing.Size(88, 48);
             this.editbtn.TabIndex = 11;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
+            // 
+            // gridview
+            // 
+            this.gridview.Location = new System.Drawing.Point(136, 196);
+            this.gridview.Name = "gridview";
+            this.gridview.Size = new System.Drawing.Size(121, 48);
+            this.gridview.TabIndex = 13;
+            this.gridview.Text = "Previous Tax Details";
+            this.gridview.UseVisualStyleBackColor = true;
+            this.gridview.Click += new System.EventHandler(this.gridview_Click);
             // 
             // Tax_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 268);
+            this.Controls.Add(this.gridview);
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.savebtn);
-            this.Controls.Add(this.cesstxt);
-            this.Controls.Add(this.vattxt);
+            this.Controls.Add(this.SGSTtxt);
+            this.Controls.Add(this.CGSTtxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -167,6 +181,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tax_Details";
             this.Text = "Tax Details";
+            this.Load += new System.EventHandler(this.Tax_Details_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,10 +195,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox vattxt;
-        private System.Windows.Forms.TextBox cesstxt;
+        private System.Windows.Forms.TextBox CGSTtxt;
+        private System.Windows.Forms.TextBox SGSTtxt;
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Button editbtn;
+        private System.Windows.Forms.Button gridview;
     }
 }

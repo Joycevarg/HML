@@ -10,7 +10,7 @@ namespace Harrison.Inventory.Service
 {
     public class DistrictServices : IDistrictServices
     {
-        private DistrictData _districtdata;
+        private IDistrictData _districtdata;
         public DistrictServices(DistrictData Districtdata)
         {
             _districtdata = Districtdata;

@@ -83,6 +83,7 @@
             this.invoicebtn = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.LumbPricetxt = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -596,7 +597,7 @@
             // 
             // invoicebtn
             // 
-            this.invoicebtn.Location = new System.Drawing.Point(103, 584);
+            this.invoicebtn.Location = new System.Drawing.Point(28, 584);
             this.invoicebtn.Name = "invoicebtn";
             this.invoicebtn.Size = new System.Drawing.Size(125, 41);
             this.invoicebtn.TabIndex = 37;
@@ -620,11 +621,22 @@
             this.LumbPricetxt.TabIndex = 39;
             this.LumbPricetxt.TextChanged += new System.EventHandler(this.LumbPricetxt_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(193, 584);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 41);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Previous Invoices";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 636);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LumbPricetxt);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.invoicebtn);
@@ -732,5 +744,6 @@
         private System.Windows.Forms.TextBox LumbAmnttxt;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox LumbPricetxt;
+        private System.Windows.Forms.Button button1;
     }
 }

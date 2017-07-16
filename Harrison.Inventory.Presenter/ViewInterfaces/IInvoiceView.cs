@@ -9,6 +9,7 @@ namespace Harrison.Inventory.Presenter
 {
     public interface IInvoiceView
     {
+        void givearrdata(DataTable branchs);
         void setVendorValues(DataTable vendors);
         void setRPSValues(DataTable rpss);
     }

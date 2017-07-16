@@ -15,10 +15,10 @@ namespace Harrison.Inventory.Data.SqlClient
         DBConnection Dbcon = new DBConnection();
        
    
-        public DataTable GetVendorDetails()
+        public DataTable GetInvoiceDetails()
         {
           
-            Sql = "Select * from VENDOR";
+            Sql = "Select * from INVOICE";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);

@@ -7,10 +7,9 @@ using Harrison.Inventory.Data.Model;
 
 namespace Harrison.Inventory.Data.SqlClient
 {
-     public interface IInvoiceData
+    public interface ITaxDetailsData
     {
-      
-        DataTable GetInvoiceDetails();
-        void AddInvoice(Invoice invoice);
+        DataTable GetTaxDetails();
+        void AddTaxDetails(TaxDetails taxdetails);
     }
 }

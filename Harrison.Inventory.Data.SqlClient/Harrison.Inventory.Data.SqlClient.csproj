@@ -59,9 +59,11 @@
     <Compile Include="Interfaces\IVendorData.cs" />
     <Compile Include="Interfaces\IRPSData.cs" />
     <Compile Include="InvoiceData.cs" />
+    <Compile Include="Interfaces\ITaxDetailsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RPSData.cs" />
     <Compile Include="StateData.cs" />
+    <Compile Include="TaxDetailsData.cs" />
     <Compile Include="VendorData.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

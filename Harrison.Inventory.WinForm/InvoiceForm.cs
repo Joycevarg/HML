@@ -17,11 +17,13 @@ namespace Harrison.Inventory.WinForm
     public partial class InvoiceForm : Form,IInvoiceView
         
     {   IInvoicePresenter _invoicepresenter;
+        GridForm gridfrm;
         public InvoiceForm()
         {
             InitializeComponent();
             _invoicepresenter= new InvoicePresenter(this,new InvoiceServices(new InvoiceData()));
             _invoicepresenter.SetVendorNames();
+            _invoicepresenter.DefaultInvoiceOrder();
            
         }
 
@@ -47,18 +49,15 @@ namespace Harrison.Inventory.WinForm
             RPScombo.DisplayMember = "RPS_NAME";
             RPScombo.DataSource = rpss;
         }
+        public void givearrdata(DataTable branchs)
+        {
+            gridfrm = new GridForm(branchs);
+        }
 
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
         
         }
-
-
-
-       
-
-        
-
         private void VendorNamecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -152,6 +151,12 @@ namespace Harrison.Inventory.WinForm
             
             _invoicepresenter.AddInvoice(moved, Datetxt.Text, int.Parse(VendorNamecombo.SelectedValue.ToString()), int.Parse(RPScombo.SelectedValue.ToString()), commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, float.Parse(barrelqtytxt.Text), float.Parse(lumpqtytxt.Text), float.Parse(emptyqtytxt.Text), float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spot_contract.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text), float.Parse(tamnttxt.Text));
             MessageBox.Show("Invoice added");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _invoicepresenter.DefaultInvoiceOrder();
+            gridfrm.Show();
         }   
     }
 }
