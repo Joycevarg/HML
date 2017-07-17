@@ -17,6 +17,7 @@ namespace Harrison.Inventory.WinForm
     public partial class InvoiceForm : Form,IInvoiceView
         
     {   IInvoicePresenter _invoicepresenter;
+        int reg;
         TaxDetails tax = new TaxDetails(0, "null", "null", 0, 0);
             
         GridForm gridfrm;
@@ -71,7 +72,7 @@ namespace Harrison.Inventory.WinForm
         }
         private void VendorNamecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            reg=_invoicepresenter.VendorRegistered(VendorNamecombo.SelectedValue.ToString());
             _invoicepresenter.SetRPSNames(VendorNamecombo.SelectedValue);
         }
 
@@ -213,10 +214,13 @@ namespace Harrison.Inventory.WinForm
                amnt = 0;
            else
                amnt = float.Parse(TotAmntNotTaxestxt.Text);
-           cgst = amnt * tax.CGST / 100;
-           sgst = amnt * tax.SGST / 100;
-           CGSTtxt.Text = cgst.ToString();
-           SGSTtxt.Text = sgst.ToString();
+           if (reg == 1)
+           {
+               cgst = amnt * tax.CGST / 100;
+               sgst = amnt * tax.SGST / 100;
+               CGSTtxt.Text = cgst.ToString();
+               SGSTtxt.Text = sgst.ToString();
+           }
            total = amnt + cgst + sgst;
            TotAmntwithTaxestxt.Text = total.ToString();
         }

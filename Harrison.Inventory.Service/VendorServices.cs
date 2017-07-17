@@ -28,6 +28,20 @@ namespace Harrison.Inventory.Service
             _vendordata.AddVendor(vendor);
 
         }
+        public int VendorRegistered(int vendorid)
+        {
+            DataTable vendors = _vendordata.GetVendorDetails();
+            int register = 0;
+            foreach (DataRow row in vendors.Rows)
+            {
+                if (int.Parse(row["VENDOR_ID"].ToString()) == vendorid)
+                {
+                    register = int.Parse(row["REGISTERED"].ToString());
+                    break;
+                }
+            }
+            return register;
+        }
     }
 
 }
