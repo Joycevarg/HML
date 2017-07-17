@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.InvoiceNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.VendorNamecombo = new System.Windows.Forms.ComboBox();
             this.RPScombo = new System.Windows.Forms.ComboBox();
@@ -84,10 +83,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Savebtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
-            this.invoicebtn = new System.Windows.Forms.Button();
+            this.Paymentform = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.LumbPricetxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Invoicelbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -101,14 +101,6 @@
             this.label1.Size = new System.Drawing.Size(78, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Invoice No:";
-            // 
-            // InvoiceNo
-            // 
-            this.InvoiceNo.Location = new System.Drawing.Point(124, 46);
-            this.InvoiceNo.Margin = new System.Windows.Forms.Padding(4);
-            this.InvoiceNo.Name = "InvoiceNo";
-            this.InvoiceNo.Size = new System.Drawing.Size(227, 22);
-            this.InvoiceNo.TabIndex = 1;
             // 
             // label2
             // 
@@ -191,8 +183,7 @@
             // 
             // Datetxt
             // 
-            this.Datetxt.CustomFormat = "yyyy-MM-dd";
-            this.Datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Datetxt.CustomFormat = "";
             this.Datetxt.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Datetxt.Location = new System.Drawing.Point(685, 46);
             this.Datetxt.Margin = new System.Windows.Forms.Padding(4);
@@ -641,14 +632,14 @@
             this.closebtn.UseVisualStyleBackColor = true;
             this.closebtn.Click += new System.EventHandler(this.button4_Click);
             // 
-            // invoicebtn
+            // Paymentform
             // 
-            this.invoicebtn.Location = new System.Drawing.Point(28, 618);
-            this.invoicebtn.Name = "invoicebtn";
-            this.invoicebtn.Size = new System.Drawing.Size(125, 41);
-            this.invoicebtn.TabIndex = 37;
-            this.invoicebtn.Text = "View Invoice";
-            this.invoicebtn.UseVisualStyleBackColor = true;
+            this.Paymentform.Location = new System.Drawing.Point(28, 618);
+            this.Paymentform.Name = "Paymentform";
+            this.Paymentform.Size = new System.Drawing.Size(125, 41);
+            this.Paymentform.TabIndex = 37;
+            this.Paymentform.Text = "Payment Form";
+            this.Paymentform.UseVisualStyleBackColor = true;
             // 
             // label24
             // 
@@ -673,19 +664,29 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 41);
             this.button1.TabIndex = 40;
-            this.button1.Text = "Previous Invoices";
+            this.button1.Text = "View Grid";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Invoicelbl
+            // 
+            this.Invoicelbl.AutoSize = true;
+            this.Invoicelbl.ForeColor = System.Drawing.Color.Firebrick;
+            this.Invoicelbl.Location = new System.Drawing.Point(123, 49);
+            this.Invoicelbl.Name = "Invoicelbl";
+            this.Invoicelbl.Size = new System.Drawing.Size(0, 17);
+            this.Invoicelbl.TabIndex = 41;
             // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 685);
+            this.Controls.Add(this.Invoicelbl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LumbPricetxt);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.invoicebtn);
+            this.Controls.Add(this.Paymentform);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.panel2);
@@ -718,7 +719,6 @@
             this.Controls.Add(this.RPScombo);
             this.Controls.Add(this.VendorNamecombo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.InvoiceNo);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InvoiceForm";
@@ -736,7 +736,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox InvoiceNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox VendorNamecombo;
         private System.Windows.Forms.ComboBox RPScombo;
@@ -785,7 +784,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button closebtn;
-        private System.Windows.Forms.Button invoicebtn;
+        private System.Windows.Forms.Button Paymentform;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox LumbAmnttxt;
         private System.Windows.Forms.Label label24;
@@ -795,5 +794,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label sgstpercentlbl;
         private System.Windows.Forms.Label cgstpercentlbl;
+        private System.Windows.Forms.Label Invoicelbl;
     }
 }

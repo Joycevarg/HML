@@ -34,5 +34,16 @@ namespace Harrison.Inventory.Service
             _invoicedata.AddInvoice(invoice);
         
         }
+        public string GenerID()
+        {
+            DataTable Id = _invoicedata.GetInvoiceID();
+
+            string invoiceid;
+            int no=100;
+            no = int.Parse(Id.Rows[0][0].ToString());
+            ServiceFunctions func= new ServiceFunctions();
+            invoiceid=func.GenerateID("INV", no,4);
+            return invoiceid;
+        }
     }
 }

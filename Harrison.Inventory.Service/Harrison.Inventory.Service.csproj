@@ -60,6 +60,7 @@
     <Compile Include="Interfaces\ITaxDetailsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RPSService.cs" />
+    <Compile Include="ServiceFunctions.cs" />
     <Compile Include="StateService.cs" />
     <Compile Include="TaxDetailsService.cs" />
     <Compile Include="VendorServices.cs" />

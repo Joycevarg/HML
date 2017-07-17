@@ -57,6 +57,10 @@ namespace Harrison.Inventory.Presenter
             _iinvoiceservice.AddInvoice(0, moved, date, vid, rid, comm, trade, commcode, frr, lpc, vfa, bqty, lqty, eqty, wwt, drc, ratekg, spot_contract, code, dwt, amnt,lumbprice,lumbamnt,notaxamnt, cgst, sgst, tamnt);
 
         }
+        public void setInvID()
+        {
+            _iinvoiceview.setID(_iinvoiceservice.GenerID());
+        }
         public int VendorRegistered(string vendorid)
         { 
             int vid=int.Parse(vendorid);

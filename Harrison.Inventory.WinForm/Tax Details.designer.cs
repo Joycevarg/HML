@@ -67,7 +67,6 @@
             // effectDate
             // 
             this.effectDate.CustomFormat = "yyyy-MM-dd";
-            this.effectDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.effectDate.Location = new System.Drawing.Point(147, 63);
             this.effectDate.Margin = new System.Windows.Forms.Padding(4);
             this.effectDate.Name = "effectDate";
@@ -175,7 +174,6 @@
             // endDate
             // 
             this.endDate.CustomFormat = "yyyy-MM-dd";
-            this.endDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.endDate.Location = new System.Drawing.Point(147, 95);
             this.endDate.Name = "endDate";
             this.endDate.Size = new System.Drawing.Size(307, 22);

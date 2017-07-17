@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Service
     {
         DataTable ArrangeInvoices(SortType srttype,SortFieldType srtfld);
         void AddInvoice(int ino, int moved, string date, int vid, int rid, string comm, int trade, string commcode, string frr, string lpc, string vfa, float bqty, float lqty, float eqty, float wwt, float drc, float ratekg, int spot_contract, string code, float dwt, float amnt,float lumbprice,float floatamnt,float notaxamnt, float cgst, float sgst, float tamnt);
+        string GenerID();
     }
 }

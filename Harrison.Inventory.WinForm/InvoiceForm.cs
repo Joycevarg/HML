@@ -28,8 +28,9 @@ namespace Harrison.Inventory.WinForm
             _invoicepresenter.SetVendorNames();
             _invoicepresenter.setSpotContractNames();
             _invoicepresenter.DefaultInvoiceOrder();
-          
+            _invoicepresenter.setInvID();
            
+
         }
 
 
@@ -69,6 +70,11 @@ namespace Harrison.Inventory.WinForm
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
             
+        }
+        public void setID(string id)
+        {
+            Invoicelbl.Text = id;
+        
         }
         private void VendorNamecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -160,10 +166,11 @@ namespace Harrison.Inventory.WinForm
                 moved=1;
             if(tradedcb.Checked==true)
                 traded=1;
-            _invoicepresenter.AddInvoice(moved, Datetxt.Text, int.Parse(VendorNamecombo.SelectedValue.ToString()), int.Parse(RPScombo.SelectedValue.ToString()), commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, float.Parse(barrelqtytxt.Text), float.Parse(lumpqtytxt.Text), float.Parse(emptyqtytxt.Text), float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spotContractCombo.SelectedValue.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text),float.Parse(LumbPricetxt.Text),float.Parse(LumbAmnttxt.Text),float.Parse(TotAmntNotTaxestxt.Text), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text), float.Parse(TotAmntwithTaxestxt.Text));
+            _invoicepresenter.AddInvoice(moved, Datetxt.Value.ToString("yyyy-MM-dd"), int.Parse(VendorNamecombo.SelectedValue.ToString()), int.Parse(RPScombo.SelectedValue.ToString()), commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, float.Parse(barrelqtytxt.Text), float.Parse(lumpqtytxt.Text), float.Parse(emptyqtytxt.Text), float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spotContractCombo.SelectedValue.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text), float.Parse(LumbPricetxt.Text), float.Parse(LumbAmnttxt.Text), float.Parse(TotAmntNotTaxestxt.Text), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text), float.Parse(TotAmntwithTaxestxt.Text));
             MessageBox.Show("Invoice added");
             FormFunctions func = new FormFunctions();
             func.ClearTextBoxes(this);
+            _invoicepresenter.setInvID();
            
         }
 

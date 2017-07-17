@@ -23,6 +23,7 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             taxpresenter.DefaultTaxDetailsOrder();
             taxpresenter.SetFinancialYears();
+            effectDate.Value = DateTime.Today;
         }
         public void givearrdata(DataTable taxdetails)
       
@@ -37,7 +38,7 @@ namespace Harrison.Inventory.WinForm
 
         private void savebtn_Click(object sender, EventArgs e)
         {
-            taxpresenter.AddTaxDetails(int.Parse(finYeartxt.SelectedValue.ToString()), effectDate.Text,endDate.Text, float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text));
+            taxpresenter.AddTaxDetails(int.Parse(finYeartxt.SelectedValue.ToString()), effectDate.Value.ToString("yyyy-MM-dd"),endDate.Value.ToString("yyyy-MM-dd"), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text));
             MessageBox.Show("Tax details added");
             FormFunctions func = new FormFunctions();
             func.ClearTextBoxes(this);
@@ -63,7 +64,7 @@ namespace Harrison.Inventory.WinForm
         private void effectDate_ValueChanged(object sender, EventArgs e)
         {
             string enddate,eff;
-            eff=effectDate.Text;
+            eff = effectDate.Value.ToString("yyyy-MM-dd");
             if (int.Parse(eff.Substring(5, 2)) < 3)
             {
                 enddate = eff.Substring(0, 4) + "-03-31";
