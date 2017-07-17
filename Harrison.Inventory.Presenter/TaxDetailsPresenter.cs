@@ -28,10 +28,10 @@ namespace Harrison.Inventory.Presenter
         {
             taxdetailsview.givearrdata(taxdetailsservice.ArrangeTaxDetails(srttype,srtfield));
         }
-        public void AddTaxDetails(int finid, string effectdate, float cgst, float sgst)
+        public void AddTaxDetails(int finid, string effectdate,string enddate, float cgst, float sgst)
         {
 
-            taxdetailsservice.AddTaxDetails(finid, effectdate, cgst, sgst);
+            taxdetailsservice.AddTaxDetails(finid, effectdate,enddate, cgst, sgst);
 
         }
         public void SetFinancialYears()

@@ -65,9 +65,11 @@
             this.label17 = new System.Windows.Forms.Label();
             this.codetxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TotAmntNotTaxestxt = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.LumbAmnttxt = new System.Windows.Forms.TextBox();
-            this.tamnttxt = new System.Windows.Forms.TextBox();
+            this.TotAmntwithTaxestxt = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.SGSTtxt = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -187,7 +189,7 @@
             // 
             // Datetxt
             // 
-            this.Datetxt.CustomFormat = "2012-07-18";
+            this.Datetxt.CustomFormat = "yyyy-MM-dd";
             this.Datetxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Datetxt.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Datetxt.Location = new System.Drawing.Point(685, 46);
@@ -195,6 +197,7 @@
             this.Datetxt.Name = "Datetxt";
             this.Datetxt.Size = new System.Drawing.Size(265, 22);
             this.Datetxt.TabIndex = 10;
+            this.Datetxt.ValueChanged += new System.EventHandler(this.Datetxt_ValueChanged);
             // 
             // label6
             // 
@@ -396,6 +399,7 @@
             // 
             // spotContractCombo
             // 
+            this.spotContractCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.spotContractCombo.FormattingEnabled = true;
             this.spotContractCombo.Location = new System.Drawing.Point(136, 396);
             this.spotContractCombo.Margin = new System.Windows.Forms.Padding(4);
@@ -434,9 +438,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.TotAmntNotTaxestxt);
+            this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.LumbAmnttxt);
-            this.panel1.Controls.Add(this.tamnttxt);
+            this.panel1.Controls.Add(this.TotAmntwithTaxestxt);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.SGSTtxt);
             this.panel1.Controls.Add(this.label21);
@@ -449,13 +455,30 @@
             this.panel1.Location = new System.Drawing.Point(17, 446);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(961, 123);
+            this.panel1.Size = new System.Drawing.Size(961, 164);
             this.panel1.TabIndex = 33;
+            // 
+            // TotAmntNotTaxestxt
+            // 
+            this.TotAmntNotTaxestxt.Location = new System.Drawing.Point(233, 70);
+            this.TotAmntNotTaxestxt.Name = "TotAmntNotTaxestxt";
+            this.TotAmntNotTaxestxt.Size = new System.Drawing.Size(137, 22);
+            this.TotAmntNotTaxestxt.TabIndex = 13;
+            this.TotAmntNotTaxestxt.TextChanged += new System.EventHandler(this.TotAmntNotTaxestxt_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(37, 73);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(188, 17);
+            this.label25.TabIndex = 12;
+            this.label25.Text = "Total Amount(not incl taxes):";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(561, 27);
+            this.label23.Location = new System.Drawing.Point(647, 27);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(99, 17);
             this.label23.TabIndex = 11;
@@ -463,41 +486,42 @@
             // 
             // LumbAmnttxt
             // 
-            this.LumbAmnttxt.Location = new System.Drawing.Point(668, 24);
+            this.LumbAmnttxt.Location = new System.Drawing.Point(752, 22);
             this.LumbAmnttxt.Name = "LumbAmnttxt";
             this.LumbAmnttxt.Size = new System.Drawing.Size(162, 22);
             this.LumbAmnttxt.TabIndex = 10;
+            this.LumbAmnttxt.TextChanged += new System.EventHandler(this.LumbAmnttxt_TextChanged);
             // 
-            // tamnttxt
+            // TotAmntwithTaxestxt
             // 
-            this.tamnttxt.Location = new System.Drawing.Point(668, 68);
-            this.tamnttxt.Margin = new System.Windows.Forms.Padding(4);
-            this.tamnttxt.Name = "tamnttxt";
-            this.tamnttxt.Size = new System.Drawing.Size(253, 22);
-            this.tamnttxt.TabIndex = 9;
+            this.TotAmntwithTaxestxt.Location = new System.Drawing.Point(639, 123);
+            this.TotAmntwithTaxestxt.Margin = new System.Windows.Forms.Padding(4);
+            this.TotAmntwithTaxestxt.Name = "TotAmntwithTaxestxt";
+            this.TotAmntwithTaxestxt.Size = new System.Drawing.Size(253, 22);
+            this.TotAmntwithTaxestxt.TabIndex = 9;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(564, 71);
+            this.label22.Location = new System.Drawing.Point(467, 126);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(96, 17);
+            this.label22.Size = new System.Drawing.Size(164, 17);
             this.label22.TabIndex = 8;
-            this.label22.Text = "Total Amount:";
+            this.label22.Text = "Total Amount(incl taxes):";
             // 
             // SGSTtxt
             // 
-            this.SGSTtxt.Location = new System.Drawing.Point(396, 68);
+            this.SGSTtxt.Location = new System.Drawing.Point(752, 66);
             this.SGSTtxt.Margin = new System.Windows.Forms.Padding(4);
             this.SGSTtxt.Name = "SGSTtxt";
-            this.SGSTtxt.Size = new System.Drawing.Size(132, 22);
+            this.SGSTtxt.Size = new System.Drawing.Size(162, 22);
             this.SGSTtxt.TabIndex = 7;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(338, 71);
+            this.label21.Location = new System.Drawing.Point(694, 73);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(50, 17);
@@ -506,7 +530,7 @@
             // 
             // CGSTtxt
             // 
-            this.CGSTtxt.Location = new System.Drawing.Point(124, 68);
+            this.CGSTtxt.Location = new System.Drawing.Point(470, 70);
             this.CGSTtxt.Margin = new System.Windows.Forms.Padding(4);
             this.CGSTtxt.Name = "CGSTtxt";
             this.CGSTtxt.Size = new System.Drawing.Size(132, 22);
@@ -515,7 +539,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(66, 71);
+            this.label20.Location = new System.Drawing.Point(400, 75);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(50, 17);
@@ -525,7 +549,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(328, 27);
+            this.label19.Location = new System.Drawing.Point(393, 30);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(60, 17);
@@ -534,24 +558,26 @@
             // 
             // amnttxt
             // 
-            this.amnttxt.Location = new System.Drawing.Point(396, 24);
+            this.amnttxt.Location = new System.Drawing.Point(470, 27);
             this.amnttxt.Margin = new System.Windows.Forms.Padding(4);
             this.amnttxt.Name = "amnttxt";
             this.amnttxt.Size = new System.Drawing.Size(132, 22);
             this.amnttxt.TabIndex = 2;
+            this.amnttxt.TextChanged += new System.EventHandler(this.amnttxt_TextChanged);
             // 
             // drywttxt
             // 
-            this.drywttxt.Location = new System.Drawing.Point(119, 24);
+            this.drywttxt.Location = new System.Drawing.Point(233, 27);
             this.drywttxt.Margin = new System.Windows.Forms.Padding(4);
             this.drywttxt.Name = "drywttxt";
             this.drywttxt.Size = new System.Drawing.Size(137, 22);
             this.drywttxt.TabIndex = 1;
+            this.drywttxt.TextChanged += new System.EventHandler(this.drywttxt_TextChanged);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(8, 27);
+            this.label18.Location = new System.Drawing.Point(117, 30);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(108, 17);
@@ -575,7 +601,7 @@
             // 
             // Savebtn
             // 
-            this.Savebtn.Location = new System.Drawing.Point(624, 584);
+            this.Savebtn.Location = new System.Drawing.Point(635, 618);
             this.Savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.Savebtn.Name = "Savebtn";
             this.Savebtn.Size = new System.Drawing.Size(126, 41);
@@ -586,7 +612,7 @@
             // 
             // closebtn
             // 
-            this.closebtn.Location = new System.Drawing.Point(797, 584);
+            this.closebtn.Location = new System.Drawing.Point(797, 618);
             this.closebtn.Margin = new System.Windows.Forms.Padding(4);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(124, 41);
@@ -597,7 +623,7 @@
             // 
             // invoicebtn
             // 
-            this.invoicebtn.Location = new System.Drawing.Point(28, 584);
+            this.invoicebtn.Location = new System.Drawing.Point(28, 618);
             this.invoicebtn.Name = "invoicebtn";
             this.invoicebtn.Size = new System.Drawing.Size(125, 41);
             this.invoicebtn.TabIndex = 37;
@@ -623,7 +649,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(193, 584);
+            this.button1.Location = new System.Drawing.Point(193, 618);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 41);
             this.button1.TabIndex = 40;
@@ -635,7 +661,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 636);
+            this.ClientSize = new System.Drawing.Size(995, 685);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LumbPricetxt);
             this.Controls.Add(this.label24);
@@ -676,7 +702,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InvoiceForm";
-            this.Text = "InvoiceForm";
+            this.Text = "Amount";
             this.Load += new System.EventHandler(this.InvoiceForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -726,7 +752,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox codetxt;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tamnttxt;
+        private System.Windows.Forms.TextBox TotAmntwithTaxestxt;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox SGSTtxt;
         private System.Windows.Forms.Label label21;
@@ -745,5 +771,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox LumbPricetxt;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TotAmntNotTaxestxt;
+        private System.Windows.Forms.Label label25;
     }
 }

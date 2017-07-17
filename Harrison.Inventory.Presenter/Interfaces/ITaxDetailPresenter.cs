@@ -10,7 +10,7 @@ namespace Harrison.Inventory.Presenter
     {
         void DefaultTaxDetailsOrder();
         void ChangeTaxDetailsOrder(SortType sortType, SortFieldType sortField);
-        void AddTaxDetails(int finid,string effectdate,float cgst,float sgst);
+        void AddTaxDetails(int finid,string effectdate,string enddate,float cgst,float sgst);
         void SetFinancialYears();
     }
 }

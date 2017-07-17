@@ -40,6 +40,8 @@
             this.cancelbtn = new System.Windows.Forms.Button();
             this.editbtn = new System.Windows.Forms.Button();
             this.gridview = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.endDate = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // finYeartxt
@@ -55,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 33);
+            this.label1.Location = new System.Drawing.Point(41, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 17);
@@ -66,16 +68,17 @@
             // 
             this.effectDate.CustomFormat = "yyyy-MM-dd";
             this.effectDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.effectDate.Location = new System.Drawing.Point(147, 64);
+            this.effectDate.Location = new System.Drawing.Point(147, 63);
             this.effectDate.Margin = new System.Windows.Forms.Padding(4);
             this.effectDate.Name = "effectDate";
             this.effectDate.Size = new System.Drawing.Size(307, 22);
             this.effectDate.TabIndex = 2;
+            this.effectDate.ValueChanged += new System.EventHandler(this.effectDate_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 71);
+            this.label2.Location = new System.Drawing.Point(27, 68);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 17);
@@ -85,7 +88,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 111);
+            this.label3.Location = new System.Drawing.Point(56, 129);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 17);
@@ -95,7 +98,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(57, 145);
+            this.label4.Location = new System.Drawing.Point(56, 156);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 17);
@@ -104,7 +107,7 @@
             // 
             // CGSTtxt
             // 
-            this.CGSTtxt.Location = new System.Drawing.Point(147, 108);
+            this.CGSTtxt.Location = new System.Drawing.Point(147, 126);
             this.CGSTtxt.Margin = new System.Windows.Forms.Padding(4);
             this.CGSTtxt.Name = "CGSTtxt";
             this.CGSTtxt.Size = new System.Drawing.Size(307, 22);
@@ -112,15 +115,16 @@
             // 
             // SGSTtxt
             // 
-            this.SGSTtxt.Location = new System.Drawing.Point(147, 145);
+            this.SGSTtxt.Location = new System.Drawing.Point(147, 156);
             this.SGSTtxt.Margin = new System.Windows.Forms.Padding(4);
             this.SGSTtxt.Name = "SGSTtxt";
             this.SGSTtxt.Size = new System.Drawing.Size(307, 22);
             this.SGSTtxt.TabIndex = 7;
+            
             // 
             // savebtn
             // 
-            this.savebtn.Location = new System.Drawing.Point(13, 196);
+            this.savebtn.Location = new System.Drawing.Point(13, 229);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(95, 48);
@@ -131,7 +135,7 @@
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(287, 196);
+            this.cancelbtn.Location = new System.Drawing.Point(281, 229);
             this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(85, 48);
@@ -142,7 +146,7 @@
             // 
             // editbtn
             // 
-            this.editbtn.Location = new System.Drawing.Point(398, 196);
+            this.editbtn.Location = new System.Drawing.Point(385, 229);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(88, 48);
@@ -152,7 +156,7 @@
             // 
             // gridview
             // 
-            this.gridview.Location = new System.Drawing.Point(136, 196);
+            this.gridview.Location = new System.Drawing.Point(136, 229);
             this.gridview.Name = "gridview";
             this.gridview.Size = new System.Drawing.Size(121, 48);
             this.gridview.TabIndex = 13;
@@ -160,11 +164,31 @@
             this.gridview.UseVisualStyleBackColor = true;
             this.gridview.Click += new System.EventHandler(this.gridview_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(109, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 17);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Till:";
+            // 
+            // endDate
+            // 
+            this.endDate.CustomFormat = "yyyy-MM-dd";
+            this.endDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endDate.Location = new System.Drawing.Point(147, 95);
+            this.endDate.Name = "endDate";
+            this.endDate.Size = new System.Drawing.Size(307, 22);
+            this.endDate.TabIndex = 16;
+            // 
             // Tax_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 268);
+            this.ClientSize = new System.Drawing.Size(499, 313);
+            this.Controls.Add(this.endDate);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.gridview);
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.cancelbtn);
@@ -201,5 +225,7 @@
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.Button gridview;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker endDate;
     }
 }

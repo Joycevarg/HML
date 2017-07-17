@@ -5,6 +5,7 @@ using System.Text;
 using Harrison.Inventory.Service;
 using Harrison.Inventory.Data.Model;
 using Harrison.Inventory.Data.SqlClient;
+using System.Data;
 
 
 namespace Harrison.Inventory.Presenter
@@ -13,11 +14,13 @@ namespace Harrison.Inventory.Presenter
     {
         private IInvoiceView _iinvoiceview;
         private IInvoiceServices _iinvoiceservice;
-        private IVendorServices _ivendorservice = new VendorService(new VendorData());
-        private IRPSServices _irpsservice = new RPSServices(new RPSData());
+        private IVendorServices _ivendorservice ;
+        private IRPSServices _irpsservice;
+        private ITaxDetailsService _itaxdetailservice;
         public void DefaultInvoiceOrder()
         {
             _iinvoiceview.givearrdata(_iinvoiceservice.ArrangeInvoices(SortType.Ascending, SortFieldType.Id));
+           
         }
         public void ChangeInvoiceOrder(SortType srttype, SortFieldType srtfield)
         {
@@ -27,18 +30,31 @@ namespace Harrison.Inventory.Presenter
         {
             _iinvoiceservice = invoiceservice;
             _iinvoiceview = invoiceview;
+            _ivendorservice = new VendorService(new VendorData());
+            _irpsservice = new RPSServices(new RPSData());
+            _itaxdetailservice = new TaxDetailsService(new TaxDetailsData());
+
         }
+        public TaxDetails GetTax(string invoicedate)
+        {
+            return _itaxdetailservice.TaxFromDate(DateTime.Parse(invoicedate));
+        }
+        public void setSpotContractNames()
+        {
+            _iinvoiceview.setSpotContractValues();
+        }
+        
         public void SetVendorNames()
         {
-            _iinvoiceview.setVendorValues(_ivendorservice.ArrangeVendor(SortType.Ascending, SortFieldType.Id));  //this one
+            _iinvoiceview.setVendorValues(_ivendorservice.ArrangeVendor(SortType.Ascending, SortFieldType.Id));  
         }
         public void SetRPSNames(object vendorid)
         {
             _iinvoiceview.setRPSValues(_irpsservice.RpswithVendor(vendorid));
         }
-        public void AddInvoice(int moved, string date, int vid, int rid, string comm, int trade, string commcode, string frr, string lpc, string vfa, float bqty, float lqty, float eqty, float wwt, float drc, float ratekg, int spot_contract, string code, float dwt, float amnt, float cgst, float sgst, float tamnt)
+        public void AddInvoice(int moved, string date, int vid, int rid, string comm, int trade, string commcode, string frr, string lpc, string vfa, float bqty, float lqty, float eqty, float wwt, float drc, float ratekg, int spot_contract, string code, float dwt, float amnt,float lumbprice,float lumbamnt,float notaxamnt, float cgst, float sgst, float tamnt)
         {
-            _iinvoiceservice.AddInvoice(0, moved, date, vid, rid, comm, trade, commcode, frr, lpc, vfa, bqty, lqty, eqty, wwt, drc, ratekg, spot_contract, code, dwt, amnt, cgst, sgst, tamnt);
+            _iinvoiceservice.AddInvoice(0, moved, date, vid, rid, comm, trade, commcode, frr, lpc, vfa, bqty, lqty, eqty, wwt, drc, ratekg, spot_contract, code, dwt, amnt,lumbprice,lumbamnt,notaxamnt, cgst, sgst, tamnt);
 
         }
     }

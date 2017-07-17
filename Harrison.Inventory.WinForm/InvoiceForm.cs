@@ -17,13 +17,17 @@ namespace Harrison.Inventory.WinForm
     public partial class InvoiceForm : Form,IInvoiceView
         
     {   IInvoicePresenter _invoicepresenter;
+        TaxDetails tax = new TaxDetails(0, "null", "null", 0, 0);
+            
         GridForm gridfrm;
         public InvoiceForm()
         {
             InitializeComponent();
             _invoicepresenter= new InvoicePresenter(this,new InvoiceServices(new InvoiceData()));
             _invoicepresenter.SetVendorNames();
+            _invoicepresenter.setSpotContractNames();
             _invoicepresenter.DefaultInvoiceOrder();
+          
            
         }
 
@@ -39,10 +43,17 @@ namespace Harrison.Inventory.WinForm
             VendorNamecombo.ValueMember="VENDOR_ID";
             VendorNamecombo.DisplayMember="VENDOR_NAME";         
             VendorNamecombo.DataSource=vendors;
-           
-          
-
         }
+
+        public void setSpotContractValues()
+        {
+            List<SPOT_CONTRACT> spotlist=new List<SPOT_CONTRACT>(){new SPOT_CONTRACT(1,"Spot"),new SPOT_CONTRACT(2,"Contract")};
+            spotContractCombo.ValueMember = "IDMember";
+            spotContractCombo.DisplayMember = "displayMember";
+            spotContractCombo.DataSource = spotlist;
+            
+        }
+
         public void setRPSValues(DataTable rpss)
         {
             RPScombo.ValueMember = "RPS_ID";
@@ -56,7 +67,7 @@ namespace Harrison.Inventory.WinForm
 
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
-        
+            
         }
         private void VendorNamecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -143,21 +154,105 @@ namespace Harrison.Inventory.WinForm
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
-            int moved=0,traded=0,spot_contract=0;
+            int moved=0,traded=0;
             if(movedcb.Checked==true)
                 moved=1;
             if(tradedcb.Checked==true)
                 traded=1;
-            
-            _invoicepresenter.AddInvoice(moved, Datetxt.Text, int.Parse(VendorNamecombo.SelectedValue.ToString()), int.Parse(RPScombo.SelectedValue.ToString()), commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, float.Parse(barrelqtytxt.Text), float.Parse(lumpqtytxt.Text), float.Parse(emptyqtytxt.Text), float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spot_contract.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text), float.Parse(tamnttxt.Text));
+            _invoicepresenter.AddInvoice(moved, Datetxt.Text, int.Parse(VendorNamecombo.SelectedValue.ToString()), int.Parse(RPScombo.SelectedValue.ToString()), commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, float.Parse(barrelqtytxt.Text), float.Parse(lumpqtytxt.Text), float.Parse(emptyqtytxt.Text), float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spotContractCombo.SelectedValue.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text),float.Parse(LumbPricetxt.Text),float.Parse(LumbAmnttxt.Text),float.Parse(TotAmntNotTaxestxt.Text), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text), float.Parse(TotAmntwithTaxestxt.Text));
             MessageBox.Show("Invoice added");
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             _invoicepresenter.DefaultInvoiceOrder();
             gridfrm.Show();
-        }   
+        }
+
+        private void amnttxt_TextChanged(object sender, EventArgs e)
+        {
+            float LatexAmnt=0, LumbAmnt=0,total;
+            if (amnttxt.Text == "")
+                LatexAmnt = 0;
+            else
+                LatexAmnt = float.Parse(amnttxt.Text);
+            if (LumbAmnttxt.Text == "")
+                LumbAmnt = 0;
+            else
+                LumbAmnt = float.Parse(LumbAmnttxt.Text);
+            total = LatexAmnt + LumbAmnt;
+
+            TotAmntNotTaxestxt.Text = total.ToString();
+        }
+
+        private void LumbAmnttxt_TextChanged(object sender, EventArgs e)
+        {
+            float LatexAmnt = 0, LumbAmnt = 0, total;
+            if (amnttxt.Text == "")
+                LatexAmnt = 0;
+            else
+                LatexAmnt = float.Parse(amnttxt.Text);
+            if (LumbAmnttxt.Text == "")
+                LumbAmnt = 0;
+            else
+                LumbAmnt = float.Parse(LumbAmnttxt.Text);
+            total = LatexAmnt + LumbAmnt;
+
+            TotAmntNotTaxestxt.Text = total.ToString();
+
+        }
+
+        
+
+        private void Datetxt_ValueChanged(object sender, EventArgs e)
+        {
+           tax = _invoicepresenter.GetTax(Datetxt.Text);
+           float amnt = 0, cgst = 0, sgst = 0, total = 0;
+           if (TotAmntNotTaxestxt.Text == "")
+               amnt = 0;
+           else
+               amnt = float.Parse(TotAmntNotTaxestxt.Text);
+           cgst = amnt * tax.CGST / 100;
+           sgst = amnt * tax.SGST / 100;
+           CGSTtxt.Text = cgst.ToString();
+           SGSTtxt.Text = sgst.ToString();
+           total = amnt + cgst + sgst;
+           TotAmntwithTaxestxt.Text = total.ToString();
+        }
+
+        private void TotAmntNotTaxestxt_TextChanged(object sender, EventArgs e)
+        {
+            float amnt=0,cgst = 0, sgst = 0, total = 0;
+            if (TotAmntNotTaxestxt.Text == "")
+                amnt = 0;
+            else
+                amnt = float.Parse(TotAmntNotTaxestxt.Text);
+            cgst = amnt * tax.CGST / 100;
+            sgst = amnt * tax.SGST / 100;
+            CGSTtxt.Text = cgst.ToString();
+            SGSTtxt.Text = sgst.ToString();
+            total = amnt + cgst + sgst;
+            TotAmntwithTaxestxt.Text = total.ToString();
+
+        }
+
+        private void drywttxt_TextChanged(object sender, EventArgs e)
+        {
+            float rate, dwt, amnt;
+            if (this.drywttxt.Text == "")
+                dwt = 0;
+            else
+                dwt = float.Parse(this.drywttxt.Text);
+            if (this.ratetxt.Text == "")
+                rate = 0;
+            else
+                rate = float.Parse(this.ratetxt.Text);
+            amnt = dwt * rate;
+            amnttxt.Text = amnt.ToString();
+        }
+
+            
     }
 }
 

@@ -24,7 +24,7 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void AddTaxDetails(TaxDetails taxdetails)
         {
-            Sql = "Insert into TAX_DETAILS (FIN_YEAR_ID,EFFECT_DATE,CGST,SGST) values( '" + taxdetails.FIN_YEAR_ID.ToString() + "','"+taxdetails.EFFECT_DATE+"','"+taxdetails.CGST.ToString()+"','"+taxdetails.SGST.ToString()+"');";
+            Sql = "Insert into TAX_DETAILS (FIN_YEAR_ID,EFFECT_DATE,END_DATE,CGST,SGST) values( '" + taxdetails.FIN_YEAR_ID.ToString() + "','"+taxdetails.EFFECT_DATE+"','"+taxdetails.END_DATE+"','"+taxdetails.CGST.ToString()+"','"+taxdetails.SGST.ToString()+"');";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
 
 

@@ -29,10 +29,28 @@ namespace Harrison.Inventory.Service
             return taxdetails;
 
         }
-        public void AddTaxDetails(int finid, string effectdate, float cgst, float sgst)
+        public void AddTaxDetails(int finid, string effectdate,string enddate, float cgst, float sgst)
         {
-            TaxDetails taxdetails = new TaxDetails(finid, effectdate, cgst, sgst);
+            TaxDetails taxdetails = new TaxDetails(finid, effectdate,enddate, cgst, sgst);
             taxdetailsdata.AddTaxDetails(taxdetails);
+        }
+        public TaxDetails TaxFromDate(DateTime invoicedate)
+        {
+            DataTable taxdetails = taxdetailsdata.GetTaxDetails();
+            TaxDetails tax = new TaxDetails(0, "null", "null", 0, 0);
+            DateTime effectdate, enddate;
+            foreach (DataRow row in taxdetails.Rows)
+            { 
+                effectdate=DateTime.Parse(row["EFFECT_DATE"].ToString());
+                enddate=DateTime.Parse(row["END_DATE"].ToString());
+                if (DateTime.Compare(invoicedate, effectdate) >= 0 && DateTime.Compare(invoicedate, enddate) <= 0)
+                {
+                   
+                    tax.CGST = float.Parse(row["CGST"].ToString());
+                    tax.SGST = float.Parse(row["SGST"].ToString());
+                }
+            }
+            return tax;
         }
     }
 }

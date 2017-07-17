@@ -11,6 +11,7 @@ namespace Harrison.Inventory.Presenter
     {
         void givearrdata(DataTable branchs);
         void setVendorValues(DataTable vendors);
-        void setRPSValues(DataTable rpss);
+        void setRPSValues(DataTable rpss); 
+        void setSpotContractValues();
     }
 }

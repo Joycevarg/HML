@@ -10,6 +10,7 @@ namespace Harrison.Inventory.Service
     public interface ITaxDetailsService
     {
         DataTable ArrangeTaxDetails(SortType sortType, SortFieldType sortField);
-        void AddTaxDetails(int finid, string effectdate, float cgst, float sgst);
+        void AddTaxDetails(int finid, string effectdate,string enddate, float cgst, float sgst);
+        TaxDetails TaxFromDate(DateTime invoicedate);
     }
 }

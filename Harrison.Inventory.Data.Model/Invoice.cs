@@ -28,12 +28,15 @@ namespace Harrison.Inventory.Data.Model
         public string CODE_NO{get;set;}
         public float DRY_WT{get;set;}
         public float AMOUNT{ get; set;}
+        public float LUMB_PRICE { get; set; }
+        public float LUMB_AMOUNT { get; set; }
+        public float NO_TAX_AMOUNT { get; set; }
         public float CGST{ get; set;}
         public float SGST{get;set;}
         public float TOTAL_AMOUNT{ get;set;}
 
 
-        public Invoice(int ino, int moved, string date,int vid,int rid,string comm,int trade,string commcode,string frr,string lpc,string vfa,float bqty,float lqty,float eqty,float wwt,float drc,float ratekg,int spot_contract,string code,float dwt,float amnt,float cgst,float sgst,float tamnt)
+        public Invoice(int ino, int moved, string date,int vid,int rid,string comm,int trade,string commcode,string frr,string lpc,string vfa,float bqty,float lqty,float eqty,float wwt,float drc,float ratekg,int spot_contract,string code,float dwt,float amnt,float lumbprice,float lumbamnt,float notaxamnt,float cgst,float sgst,float tamnt)
 
         {
             this.INVOICE_NO = ino;
@@ -56,6 +59,9 @@ namespace Harrison.Inventory.Data.Model
             this.CODE_NO = code;
             this.DRY_WT = dwt;
             this.AMOUNT = amnt;
+            this.LUMB_PRICE = lumbprice;
+            this.LUMB_AMOUNT = lumbamnt;
+            this.NO_TAX_AMOUNT = notaxamnt;
             this.CGST = cgst;
             this.SGST = sgst;
             this.TOTAL_AMOUNT = tamnt;
