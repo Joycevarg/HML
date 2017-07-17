@@ -28,7 +28,7 @@ namespace Harrison.Inventory.WinForm
             vendorpresenter.setEstateNames();
             vendorpresenter.setBankNames();
             ownerNotxt.MaxLength = 10;
-            
+            tapperNotxt.MaxLength = 10;
         }
 
             public SortType SortDirection { get; set; }
@@ -44,6 +44,8 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
+
+      
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -116,29 +118,53 @@ namespace Harrison.Inventory.WinForm
                 dealer_grower = 1;
             else
                 dealer_grower = 2;
-            if (rgstrchkbox.Checked == true)
+            if (regcheckbox.Checked == true)
                 register = 1;
             else
                 register = 0;
             if (string.IsNullOrWhiteSpace(ventorNametxt.Text))
                 MessageBox.Show("Enter the Name");
-            else if (phone.IsMatch(ownerNotxt.Text))
+            else if (!phone.IsMatch(ownerNotxt.Text))
                 MessageBox.Show("Owner phone number has insufficient digits");
-            else if (phone.IsMatch(tapperNotxt.Text))
+            else if (!phone.IsMatch(tapperNotxt.Text))
                 MessageBox.Show("Tapper phone number has insufficient digits");
             else
             {
-                vendorpresenter.AddVendor(ventorNametxt.Text, homeAddresstxt.Text, int.Parse(hdistrictcombo.SelectedValue.ToString()), int.Parse(hstatecombo.SelectedValue.ToString()), estateAddresstxt.Text, int.Parse(edistrictcombo.SelectedValue.ToString()), int.Parse(estatecombo.SelectedValue.ToString()), oAddresstxt.Text, tapperNotxt.Text, occuptxt.Text, ownerNotxt.Text, dealer_grower, LNotxt.Text, TinNotxt.Text, cstNotxt.Text, remarktxt.Text, DateTime.Now.Date.ToString("yyyy-MM-dd"), DateTime.Now.Date.ToString("yyyy-MM-dd"), "notnow", int.Parse(Bankcombo.SelectedValue.ToString()), int.Parse(Branchcombo.SelectedValue.ToString()), acctxt.Text, register);
+                vendorpresenter.AddVendor(ventorNametxt.Text, homeAddresstxt.Text, int.Parse(hdistrictcombo.SelectedValue.ToString()), int.Parse(hstatecombo.SelectedValue.ToString()), estateAddresstxt.Text, int.Parse(edistrictcombo.SelectedValue.ToString()), int.Parse(estatecombo.SelectedValue.ToString()), oAddresstxt.Text, tapperNotxt.Text, occuptxt.Text, ownerNotxt.Text, dealer_grower, LicenNotxt.Text, TinNotxt.Text, cstNotxt.Text, remarktxt.Text, DateTime.Now.Date.ToString("yyyy-MM-dd"), DateTime.Now.Date.ToString("yyyy-MM-dd"), "notnow", int.Parse(Bankcombo.SelectedValue.ToString()), int.Parse(Branchcombo.SelectedValue.ToString()), acctxt.Text, register);
                 MessageBox.Show("Vendor added");
-            }  
+                FormFunctions func = new FormFunctions();
+                func.ClearTextBoxes(this);
+            }
+  
 
         }
-
+       
         private void Bankcombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             vendorpresenter.setBranchNames(Bankcombo.SelectedValue);
         }
 
+        private void rgstrchkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (regcheckbox.Checked == false)
+            {
+                dealerRbtn.Enabled = false;
+                LicenNotxt.Enabled = false;
+                TinNotxt.Enabled = false;
+                cstNotxt.Enabled = false;
+                remarktxt.Enabled = false;
+            }
+            else
+            {
+                dealerRbtn.Enabled = true;
+                LicenNotxt.Enabled = true;
+                TinNotxt.Enabled = true;
+                cstNotxt.Enabled = true;
+                remarktxt.Enabled = true;
+            }
+        }
+
+     
        
 
         

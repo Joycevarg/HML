@@ -65,6 +65,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.codetxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sgstpercentlbl = new System.Windows.Forms.Label();
+            this.cgstpercentlbl = new System.Windows.Forms.Label();
             this.TotAmntNotTaxestxt = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -438,6 +440,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.sgstpercentlbl);
+            this.panel1.Controls.Add(this.cgstpercentlbl);
             this.panel1.Controls.Add(this.TotAmntNotTaxestxt);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label23);
@@ -457,6 +461,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(961, 164);
             this.panel1.TabIndex = 33;
+            // 
+            // sgstpercentlbl
+            // 
+            this.sgstpercentlbl.AutoSize = true;
+            this.sgstpercentlbl.Location = new System.Drawing.Point(860, 92);
+            this.sgstpercentlbl.Name = "sgstpercentlbl";
+            this.sgstpercentlbl.Size = new System.Drawing.Size(0, 17);
+            this.sgstpercentlbl.TabIndex = 15;
+            // 
+            // cgstpercentlbl
+            // 
+            this.cgstpercentlbl.AutoSize = true;
+            this.cgstpercentlbl.Location = new System.Drawing.Point(548, 96);
+            this.cgstpercentlbl.Name = "cgstpercentlbl";
+            this.cgstpercentlbl.Size = new System.Drawing.Size(0, 17);
+            this.cgstpercentlbl.TabIndex = 14;
             // 
             // TotAmntNotTaxestxt
             // 
@@ -702,7 +722,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InvoiceForm";
-            this.Text = "Amount";
+            this.Text = "Invoice";
             this.Load += new System.EventHandler(this.InvoiceForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -773,5 +793,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox TotAmntNotTaxestxt;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label sgstpercentlbl;
+        private System.Windows.Forms.Label cgstpercentlbl;
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="Bank.cs" />
     <Compile Include="Branch.cs" />
     <Compile Include="Cluster.cs" />
+    <Compile Include="ClusterDistrict.cs" />
     <Compile Include="District.cs" />
     <Compile Include="Enum\SortFieldType.cs" />
     <Compile Include="Enum\SortType.cs" />

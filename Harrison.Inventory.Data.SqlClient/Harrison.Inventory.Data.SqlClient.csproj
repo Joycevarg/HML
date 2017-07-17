@@ -46,6 +46,8 @@
     <Compile Include="BankData.cs" />
     <Compile Include="BranchData.cs" />
     <Compile Include="ClusterData.cs" />
+    <Compile Include="ClusterDistrictData.cs" />
+    <Compile Include="Interfaces\IClusterDistrictData.cs" />
     <Compile Include="Interfaces\IInvoiceData.cs" />
     <Compile Include="Interfaces\IBranchData.cs" />
     <Compile Include="Interfaces\IClusterData.cs" />

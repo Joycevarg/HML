@@ -136,6 +136,7 @@
             this.clusterDistrictMappingToolStripMenuItem.Name = "clusterDistrictMappingToolStripMenuItem";
             this.clusterDistrictMappingToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
             this.clusterDistrictMappingToolStripMenuItem.Text = "Cluster-District Mapping";
+            this.clusterDistrictMappingToolStripMenuItem.Click += new System.EventHandler(this.clusterDistrictMappingToolStripMenuItem_Click);
             // 
             // stateToolStripMenuItem
             // 

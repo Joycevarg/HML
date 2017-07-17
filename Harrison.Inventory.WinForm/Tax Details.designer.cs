@@ -120,7 +120,6 @@
             this.SGSTtxt.Name = "SGSTtxt";
             this.SGSTtxt.Size = new System.Drawing.Size(307, 22);
             this.SGSTtxt.TabIndex = 7;
-            
             // 
             // savebtn
             // 
@@ -160,7 +159,7 @@
             this.gridview.Name = "gridview";
             this.gridview.Size = new System.Drawing.Size(121, 48);
             this.gridview.TabIndex = 13;
-            this.gridview.Text = "Previous Tax Details";
+            this.gridview.Text = "View grid";
             this.gridview.UseVisualStyleBackColor = true;
             this.gridview.Click += new System.EventHandler(this.gridview_Click);
             // 

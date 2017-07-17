@@ -43,7 +43,7 @@
             this.finYeartxt.Margin = new System.Windows.Forms.Padding(4);
             this.finYeartxt.Name = "finYeartxt";
             this.finYeartxt.Size = new System.Drawing.Size(227, 22);
-            this.finYeartxt.TabIndex = 0;
+            this.finYeartxt.TabIndex = 0;            
             // 
             // label1
             // 

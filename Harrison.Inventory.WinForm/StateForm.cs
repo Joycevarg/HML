@@ -41,6 +41,8 @@ namespace Harrison.Inventory.WinForm
             {
                 _statepresenter.AddState(statetxt.Text);
                 MessageBox.Show("State added");
+                FormFunctions func = new FormFunctions();
+                func.ClearTextBoxes(this);
                 _statepresenter.DefaultStateOrder();
 
 

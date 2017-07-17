@@ -60,6 +60,7 @@ namespace Harrison.Inventory.WinForm
             else {
                 _idistrictpresenter.AddDistrict(districttxt.Text, int.Parse(statecombo.SelectedValue.ToString()));
                 MessageBox.Show("District Added");
+                districttxt.Text = "";
                 _idistrictpresenter.DefaultDistrictOrder();
 
             }

@@ -67,7 +67,8 @@ namespace Harrison.Inventory.WinForm
             {
                 branchpresenter.AddBranch(branchnametxt.Text, int.Parse(bankcombo.SelectedValue.ToString()), ifsctxt.Text, bankaddresstxt.Text, contacttxt.Text);
                 MessageBox.Show("Branch added");
-              
+                FormFunctions func = new FormFunctions();
+                func.ClearTextBoxes(this);
 
             }
 

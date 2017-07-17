@@ -30,28 +30,9 @@ namespace Harrison.Inventory.WinForm
             _iFinancialYearsPresenter = new FinancialYearsPresenter(this,new FinancialYearsService(new FinancialYearsDAL()));
             _iFinancialYearsPresenter.init();
            
-           this.finYeartxt.TextChanged+=new EventHandler(finYeartxt_TextChanged);
-
-            
+       
          }
-        private void finYeartxt_TextChanged(object sender, EventArgs e)
-        {
-            
-            finYeartxt.MaxLength = 9;
-
-            if (finYeartxt.TextLength == 4 && flag)
-            {
-                finYeartxt.Text += "-";
-                finYeartxt.SelectionStart = finYeartxt.TextLength;
-                      flag = false;
-            }
-            else if (finYeartxt.TextLength == 3)
-                    flag = true;
-                
-           
-            
-        
-        }
+     
       
         public SortType SortDirection
         {
@@ -92,6 +73,7 @@ namespace Harrison.Inventory.WinForm
                 _iFinancialYearsPresenter.AddFinancialYears(FinyearText);
                 _iFinancialYearsPresenter.init();
                 MessageBox.Show("Financial Year added!");
+                finYeartxt.Clear();
             }
         }
 
@@ -110,6 +92,9 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
-     
+
+       
+
+        
     }
 }

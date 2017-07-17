@@ -30,7 +30,7 @@
         {
             this.ventorNametxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rgstrchkbox = new System.Windows.Forms.CheckBox();
+            this.regcheckbox = new System.Windows.Forms.CheckBox();
             this.homeAddresstxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.dealerRbtn = new System.Windows.Forms.RadioButton();
             this.growerRbtn = new System.Windows.Forms.RadioButton();
             this.oAddresstxt = new System.Windows.Forms.TextBox();
-            this.LNotxt = new System.Windows.Forms.TextBox();
+            this.LicenNotxt = new System.Windows.Forms.TextBox();
             this.remarktxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -103,16 +103,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Vendor Name";
             // 
-            // rgstrchkbox
+            // regcheckbox
             // 
-            this.rgstrchkbox.AutoSize = true;
-            this.rgstrchkbox.Location = new System.Drawing.Point(115, 18);
-            this.rgstrchkbox.Margin = new System.Windows.Forms.Padding(4);
-            this.rgstrchkbox.Name = "rgstrchkbox";
-            this.rgstrchkbox.Size = new System.Drawing.Size(279, 21);
-            this.rgstrchkbox.TabIndex = 2;
-            this.rgstrchkbox.Text = "     Registered (UnTick if UnRegistered)";
-            this.rgstrchkbox.UseVisualStyleBackColor = true;
+            this.regcheckbox.AutoSize = true;
+            this.regcheckbox.Checked = true;
+            this.regcheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.regcheckbox.Location = new System.Drawing.Point(115, 18);
+            this.regcheckbox.Margin = new System.Windows.Forms.Padding(4);
+            this.regcheckbox.Name = "regcheckbox";
+            this.regcheckbox.Size = new System.Drawing.Size(279, 21);
+            this.regcheckbox.TabIndex = 2;
+            this.regcheckbox.Text = "     Registered (UnTick if UnRegistered)";
+            this.regcheckbox.UseVisualStyleBackColor = true;
+            this.regcheckbox.CheckedChanged += new System.EventHandler(this.rgstrchkbox_CheckedChanged);
             // 
             // homeAddresstxt
             // 
@@ -257,13 +260,13 @@
             this.oAddresstxt.Size = new System.Drawing.Size(304, 112);
             this.oAddresstxt.TabIndex = 17;
             // 
-            // LNotxt
+            // LicenNotxt
             // 
-            this.LNotxt.Location = new System.Drawing.Point(119, 50);
-            this.LNotxt.Margin = new System.Windows.Forms.Padding(4);
-            this.LNotxt.Name = "LNotxt";
-            this.LNotxt.Size = new System.Drawing.Size(167, 22);
-            this.LNotxt.TabIndex = 18;
+            this.LicenNotxt.Location = new System.Drawing.Point(119, 50);
+            this.LicenNotxt.Margin = new System.Windows.Forms.Padding(4);
+            this.LicenNotxt.Name = "LicenNotxt";
+            this.LicenNotxt.Size = new System.Drawing.Size(167, 22);
+            this.LicenNotxt.TabIndex = 18;
             // 
             // remarktxt
             // 
@@ -401,7 +404,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.homeAddresstxt);
-            this.groupBox1.Controls.Add(this.rgstrchkbox);
+            this.groupBox1.Controls.Add(this.regcheckbox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.ventorNametxt);
             this.groupBox1.Location = new System.Drawing.Point(19, 2);
@@ -507,7 +510,7 @@
             this.editbtn.Size = new System.Drawing.Size(100, 28);
             this.editbtn.TabIndex = 43;
             this.editbtn.Text = "Edit";
-            this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.UseVisualStyleBackColor = true;          
             // 
             // groupBox4
             // 
@@ -517,7 +520,7 @@
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.remarktxt);
-            this.groupBox4.Controls.Add(this.LNotxt);
+            this.groupBox4.Controls.Add(this.LicenNotxt);
             this.groupBox4.Controls.Add(this.growerRbtn);
             this.groupBox4.Controls.Add(this.dealerRbtn);
             this.groupBox4.Controls.Add(this.TinNotxt);
@@ -559,7 +562,6 @@
             // 
             // Bankcombo
             // 
-            this.Bankcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Bankcombo.FormattingEnabled = true;
             this.Bankcombo.Location = new System.Drawing.Point(113, 17);
             this.Bankcombo.Name = "Bankcombo";
@@ -643,7 +645,7 @@
 
         private System.Windows.Forms.TextBox ventorNametxt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox rgstrchkbox;
+        private System.Windows.Forms.CheckBox regcheckbox;
         private System.Windows.Forms.TextBox homeAddresstxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -659,7 +661,7 @@
         private System.Windows.Forms.RadioButton dealerRbtn;
         private System.Windows.Forms.RadioButton growerRbtn;
         private System.Windows.Forms.TextBox oAddresstxt;
-        private System.Windows.Forms.TextBox LNotxt;
+        private System.Windows.Forms.TextBox LicenNotxt;
         private System.Windows.Forms.TextBox remarktxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

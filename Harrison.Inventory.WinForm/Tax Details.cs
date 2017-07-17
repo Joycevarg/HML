@@ -39,6 +39,8 @@ namespace Harrison.Inventory.WinForm
         {
             taxpresenter.AddTaxDetails(int.Parse(finYeartxt.SelectedValue.ToString()), effectDate.Text,endDate.Text, float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text));
             MessageBox.Show("Tax details added");
+            FormFunctions func = new FormFunctions();
+            func.ClearTextBoxes(this);
         }
 
         private void Tax_Details_Load(object sender, EventArgs e)
@@ -72,5 +74,6 @@ namespace Harrison.Inventory.WinForm
             }
             endDate.Text = enddate;
         }
+
     }
 }

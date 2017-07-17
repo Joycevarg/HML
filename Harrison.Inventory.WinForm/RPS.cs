@@ -63,6 +63,8 @@ namespace Harrison.Inventory.WinForm
             {
                 rpspresenter.AddRPS(int.Parse(VendorNameCombo.SelectedValue.ToString()), rpsNametxt.Text, contactNametxt.Text, contactNotxt.Text, routeDetlstxt.Text, remarktxt.Text);
                 MessageBox.Show("RPS added");
+                FormFunctions func = new FormFunctions();
+                func.ClearTextBoxes(this);
             }
 
 

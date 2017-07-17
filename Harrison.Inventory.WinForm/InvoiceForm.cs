@@ -162,6 +162,8 @@ namespace Harrison.Inventory.WinForm
                 traded=1;
             _invoicepresenter.AddInvoice(moved, Datetxt.Text, int.Parse(VendorNamecombo.SelectedValue.ToString()), int.Parse(RPScombo.SelectedValue.ToString()), commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, float.Parse(barrelqtytxt.Text), float.Parse(lumpqtytxt.Text), float.Parse(emptyqtytxt.Text), float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spotContractCombo.SelectedValue.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text),float.Parse(LumbPricetxt.Text),float.Parse(LumbAmnttxt.Text),float.Parse(TotAmntNotTaxestxt.Text), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text), float.Parse(TotAmntwithTaxestxt.Text));
             MessageBox.Show("Invoice added");
+            FormFunctions func = new FormFunctions();
+            func.ClearTextBoxes(this);
            
         }
 
@@ -210,12 +212,16 @@ namespace Harrison.Inventory.WinForm
         {
            tax = _invoicepresenter.GetTax(Datetxt.Text);
            float amnt = 0, cgst = 0, sgst = 0, total = 0;
+           cgstpercentlbl.Text = "";
+           sgstpercentlbl.Text = "";                
            if (TotAmntNotTaxestxt.Text == "")
                amnt = 0;
            else
                amnt = float.Parse(TotAmntNotTaxestxt.Text);
            if (reg == 1)
            {
+               cgstpercentlbl.Text = tax.CGST.ToString() + "%";
+               sgstpercentlbl.Text = tax.SGST.ToString() + "%";
                cgst = amnt * tax.CGST / 100;
                sgst = amnt * tax.SGST / 100;
                CGSTtxt.Text = cgst.ToString();
@@ -228,14 +234,21 @@ namespace Harrison.Inventory.WinForm
         private void TotAmntNotTaxestxt_TextChanged(object sender, EventArgs e)
         {
             float amnt=0,cgst = 0, sgst = 0, total = 0;
+            cgstpercentlbl.Text = "";
+            sgstpercentlbl.Text = "";
             if (TotAmntNotTaxestxt.Text == "")
                 amnt = 0;
             else
                 amnt = float.Parse(TotAmntNotTaxestxt.Text);
-            cgst = amnt * tax.CGST / 100;
-            sgst = amnt * tax.SGST / 100;
-            CGSTtxt.Text = cgst.ToString();
-            SGSTtxt.Text = sgst.ToString();
+            if (reg == 1)
+            {
+                cgstpercentlbl.Text = tax.CGST.ToString() + "%";
+                sgstpercentlbl.Text = tax.SGST.ToString() + "%";
+                cgst = amnt * tax.CGST / 100;
+                sgst = amnt * tax.SGST / 100;
+                CGSTtxt.Text = cgst.ToString();
+                SGSTtxt.Text = sgst.ToString();
+            }
             total = amnt + cgst + sgst;
             TotAmntwithTaxestxt.Text = total.ToString();
 

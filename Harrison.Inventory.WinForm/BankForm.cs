@@ -60,6 +60,8 @@ namespace Harrison.Inventory.WinForm
             {
                 _bankpresenter.AddBank(bankNametxt.Text);
                  MessageBox.Show("Bank added");
+                 FormFunctions func = new FormFunctions();
+                 func.ClearTextBoxes(this);
                 _bankpresenter.DefaultBankOrder();
                 
             

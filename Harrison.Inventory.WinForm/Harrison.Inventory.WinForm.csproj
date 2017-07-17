@@ -62,6 +62,12 @@
     <Compile Include="BranchForm.designer.cs">
       <DependentUpon>BranchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClusterDistrictMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClusterDistrictMap.Designer.cs">
+      <DependentUpon>ClusterDistrictMap.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClusterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,7 @@
     <Compile Include="FinancialYear.Designer.cs">
       <DependentUpon>FinancialYear.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFunctions.cs" />
     <Compile Include="GridForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BranchForm.resx">
       <DependentUpon>BranchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClusterDistrictMap.resx">
+      <DependentUpon>ClusterDistrictMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClusterForm.resx">
       <DependentUpon>ClusterForm.cs</DependentUpon>

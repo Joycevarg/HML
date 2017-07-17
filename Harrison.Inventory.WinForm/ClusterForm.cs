@@ -56,6 +56,7 @@ namespace Harrison.Inventory.WinForm
             {
                 _iclusterpresenter.AddCluster(clustertxt.Text, int.Parse(statecombo.SelectedValue.ToString()));
                 MessageBox.Show("Cluster added");
+                clustertxt.Text = "";
                 _iclusterpresenter.DefaultClusterOrder();
 
             }
