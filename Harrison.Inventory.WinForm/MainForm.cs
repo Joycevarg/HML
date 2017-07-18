@@ -97,6 +97,12 @@ namespace Harrison.Inventory.WinForm
         {
             ClusterDistrictMap clusterdistrictform = new ClusterDistrictMap();
             clusterdistrictform.Show();
+        }
+
+        private void paymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PaymentInfoForm Paymentform = new PaymentInfoForm();
+            Paymentform.Show();
         }       
     }
 }

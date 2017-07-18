@@ -99,11 +99,11 @@
     <Compile Include="MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Payment Info.cs">
+    <Compile Include="PaymentInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Payment Info.designer.cs">
-      <DependentUpon>Payment Info.cs</DependentUpon>
+    <Compile Include="PaymentInfo.designer.cs">
+      <DependentUpon>PaymentInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,8 +161,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payment Info.resx">
-      <DependentUpon>Payment Info.cs</DependentUpon>
+    <EmbeddedResource Include="PaymentInfo.resx">
+      <DependentUpon>PaymentInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

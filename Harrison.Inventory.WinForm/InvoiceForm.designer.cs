@@ -83,7 +83,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Savebtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
-            this.Paymentform = new System.Windows.Forms.Button();
+            this.Invoiceviewbtn = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.LumbPricetxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -632,14 +632,14 @@
             this.closebtn.UseVisualStyleBackColor = true;
             this.closebtn.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Paymentform
+            // Invoiceviewbtn
             // 
-            this.Paymentform.Location = new System.Drawing.Point(28, 618);
-            this.Paymentform.Name = "Paymentform";
-            this.Paymentform.Size = new System.Drawing.Size(125, 41);
-            this.Paymentform.TabIndex = 37;
-            this.Paymentform.Text = "Payment Form";
-            this.Paymentform.UseVisualStyleBackColor = true;
+            this.Invoiceviewbtn.Location = new System.Drawing.Point(28, 618);
+            this.Invoiceviewbtn.Name = "Invoiceviewbtn";
+            this.Invoiceviewbtn.Size = new System.Drawing.Size(125, 41);
+            this.Invoiceviewbtn.TabIndex = 37;
+            this.Invoiceviewbtn.Text = "View Invoice";
+            this.Invoiceviewbtn.UseVisualStyleBackColor = true;
             // 
             // label24
             // 
@@ -686,7 +686,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LumbPricetxt);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.Paymentform);
+            this.Controls.Add(this.Invoiceviewbtn);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.panel2);
@@ -784,7 +784,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button closebtn;
-        private System.Windows.Forms.Button Paymentform;
+        private System.Windows.Forms.Button Invoiceviewbtn;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox LumbAmnttxt;
         private System.Windows.Forms.Label label24;

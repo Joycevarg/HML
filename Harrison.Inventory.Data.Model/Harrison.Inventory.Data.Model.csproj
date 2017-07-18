@@ -51,6 +51,7 @@
     <Compile Include="Enum\SortType.cs" />
     <Compile Include="FinancialYears.cs" />
     <Compile Include="Invoice.cs" />
+    <Compile Include="PaymentInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RPS.cs" />
     <Compile Include="SPOT_CONTRACT.cs" />
