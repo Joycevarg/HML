@@ -12,5 +12,9 @@ namespace Harrison.Inventory.Presenter
         SortType SortDirection { get; set; }
         SortFieldType SortField { get; set; }
         void givearrdata(DataTable paymentinfos);
+        void SetInvoiceValues(DataTable invoices);
+        void SetVendorName(string vendorname);
+        void SetToPayAmount(float topayamnt);
+
     }
 }

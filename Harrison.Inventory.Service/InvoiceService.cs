@@ -17,7 +17,7 @@ namespace Harrison.Inventory.Service
         }
         public DataTable ArrangeInvoices(SortType srttype,SortFieldType srtfld)
         {
-            DataTable invoices = _invoicedata.GetInvoiceDetails();
+             DataTable invoices = _invoicedata.GetInvoiceDetails();
             /*    if (sortType == SortType.Ascending)
                 {
                     clusters = clusters.OrderBy(p => p.CLUSTER_ID).ToList();
@@ -36,14 +36,38 @@ namespace Harrison.Inventory.Service
         }
         public string GenerID()
         {
-            DataTable Id = _invoicedata.GetInvoiceID();
-
+            DataTable dt = _invoicedata.GetInvoiceID();
             string invoiceid;
             int no=100;
-            no = int.Parse(Id.Rows[0][0].ToString());
+            no = int.Parse(dt.Rows[0][0].ToString());
             ServiceFunctions func= new ServiceFunctions();
             invoiceid=func.GenerateID("INV", no,4);
             return invoiceid;
+        }
+        public int GetVendorID(int invoiceno)
+        {
+            int vendorid=0;
+            int  invoicenum = invoiceno;
+            DataTable dt = _invoicedata.GetInvoiceDetails();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (int.Parse(row["INVOICE_ID"].ToString()) == invoicenum)
+                { vendorid = int.Parse(row["VENDOR_ID"].ToString()); break; }
+
+            }
+            return vendorid;
+        }
+        public float GetAmount(int invno)
+        {
+            float topayamnt=0;
+            DataTable dt = _invoicedata.GetInvoiceDetails();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (int.Parse(row["INVOICE_ID"].ToString()) ==invno)
+                { topayamnt = float.Parse(row["TOTAL_AMOUNT"].ToString()); break; }
+
+            }
+            return topayamnt;
         }
     }
 }

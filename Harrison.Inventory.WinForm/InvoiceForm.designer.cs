@@ -345,6 +345,7 @@
             // 
             // wetwttxt
             // 
+            this.wetwttxt.BackColor = System.Drawing.SystemColors.Window;
             this.wetwttxt.Location = new System.Drawing.Point(136, 350);
             this.wetwttxt.Margin = new System.Windows.Forms.Padding(4);
             this.wetwttxt.Name = "wetwttxt";
@@ -471,8 +472,10 @@
             // 
             // TotAmntNotTaxestxt
             // 
+            this.TotAmntNotTaxestxt.BackColor = System.Drawing.SystemColors.Window;
             this.TotAmntNotTaxestxt.Location = new System.Drawing.Point(233, 70);
             this.TotAmntNotTaxestxt.Name = "TotAmntNotTaxestxt";
+            this.TotAmntNotTaxestxt.ReadOnly = true;
             this.TotAmntNotTaxestxt.Size = new System.Drawing.Size(137, 22);
             this.TotAmntNotTaxestxt.TabIndex = 13;
             this.TotAmntNotTaxestxt.TextChanged += new System.EventHandler(this.TotAmntNotTaxestxt_TextChanged);
@@ -497,17 +500,21 @@
             // 
             // LumbAmnttxt
             // 
+            this.LumbAmnttxt.BackColor = System.Drawing.SystemColors.Window;
             this.LumbAmnttxt.Location = new System.Drawing.Point(752, 22);
             this.LumbAmnttxt.Name = "LumbAmnttxt";
+            this.LumbAmnttxt.ReadOnly = true;
             this.LumbAmnttxt.Size = new System.Drawing.Size(162, 22);
             this.LumbAmnttxt.TabIndex = 10;
             this.LumbAmnttxt.TextChanged += new System.EventHandler(this.LumbAmnttxt_TextChanged);
             // 
             // TotAmntwithTaxestxt
             // 
+            this.TotAmntwithTaxestxt.BackColor = System.Drawing.SystemColors.Window;
             this.TotAmntwithTaxestxt.Location = new System.Drawing.Point(639, 123);
             this.TotAmntwithTaxestxt.Margin = new System.Windows.Forms.Padding(4);
             this.TotAmntwithTaxestxt.Name = "TotAmntwithTaxestxt";
+            this.TotAmntwithTaxestxt.ReadOnly = true;
             this.TotAmntwithTaxestxt.Size = new System.Drawing.Size(253, 22);
             this.TotAmntwithTaxestxt.TabIndex = 9;
             // 
@@ -523,9 +530,11 @@
             // 
             // SGSTtxt
             // 
+            this.SGSTtxt.BackColor = System.Drawing.SystemColors.Window;
             this.SGSTtxt.Location = new System.Drawing.Point(752, 66);
             this.SGSTtxt.Margin = new System.Windows.Forms.Padding(4);
             this.SGSTtxt.Name = "SGSTtxt";
+            this.SGSTtxt.ReadOnly = true;
             this.SGSTtxt.Size = new System.Drawing.Size(162, 22);
             this.SGSTtxt.TabIndex = 7;
             // 
@@ -541,9 +550,11 @@
             // 
             // CGSTtxt
             // 
+            this.CGSTtxt.BackColor = System.Drawing.SystemColors.Window;
             this.CGSTtxt.Location = new System.Drawing.Point(470, 70);
             this.CGSTtxt.Margin = new System.Windows.Forms.Padding(4);
             this.CGSTtxt.Name = "CGSTtxt";
+            this.CGSTtxt.ReadOnly = true;
             this.CGSTtxt.Size = new System.Drawing.Size(132, 22);
             this.CGSTtxt.TabIndex = 5;
             // 
@@ -569,18 +580,22 @@
             // 
             // amnttxt
             // 
+            this.amnttxt.BackColor = System.Drawing.SystemColors.Window;
             this.amnttxt.Location = new System.Drawing.Point(470, 27);
             this.amnttxt.Margin = new System.Windows.Forms.Padding(4);
             this.amnttxt.Name = "amnttxt";
+            this.amnttxt.ReadOnly = true;
             this.amnttxt.Size = new System.Drawing.Size(132, 22);
             this.amnttxt.TabIndex = 2;
             this.amnttxt.TextChanged += new System.EventHandler(this.amnttxt_TextChanged);
             // 
             // drywttxt
             // 
+            this.drywttxt.BackColor = System.Drawing.SystemColors.Window;
             this.drywttxt.Location = new System.Drawing.Point(233, 27);
             this.drywttxt.Margin = new System.Windows.Forms.Padding(4);
             this.drywttxt.Name = "drywttxt";
+            this.drywttxt.ReadOnly = true;
             this.drywttxt.Size = new System.Drawing.Size(137, 22);
             this.drywttxt.TabIndex = 1;
             this.drywttxt.TextChanged += new System.EventHandler(this.drywttxt_TextChanged);

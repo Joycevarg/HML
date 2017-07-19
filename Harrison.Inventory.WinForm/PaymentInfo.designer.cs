@@ -108,6 +108,7 @@
             // 
             // TotAmntPaidtxt
             // 
+            this.TotAmntPaidtxt.BackColor = System.Drawing.SystemColors.Window;
             this.TotAmntPaidtxt.Location = new System.Drawing.Point(185, 264);
             this.TotAmntPaidtxt.Name = "TotAmntPaidtxt";
             this.TotAmntPaidtxt.ReadOnly = true;
@@ -135,7 +136,7 @@
             // 
             // Balancetxt
             // 
-            this.Balancetxt.BackColor = System.Drawing.Color.GhostWhite;
+            this.Balancetxt.BackColor = System.Drawing.SystemColors.Window;
             this.Balancetxt.Location = new System.Drawing.Point(185, 298);
             this.Balancetxt.Name = "Balancetxt";
             this.Balancetxt.ReadOnly = true;
@@ -157,7 +158,7 @@
             this.PaymentModeCombo.Name = "PaymentModeCombo";
             this.PaymentModeCombo.Size = new System.Drawing.Size(245, 24);
             this.PaymentModeCombo.TabIndex = 21;
-            this.PaymentModeCombo.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.PaymentModeCombo.SelectedIndexChanged += new System.EventHandler(this.PaymentModeCombo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -238,11 +239,12 @@
             this.InvNoCombo.Name = "InvNoCombo";
             this.InvNoCombo.Size = new System.Drawing.Size(200, 24);
             this.InvNoCombo.TabIndex = 32;
+            this.InvNoCombo.SelectedIndexChanged += new System.EventHandler(this.InvNoCombo_SelectedIndexChanged);
             // 
             // TotaltoPaytxt
             // 
-            this.TotaltoPaytxt.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TotaltoPaytxt.Location = new System.Drawing.Point(185, 181);
+            this.TotaltoPaytxt.BackColor = System.Drawing.SystemColors.Window;
+            this.TotaltoPaytxt.Location = new System.Drawing.Point(185, 176);
             this.TotaltoPaytxt.Name = "TotaltoPaytxt";
             this.TotaltoPaytxt.ReadOnly = true;
             this.TotaltoPaytxt.Size = new System.Drawing.Size(172, 22);
@@ -250,7 +252,7 @@
             // 
             // VendorNametxt
             // 
-            this.VendorNametxt.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.VendorNametxt.BackColor = System.Drawing.SystemColors.Window;
             this.VendorNametxt.Location = new System.Drawing.Point(185, 76);
             this.VendorNametxt.Name = "VendorNametxt";
             this.VendorNametxt.ReadOnly = true;

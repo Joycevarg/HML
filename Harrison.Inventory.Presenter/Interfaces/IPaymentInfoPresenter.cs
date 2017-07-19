@@ -11,6 +11,8 @@ namespace Harrison.Inventory.Presenter
          void DefaultPaymentInfoOrder();
          void ChangePaymentInfoOrder(SortType srttype, SortFieldType srtfield);
         void AddPaymentInfo(int invid, int venid, string paiddate,float topay, float fromho, float otherdebit, string paymentmethod, float total, float balance, string remark);
-        
+        void SetInvoiceIDs();
+        void SetVendorName(int invno);
+        void SetToPayAmnt(int invno);
     }
 }

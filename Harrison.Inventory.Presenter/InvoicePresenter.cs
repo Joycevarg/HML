@@ -64,7 +64,7 @@ namespace Harrison.Inventory.Presenter
         public int VendorRegistered(string vendorid)
         { 
             int vid=int.Parse(vendorid);
-            return _ivendorservice.VendorRegistered(vid);
+            return _ivendorservice.GetVendorRegistered(vid);
         
         }
     }

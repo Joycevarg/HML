@@ -15,11 +15,13 @@ namespace Harrison.Inventory.WinForm
 {
     public partial class PaymentInfoForm : Form,IPaymentInfoView
     {
-        IPaymentInfoPresenter paymentinfopresenter; GridForm gridview;
+        IPaymentInfoPresenter _paymentinfopresenter; 
+        GridForm gridview;
         public PaymentInfoForm()
         {
             InitializeComponent();
-            paymentinfopresenter = new PaymentInfoPresenter(this, new PaymentInfoService(new PaymentInfoData()));
+            _paymentinfopresenter = new PaymentInfoPresenter(this, new PaymentInfoService(new PaymentInfoData()));
+           _paymentinfopresenter.SetInvoiceIDs();
             
             
         }
@@ -29,6 +31,13 @@ namespace Harrison.Inventory.WinForm
         {
            gridview = new GridForm(paymentinfos);
             
+        }
+        public void SetInvoiceValues(DataTable invoices)
+        {
+            InvNoCombo.ValueMember = "INVOICE_ID";
+            InvNoCombo.DisplayMember = "INVOICE_ID";
+            InvNoCombo.DataSource=invoices;
+            InvNoCombo.FormatString = "INV0000";
         }
         private void cancelbtn_Click(object sender, EventArgs e)
         {
@@ -87,23 +96,35 @@ namespace Harrison.Inventory.WinForm
 
         private void gridbtn_Click(object sender, EventArgs e)
         {
-            paymentinfopresenter.DefaultPaymentInfoOrder();
+            _paymentinfopresenter.DefaultPaymentInfoOrder();
             gridview.Show();
             
         }
 
         private void donebtn_Click(object sender, EventArgs e)
         {
-            paymentinfopresenter.AddPaymentInfo(0,0, paymentdatetxt.Value.ToString("yyyy-MM-dd"), 0, float.Parse(HOtxt.Text), float.Parse(OtherDebittxt.Text), PaymentModeCombo.Text, 0, float.Parse(Balancetxt.Text), Remarktxt.Text);
+            _paymentinfopresenter.AddPaymentInfo(0,0, paymentdatetxt.Value.ToString("yyyy-MM-dd"), 0, float.Parse(HOtxt.Text), float.Parse(OtherDebittxt.Text), PaymentModeCombo.Text, 0, float.Parse(Balancetxt.Text), Remarktxt.Text);
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+     
+        private void InvNoCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+         int invid = int.Parse(InvNoCombo.SelectedValue.ToString());
+         _paymentinfopresenter.SetVendorName(invid);   
+        _paymentinfopresenter.SetToPayAmnt(invid);
+        }
+
+        private void PaymentModeCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-       
-
-     
+        public void SetVendorName(string vendorname)
+        {
+            VendorNametxt.Text = vendorname;
+        }
+        public void SetToPayAmount(float topayamnt)
+        {
+            TotaltoPaytxt.Text = topayamnt.ToString();
+        }
     }
 }

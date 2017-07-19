@@ -28,7 +28,7 @@ namespace Harrison.Inventory.Service
             _vendordata.AddVendor(vendor);
 
         }
-        public int VendorRegistered(int vendorid)
+        public int GetVendorRegistered(int vendorid)
         {
             DataTable vendors = _vendordata.GetVendorDetails();
             int register = 0;
@@ -41,6 +41,20 @@ namespace Harrison.Inventory.Service
                 }
             }
             return register;
+        }
+        public string GetVendorName(int vendorid)
+        {
+            DataTable vendors = _vendordata.GetVendorDetails();
+            string vendorname = "";
+            foreach (DataRow row in vendors.Rows)
+            {
+                if (int.Parse(row["VENDOR_ID"].ToString()) == vendorid)
+                {
+                    vendorname = row["VENDOR_NAME"].ToString();
+                    break;
+                }
+            }
+            return vendorname;
         }
     }
 
