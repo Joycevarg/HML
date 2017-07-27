@@ -10,13 +10,14 @@ namespace Harrison.Inventory.Presenter
 {
     public class RPSPresenter : IRPSPresenter
     {
-        private IVendorServices _ivendorservice = new VendorService(new VendorData());
+        private IVendorServices _ivendorservice;
         private IRPSView _irpsview;
         private IRPSServices _irpsservice;
         public RPSPresenter(IRPSView rpsview, IRPSServices rpsservice)
         {
             _irpsservice = rpsservice;
             _irpsview = rpsview;
+            _ivendorservice = new VendorService(new VendorData());
         }
         public void DefaultRPSOrder()
         {
@@ -26,9 +27,9 @@ namespace Harrison.Inventory.Presenter
         {
             _irpsview.givearrdata(_irpsservice.ArrangeRPS(srttype, srtfield));
         }
-         public void setVendorValues()
+         public void setVendorNames()
         {
-            _irpsview.setVendorNames(_ivendorservice.ArrangeVendor(SortType.Ascending, SortFieldType.Id));  //this one
+            _irpsview.setVendorValues(_ivendorservice.ArrangeVendor(SortType.Ascending, SortFieldType.Id));  
         }
          public void AddRPS(int vendid,string rpsname,string contname,string contno,string route,string remark)
          {

@@ -161,12 +161,25 @@ namespace Harrison.Inventory.WinForm
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
-            int moved=0,traded=0;
+            int barrel=0,lump=0,empty=0,moved=0,traded=0,rps=0;
+            float cgst=0,sgst=0;
             if(movedcb.Checked==true)
                 moved=1;
             if(tradedcb.Checked==true)
                 traded=1;
-            _invoicepresenter.AddInvoice(moved, Datetxt.Value.ToString("yyyy-MM-dd"), int.Parse(VendorNamecombo.SelectedValue.ToString()), int.Parse(RPScombo.SelectedValue.ToString()), commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, float.Parse(barrelqtytxt.Text), float.Parse(lumpqtytxt.Text), float.Parse(emptyqtytxt.Text), float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spotContractCombo.SelectedValue.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text), float.Parse(LumbPricetxt.Text), float.Parse(LumbAmnttxt.Text), float.Parse(TotAmntNotTaxestxt.Text), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text), float.Parse(TotAmntwithTaxestxt.Text));
+            if (!string.IsNullOrWhiteSpace(CGSTtxt.Text))
+                cgst = float.Parse(CGSTtxt.Text);
+            if (!string.IsNullOrWhiteSpace(SGSTtxt.Text))
+                sgst = float.Parse(SGSTtxt.Text);
+            if (RPScombo.SelectedValue != null)
+                rps = int.Parse(RPScombo.SelectedValue.ToString());
+            if (!string.IsNullOrWhiteSpace(barrelqtytxt.Text))
+                barrel = int.Parse(barrelqtytxt.Text);
+            if (!string.IsNullOrWhiteSpace(lumpqtytxt.Text))
+                lump = int.Parse(lumpqtytxt.Text);
+            if (!string.IsNullOrWhiteSpace(emptyqtytxt.Text))
+                empty = int.Parse(emptyqtytxt.Text);
+            _invoicepresenter.AddInvoice(moved, Datetxt.Value.ToString("yyyy-MM-dd"), int.Parse(VendorNamecombo.SelectedValue.ToString()), rps, commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, barrel,lump,empty, float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spotContractCombo.SelectedValue.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text), float.Parse(LumbPricetxt.Text), float.Parse(LumbAmnttxt.Text), float.Parse(TotAmntNotTaxestxt.Text), cgst,sgst, float.Parse(TotAmntwithTaxestxt.Text));
             MessageBox.Show("Invoice added");
             FormFunctions func = new FormFunctions();
             func.ClearTextBoxes(this);

@@ -48,6 +48,9 @@
     <Compile Include="FinancialYearsPresenter.cs" />
     <Compile Include="Interfaces\IClusterDistrictPresenter.cs" />
     <Compile Include="Interfaces\IPaymentInfoPresenter.cs" />
+    <Compile Include="Interfaces\IVendorReportPresenter.cs" />
+    <Compile Include="ViewInterfaces\IVendorReportView.cs" />
+    <Compile Include="VendorReportPresenter.cs" />
     <Compile Include="ViewInterfaces\IPaymentInfoView.cs" />
     <Compile Include="PaymentInfoPresenter.cs" />
     <Compile Include="ViewInterfaces\IClusterDistrictView.cs" />

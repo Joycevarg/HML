@@ -58,11 +58,7 @@ namespace Harrison.Inventory.WinForm
             this.Close();
         }
 
-        private void generateFrrReportToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-          //  testreportform report = new testreportform();
-          //  report.Show();
-        }
+   
 
         private void financialYearToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -103,6 +99,14 @@ namespace Harrison.Inventory.WinForm
         {
             PaymentInfoForm Paymentform = new PaymentInfoForm();
             Paymentform.Show();
-        }       
+        }
+
+        private void GenerateVendorReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VendorReportForm vendorform = new VendorReportForm();
+            vendorform.Show();
+        }
+
+             
     }
 }

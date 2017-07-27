@@ -10,7 +10,7 @@ namespace Harrison.Inventory.Presenter
     {
         void DefaultRPSOrder();
         void ChangeRPSOrder(SortType sortType, SortFieldType sortField);
-        void setVendorValues();
+        void setVendorNames();
         void AddRPS(int vendid, string rpsname, string contname, string contno, string route, string remark);
     }
 }

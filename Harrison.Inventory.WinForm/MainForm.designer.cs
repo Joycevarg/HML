@@ -36,7 +36,6 @@
             this.vendorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clustersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rPSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rPSVendorMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clusterDistrictMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financialYearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +45,7 @@
             this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generateFrrReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GenerateVendorReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -68,17 +67,16 @@
             // mastersToolStripMenuItem
             // 
             this.mastersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.taxDetailsToolStripMenuItem,
-            this.districtsToolStripMenuItem,
-            this.bankToolStripMenuItem,
             this.vendorsToolStripMenuItem,
-            this.clustersToolStripMenuItem,
             this.rPSToolStripMenuItem,
-            this.rPSVendorMappingToolStripMenuItem,
-            this.clusterDistrictMappingToolStripMenuItem,
+            this.bankToolStripMenuItem,
+            this.branchsToolStripMenuItem,
             this.stateToolStripMenuItem,
+            this.districtsToolStripMenuItem,
             this.financialYearToolStripMenuItem,
-            this.branchsToolStripMenuItem});
+            this.taxDetailsToolStripMenuItem,
+            this.clustersToolStripMenuItem,
+            this.clusterDistrictMappingToolStripMenuItem});
             this.mastersToolStripMenuItem.Name = "mastersToolStripMenuItem";
             this.mastersToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.mastersToolStripMenuItem.Text = "Masters";
@@ -124,12 +122,6 @@
             this.rPSToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
             this.rPSToolStripMenuItem.Text = "RPS";
             this.rPSToolStripMenuItem.Click += new System.EventHandler(this.rPSToolStripMenuItem_Click);
-            // 
-            // rPSVendorMappingToolStripMenuItem
-            // 
-            this.rPSVendorMappingToolStripMenuItem.Name = "rPSVendorMappingToolStripMenuItem";
-            this.rPSVendorMappingToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.rPSVendorMappingToolStripMenuItem.Text = "RPS-Vendor-Mapping";
             // 
             // clusterDistrictMappingToolStripMenuItem
             // 
@@ -192,17 +184,17 @@
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generateFrrReportToolStripMenuItem});
+            this.GenerateVendorReportToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
-            // generateFrrReportToolStripMenuItem
+            // GenerateVendorReportToolStripMenuItem
             // 
-            this.generateFrrReportToolStripMenuItem.Name = "generateFrrReportToolStripMenuItem";
-            this.generateFrrReportToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
-            this.generateFrrReportToolStripMenuItem.Text = "Generate frr report";
-            this.generateFrrReportToolStripMenuItem.Click += new System.EventHandler(this.generateFrrReportToolStripMenuItem_Click);
+            this.GenerateVendorReportToolStripMenuItem.Name = "GenerateVendorReportToolStripMenuItem";
+            this.GenerateVendorReportToolStripMenuItem.Size = new System.Drawing.Size(233, 24);
+            this.GenerateVendorReportToolStripMenuItem.Text = "Generate vendor report";
+            this.GenerateVendorReportToolStripMenuItem.Click += new System.EventHandler(this.GenerateVendorReportToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -243,14 +235,13 @@
         private System.Windows.Forms.ToolStripMenuItem vendorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clusterDistrictMappingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rPSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rPSVendorMappingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem invoiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generateFrrReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GenerateVendorReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem financialYearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem branchsToolStripMenuItem;
     }

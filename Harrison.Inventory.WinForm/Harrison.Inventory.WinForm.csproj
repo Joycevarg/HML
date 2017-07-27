@@ -131,6 +131,12 @@
     <Compile Include="Tax Details.designer.cs">
       <DependentUpon>Tax Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="VendorReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendorReportForm.Designer.cs">
+      <DependentUpon>VendorReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vendors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tax Details.resx">
       <DependentUpon>Tax Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendorReportForm.resx">
+      <DependentUpon>VendorReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vendors.resx">
       <DependentUpon>Vendors.cs</DependentUpon>

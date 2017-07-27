@@ -56,6 +56,20 @@ namespace Harrison.Inventory.Service
             }
             return vendorname;
         }
+        public string GetTIN(int vendorid)
+        {
+            DataTable vendors = _vendordata.GetVendorDetails();
+            string vendorname = "";
+            foreach (DataRow row in vendors.Rows)
+            {
+                if (int.Parse(row["VENDOR_ID"].ToString()) == vendorid)
+                {
+                    vendorname = row["TIN_NO"].ToString();
+                    break;
+                }
+            }
+            return vendorname;
+        }
     }
 
 }

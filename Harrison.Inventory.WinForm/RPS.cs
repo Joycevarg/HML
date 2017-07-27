@@ -21,14 +21,14 @@ namespace Harrison.Inventory.WinForm
         {
             InitializeComponent();
             rpspresenter = new RPSPresenter(this, new RPSServices(new RPSData()));
-            rpspresenter.setVendorValues();
+            rpspresenter.setVendorNames();
         }
 
         private void RPS_Load(object sender, EventArgs e)
         {
 
         }
-        public void setVendorNames(DataTable vendors)
+        public void setVendorValues(DataTable vendors)
         {
             VendorNameCombo.ValueMember = "VENDOR_ID";
             VendorNameCombo.DisplayMember = "VENDOR_NAME";
