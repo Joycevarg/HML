@@ -33,12 +33,12 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void UpdateDistrict(District district)
         {
-            Sql = "UPDATE DISTRICT set DISTRICT_NAME='" + district.DISTRICT_NAME + "',STATE_ID=" + district.STATE_ID.ToString() +" WHERE DISTRICT_ID=" + district.DISTRICT_ID.ToString();
+            Sql = "UPDATE DISTRICT set DISTRICT_NAME='" + district.DISTRICT_NAME.ToUpper() + "',STATE_ID=" + district.STATE_ID.ToString() + " WHERE DISTRICT_ID=" + district.DISTRICT_ID.ToString();
             dt = Dbcon.Sqlconnection(Sql, "Update");
         }
         public void AddDistrict(District district)
         {
-            Sql = "Insert into DISTRICT (DISTRICT_NAME,STATE_ID) values( '" + district.DISTRICT_NAME + "','" + district.STATE_ID.ToString() + "')";
+            Sql = "Insert into DISTRICT (DISTRICT_NAME,STATE_ID) values( '" + district.DISTRICT_NAME.ToUpper() + "','" + district.STATE_ID.ToString() + "')";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
         public void DeleteDistrict(string districtid)

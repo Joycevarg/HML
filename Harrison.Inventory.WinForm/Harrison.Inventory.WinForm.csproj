@@ -74,6 +74,12 @@
     <Compile Include="ClusterForm.designer.cs">
       <DependentUpon>ClusterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmBox.Designer.cs">
+      <DependentUpon>ConfirmBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="DistrictForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClusterForm.resx">
       <DependentUpon>ClusterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmBox.resx">
+      <DependentUpon>ConfirmBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DistrictForm.resx">
       <DependentUpon>DistrictForm.cs</DependentUpon>

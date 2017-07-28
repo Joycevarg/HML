@@ -14,7 +14,7 @@ namespace Harrison.Inventory.Service
         string GenerateID(string stringpart, int number);
         int GetIDint(string id);
         int GetIDint(string id, int noofdigits);
-        void ExportToExcel( DataTable tbl,int hearderformat,string excelFilePath = null);
-        int VendorReportHeader(Excel._Worksheet worksheet, string tinno);
+        void ExportToExcel( DataTable tbl,int hearderformat,int venid,string excelFilePath = null);
+        int VendorReportHeader(Excel._Worksheet worksheet,int venid);
     }
 }

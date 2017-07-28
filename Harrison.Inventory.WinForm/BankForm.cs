@@ -16,6 +16,8 @@ namespace Harrison.Inventory.WinForm
     public partial class bankDetails : Form,IBankView
     {
         private IBankPresenter _bankpresenter;
+        private object ID;
+        
         public bankDetails()
         {
             InitializeComponent();
@@ -44,8 +46,6 @@ namespace Harrison.Inventory.WinForm
                  FormFunctions func = new FormFunctions();
                  func.ClearTextBoxes(this);
                 _bankpresenter.DefaultBankOrder();
-                
-            
             }
         }
 
@@ -61,12 +61,23 @@ namespace Harrison.Inventory.WinForm
        
         private void bankgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            bankNametxt.Text = bankgrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            edtbtn.Enabled = true;
+            dltbtn.Enabled = true;
+            ID = bankgrid.Rows[e.RowIndex].Cells[0].Value;
+            bankNametxt.Text = bankgrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            _bankpresenter.DeleteBank(ID);
+            MessageBox.Show(bankNametxt.Text + " is deleted");
+            _bankpresenter.DefaultBankOrder();
         }
 
         private void edtbtn_Click(object sender, EventArgs e)
         {
-            
+            _bankpresenter.UpdateBank(int.Parse(ID.ToString()), bankNametxt.Text);
+            _bankpresenter.DefaultBankOrder();
         }
 
     }

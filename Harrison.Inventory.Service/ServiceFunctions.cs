@@ -5,6 +5,7 @@ using System.Text;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data;
 using System.Data.OleDb;
+using Harrison.Inventory.Data.SqlClient;
 
 namespace Harrison.Inventory.Service
 {
@@ -42,8 +43,9 @@ namespace Harrison.Inventory.Service
             return int.Parse(id.Substring(id.Length - noofdigits));
         }
 
-        public void ExportToExcel(DataTable tbl,int headerformat,string excelFilePath = null)
+        public void ExportToExcel(DataTable tbl,int headerformat,int venid,string excelFilePath = null)
         {
+            int start=0;
             try
             {
                 if (tbl == null || tbl.Columns.Count == 0)
@@ -55,12 +57,12 @@ namespace Harrison.Inventory.Service
                 
                 // single worksheet
                 Excel._Worksheet workSheet = excelApp.ActiveSheet;
-                if(headerformat==1)
-
+                if (headerformat == 1)
+                { start = VendorReportHeader(workSheet,venid); }
                 // column headings
                 for (var i = 0; i < tbl.Columns.Count; i++)
                 {
-                    workSheet.Cells[1, i + 1] = tbl.Columns[i].ColumnName;
+                    workSheet.Cells[start, i + 1] = tbl.Columns[i].ColumnName;
                 }
 
                 // rows
@@ -69,7 +71,7 @@ namespace Harrison.Inventory.Service
                     // to do: format datetime values before printing
                     for (var j = 0; j < tbl.Columns.Count; j++)
                     {
-                        workSheet.Cells[i + 2, j + 1] = tbl.Rows[i][j];
+                        workSheet.Cells[i + 2+start, j + 1] = tbl.Rows[i][j];
                     }
                 }
 
@@ -98,10 +100,20 @@ namespace Harrison.Inventory.Service
                 throw new Exception("ExportToExcel: \n" + ex.Message);
             }
         }
-        public int VendorReportHeader(Excel._Worksheet worksheet,string tinno)
+        public int VendorReportHeader(Excel._Worksheet worksheet,int vendorid)
         {
-            worksheet.Cells[1, 1] = tinno;
-            worksheet.Cells[1, 2] = "Rubber Board License No:";
+            IVendorServices _vendorservice = new VendorService(new VendorData());
+            worksheet.Cells[1, 1] = "TIN:"+_vendorservice.GetTIN(vendorid);
+            worksheet.Cells[2, 1] = "Rubber Board License No:";
+            worksheet.Cells[5, 1] = "HARRISONS MALAYALAM LIMITED";
+            worksheet.Cells[6, 1] = "Mooply Estate-Centrifuge Latex Factory";
+            worksheet.Cells[7, 1] = "Palappilly P.O,Thrissur";
+            worksheet.Cells[8, 1] = "Bought Latex Statement";
+            for(int i=1;i<9;i++)
+            worksheet.Cells[i, 1].Font.Bold = true;
+            worksheet.Range[worksheet.Cells[1, 1], worksheet.Cells[100, 100]].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            worksheet.Cells[10, 1] = "Name of Vendor:";
+            worksheet.Cells[10, 2] = _vendorservice.GetVendorName(vendorid);
             for(int i=5;i<10;i++)
             worksheet.Range[worksheet.Cells[i, 1], worksheet.Cells[i, 8]].Merge();
             return 12;

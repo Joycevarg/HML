@@ -18,7 +18,7 @@ namespace Harrison.Inventory.Service
             string filename="";
             DataTable dt = new DataTable();
             dt = reportdata.GetReportData(venid, fromdate, todate);
-            servicefunction.ExportToExcel(dt,1, filename);
+            servicefunction.ExportToExcel(dt,1,venid, filename);
         }
      
 

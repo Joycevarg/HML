@@ -89,6 +89,7 @@
             // 
             // edtbtn
             // 
+            this.edtbtn.Enabled = false;
             this.edtbtn.Location = new System.Drawing.Point(373, 110);
             this.edtbtn.Name = "edtbtn";
             this.edtbtn.Size = new System.Drawing.Size(111, 41);
@@ -109,12 +110,14 @@
             // 
             // dltbtn
             // 
+            this.dltbtn.Enabled = false;
             this.dltbtn.Location = new System.Drawing.Point(543, 110);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(102, 41);
             this.dltbtn.TabIndex = 5;
             this.dltbtn.Text = "Remove";
             this.dltbtn.UseVisualStyleBackColor = true;
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // bankDetails
             // 
