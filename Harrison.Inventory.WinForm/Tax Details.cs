@@ -15,7 +15,7 @@ namespace Harrison.Inventory.WinForm
 {
     public partial class Tax_Details : Form,ITaxDetailsView
     {
-        GridForm gridfrm;
+        
         ITaxDetailPresenter taxpresenter;
         public Tax_Details()
         {
@@ -28,7 +28,7 @@ namespace Harrison.Inventory.WinForm
         public void givearrdata(DataTable taxdetails)
       
         {
-            gridfrm = new GridForm(taxdetails);
+            taxgrid.DataSource = taxdetails;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,11 +55,7 @@ namespace Harrison.Inventory.WinForm
             finYeartxt.DataSource = finyears;
         }
 
-        private void gridview_Click(object sender, EventArgs e)
-        {
-            taxpresenter.DefaultTaxDetailsOrder();
-            gridfrm.Show();
-        }
+       
 
         private void effectDate_ValueChanged(object sender, EventArgs e)
         {

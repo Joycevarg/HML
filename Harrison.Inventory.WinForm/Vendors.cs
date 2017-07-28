@@ -18,7 +18,7 @@ namespace Harrison.Inventory.WinForm
     public partial class VendorsForm : Form,IVendorView
     {
         private IVendorPresenter vendorpresenter;
-        GridForm gridfrm;
+        
             
             public VendorsForm()
         {
@@ -27,6 +27,7 @@ namespace Harrison.Inventory.WinForm
             vendorpresenter.setHstateNames();
             vendorpresenter.setEstateNames();
             vendorpresenter.setBankNames();
+            vendorpresenter.DefaultVendorOrder();
             ownerNotxt.MaxLength = 10;
             tapperNotxt.MaxLength = 10;
         }
@@ -36,7 +37,7 @@ namespace Harrison.Inventory.WinForm
 
             public void givearrdata(DataTable vendors)
             {
-                 gridfrm = new GridForm(vendors);
+                vendorgrid.DataSource = vendors;
             }
           
 
@@ -52,12 +53,7 @@ namespace Harrison.Inventory.WinForm
             this.Close();
         }
 
-        private void gridbtn_Click(object sender, EventArgs e)
-        {
-            vendorpresenter.DefaultVendorOrder();
-            gridfrm.Show();
-
-        }
+        
 
         public void setHStateValues(DataTable states)
         {

@@ -22,7 +22,7 @@ namespace Harrison.Inventory.WinForm
             _clusterdistrictpresenter = new ClusterDistrictPresenter(this, new ClusterDistrictservice(new ClusterDistrictData()));
             _clusterdistrictpresenter.DefaultClusterDistrictOrder();
             _clusterdistrictpresenter.SetClusterNames();
-            _clusterdistrictpresenter.SetDistrictNames();
+            
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
@@ -38,7 +38,7 @@ namespace Harrison.Inventory.WinForm
         }
         public void setClusterValues(DataTable clusters)
         {
-            ClusterCombo.ValueMember = "CLUSTER_ID";
+            ClusterCombo.ValueMember = "STATE_ID";
             ClusterCombo.DisplayMember = "CLUSTER_NAME";
             ClusterCombo.DataSource = clusters;
         }
@@ -55,11 +55,19 @@ namespace Harrison.Inventory.WinForm
 
         private void Addbtn_Click(object sender, EventArgs e)
         {
+            ClusterCombo.ValueMember = "CLUSTER_ID";
             _clusterdistrictpresenter.AddClusterDistrict(int.Parse(DistrictCombo.SelectedValue.ToString()), int.Parse(ClusterCombo.SelectedValue.ToString()));
             MessageBox.Show("Cluster-District Map added");
             _clusterdistrictpresenter.DefaultClusterDistrictOrder();
             FormFunctions form = new FormFunctions();
             form.ClearTextBoxes(this);
+            ClusterCombo.ValueMember = "STATE_ID";
+        }
+
+        private void ClusterCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            _clusterdistrictpresenter.SetDistrictNames(ClusterCombo.SelectedValue);
         }
 
        

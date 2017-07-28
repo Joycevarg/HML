@@ -299,6 +299,7 @@
             this.Controls.Add(this.paymentdatetxt);
             this.Controls.Add(this.paidDatelbl);
             this.Name = "PaymentInfoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment Details";
             this.Load += new System.EventHandler(this.paymentInfo_Load);
             this.ResumeLayout(false);

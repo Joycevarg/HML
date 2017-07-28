@@ -22,6 +22,7 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             rpspresenter = new RPSPresenter(this, new RPSServices(new RPSData()));
             rpspresenter.setVendorNames();
+            rpspresenter.DefaultRPSOrder();
         }
 
         private void RPS_Load(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace Harrison.Inventory.WinForm
 
         public void givearrdata(DataTable rpss)
         {
-            gridfrm = new GridForm(rpss);
+            rpsgrid.DataSource = rpss;
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)
@@ -48,12 +49,7 @@ namespace Harrison.Inventory.WinForm
             this.Close();
         }
 
-        private void gridbtn_Click(object sender, EventArgs e)
-        {
-            rpspresenter.DefaultRPSOrder();
-            gridfrm.Show();
-
-        }
+       
 
         private void donebtn_Click(object sender, EventArgs e)
         {

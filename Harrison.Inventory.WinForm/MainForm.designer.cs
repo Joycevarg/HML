@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mastersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.taxDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.districtsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clustersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rPSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clusterDistrictMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.financialYearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.branchsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.districtsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.financialYearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taxDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clustersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clusterDistrictMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,40 +82,12 @@
             this.mastersToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.mastersToolStripMenuItem.Text = "Masters";
             // 
-            // taxDetailsToolStripMenuItem
-            // 
-            this.taxDetailsToolStripMenuItem.Name = "taxDetailsToolStripMenuItem";
-            this.taxDetailsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.taxDetailsToolStripMenuItem.Text = "Tax Details";
-            this.taxDetailsToolStripMenuItem.Click += new System.EventHandler(this.taxDetailsToolStripMenuItem_Click);
-            // 
-            // districtsToolStripMenuItem
-            // 
-            this.districtsToolStripMenuItem.Name = "districtsToolStripMenuItem";
-            this.districtsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.districtsToolStripMenuItem.Text = "Districts";
-            this.districtsToolStripMenuItem.Click += new System.EventHandler(this.districtsToolStripMenuItem_Click);
-            // 
-            // bankToolStripMenuItem
-            // 
-            this.bankToolStripMenuItem.Name = "bankToolStripMenuItem";
-            this.bankToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.bankToolStripMenuItem.Text = "Bank";
-            this.bankToolStripMenuItem.Click += new System.EventHandler(this.bankToolStripMenuItem_Click);
-            // 
             // vendorsToolStripMenuItem
             // 
             this.vendorsToolStripMenuItem.Name = "vendorsToolStripMenuItem";
             this.vendorsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
             this.vendorsToolStripMenuItem.Text = "Vendors";
             this.vendorsToolStripMenuItem.Click += new System.EventHandler(this.vendorsToolStripMenuItem_Click);
-            // 
-            // clustersToolStripMenuItem
-            // 
-            this.clustersToolStripMenuItem.Name = "clustersToolStripMenuItem";
-            this.clustersToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.clustersToolStripMenuItem.Text = "Clusters";
-            this.clustersToolStripMenuItem.Click += new System.EventHandler(this.clustersToolStripMenuItem_Click);
             // 
             // rPSToolStripMenuItem
             // 
@@ -123,12 +96,19 @@
             this.rPSToolStripMenuItem.Text = "RPS";
             this.rPSToolStripMenuItem.Click += new System.EventHandler(this.rPSToolStripMenuItem_Click);
             // 
-            // clusterDistrictMappingToolStripMenuItem
+            // bankToolStripMenuItem
             // 
-            this.clusterDistrictMappingToolStripMenuItem.Name = "clusterDistrictMappingToolStripMenuItem";
-            this.clusterDistrictMappingToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.clusterDistrictMappingToolStripMenuItem.Text = "Cluster-District Mapping";
-            this.clusterDistrictMappingToolStripMenuItem.Click += new System.EventHandler(this.clusterDistrictMappingToolStripMenuItem_Click);
+            this.bankToolStripMenuItem.Name = "bankToolStripMenuItem";
+            this.bankToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.bankToolStripMenuItem.Text = "Bank";
+            this.bankToolStripMenuItem.Click += new System.EventHandler(this.bankToolStripMenuItem_Click);
+            // 
+            // branchsToolStripMenuItem
+            // 
+            this.branchsToolStripMenuItem.Name = "branchsToolStripMenuItem";
+            this.branchsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.branchsToolStripMenuItem.Text = "Branches";
+            this.branchsToolStripMenuItem.Click += new System.EventHandler(this.branchsToolStripMenuItem_Click);
             // 
             // stateToolStripMenuItem
             // 
@@ -137,6 +117,13 @@
             this.stateToolStripMenuItem.Text = "State";
             this.stateToolStripMenuItem.Click += new System.EventHandler(this.stateToolStripMenuItem_Click);
             // 
+            // districtsToolStripMenuItem
+            // 
+            this.districtsToolStripMenuItem.Name = "districtsToolStripMenuItem";
+            this.districtsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.districtsToolStripMenuItem.Text = "Districts";
+            this.districtsToolStripMenuItem.Click += new System.EventHandler(this.districtsToolStripMenuItem_Click);
+            // 
             // financialYearToolStripMenuItem
             // 
             this.financialYearToolStripMenuItem.Name = "financialYearToolStripMenuItem";
@@ -144,12 +131,26 @@
             this.financialYearToolStripMenuItem.Text = "Financial Year";
             this.financialYearToolStripMenuItem.Click += new System.EventHandler(this.financialYearToolStripMenuItem_Click);
             // 
-            // branchsToolStripMenuItem
+            // taxDetailsToolStripMenuItem
             // 
-            this.branchsToolStripMenuItem.Name = "branchsToolStripMenuItem";
-            this.branchsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.branchsToolStripMenuItem.Text = "Branchs";
-            this.branchsToolStripMenuItem.Click += new System.EventHandler(this.branchsToolStripMenuItem_Click);
+            this.taxDetailsToolStripMenuItem.Name = "taxDetailsToolStripMenuItem";
+            this.taxDetailsToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.taxDetailsToolStripMenuItem.Text = "Tax Details";
+            this.taxDetailsToolStripMenuItem.Click += new System.EventHandler(this.taxDetailsToolStripMenuItem_Click);
+            // 
+            // clustersToolStripMenuItem
+            // 
+            this.clustersToolStripMenuItem.Name = "clustersToolStripMenuItem";
+            this.clustersToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.clustersToolStripMenuItem.Text = "Clusters";
+            this.clustersToolStripMenuItem.Click += new System.EventHandler(this.clustersToolStripMenuItem_Click);
+            // 
+            // clusterDistrictMappingToolStripMenuItem
+            // 
+            this.clusterDistrictMappingToolStripMenuItem.Name = "clusterDistrictMappingToolStripMenuItem";
+            this.clusterDistrictMappingToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
+            this.clusterDistrictMappingToolStripMenuItem.Text = "Cluster-District Mapping";
+            this.clusterDistrictMappingToolStripMenuItem.Click += new System.EventHandler(this.clusterDistrictMappingToolStripMenuItem_Click);
             // 
             // transationsToolStripMenuItem
             // 
@@ -208,13 +209,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1009, 641);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Main Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

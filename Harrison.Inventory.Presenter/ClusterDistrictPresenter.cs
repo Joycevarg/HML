@@ -30,9 +30,9 @@ namespace Harrison.Inventory.Presenter
         {
             _iclusterdistrictview.givearrdata(_iclusterdistrictservice.ArrangeClusterDistrict(srttype, srtfield));
         }
-        public void SetDistrictNames()
+        public void SetDistrictNames(object stateid)
         {
-            _iclusterdistrictview.setDistrictValues(_idistrictservice.ArrangeDistrict(SortType.Ascending, SortFieldType.Id));
+            _iclusterdistrictview.setDistrictValues(_idistrictservice.DistrictwithState(stateid));
 
         }
         public void DeleteClusterDistrict(object Districtid)

@@ -34,21 +34,22 @@
             this.editbtn = new System.Windows.Forms.Button();
             this.Cancelbtn = new System.Windows.Forms.Button();
             this.FinancialYear_Grid = new System.Windows.Forms.DataGridView();
+            this.dltbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FinancialYear_Grid)).BeginInit();
             this.SuspendLayout();
             // 
             // finYeartxt
             // 
-            this.finYeartxt.Location = new System.Drawing.Point(128, 41);
+            this.finYeartxt.Location = new System.Drawing.Point(181, 44);
             this.finYeartxt.Margin = new System.Windows.Forms.Padding(4);
             this.finYeartxt.Name = "finYeartxt";
-            this.finYeartxt.Size = new System.Drawing.Size(227, 22);
-            this.finYeartxt.TabIndex = 0;            
+            this.finYeartxt.Size = new System.Drawing.Size(265, 22);
+            this.finYeartxt.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 44);
+            this.label1.Location = new System.Drawing.Point(53, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 17);
@@ -57,7 +58,7 @@
             // 
             // Add_Fin_Year_Bttn
             // 
-            this.Add_Fin_Year_Bttn.Location = new System.Drawing.Point(26, 85);
+            this.Add_Fin_Year_Bttn.Location = new System.Drawing.Point(29, 85);
             this.Add_Fin_Year_Bttn.Margin = new System.Windows.Forms.Padding(4);
             this.Add_Fin_Year_Bttn.Name = "Add_Fin_Year_Bttn";
             this.Add_Fin_Year_Bttn.Size = new System.Drawing.Size(94, 37);
@@ -68,7 +69,7 @@
             // 
             // editbtn
             // 
-            this.editbtn.Location = new System.Drawing.Point(267, 85);
+            this.editbtn.Location = new System.Drawing.Point(279, 85);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(91, 37);
@@ -78,7 +79,7 @@
             // 
             // Cancelbtn
             // 
-            this.Cancelbtn.Location = new System.Drawing.Point(150, 85);
+            this.Cancelbtn.Location = new System.Drawing.Point(157, 85);
             this.Cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Cancelbtn.Name = "Cancelbtn";
             this.Cancelbtn.Size = new System.Drawing.Size(91, 37);
@@ -90,19 +91,29 @@
             // FinancialYear_Grid
             // 
             this.FinancialYear_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FinancialYear_Grid.Location = new System.Drawing.Point(26, 140);
+            this.FinancialYear_Grid.Location = new System.Drawing.Point(44, 147);
             this.FinancialYear_Grid.Margin = new System.Windows.Forms.Padding(4);
             this.FinancialYear_Grid.Name = "FinancialYear_Grid";
-            this.FinancialYear_Grid.Size = new System.Drawing.Size(332, 152);
+            this.FinancialYear_Grid.Size = new System.Drawing.Size(402, 155);
             this.FinancialYear_Grid.TabIndex = 5;
             this.FinancialYear_Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FinancialYear_Grid_CellContentClick);
+            // 
+            // dltbtn
+            // 
+            this.dltbtn.Location = new System.Drawing.Point(392, 85);
+            this.dltbtn.Name = "dltbtn";
+            this.dltbtn.Size = new System.Drawing.Size(91, 37);
+            this.dltbtn.TabIndex = 6;
+            this.dltbtn.Text = "Delete";
+            this.dltbtn.UseVisualStyleBackColor = true;
             // 
             // FinancialYear
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(386, 318);
+            this.ClientSize = new System.Drawing.Size(526, 341);
+            this.Controls.Add(this.dltbtn);
             this.Controls.Add(this.FinancialYear_Grid);
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.editbtn);
@@ -111,6 +122,7 @@
             this.Controls.Add(this.finYeartxt);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FinancialYear";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FinancialYear";
             this.Load += new System.EventHandler(this.FinancialYear_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FinancialYear_Grid)).EndInit();
@@ -127,5 +139,6 @@
         private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.Button Cancelbtn;
         private System.Windows.Forms.DataGridView FinancialYear_Grid;
+        private System.Windows.Forms.Button dltbtn;
     }
 }

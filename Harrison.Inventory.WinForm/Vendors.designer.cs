@@ -70,7 +70,6 @@
             this.cancelbtn = new System.Windows.Forms.Button();
             this.editbtn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.gridbtn = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.Bankcombo = new System.Windows.Forms.ComboBox();
@@ -78,11 +77,14 @@
             this.label19 = new System.Windows.Forms.Label();
             this.acctxt = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dltbtn = new System.Windows.Forms.Button();
+            this.vendorgrid = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.box.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorgrid)).BeginInit();
             this.SuspendLayout();
             // 
             // ventorNametxt
@@ -423,7 +425,7 @@
             this.box.Controls.Add(this.label15);
             this.box.Controls.Add(this.edistrictcombo);
             this.box.Controls.Add(this.estatecombo);
-            this.box.Location = new System.Drawing.Point(19, 242);
+            this.box.Location = new System.Drawing.Point(867, 84);
             this.box.Margin = new System.Windows.Forms.Padding(4);
             this.box.Name = "box";
             this.box.Padding = new System.Windows.Forms.Padding(4);
@@ -464,7 +466,7 @@
             this.groupBox3.Controls.Add(this.ownerNotxt);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(19, 400);
+            this.groupBox3.Location = new System.Drawing.Point(19, 261);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -482,10 +484,10 @@
             // 
             // savebtn
             // 
-            this.savebtn.Location = new System.Drawing.Point(36, 848);
+            this.savebtn.Location = new System.Drawing.Point(1037, 481);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(100, 28);
+            this.savebtn.Size = new System.Drawing.Size(100, 47);
             this.savebtn.TabIndex = 41;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
@@ -493,10 +495,10 @@
             // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(232, 848);
+            this.cancelbtn.Location = new System.Drawing.Point(1199, 481);
             this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(100, 28);
+            this.cancelbtn.Size = new System.Drawing.Size(100, 47);
             this.cancelbtn.TabIndex = 42;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
@@ -504,13 +506,13 @@
             // 
             // editbtn
             // 
-            this.editbtn.Location = new System.Drawing.Point(478, 848);
+            this.editbtn.Location = new System.Drawing.Point(1349, 481);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
-            this.editbtn.Size = new System.Drawing.Size(100, 28);
+            this.editbtn.Size = new System.Drawing.Size(100, 47);
             this.editbtn.TabIndex = 43;
             this.editbtn.Text = "Edit";
-            this.editbtn.UseVisualStyleBackColor = true;          
+            this.editbtn.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -524,23 +526,13 @@
             this.groupBox4.Controls.Add(this.growerRbtn);
             this.groupBox4.Controls.Add(this.dealerRbtn);
             this.groupBox4.Controls.Add(this.TinNotxt);
-            this.groupBox4.Location = new System.Drawing.Point(19, 558);
+            this.groupBox4.Location = new System.Drawing.Point(878, 261);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(800, 158);
             this.groupBox4.TabIndex = 44;
             this.groupBox4.TabStop = false;
-            // 
-            // gridbtn
-            // 
-            this.gridbtn.Location = new System.Drawing.Point(674, 848);
-            this.gridbtn.Name = "gridbtn";
-            this.gridbtn.Size = new System.Drawing.Size(113, 28);
-            this.gridbtn.TabIndex = 45;
-            this.gridbtn.Text = "View Grid";
-            this.gridbtn.UseVisualStyleBackColor = true;
-            this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
             // 
             // label17
             // 
@@ -602,20 +594,38 @@
             this.groupBox2.Controls.Add(this.acctxt);
             this.groupBox2.Controls.Add(this.Bankcombo);
             this.groupBox2.Controls.Add(this.Branchcombo);
-            this.groupBox2.Location = new System.Drawing.Point(19, 723);
+            this.groupBox2.Location = new System.Drawing.Point(19, 443);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(800, 117);
+            this.groupBox2.Size = new System.Drawing.Size(801, 117);
             this.groupBox2.TabIndex = 52;
             this.groupBox2.TabStop = false;
+            // 
+            // dltbtn
+            // 
+            this.dltbtn.Location = new System.Drawing.Point(1511, 481);
+            this.dltbtn.Name = "dltbtn";
+            this.dltbtn.Size = new System.Drawing.Size(100, 47);
+            this.dltbtn.TabIndex = 53;
+            this.dltbtn.Text = "Delete";
+            this.dltbtn.UseVisualStyleBackColor = true;
+            // 
+            // vendorgrid
+            // 
+            this.vendorgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vendorgrid.Location = new System.Drawing.Point(19, 606);
+            this.vendorgrid.Name = "vendorgrid";
+            this.vendorgrid.RowTemplate.Height = 24;
+            this.vendorgrid.Size = new System.Drawing.Size(1659, 238);
+            this.vendorgrid.TabIndex = 54;
             // 
             // VendorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(836, 889);
+            this.ClientSize = new System.Drawing.Size(1716, 889);
+            this.Controls.Add(this.vendorgrid);
+            this.Controls.Add(this.dltbtn);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.editbtn);
             this.Controls.Add(this.cancelbtn);
@@ -625,6 +635,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VendorsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendors";
             this.Load += new System.EventHandler(this.Vendors_Load);
             this.groupBox1.ResumeLayout(false);
@@ -637,6 +648,7 @@
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vendorgrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -685,7 +697,6 @@
         private System.Windows.Forms.Button editbtn;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox estatecombo;
-        private System.Windows.Forms.Button gridbtn;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox Bankcombo;
@@ -693,6 +704,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox acctxt;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button dltbtn;
+        private System.Windows.Forms.DataGridView vendorgrid;
     }
 }
 

@@ -38,11 +38,14 @@
             this.remarklbl = new System.Windows.Forms.Label();
             this.remarktxt = new System.Windows.Forms.TextBox();
             this.donebtn = new System.Windows.Forms.Button();
-            this.gridbtn = new System.Windows.Forms.Button();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.VendorNameCombo = new System.Windows.Forms.ComboBox();
             this.rpsNametxt = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.rpsgrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.rpsgrid)).BeginInit();
             this.SuspendLayout();
             // 
             // rpsNamelbl
@@ -101,7 +104,7 @@
             this.routeDetlstxt.Multiline = true;
             this.routeDetlstxt.Name = "routeDetlstxt";
             this.routeDetlstxt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.routeDetlstxt.Size = new System.Drawing.Size(426, 82);
+            this.routeDetlstxt.Size = new System.Drawing.Size(403, 82);
             this.routeDetlstxt.TabIndex = 7;
             // 
             // remarklbl
@@ -118,35 +121,24 @@
             this.remarktxt.Location = new System.Drawing.Point(160, 328);
             this.remarktxt.Multiline = true;
             this.remarktxt.Name = "remarktxt";
-            this.remarktxt.Size = new System.Drawing.Size(426, 56);
+            this.remarktxt.Size = new System.Drawing.Size(403, 56);
             this.remarktxt.TabIndex = 8;
             // 
             // donebtn
             // 
-            this.donebtn.Location = new System.Drawing.Point(36, 413);
+            this.donebtn.Location = new System.Drawing.Point(23, 413);
             this.donebtn.Name = "donebtn";
-            this.donebtn.Size = new System.Drawing.Size(161, 44);
+            this.donebtn.Size = new System.Drawing.Size(111, 44);
             this.donebtn.TabIndex = 10;
             this.donebtn.Text = "Save";
             this.donebtn.UseVisualStyleBackColor = true;
             this.donebtn.Click += new System.EventHandler(this.donebtn_Click);
             // 
-            // gridbtn
-            // 
-            this.gridbtn.BackColor = System.Drawing.SystemColors.Control;
-            this.gridbtn.Location = new System.Drawing.Point(442, 414);
-            this.gridbtn.Name = "gridbtn";
-            this.gridbtn.Size = new System.Drawing.Size(144, 43);
-            this.gridbtn.TabIndex = 16;
-            this.gridbtn.Text = "View Grid";
-            this.gridbtn.UseVisualStyleBackColor = true;
-            this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
-            // 
             // cancelbtn
             // 
-            this.cancelbtn.Location = new System.Drawing.Point(241, 413);
+            this.cancelbtn.Location = new System.Drawing.Point(172, 413);
             this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.Size = new System.Drawing.Size(144, 44);
+            this.cancelbtn.Size = new System.Drawing.Size(111, 44);
             this.cancelbtn.TabIndex = 17;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
@@ -157,9 +149,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Ventor Name:";
+            this.label1.Text = "Vendor Name:";
             // 
             // VendorNameCombo
             // 
@@ -177,16 +169,46 @@
             this.rpsNametxt.Size = new System.Drawing.Size(309, 22);
             this.rpsNametxt.TabIndex = 20;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(321, 413);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 44);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(475, 413);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 44);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Remove";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // rpsgrid
+            // 
+            this.rpsgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.rpsgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rpsgrid.Location = new System.Drawing.Point(36, 489);
+            this.rpsgrid.Name = "rpsgrid";
+            this.rpsgrid.RowTemplate.Height = 24;
+            this.rpsgrid.Size = new System.Drawing.Size(527, 150);
+            this.rpsgrid.TabIndex = 23;
+            // 
             // RPSdetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 490);
+            this.ClientSize = new System.Drawing.Size(615, 674);
+            this.Controls.Add(this.rpsgrid);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.rpsNametxt);
             this.Controls.Add(this.VendorNameCombo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancelbtn);
-            this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.donebtn);
             this.Controls.Add(this.remarktxt);
             this.Controls.Add(this.remarklbl);
@@ -198,8 +220,10 @@
             this.Controls.Add(this.contactNamelbl);
             this.Controls.Add(this.rpsNamelbl);
             this.Name = "RPSdetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RPS";
             this.Load += new System.EventHandler(this.RPS_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.rpsgrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,11 +241,13 @@
         private System.Windows.Forms.Label remarklbl;
         private System.Windows.Forms.TextBox remarktxt;
         private System.Windows.Forms.Button donebtn;
-        private System.Windows.Forms.Button gridbtn;
         private System.Windows.Forms.Button cancelbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox VendorNameCombo;
         private System.Windows.Forms.TextBox rpsNametxt;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView rpsgrid;
 
     }
 }

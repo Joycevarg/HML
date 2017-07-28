@@ -16,13 +16,14 @@ namespace Harrison.Inventory.WinForm
     public partial class branchDetails : Form,IBranchView
     {
         private IBranchPresenter branchpresenter;
-        GridForm gridfrm;
+       
  
         public branchDetails()
         {
             InitializeComponent();
             branchpresenter = new BranchPresenter(this, new BranchServices(new BranchData()));
             branchpresenter.setBankNames();
+            branchpresenter.DefaultBranchOrder();
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
@@ -44,13 +45,9 @@ namespace Harrison.Inventory.WinForm
 
         public void givearrdata(DataTable branchs)
         {
-            gridfrm = new GridForm(branchs);
+            branchgrid.DataSource = branchs;
         }
-        private void gridbtn_Click(object sender, EventArgs e)
-        {
-            branchpresenter.DefaultBranchOrder();
-            gridfrm.Show();
-        }
+       
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {

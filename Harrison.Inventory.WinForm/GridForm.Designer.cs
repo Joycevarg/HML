@@ -48,6 +48,7 @@
             this.ClientSize = new System.Drawing.Size(765, 349);
             this.Controls.Add(this.grid);
             this.Name = "GridForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GridForm";
             this.Load += new System.EventHandler(this.GridForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

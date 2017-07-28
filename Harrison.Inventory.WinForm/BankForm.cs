@@ -27,25 +27,6 @@ namespace Harrison.Inventory.WinForm
         public SortFieldType SortField { get; set; }
        
 
-        private void addBank_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void modifyBank_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void removeBank_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clearbtn_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {
@@ -77,14 +58,16 @@ namespace Harrison.Inventory.WinForm
             bankgrid.DataSource = banks;
         }
 
-        private void addbtn_Click(object sender, EventArgs e)
+       
+        private void bankgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            branchDetails branchform = new branchDetails();
-            branchform.Show();
-   
-
+            bankNametxt.Text = bankgrid.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
 
-       
+        private void edtbtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }
