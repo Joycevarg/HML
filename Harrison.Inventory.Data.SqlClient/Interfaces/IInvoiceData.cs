@@ -14,5 +14,6 @@ namespace Harrison.Inventory.Data.SqlClient
         void AddInvoice(Invoice invoice);
         DataTable GetInvoiceID();
         void DeleteInvoice(string invoiceid);
+        void UpdateInvoice(Invoice invoice);
     }
 }

@@ -17,5 +17,7 @@ namespace Harrison.Inventory.Service
         string GetVendorName(int vendorid);
         string GetTIN(int vendorid);
         void DeleteVendor(object Vendorid);
+        void UpdateVendor(int vendorid, string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat, int bankid, int branchid, string accno, int register);
+       
     }
 }

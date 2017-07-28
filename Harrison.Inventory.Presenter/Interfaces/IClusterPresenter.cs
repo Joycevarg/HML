@@ -13,5 +13,6 @@ namespace Harrison.Inventory.Presenter
         void setStateValues();
         void AddCluster(String ClusterName, int stateid);
         void DeleteCluster(object Clusterid);
+        void UpdateCluster(int clusterid, String ClusterName, int stateid);
     }
 }

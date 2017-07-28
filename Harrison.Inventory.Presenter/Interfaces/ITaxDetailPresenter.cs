@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Presenter
         void ChangeTaxDetailsOrder(SortType sortType, SortFieldType sortField);
         void AddTaxDetails(int finid,string effectdate,string enddate,float cgst,float sgst);
         void SetFinancialYears();
+        void UpdateTaxDetails(int finid, string effectdate, string enddate, float cgst, float sgst);
     }
 }

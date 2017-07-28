@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Data.SqlClient
          DataTable GetPaymentInfoDetails();
          void AddPaymentInfo(PaymentInfo paymentinfo);
          void DeletePaymentInfo(string invoiceid);
+         void UpdatePaymentForm(PaymentInfo paymentinfo);
     }
 }

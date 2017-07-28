@@ -31,7 +31,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Delete FIN_YEAR WHERE FIN_YEAR_ID="+finyearid;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
-        
+        public void UpdateFinYear(FinancialYears FinYear)
+        {
+            Sql = "UPDATE FIN_YEAR set FIN_YEAR_NAME='" + FinYear.FIN_YEAR_NAME + "' WHERE FIN_YEAR_ID=" + FinYear.FIN_YEAR_ID.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Update");
+        }
         
     }
 }

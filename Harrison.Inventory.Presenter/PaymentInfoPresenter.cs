@@ -33,6 +33,10 @@ namespace Harrison.Inventory.Presenter
         {
             _ipaymentinfoservice.AddPaymentInfo(invid, venid, paiddate, topay,fromho, otherdebit, paymentmethod, total, balance, remark);
         }
+        public void UpdatePaymentInfo(int invid, int venid, string paiddate, float topay, float fromho, float otherdebit, string paymentmethod, float total, float balance, string remark)
+        {
+            _ipaymentinfoservice.UpdatePaymentInfo(invid, venid, paiddate, topay, fromho, otherdebit, paymentmethod, total, balance, remark);
+        }
         public void DeletePaymentInfo(object Invid)
         {
             _ipaymentinfoservice.DeletePaymentInfo(Invid);

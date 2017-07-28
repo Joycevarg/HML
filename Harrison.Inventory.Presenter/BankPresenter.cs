@@ -30,6 +30,10 @@ namespace Harrison.Inventory.Presenter
             _ibankservice.AddBank(BankName);
 
         }
+        public void UpdateBank(int bankid,string bankname)
+        {
+            _ibankservice.UpdateBank(bankid, bankname);
+        }
         public void DeleteBank(object Bankid)
         {
             _ibankservice.DeleteBank(Bankid);

@@ -38,6 +38,12 @@ namespace Harrison.Inventory.Presenter
             taxdetailsservice.AddTaxDetails(finid, effectdate,enddate, cgst, sgst);
 
         }
+        public void UpdateTaxDetails(int finid, string effectdate, string enddate, float cgst, float sgst)
+        {
+
+            taxdetailsservice.UpdateTaxDetails(finid, effectdate, enddate, cgst, sgst);
+
+        }
         public void SetFinancialYears()
         {
             taxdetailsview.setFinancialYears(ifinancialyearservice.GetAllFinancialYears(SortType.Ascending, SortFieldType.Id));

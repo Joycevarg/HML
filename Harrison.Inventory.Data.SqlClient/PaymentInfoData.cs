@@ -28,9 +28,13 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void DeletePaymentInfo(string invoiceid)
         {
-            Sql = "Delete PAYMENT_FORM where INVOICEID=" + invoiceid;
+            Sql = "Delete PAYMENT_FORM where INVOICE_ID=" + invoiceid;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
-
+        public void UpdatePaymentForm(PaymentInfo paymentinfo)
+        {
+            Sql = "UPDATE PAYMENT_FORM set VENDOR_ID='" + paymentinfo.VENDOR_ID.ToString() + "',PAID_DATE='" + paymentinfo.PAID_DATE + "',TO_PAY=" + paymentinfo.TO_PAY.ToString() + ",FROM_HO=" + paymentinfo.FROM_HO.ToString() + ",OTHER_DEBITS=" + paymentinfo.OTHER_DEBITS.ToString() + ",PAYMENT_METHOD='" + paymentinfo.PAYMENT_METHOD + "',TOTAL_PAID=" + paymentinfo.TOTAL_PAID.ToString() + ",BALANCE=" + paymentinfo.BALANCE.ToString() + ",REMARKS='" + paymentinfo.REMARKS + "' WHERE INVOICE_ID="+paymentinfo.INVOICE_ID.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Update");
+        }
     }
 }

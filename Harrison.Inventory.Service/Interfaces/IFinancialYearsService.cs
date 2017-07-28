@@ -12,6 +12,7 @@ namespace Harrison.Inventory.Service
 
         DataTable GetAllFinancialYears(SortType sortType, SortFieldType sortField);
         void AddFinancialYears(String FinYear);
+        void UpdateFinancialYear(int finyearid, string finyearname);
         void DeleteFinancialYear(object FinYearid);
     }
 }

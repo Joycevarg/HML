@@ -30,5 +30,10 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Delete TAX_DETAILS where FIN_YEAR=" + finyear;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
+        public void UpdateTaxDetails(TaxDetails taxdetails)
+        {
+            Sql = "UPDATE TAX_DETAILS set FIN_YEAR_ID='" + taxdetails.FIN_YEAR_ID.ToString() + "',EFFECT_DATE='" + taxdetails.EFFECT_DATE + "',END_DATE='" + taxdetails.END_DATE + "',CGST='" + taxdetails.CGST.ToString() + "',SGST='" + taxdetails.SGST.ToString() + "' WHERE FIN_YEAR_ID="+taxdetails.FIN_YEAR_ID.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Update");
+        }
     }
 }

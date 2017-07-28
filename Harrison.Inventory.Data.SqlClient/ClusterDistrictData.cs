@@ -32,6 +32,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Delete CLUS_DIST_MAP where DISTRICT_ID="+districtid;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
+        public void UpdateClusterDistrict(ClusterDistrict clustdist)
+        {
+            Sql = "UPDATE CLUS_DIST_MAP set CLUSTER_ID=" + clustdist.clusterid.ToString() + ",DISTRICT_ID=" + clustdist.districtid.ToString() + " WHERE DISTRICT_ID=" + clustdist.districtid.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Update");
+        }
         
     }
 }

@@ -10,8 +10,8 @@ namespace Harrison.Inventory.Service
 {
     public class ClusterServices : IClusterServices
     {
-        private ClusterData _clusterdata;
-        public ClusterServices(ClusterData ClusterData)
+        private IClusterData _clusterdata;
+        public ClusterServices(IClusterData ClusterData)
         {
             _clusterdata = ClusterData;
         }
@@ -39,6 +39,11 @@ namespace Harrison.Inventory.Service
 
             _clusterdata.DeleteCluster(Clusterid.ToString());
 
+        }
+        public void UpdateCluster(int clusterid,string clustername, int stateid)
+        {
+            Cluster cluster = new Cluster(clusterid, clustername, stateid);
+            _clusterdata.UpdateCluster(cluster);
         }
     }
 }

@@ -13,5 +13,6 @@ namespace Harrison.Inventory.Service
         DataTable Arrangebank(SortType sortType, SortFieldType sortField);
         void AddBank(String BankName);
         void DeleteBank(object Bankid);
+        void UpdateBank(int bankid, string bankname);
     }
 }

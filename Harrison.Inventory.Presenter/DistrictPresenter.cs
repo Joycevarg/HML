@@ -42,5 +42,11 @@ namespace Harrison.Inventory.Presenter
             _idistrictservice.AddDistrict(DistrictName, stateid);
 
         }
+        public void UpdateDistrict(int districtid,String DistrictName, int stateid)
+        {
+
+            _idistrictservice.UpdateDistrict(districtid,DistrictName, stateid);
+
+        }
     }
 }

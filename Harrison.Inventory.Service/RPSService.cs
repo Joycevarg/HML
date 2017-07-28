@@ -42,5 +42,9 @@ namespace Harrison.Inventory.Service
         {
             _rpsdata.DeleteRPS(rpsid.ToString());
         }
+        public void UpdateRPS(RPS rps)
+        {
+            _rpsdata.UpdateRPS(rps);
+        }
     }
 }

@@ -24,6 +24,12 @@ namespace Harrison.Inventory.Presenter
             _iFinacialYearsService.AddFinancialYears( FinYear);
 
         }
+        public void UpdateFinancialYears(int finid,String FinYear)
+        {
+
+            _iFinacialYearsService.UpdateFinancialYear(finid,FinYear);
+
+        }
 
         public void init()
         {

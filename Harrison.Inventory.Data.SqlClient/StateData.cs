@@ -33,6 +33,10 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Delete STATE where STATE_ID=" + stateid;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
-
+        public void UpdateState(State state)
+        {
+            Sql = "UPDATE STATE set STATE_NAME='" + state.STATE_NAME + "' WHERE STATE_ID=" + state.STATE_ID.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Update");
+        }
     }
 }

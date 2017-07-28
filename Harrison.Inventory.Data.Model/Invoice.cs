@@ -7,7 +7,7 @@ namespace Harrison.Inventory.Data.Model
 {
     public class Invoice
     {
-        public int INVOICE_NO { get; set; }
+        public int INVOICE_ID { get; set; }
         public int MOVED_RECIEPT { get; set; }
         public string INVOICE_DATE { get; set; }
         public int VENDOR_ID{ get; set; }
@@ -39,7 +39,7 @@ namespace Harrison.Inventory.Data.Model
         public Invoice(int ino, int moved, string date,int vid,int rid,string comm,int trade,string commcode,string frr,string lpc,string vfa,float bqty,float lqty,float eqty,float wwt,float drc,float ratekg,int spot_contract,string code,float dwt,float amnt,float lumbprice,float lumbamnt,float notaxamnt,float cgst,float sgst,float tamnt)
 
         {
-            this.INVOICE_NO = ino;
+            this.INVOICE_ID = ino;
             this.MOVED_RECIEPT = moved;
             this.INVOICE_DATE = date;
             this.VENDOR_ID = vid;

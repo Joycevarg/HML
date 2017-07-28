@@ -31,9 +31,9 @@ namespace Harrison.Inventory.Data.Model
         public string ACCOUNT_NO { get; set; }
         public int BRANCH_ID { get; set; }
         public int REGISTERED { get; set; }
-        public Vendor(string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat,int bankid, int branchid,string accno, int register)
+        public Vendor(int vendorid,string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat,int bankid, int branchid,string accno, int register)
         {
-            this.VENDOR_ID = 0;
+            this.VENDOR_ID = vendorid;
             this.VENDOR_NAME = vendorname;
             this.HOME_ADDRESS = homeaddr;
             this.HOME_DISTRICT_ID = homedist;

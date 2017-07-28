@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Service
         DataTable ArrangeClusterDistrict(SortType sortType, SortFieldType sortField);
         void AddClusterDistrict(int districtid, int clusterid);
         void DeleteClusterDistrict(object Districtid);
+        void UpdateClusterDistrict(int districtid, int clusterid);
     }
 }

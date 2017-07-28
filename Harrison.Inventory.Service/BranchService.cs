@@ -40,6 +40,11 @@ namespace Harrison.Inventory.Service
             _branchdata.DeleteBranch(Branchid.ToString());
 
         }
+        public void UpdateBranch(int branchid, string branchname, int bankid, string ifsc, string address, string contact)
+        {
+            Branch branch = new Branch(branchid, branchname, bankid, ifsc, address, contact);
+            _branchdata.UpdateBranch(branch);
+        }
         public DataTable BranchwithBank(object bankid)
         {
             DataTable branchs = _branchdata.SelectBranchs(bankid);

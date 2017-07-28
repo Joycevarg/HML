@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Data.SqlClient
         DataTable GetStateDetails();
         void AddState(string StateName);
         void DeleteState(string stateid);
+        void UpdateState(State state);
     }
 }

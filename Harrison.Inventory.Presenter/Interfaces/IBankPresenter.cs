@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Presenter
         void ChangeBankOrder(SortType sortType, SortFieldType sortField);
         void AddBank(String Bank);
         void DeleteBank(object Bankid);
+        void UpdateBank(int bankid, string bankname);
     }
 }

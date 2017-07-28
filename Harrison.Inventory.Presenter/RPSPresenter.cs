@@ -39,8 +39,11 @@ namespace Harrison.Inventory.Presenter
          {
              RPS rps = new RPS(vendid, 0, rpsname, contname, contno, route, remark);
              _irpsservice.AddRPS(rps);
-             
-
+         }
+         public void UpdateRPS(int rpsid,int vendid, string rpsname, string contname, string contno, string route, string remark)
+         {
+             RPS rps = new RPS(vendid, rpsid, rpsname, contname, contno, route, remark);
+             _irpsservice.UpdateRPS(rps);
          }
         
     }

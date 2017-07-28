@@ -34,6 +34,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Delete CLUSTER where CLUSTER_ID="+clusterid;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
+        public void UpdateCluster(Cluster cluster)
+        {
+            Sql = "UPDATE CLUSTER set CLUSTER_NAME='" + cluster.CLUSTER_NAME + "',STATE_ID=" + cluster.STATE_ID.ToString() + "WHERE CLUSTER_ID=" + cluster.CLUSTER_ID.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Update");
+        }
         
     }
 }

@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Data.SqlClient
         DataTable GetVendorDetails();
         void AddVendor(Vendor vendor);
         void DeleteVendor(string vendorid);
+        void UpdateVendor(Vendor vendor);
     }
 }

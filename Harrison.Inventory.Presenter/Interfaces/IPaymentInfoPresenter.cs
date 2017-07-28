@@ -14,5 +14,6 @@ namespace Harrison.Inventory.Presenter
         void SetInvoiceIDs();
         void SetVendorName(int invno);
         void SetToPayAmnt(int invno);
+        void UpdatePaymentInfo(int invid, int venid, string paiddate, float topay, float fromho, float otherdebit, string paymentmethod, float total, float balance, string remark);
     }
 }

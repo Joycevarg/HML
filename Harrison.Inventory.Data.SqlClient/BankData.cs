@@ -34,7 +34,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "DELETE BANK WHERE BANK_ID="+BankId;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
-        
+        public void UpdateBank(Bank bank)
+        {
+            Sql = "UPDATE BANK set BANK_NAME='" + bank.BANK_NAME + "' WHERE BANK_ID="+bank.BANK_ID.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Update");
+        }
         
     }
 }

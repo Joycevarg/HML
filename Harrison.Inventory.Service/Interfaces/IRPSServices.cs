@@ -13,5 +13,6 @@ namespace Harrison.Inventory.Service
         DataTable RpswithVendor(object vendorid);
         void AddRPS(RPS rps);
         void DeleteRPS(object rpsid);
+        void UpdateRPS(RPS rps);
     }
 }

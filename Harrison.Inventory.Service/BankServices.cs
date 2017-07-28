@@ -43,6 +43,10 @@ namespace Harrison.Inventory.Service
             _bankdata.DeleteBank(Bankid.ToString());
 
         }
-       
+        public void UpdateBank(int bankid, string bankname)
+        {
+            Bank bank = new Bank(bankid, bankname);
+            _bankdata.UpdateBank(bank);
+        }
     }
 }

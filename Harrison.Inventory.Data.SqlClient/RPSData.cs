@@ -42,6 +42,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Delete RPS where RPS_ID=" + rpsid;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
+        public void UpdateRPS(RPS rps)
+        {
+            Sql = "UPDATE RPS set VENDOR_ID =" + rps.VENDOR_ID.ToString() + ",RPS_NAME='" + rps.RPS_NAME + "',CONTACT_NAME='" + rps.CONTACT_NAME + "',CONTACT_NO='" + rps.CONTACT_NO + "',ROUTE_DETAILS='" + rps.ROUTE_DETAILS + "',REMARKS='" + rps.REMARKS + "' WHERE RPS_ID="+rps.RPS_ID.ToString();
+            dt = Dbcon.Sqlconnection(Sql, "Update");
+        }
 
     }
 

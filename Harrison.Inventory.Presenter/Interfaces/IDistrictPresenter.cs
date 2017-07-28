@@ -13,5 +13,6 @@ namespace Harrison.Inventory.Presenter
         void setStateNames();
         void AddDistrict(String DistrictName, int stateid);
         void DeleteDistrict(object Districtid);
+        void UpdateDistrict(int districtid, String DistrictName, int stateid);
     }
 }

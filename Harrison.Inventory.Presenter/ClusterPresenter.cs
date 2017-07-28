@@ -39,5 +39,9 @@ namespace Harrison.Inventory.Presenter
         {
             _iclusterservice.AddCluster(ClusterName, stateid);
         }
+        public void UpdateCluster(int clusterid,String ClusterName, int stateid)
+        {
+            _iclusterservice.UpdateCluster(clusterid,ClusterName, stateid);
+        }
     }
 }
