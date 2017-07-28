@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Presenter
         void ChangeDistrictOrder(SortType sortType, SortFieldType sortField);
         void setStateNames();
         void AddDistrict(String DistrictName, int stateid);
+        void DeleteDistrict(object Districtid);
     }
 }

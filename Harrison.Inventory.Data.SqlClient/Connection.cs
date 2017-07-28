@@ -27,11 +27,13 @@ namespace Harrison.Inventory.Data.SqlClient
                     da = new SqlDataAdapter(myCommand);
                     da.Fill(dt);
                 }
-                else if (TypeExec == "Insert")
+                else if (TypeExec == "Insert"||TypeExec=="Delete")
                 {
                     da.InsertCommand = new SqlCommand(sql, cnn);
                     da.InsertCommand.ExecuteNonQuery();
                 }
+               
+
                 return (dt);
             }
             catch (Exception ex)

@@ -35,6 +35,12 @@ namespace Harrison.Inventory.Service
             _iFinancialYearsDAL.AddFinancialYears(FinYear);
 
         }
+        public void DeleteFinancialYear(object FinYearid)
+        {
+
+            _iFinancialYearsDAL.DeleteFinYear(FinYearid.ToString());
+
+        }
     }
    
 }

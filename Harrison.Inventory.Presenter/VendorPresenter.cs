@@ -31,6 +31,10 @@ namespace Harrison.Inventory.Presenter
         {
             _ivendorview.givearrdata(_ivendorservice.ArrangeVendor(SortType.Ascending, SortFieldType.Id));
         }
+        public void DeleteVendor(object Vendorid)
+        {
+            _ivendorservice.DeleteVendor(Vendorid);
+        }
         public void ChangeVendorOrder(SortType srttype, SortFieldType srtfield)
         {
             _ivendorview.givearrdata(_ivendorservice.ArrangeVendor(srttype, srtfield));

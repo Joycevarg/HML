@@ -27,6 +27,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Insert into CLUS_DIST_MAP (DISTRICT_ID,CLUSTER_ID) values( " + clusterdistrict.districtid.ToString() + "," + clusterdistrict.clusterid.ToString()+ ")";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
+        public void DeleteClusterDistrict(string districtid)
+        {
+            Sql = "Delete CLUS_DIST_MAP where DISTRICT_ID="+districtid;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
         
     }
 }

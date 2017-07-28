@@ -13,5 +13,6 @@ namespace Harrison.Inventory.Presenter
         void AddClusterDistrict(int districtid, int clusterid);
         void SetDistrictNames();
         void SetClusterNames();
+        void DeleteClusterDistrict(object Districtid);
     }
 }

@@ -32,6 +32,10 @@ namespace Harrison.Inventory.Presenter
             _idistrictview.setStateValues(_istateservice.ArrangeState(SortType.Ascending, SortFieldType.Id));
 
         }
+        public void DeleteDistrict(object Districtid)
+        {
+            _idistrictservice.DeleteDistrict(Districtid);
+        }
         public void AddDistrict(String DistrictName,int stateid)
         {
 

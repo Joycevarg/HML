@@ -17,5 +17,6 @@ namespace Harrison.Inventory.Presenter
         void setSpotContractNames();
         void setInvID();
         int VendorRegistered(string vendorid);
+        void DeleteInvoice(object Invoiceid);
     }
 }

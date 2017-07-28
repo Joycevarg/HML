@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Service
     {
         DataTable ArrangeCluster(SortType sortType, SortFieldType sortField);
         void AddCluster(string clustername, int stateid);
+        void DeleteCluster(object Clusterid);
     }
 }

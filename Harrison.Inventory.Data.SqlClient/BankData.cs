@@ -29,7 +29,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Insert into BANK (BANK_NAME) values( '" + BankName + "');";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
-        
+        public void DeleteBank(string BankId)
+        {
+            Sql = "DELETE BANK WHERE BANK_ID="+BankId;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
         
         
     }

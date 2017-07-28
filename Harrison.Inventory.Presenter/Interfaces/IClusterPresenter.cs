@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Presenter
         void ChangeClusterOrder(SortType sortType, SortFieldType sortField);
         void setStateValues();
         void AddCluster(String ClusterName, int stateid);
+        void DeleteCluster(object Clusterid);
     }
 }

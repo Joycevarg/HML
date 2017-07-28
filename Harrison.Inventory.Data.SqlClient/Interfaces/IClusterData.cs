@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Data.SqlClient
     {
         DataTable GetClusterDetails();
         void AddCluster(Cluster cluster);
+        void DeleteCluster(string clusterid);
     }
 }

@@ -10,6 +10,7 @@ namespace Harrison.Inventory.Data.SqlClient
     public interface IVendorData
     {
         DataTable GetVendorDetails();
-         void AddVendor(Vendor vendor);
+        void AddVendor(Vendor vendor);
+        void DeleteVendor(string vendorid);
     }
 }

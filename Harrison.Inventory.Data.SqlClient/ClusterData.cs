@@ -28,6 +28,12 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Insert into CLUSTER (CLUSTER_NAME,STATE_ID) values( '" + cluster.CLUSTER_NAME + "'," + cluster.STATE_ID.ToString() + ")";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
+
+        public void DeleteCluster(string clusterid)
+        {
+            Sql = "Delete CLUSTER where CLUSTER_ID="+clusterid;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
         
     }
 }

@@ -14,5 +14,6 @@ namespace Harrison.Inventory.Service
         string GenerID();
         int GetVendorID(int invoiceno);
         float GetAmount(int invno);
+        void DeleteInvoice(object Invoiceid);
     }
 }

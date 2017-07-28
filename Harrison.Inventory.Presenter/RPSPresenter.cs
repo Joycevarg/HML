@@ -31,6 +31,10 @@ namespace Harrison.Inventory.Presenter
         {
             _irpsview.setVendorValues(_ivendorservice.ArrangeVendor(SortType.Ascending, SortFieldType.Id));  
         }
+         public void DeleteRPS(object RPSid)
+         {
+             _irpsservice.DeleteRPS(RPSid);
+         }
          public void AddRPS(int vendid,string rpsname,string contname,string contno,string route,string remark)
          {
              RPS rps = new RPS(vendid, 0, rpsname, contname, contno, route, remark);

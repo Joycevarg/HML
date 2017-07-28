@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Data.SqlClient
         DataTable GetBranchDetails();
         DataTable SelectBranchs(object branchid);
         void AddBranch(Branch branch);
+        void DeleteBranch(string BranchId);
     }
 }

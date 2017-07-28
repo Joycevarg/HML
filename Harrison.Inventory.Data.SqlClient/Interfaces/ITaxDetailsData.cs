@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Data.SqlClient
     {
         DataTable GetTaxDetails();
         void AddTaxDetails(TaxDetails taxdetails);
+        void DeleteTaxDetails(string finyear);
     }
 }

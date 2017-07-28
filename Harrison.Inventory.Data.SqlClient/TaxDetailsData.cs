@@ -15,8 +15,6 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public DataTable GetTaxDetails()
         {
-
-
             Sql = "Select * from TAX_DETAILS";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
@@ -26,8 +24,11 @@ namespace Harrison.Inventory.Data.SqlClient
         {
             Sql = "Insert into TAX_DETAILS (FIN_YEAR_ID,EFFECT_DATE,END_DATE,CGST,SGST) values( '" + taxdetails.FIN_YEAR_ID.ToString() + "','"+taxdetails.EFFECT_DATE+"','"+taxdetails.END_DATE+"','"+taxdetails.CGST.ToString()+"','"+taxdetails.SGST.ToString()+"');";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
-
-
+        }
+        public void DeleteTaxDetails(string finyear)
+        {
+            Sql = "Delete TAX_DETAILS where FIN_YEAR=" + finyear;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
     }
 }

@@ -37,5 +37,12 @@ namespace Harrison.Inventory.Service
             _clusterdistrictdata.AddClusterDistrict(clusterdistrict);
 
         }
+        public void DeleteClusterDistrict(object Districtid)
+        {
+
+            _clusterdistrictdata.DeleteClusterDistrict(Districtid.ToString());
+
+        }
+       
     }
 }

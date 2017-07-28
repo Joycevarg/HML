@@ -32,8 +32,10 @@ namespace Harrison.Inventory.Service
         {
             PaymentInfo paymentinfo = new PaymentInfo(invid, venid, paiddate,topay, fromho, otherdebit, paymentmethod, total, balance, remark);
             _paymentinfodata.AddPaymentInfo(paymentinfo);
-            
-
+        }
+        public void DeletePaymentInfo(object invid)
+        {
+            _paymentinfodata.DeletePaymentInfo(invid.ToString());
         }
     }
 }

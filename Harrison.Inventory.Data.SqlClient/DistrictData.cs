@@ -36,6 +36,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Insert into DISTRICT (DISTRICT_NAME,STATE_ID) values( '" + district.DISTRICT_NAME + "','" + district.STATE_ID.ToString() + "')";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
-
+        public void DeleteDistrict(string districtid)
+        {
+            Sql = "Delete DISTRICT where DISTRICT_ID=" + districtid;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
+        
     }
 }

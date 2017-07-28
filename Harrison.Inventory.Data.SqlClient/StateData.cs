@@ -27,10 +27,12 @@ namespace Harrison.Inventory.Data.SqlClient
         {
             Sql = "Insert into STATE (STATE_NAME) values( '" + StateName + "');";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
-
-
         }
-        
+        public void DeleteState(string stateid)
+        {
+            Sql = "Delete STATE where STATE_ID=" + stateid;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
 
     }
 }

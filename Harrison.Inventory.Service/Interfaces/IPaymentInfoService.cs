@@ -11,5 +11,6 @@ namespace Harrison.Inventory.Service
     {
         DataTable ArrangePaymentInfo(SortType sortType, SortFieldType sortField);
         void AddPaymentInfo(int invid, int venid, string paiddate,float topay, float fromho, float otherdebit, string paymentmethod, float total, float balance, string remark);
+        void DeletePaymentInfo(object invid);
     }
 }

@@ -18,8 +18,6 @@ namespace Harrison.Inventory.Service
         public DataTable ArrangeVendor(SortType sortType, SortFieldType sortFieldType)
         {
             DataTable vendors = _vendordata.GetVendorDetails();
-
-           
             return vendors;
         }
         public void AddVendor(string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat, int bankid, int branchid, string accno, int register)
@@ -28,6 +26,11 @@ namespace Harrison.Inventory.Service
             _vendordata.AddVendor(vendor);
 
         }
+        public void DeleteVendor(object Vendorid)
+        {
+            _vendordata.DeleteVendor(Vendorid.ToString());
+        }
+       
         public int GetVendorRegistered(int vendorid)
         {
             DataTable vendors = _vendordata.GetVendorDetails();

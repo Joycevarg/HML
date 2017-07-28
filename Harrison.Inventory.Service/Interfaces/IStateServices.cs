@@ -11,6 +11,6 @@ namespace Harrison.Inventory.Service
     {
         DataTable ArrangeState(SortType sortType, SortFieldType sortField);
         void AddState(String StateName);
-
+        void DeleteState(object stateid);
     }
 }

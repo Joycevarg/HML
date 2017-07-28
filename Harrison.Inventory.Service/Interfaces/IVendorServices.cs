@@ -16,6 +16,6 @@ namespace Harrison.Inventory.Service
         int GetVendorRegistered(int vendorid);
         string GetVendorName(int vendorid);
         string GetTIN(int vendorid);
-        
+        void DeleteVendor(object Vendorid);
     }
 }

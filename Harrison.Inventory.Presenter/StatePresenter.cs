@@ -30,5 +30,9 @@ namespace Harrison.Inventory.Presenter
             _istateservice.AddState(StateName);
 
         }
+        public void DeleteState(object Stateid)
+        {
+            _istateservice.DeleteState(Stateid);
+        }
     }
 }

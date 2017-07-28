@@ -33,5 +33,9 @@ namespace Harrison.Inventory.Presenter
         {
             _ibranchservice.AddBranch(branchname, bankid, ifsc, address, contact);
         }
+        public void DeleteBranch(object Branchid)
+        {
+            _ibranchservice.DeleteBranch(Branchid);
+        }
     }
 }

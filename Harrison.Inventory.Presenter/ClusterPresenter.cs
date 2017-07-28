@@ -31,6 +31,10 @@ namespace Harrison.Inventory.Presenter
             _iclusterview.setStateNames(_istateservice.ArrangeState(SortType.Ascending, SortFieldType.Id));
                 
         }
+        public void DeleteCluster(object Clusterid)
+        {
+            _iclusterservice.DeleteCluster(Clusterid);
+        }
         public void AddCluster(String ClusterName, int stateid)
         {
             _iclusterservice.AddCluster(ClusterName, stateid);

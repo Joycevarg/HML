@@ -37,7 +37,11 @@ namespace Harrison.Inventory.Data.SqlClient
             Sql = "Insert into RPS (VENDOR_ID,RPS_NAME,CONTACT_NAME,CONTACT_NO,ROUTE_DETAILS,REMARKS) values( '" + rps.VENDOR_ID.ToString() + "','" + rps.RPS_NAME + "','" + rps.CONTACT_NAME + "','" + rps.CONTACT_NO + "','" + rps.ROUTE_DETAILS + "','" +rps.REMARKS+ "')";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
-        
+        public void DeleteRPS(string rpsid)
+        {
+            Sql = "Delete RPS where RPS_ID=" + rpsid;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
 
     }
 

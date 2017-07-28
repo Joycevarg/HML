@@ -34,5 +34,10 @@ namespace Harrison.Inventory.Data.SqlClient
             //da.Fill(dt);
             return dt;
         }
+        public void DeleteBranch(string BranchId)
+        {
+            Sql = "DELETE BRANCH WHERE BRANCH_ID=" + BranchId;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
     }
 }

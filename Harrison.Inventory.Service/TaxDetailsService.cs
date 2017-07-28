@@ -34,6 +34,11 @@ namespace Harrison.Inventory.Service
             TaxDetails taxdetails = new TaxDetails(finid, effectdate,enddate, cgst, sgst);
             taxdetailsdata.AddTaxDetails(taxdetails);
         }
+        public void DeleteTaxDetails(object FinYearid)
+        {
+            taxdetailsdata.DeleteTaxDetails(FinYearid.ToString()); 
+        }
+       
         public TaxDetails TaxFromDate(DateTime invoicedate)
         {
             DataTable taxdetails = taxdetailsdata.GetTaxDetails();

@@ -33,6 +33,10 @@ namespace Harrison.Inventory.Presenter
         {
             _ipaymentinfoservice.AddPaymentInfo(invid, venid, paiddate, topay,fromho, otherdebit, paymentmethod, total, balance, remark);
         }
+        public void DeletePaymentInfo(object Invid)
+        {
+            _ipaymentinfoservice.DeletePaymentInfo(Invid);
+        }
         public void SetInvoiceIDs()
         {
             _ipaymentinfoview.SetInvoiceValues(_iinvoiceservice.ArrangeInvoices(SortType.Ascending,SortFieldType.Id));

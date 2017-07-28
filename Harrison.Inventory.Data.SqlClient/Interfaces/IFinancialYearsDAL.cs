@@ -10,5 +10,6 @@ namespace Harrison.Inventory.Data.SqlClient
     {
         DataTable GetAllFinancialYears();
         void AddFinancialYears(String FinYear);
+        void DeleteFinYear(string finyearid);
     }
 }

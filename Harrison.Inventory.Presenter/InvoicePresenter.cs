@@ -26,6 +26,10 @@ namespace Harrison.Inventory.Presenter
         {
             _iinvoiceview.givearrdata(_iinvoiceservice.ArrangeInvoices(srttype, srtfield));
         }
+        public void DeleteInvoice(object Invoiceid)
+        {
+            _iinvoiceservice.DeleteInvoice(Invoiceid);
+        }
         public InvoicePresenter(IInvoiceView invoiceview, IInvoiceServices invoiceservice)
         {
             _iinvoiceservice = invoiceservice;

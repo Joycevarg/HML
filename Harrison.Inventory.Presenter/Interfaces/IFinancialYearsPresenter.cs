@@ -9,5 +9,6 @@ namespace Harrison.Inventory.Presenter
         void FinancialYearsSort(SortType sortType, SortFieldType sortFieldType);
         void init();
         void AddFinancialYears(String FinYear);
+        void DeleteFinYear(object FinYearid);
     }
 }

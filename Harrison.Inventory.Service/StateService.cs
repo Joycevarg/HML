@@ -32,9 +32,12 @@ namespace Harrison.Inventory.Service
         }
         public void AddState(String StateName)
         {
-
             _statedata.AddState(StateName);
-                
         }
+        public void DeleteState(object stateid)
+        {
+            _statedata.DeleteState(stateid.ToString());
+        }
+       
     }
 }

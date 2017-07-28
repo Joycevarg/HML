@@ -41,6 +41,12 @@ namespace Harrison.Inventory.Service
             _districtdata.AddDistrict(district);
 
         }
+        public void DeleteDistrict(object Districtid)
+        {
+
+            _districtdata.DeleteDistrict(Districtid.ToString());
+
+        }
       
     }
 }

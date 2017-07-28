@@ -11,6 +11,6 @@ namespace Harrison.Inventory.Data.SqlClient
         DataTable GetRPSDetails();
         DataTable SelectRPS(object vendorid);
         void AddRPS(RPS rps);
-       
+        void DeleteRPS(string rpsid);
     }
 }

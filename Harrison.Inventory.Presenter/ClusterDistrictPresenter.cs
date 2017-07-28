@@ -35,6 +35,10 @@ namespace Harrison.Inventory.Presenter
             _iclusterdistrictview.setDistrictValues(_idistrictservice.ArrangeDistrict(SortType.Ascending, SortFieldType.Id));
 
         }
+        public void DeleteClusterDistrict(object Districtid)
+        {
+            _iclusterdistrictservice.DeleteClusterDistrict(Districtid);
+        }
         public void SetClusterNames()
         {
             _iclusterdistrictview.setClusterValues(_iclusterservice.ArrangeCluster(SortType.Ascending, SortFieldType.Id));

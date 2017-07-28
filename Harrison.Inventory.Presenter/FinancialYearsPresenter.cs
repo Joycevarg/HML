@@ -29,6 +29,10 @@ namespace Harrison.Inventory.Presenter
         {
             _iFinancialYearsView.OrderFinancialYearbyFieldAndDirection(_iFinacialYearsService.GetAllFinancialYears(SortType.Ascending,SortFieldType.Id));
         }
+        public void DeleteFinYear(object FinYearid)
+        {
+            _iFinacialYearsService.DeleteFinancialYear(FinYearid);
+        }
         public void FinancialYearsSort(SortType sortType ,SortFieldType sortFieldType)
     {
         _iFinancialYearsView.OrderFinancialYearbyFieldAndDirection(_iFinacialYearsService.GetAllFinancialYears(sortType, sortFieldType));

@@ -34,5 +34,10 @@ namespace Harrison.Inventory.Data.SqlClient
             dt = Dbcon.Sqlconnection(Sql, "Select");
             return dt;
         }
+        public void DeleteInvoice(string invoiceid)
+        {
+            Sql = "Delete INVOICE where INVOICE_ID=" + invoiceid;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
     }
 }

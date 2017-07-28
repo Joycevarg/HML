@@ -11,6 +11,7 @@ namespace Harrison.Inventory.Service
     {
         DataTable ArrangeTaxDetails(SortType sortType, SortFieldType sortField);
         void AddTaxDetails(int finid, string effectdate,string enddate, float cgst, float sgst);
+        void DeleteTaxDetails(object FinYearid);
         TaxDetails TaxFromDate(DateTime invoicedate);
     }
 }

@@ -33,6 +33,11 @@ namespace Harrison.Inventory.Service
         {
             Cluster cluster = new Cluster(0, clustername, stateid);
             _clusterdata.AddCluster(cluster);
+        }
+        public void DeleteCluster(object Clusterid)
+        {
+
+            _clusterdata.DeleteCluster(Clusterid.ToString());
 
         }
     }

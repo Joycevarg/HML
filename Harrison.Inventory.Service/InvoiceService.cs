@@ -69,5 +69,11 @@ namespace Harrison.Inventory.Service
             }
             return topayamnt;
         }
+        public void DeleteInvoice(object Invoiceid)
+        {
+
+            _invoicedata.DeleteInvoice(Invoiceid.ToString());
+
+        }
     }
 }

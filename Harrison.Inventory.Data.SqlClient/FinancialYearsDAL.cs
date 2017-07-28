@@ -25,9 +25,13 @@ namespace Harrison.Inventory.Data.SqlClient
         {
             Sql = "Insert into FIN_YEAR (FIN_YEAR_NAME) values( '" + FinYear + "');";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
-
-
         }
+        public void DeleteFinYear(string finyearid)
+        {
+            Sql = "Delete FIN_YEAR WHERE FIN_YEAR_ID="+finyearid;
+            dt = Dbcon.Sqlconnection(Sql, "Delete");
+        }
+        
         
     }
 }
