@@ -109,6 +109,7 @@ namespace Harrison.Inventory.Service
             worksheet.Cells[6, 1] = "Mooply Estate-Centrifuge Latex Factory";
             worksheet.Cells[7, 1] = "Palappilly P.O,Thrissur";
             worksheet.Cells[8, 1] = "Bought Latex Statement";
+            worksheet.Shapes.AddPicture("C:\\Users\\Joyce Varghese\\Documents\\hml'\\HML\\hmllogo.jpg", Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 160, 12, 45, 45); 
             for(int i=1;i<9;i++)
             worksheet.Cells[i, 1].Font.Bold = true;
             worksheet.Range[worksheet.Cells[1, 1], worksheet.Cells[100, 100]].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;

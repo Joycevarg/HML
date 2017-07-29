@@ -13,7 +13,7 @@ namespace Harrison.Inventory.Data.SqlClient
         {
             SqlConnection cnn;
             string connetionString = null;
-            connetionString = "Data Source=(local);Initial Catalog=HML_PURCHASE;User ID=Joyce;Password=tiger1234";
+            connetionString = "Data Source=(local);Initial Catalog=HML_PURCHASE;User ID=Joyce;Password=hml1234";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter();
             SqlCommand myCommand;
