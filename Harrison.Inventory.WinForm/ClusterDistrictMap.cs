@@ -22,6 +22,7 @@ namespace Harrison.Inventory.WinForm
             _clusterdistrictpresenter = new ClusterDistrictPresenter(this, new ClusterDistrictservice(new ClusterDistrictData()));
             _clusterdistrictpresenter.DefaultClusterDistrictOrder();
             _clusterdistrictpresenter.SetClusterNames();
+            _clusterdistrictpresenter.SetDistrictNames();
             
         }
         public SortType SortDirection { get; set; }
@@ -38,7 +39,7 @@ namespace Harrison.Inventory.WinForm
         }
         public void setClusterValues(DataTable clusters)
         {
-            ClusterCombo.ValueMember = "STATE_ID";
+            ClusterCombo.ValueMember = "CLUSTER_ID";
             ClusterCombo.DisplayMember = "CLUSTER_NAME";
             ClusterCombo.DataSource = clusters;
         }
@@ -47,7 +48,11 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
-
+        private void clusterdistrictgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ClusterCombo.SelectedValue = clusterdistrictgrid.Rows[e.RowIndex].Cells[0].Value;
+            DistrictCombo.SelectedValue = clusterdistrictgrid.Rows[e.RowIndex].Cells[1].Value;
+        }
         private void Cancelbtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -55,19 +60,11 @@ namespace Harrison.Inventory.WinForm
 
         private void Addbtn_Click(object sender, EventArgs e)
         {
-            ClusterCombo.ValueMember = "CLUSTER_ID";
             _clusterdistrictpresenter.AddClusterDistrict(int.Parse(DistrictCombo.SelectedValue.ToString()), int.Parse(ClusterCombo.SelectedValue.ToString()));
             MessageBox.Show("Cluster-District Map added");
             _clusterdistrictpresenter.DefaultClusterDistrictOrder();
             FormFunctions form = new FormFunctions();
             form.ClearTextBoxes(this);
-            ClusterCombo.ValueMember = "STATE_ID";
-        }
-
-        private void ClusterCombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            _clusterdistrictpresenter.SetDistrictNames(ClusterCombo.SelectedValue);
         }
 
        

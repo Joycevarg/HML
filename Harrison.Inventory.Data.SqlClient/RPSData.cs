@@ -34,7 +34,7 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void AddRPS(RPS rps)
         {
-            Sql = "Insert into RPS (VENDOR_ID,RPS_NAME,CONTACT_NAME,CONTACT_NO,ROUTE_DETAILS,REMARKS) values( '" + rps.VENDOR_ID.ToString() + "','" + rps.RPS_NAME + "','" + rps.CONTACT_NAME + "','" + rps.CONTACT_NO + "','" + rps.ROUTE_DETAILS + "','" +rps.REMARKS+ "')";
+            Sql = "Insert into RPS (VENDOR_ID,RPS_NAME,CONTACT_NAME,CONTACT_NO,ROUTE_DETAILS,REMARKS) values( '" + rps.VENDOR_ID.ToString() + "','" + rps.RPS_NAME.ToUpper() + "','" + rps.CONTACT_NAME.ToUpper() + "','" + rps.CONTACT_NO + "','" + rps.ROUTE_DETAILS.ToUpper() + "','" + rps.REMARKS.ToUpper() + "')";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
         public void DeleteRPS(string rpsid)
@@ -44,7 +44,7 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void UpdateRPS(RPS rps)
         {
-            Sql = "UPDATE RPS set VENDOR_ID =" + rps.VENDOR_ID.ToString() + ",RPS_NAME='" + rps.RPS_NAME + "',CONTACT_NAME='" + rps.CONTACT_NAME + "',CONTACT_NO='" + rps.CONTACT_NO + "',ROUTE_DETAILS='" + rps.ROUTE_DETAILS + "',REMARKS='" + rps.REMARKS + "' WHERE RPS_ID="+rps.RPS_ID.ToString();
+            Sql = "UPDATE RPS set VENDOR_ID =" + rps.VENDOR_ID.ToString() + ",RPS_NAME='" + rps.RPS_NAME.ToUpper() + "',CONTACT_NAME='" + rps.CONTACT_NAME.ToUpper() + "',CONTACT_NO='" + rps.CONTACT_NO + "',ROUTE_DETAILS='" + rps.ROUTE_DETAILS.ToUpper() + "',REMARKS='" + rps.REMARKS.ToUpper() + "' WHERE RPS_ID=" + rps.RPS_ID.ToString();
             dt = Dbcon.Sqlconnection(Sql, "Update");
         }
 

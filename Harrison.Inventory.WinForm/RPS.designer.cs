@@ -196,6 +196,7 @@
             this.rpsgrid.RowTemplate.Height = 24;
             this.rpsgrid.Size = new System.Drawing.Size(527, 150);
             this.rpsgrid.TabIndex = 23;
+            this.rpsgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(rpsgrid_RowHeaderMouseClick);
             // 
             // RPSdetails
             // 

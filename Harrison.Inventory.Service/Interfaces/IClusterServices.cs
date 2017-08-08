@@ -10,8 +10,8 @@ namespace Harrison.Inventory.Service
     public interface IClusterServices
     {
         DataTable ArrangeCluster(SortType sortType, SortFieldType sortField);
-        void AddCluster(string clustername, int stateid);
+        void AddCluster(string clustername);
         void DeleteCluster(object Clusterid);
-        void UpdateCluster(int clusterid, string clustername, int stateid);
+        void UpdateCluster(int clusterid, string clustername);
     }
 }

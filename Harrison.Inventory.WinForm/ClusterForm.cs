@@ -21,16 +21,9 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             _iclusterpresenter = new ClusterPresenter(this, new ClusterServices(new ClusterData()));
             _iclusterpresenter.DefaultClusterOrder();
-            _iclusterpresenter.setStateValues();
             
         }
-        public void setStateNames(DataTable states)
-        {
-            statecombo.ValueMember = "STATE_ID";
-            statecombo.DisplayMember="STATE_NAME";
-            statecombo.DataSource = states;
- 
-        }
+       
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
 
@@ -47,14 +40,17 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
-
+        private void clustergrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            clustertxt.Text = clustergrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
         private void addbtn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(clustertxt.Text))
                 MessageBox.Show("Enter a name");
             else
             {
-                _iclusterpresenter.AddCluster(clustertxt.Text, int.Parse(statecombo.SelectedValue.ToString()));
+                _iclusterpresenter.AddCluster(clustertxt.Text);
                 MessageBox.Show("Cluster added");
                 clustertxt.Text = "";
                 _iclusterpresenter.DefaultClusterOrder();

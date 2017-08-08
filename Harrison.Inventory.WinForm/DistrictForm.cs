@@ -16,6 +16,7 @@ namespace Harrison.Inventory.WinForm
     public partial class DistrictForm : Form,IDistrictView
     {
         IDistrictPresenter _idistrictpresenter;
+        string ID;
         public DistrictForm()
         {
             InitializeComponent();
@@ -37,6 +38,12 @@ namespace Harrison.Inventory.WinForm
         private void DistrictForm_Load(object sender, EventArgs e)
         {
 
+        }
+        private void districtgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ID = districtgrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            districttxt.Text = districtgrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            statecombo.SelectedValue = districtgrid.Rows[e.RowIndex].Cells[2].Value;
         }
         public void givearrdata(DataTable districts)
         {

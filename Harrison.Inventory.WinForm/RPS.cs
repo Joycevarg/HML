@@ -29,6 +29,15 @@ namespace Harrison.Inventory.WinForm
         {
 
         }
+        private void rpsgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        { 
+            VendorNameCombo.SelectedValue=rpsgrid.Rows[e.RowIndex].Cells[1].Value;
+            rpsNametxt.Text = rpsgrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+            contactNametxt.Text=rpsgrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+            contactNotxt.Text= rpsgrid.Rows[e.RowIndex].Cells[4].Value.ToString(); 
+            routeDetlstxt.Text= rpsgrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+            remarktxt.Text=rpsgrid.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
         public void setVendorValues(DataTable vendors)
         {
             VendorNameCombo.ValueMember = "VENDOR_ID";

@@ -11,7 +11,7 @@ namespace Harrison.Inventory.Presenter
         void DefaultClusterDistrictOrder();
         void ChangeClusterDistrictOrder(SortType srttype, SortFieldType srtfield);
         void AddClusterDistrict(int districtid, int clusterid);
-        void SetDistrictNames(object stateid);
+        void SetDistrictNames();
         void SetClusterNames();
         void DeleteClusterDistrict(object Districtid);
         void UpdateClusterDistrict(int districtid, int clusterid);

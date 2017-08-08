@@ -88,9 +88,9 @@ namespace Harrison.Inventory.WinForm
 
         }
 
-        private void FinancialYear_Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FinancialYear_Grid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
+            finYeartxt.Text =  FinancialYear_Grid.Rows[e.RowIndex].Cells[1].Value.ToString(); 
         }
 
        

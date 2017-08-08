@@ -25,7 +25,7 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public void AddCluster(Cluster cluster)
         {
-            Sql = "Insert into CLUSTER (CLUSTER_NAME,STATE_ID) values( '" + cluster.CLUSTER_NAME + "'," + cluster.STATE_ID.ToString() + ")";
+            Sql = "Insert into CLUSTER (CLUSTER_NAME) values( '" + cluster.CLUSTER_NAME.ToUpper() + "')";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
 
@@ -36,7 +36,7 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void UpdateCluster(Cluster cluster)
         {
-            Sql = "UPDATE CLUSTER set CLUSTER_NAME='" + cluster.CLUSTER_NAME + "',STATE_ID=" + cluster.STATE_ID.ToString() + "WHERE CLUSTER_ID=" + cluster.CLUSTER_ID.ToString();
+            Sql = "UPDATE CLUSTER set CLUSTER_NAME='" + cluster.CLUSTER_NAME.ToUpper() + "WHERE CLUSTER_ID=" + cluster.CLUSTER_ID.ToString();
             dt = Dbcon.Sqlconnection(Sql, "Update");
         }
         

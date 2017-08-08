@@ -32,7 +32,11 @@ namespace Harrison.Inventory.WinForm
         {
            
         }
-
+        private void stategrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            statetxt.Text = stategrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+        
         private void savebtn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(statetxt.Text))
@@ -53,6 +57,11 @@ namespace Harrison.Inventory.WinForm
         {
             DistrictForm district = new DistrictForm();
             district.Show();
+        }
+
+        private void cnclbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

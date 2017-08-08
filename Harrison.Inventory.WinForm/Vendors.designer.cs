@@ -89,7 +89,7 @@
             // 
             // ventorNametxt
             // 
-            this.ventorNametxt.Location = new System.Drawing.Point(115, 47);
+            this.ventorNametxt.Location = new System.Drawing.Point(115, 29);
             this.ventorNametxt.Margin = new System.Windows.Forms.Padding(4);
             this.ventorNametxt.Name = "ventorNametxt";
             this.ventorNametxt.Size = new System.Drawing.Size(663, 22);
@@ -98,7 +98,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 50);
+            this.label1.Location = new System.Drawing.Point(4, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 17);
@@ -110,7 +110,7 @@
             this.regcheckbox.AutoSize = true;
             this.regcheckbox.Checked = true;
             this.regcheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.regcheckbox.Location = new System.Drawing.Point(115, 18);
+            this.regcheckbox.Location = new System.Drawing.Point(117, 31);
             this.regcheckbox.Margin = new System.Windows.Forms.Padding(4);
             this.regcheckbox.Name = "regcheckbox";
             this.regcheckbox.Size = new System.Drawing.Size(279, 21);
@@ -131,7 +131,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 118);
+            this.label2.Location = new System.Drawing.Point(6, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 17);
@@ -352,7 +352,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(8, 47);
+            this.label13.Location = new System.Drawing.Point(5, 69);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 17);
@@ -361,18 +361,18 @@
             // 
             // estateAddresstxt
             // 
-            this.estateAddresstxt.Location = new System.Drawing.Point(120, 18);
+            this.estateAddresstxt.Location = new System.Drawing.Point(117, 66);
             this.estateAddresstxt.Margin = new System.Windows.Forms.Padding(4);
             this.estateAddresstxt.Multiline = true;
             this.estateAddresstxt.Name = "estateAddresstxt";
-            this.estateAddresstxt.Size = new System.Drawing.Size(660, 79);
+            this.estateAddresstxt.Size = new System.Drawing.Size(660, 109);
             this.estateAddresstxt.TabIndex = 31;
             // 
             // edistrictcombo
             // 
             this.edistrictcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.edistrictcombo.FormattingEnabled = true;
-            this.edistrictcombo.Location = new System.Drawing.Point(468, 109);
+            this.edistrictcombo.Location = new System.Drawing.Point(457, 185);
             this.edistrictcombo.Margin = new System.Windows.Forms.Padding(4);
             this.edistrictcombo.Name = "edistrictcombo";
             this.edistrictcombo.Size = new System.Drawing.Size(312, 24);
@@ -381,7 +381,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(405, 112);
+            this.label14.Location = new System.Drawing.Point(398, 192);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(51, 17);
@@ -391,7 +391,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(61, 112);
+            this.label15.Location = new System.Drawing.Point(56, 192);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(41, 17);
@@ -400,36 +400,38 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.hstatecombo);
             this.groupBox1.Controls.Add(this.hdistrictcombo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.homeAddresstxt);
-            this.groupBox1.Controls.Add(this.regcheckbox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.ventorNametxt);
-            this.groupBox1.Location = new System.Drawing.Point(19, 2);
+            this.groupBox1.Location = new System.Drawing.Point(19, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(801, 241);
+            this.groupBox1.Size = new System.Drawing.Size(801, 230);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             // 
             // box
             // 
+            this.box.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.box.Controls.Add(this.estateAddresstxt);
             this.box.Controls.Add(this.label13);
             this.box.Controls.Add(this.label14);
             this.box.Controls.Add(this.label15);
             this.box.Controls.Add(this.edistrictcombo);
             this.box.Controls.Add(this.estatecombo);
-            this.box.Location = new System.Drawing.Point(867, 84);
+            this.box.Controls.Add(this.regcheckbox);
+            this.box.Location = new System.Drawing.Point(867, 13);
             this.box.Margin = new System.Windows.Forms.Padding(4);
             this.box.Name = "box";
             this.box.Padding = new System.Windows.Forms.Padding(4);
-            this.box.Size = new System.Drawing.Size(801, 159);
+            this.box.Size = new System.Drawing.Size(801, 230);
             this.box.TabIndex = 37;
             this.box.TabStop = false;
             // 
@@ -437,7 +439,7 @@
             // 
             this.estatecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.estatecombo.FormattingEnabled = true;
-            this.estatecombo.Location = new System.Drawing.Point(115, 109);
+            this.estatecombo.Location = new System.Drawing.Point(105, 185);
             this.estatecombo.Margin = new System.Windows.Forms.Padding(4);
             this.estatecombo.Name = "estatecombo";
             this.estatecombo.Size = new System.Drawing.Size(253, 24);
@@ -456,6 +458,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
@@ -484,6 +487,7 @@
             // 
             // savebtn
             // 
+            this.savebtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.savebtn.Location = new System.Drawing.Point(1037, 481);
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
@@ -495,6 +499,7 @@
             // 
             // cancelbtn
             // 
+            this.cancelbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cancelbtn.Location = new System.Drawing.Point(1199, 481);
             this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelbtn.Name = "cancelbtn";
@@ -506,6 +511,7 @@
             // 
             // editbtn
             // 
+            this.editbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.editbtn.Location = new System.Drawing.Point(1349, 481);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
@@ -516,6 +522,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox4.Controls.Add(this.cstNotxt);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label11);
@@ -588,6 +595,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label19);
@@ -602,6 +610,7 @@
             // 
             // dltbtn
             // 
+            this.dltbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dltbtn.Location = new System.Drawing.Point(1511, 481);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(100, 47);
@@ -611,12 +620,14 @@
             // 
             // vendorgrid
             // 
+            this.vendorgrid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vendorgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vendorgrid.Location = new System.Drawing.Point(19, 606);
             this.vendorgrid.Name = "vendorgrid";
             this.vendorgrid.RowTemplate.Height = 24;
             this.vendorgrid.Size = new System.Drawing.Size(1659, 238);
             this.vendorgrid.TabIndex = 54;
+            this.vendorgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(vendorgrid_RowHeaderMouseClick);
             // 
             // VendorsForm
             // 
@@ -637,6 +648,7 @@
             this.Name = "VendorsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendors";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Vendors_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

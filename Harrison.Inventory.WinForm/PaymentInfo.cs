@@ -103,7 +103,7 @@ namespace Harrison.Inventory.WinForm
 
         private void donebtn_Click(object sender, EventArgs e)
         {
-            _paymentinfopresenter.AddPaymentInfo(0,0, paymentdatetxt.Value.ToString("yyyy-MM-dd"), 0, float.Parse(HOtxt.Text), float.Parse(OtherDebittxt.Text), PaymentModeCombo.Text, 0, float.Parse(Balancetxt.Text), Remarktxt.Text);
+            _paymentinfopresenter.AddPaymentInfo(int.Parse(InvNoCombo.SelectedValue.ToString()),0, paymentdatetxt.Value.ToString("yyyy-MM-dd"), 0, float.Parse(HOtxt.Text), float.Parse(OtherDebittxt.Text), PaymentModeCombo.Text, 0, float.Parse(Balancetxt.Text), Remarktxt.Text);
         }
 
      

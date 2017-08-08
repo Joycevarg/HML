@@ -29,9 +29,9 @@ namespace Harrison.Inventory.Service
             return clusters;
         }
 
-        public void AddCluster(string clustername, int stateid)
+        public void AddCluster(string clustername)
         {
-            Cluster cluster = new Cluster(0, clustername, stateid);
+            Cluster cluster = new Cluster(0, clustername);
             _clusterdata.AddCluster(cluster);
         }
         public void DeleteCluster(object Clusterid)
@@ -40,9 +40,9 @@ namespace Harrison.Inventory.Service
             _clusterdata.DeleteCluster(Clusterid.ToString());
 
         }
-        public void UpdateCluster(int clusterid,string clustername, int stateid)
+        public void UpdateCluster(int clusterid,string clustername)
         {
-            Cluster cluster = new Cluster(clusterid, clustername, stateid);
+            Cluster cluster = new Cluster(clusterid, clustername);
             _clusterdata.UpdateCluster(cluster);
         }
     }

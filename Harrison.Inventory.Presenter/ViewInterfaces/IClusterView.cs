@@ -12,6 +12,6 @@ namespace Harrison.Inventory.Presenter
         SortType SortDirection { get; set; }
         SortFieldType SortField { get; set; }
         void givearrdata(DataTable clusters);
-        void setStateNames(DataTable states);
+        
     }
 }

@@ -96,7 +96,7 @@
             this.FinancialYear_Grid.Name = "FinancialYear_Grid";
             this.FinancialYear_Grid.Size = new System.Drawing.Size(402, 155);
             this.FinancialYear_Grid.TabIndex = 5;
-            this.FinancialYear_Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FinancialYear_Grid_CellContentClick);
+            this.FinancialYear_Grid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(FinancialYear_Grid_RowHeaderMouseClick);
             // 
             // dltbtn
             // 

@@ -10,9 +10,8 @@ namespace Harrison.Inventory.Presenter
     {
         void DefaultClusterOrder();
         void ChangeClusterOrder(SortType sortType, SortFieldType sortField);
-        void setStateValues();
-        void AddCluster(String ClusterName, int stateid);
+        void AddCluster(String ClusterName);
         void DeleteCluster(object Clusterid);
-        void UpdateCluster(int clusterid, String ClusterName, int stateid);
+        void UpdateCluster(int clusterid, String ClusterName);
     }
 }

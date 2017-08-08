@@ -166,6 +166,7 @@
             this.branchgrid.RowTemplate.Height = 24;
             this.branchgrid.Size = new System.Drawing.Size(674, 238);
             this.branchgrid.TabIndex = 17;
+            this.branchgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(branchgrid_RowHeaderMouseClick);
             // 
             // edtbtn
             // 
@@ -175,6 +176,7 @@
             this.edtbtn.TabIndex = 8;
             this.edtbtn.Text = "Edit";
             this.edtbtn.UseVisualStyleBackColor = true;
+            this.edtbtn.Click += new System.EventHandler(this.edtbtn_Click);
             // 
             // dltbtn
             // 

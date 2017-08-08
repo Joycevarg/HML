@@ -12,7 +12,6 @@ namespace Harrison.Inventory.Presenter
     {
         private IClusterView _iclusterview;
         private IClusterServices _iclusterservice;
-        private IStateServices _istateservice = new StateServices(new StateData());
         public ClusterPresenter(IClusterView clusterview, IClusterServices clusterservice)
         {
             _iclusterservice = clusterservice;
@@ -26,22 +25,18 @@ namespace Harrison.Inventory.Presenter
         {
             _iclusterview.givearrdata(_iclusterservice.ArrangeCluster(srttype, srtfield));
         }
-        public void setStateValues()
-        {
-            _iclusterview.setStateNames(_istateservice.ArrangeState(SortType.Ascending, SortFieldType.Id));
-                
-        }
+       
         public void DeleteCluster(object Clusterid)
         {
             _iclusterservice.DeleteCluster(Clusterid);
         }
-        public void AddCluster(String ClusterName, int stateid)
+        public void AddCluster(String ClusterName)
         {
-            _iclusterservice.AddCluster(ClusterName, stateid);
+            _iclusterservice.AddCluster(ClusterName);
         }
-        public void UpdateCluster(int clusterid,String ClusterName, int stateid)
+        public void UpdateCluster(int clusterid,String ClusterName)
         {
-            _iclusterservice.UpdateCluster(clusterid,ClusterName, stateid);
+            _iclusterservice.UpdateCluster(clusterid,ClusterName);
         }
     }
 }

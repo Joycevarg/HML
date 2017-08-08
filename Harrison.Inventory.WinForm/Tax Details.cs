@@ -42,11 +42,20 @@ namespace Harrison.Inventory.WinForm
             MessageBox.Show("Tax details added");
             FormFunctions func = new FormFunctions();
             func.ClearTextBoxes(this);
+            taxpresenter.DefaultTaxDetailsOrder();
         }
 
         private void Tax_Details_Load(object sender, EventArgs e)
         {
-
+            
+        }
+        private void taxgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            finYeartxt.SelectedValue = taxgrid.Rows[e.RowIndex].Cells[0].Value;
+            effectDate.Value = DateTime.Parse(taxgrid.Rows[e.RowIndex].Cells[1].Value.ToString());
+            endDate.Value = DateTime.Parse(taxgrid.Rows[e.RowIndex].Cells[2].Value.ToString());
+            SGSTtxt.Text = taxgrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+            CGSTtxt.Text = taxgrid.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
         public void setFinancialYears(DataTable finyears)
         {

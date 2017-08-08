@@ -44,6 +44,9 @@ namespace Harrison.Inventory.WinForm
         private void vendorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VendorsForm vendorform = new VendorsForm();
+            vendorform.MdiParent = this;
+            vendorform.Dock = DockStyle.Fill;
+            vendorform.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             vendorform.Show();
         }
 

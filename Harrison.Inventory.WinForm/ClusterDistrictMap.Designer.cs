@@ -73,7 +73,7 @@
             this.ClusterCombo.Name = "ClusterCombo";
             this.ClusterCombo.Size = new System.Drawing.Size(301, 24);
             this.ClusterCombo.TabIndex = 1;
-            this.ClusterCombo.SelectedIndexChanged += new System.EventHandler(this.ClusterCombo_SelectedIndexChanged);
+           
             // 
             // Addbtn
             // 
@@ -103,6 +103,7 @@
             this.clusterdistrictgrid.RowTemplate.Height = 24;
             this.clusterdistrictgrid.Size = new System.Drawing.Size(484, 190);
             this.clusterdistrictgrid.TabIndex = 6;
+            this.clusterdistrictgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(clusterdistrictgrid_RowHeaderMouseClick);
             // 
             // edtbtn
             // 

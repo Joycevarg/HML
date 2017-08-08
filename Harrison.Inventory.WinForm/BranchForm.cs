@@ -16,7 +16,7 @@ namespace Harrison.Inventory.WinForm
     public partial class branchDetails : Form,IBranchView
     {
         private IBranchPresenter branchpresenter;
-       
+        private object ID;
  
         public branchDetails()
         {
@@ -64,11 +64,27 @@ namespace Harrison.Inventory.WinForm
             {
                 branchpresenter.AddBranch(branchnametxt.Text, int.Parse(bankcombo.SelectedValue.ToString()), ifsctxt.Text, bankaddresstxt.Text, contacttxt.Text);
                 MessageBox.Show("Branch added");
+                branchpresenter.DefaultBranchOrder();
                 FormFunctions func = new FormFunctions();
                 func.ClearTextBoxes(this);
 
             }
 
+        }
+        private void branchgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            edtbtn.Enabled = true;
+            dltbtn.Enabled = true;
+            ID = branchgrid.Rows[e.RowIndex].Cells[0].Value;
+            branchnametxt.Text = branchgrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            bankcombo.SelectedValue = branchgrid.Rows[e.RowIndex].Cells[2].Value;
+            ifsctxt.Text = branchgrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+            bankaddresstxt.Text = branchgrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+            contacttxt.Text=branchgrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+        private void edtbtn_Click(object sender, EventArgs e)
+        {
+            branchpresenter.UpdateBranch(int.Parse(ID.ToString()), branchnametxt.Text, int.Parse(bankcombo.SelectedValue.ToString()), ifsctxt.Text, bankaddresstxt.Text, contacttxt.Text);
         }
     }
 }

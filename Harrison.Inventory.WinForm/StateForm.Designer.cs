@@ -65,6 +65,7 @@
             this.cnclbtn.TabIndex = 3;
             this.cnclbtn.Text = "Cancel";
             this.cnclbtn.UseVisualStyleBackColor = true;
+            this.cnclbtn.Click += new System.EventHandler(this.cnclbtn_Click);
             // 
             // stategrid
             // 
@@ -74,6 +75,7 @@
             this.stategrid.RowTemplate.Height = 24;
             this.stategrid.Size = new System.Drawing.Size(423, 126);
             this.stategrid.TabIndex = 4;
+            this.stategrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(stategrid_RowHeaderMouseClick);
             // 
             // label1
             // 

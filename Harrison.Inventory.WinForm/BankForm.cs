@@ -78,6 +78,7 @@ namespace Harrison.Inventory.WinForm
         {
             _bankpresenter.UpdateBank(int.Parse(ID.ToString()), bankNametxt.Text);
             _bankpresenter.DefaultBankOrder();
+            bankNametxt.Text = "";
         }
 
     }

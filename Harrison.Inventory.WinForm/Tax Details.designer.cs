@@ -188,6 +188,7 @@
             this.taxgrid.RowTemplate.Height = 24;
             this.taxgrid.Size = new System.Drawing.Size(537, 150);
             this.taxgrid.TabIndex = 19;
+            this.taxgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(taxgrid_RowHeaderMouseClick);
             // 
             // Tax_Details
             // 

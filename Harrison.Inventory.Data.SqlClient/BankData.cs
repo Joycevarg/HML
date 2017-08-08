@@ -26,7 +26,7 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void AddBank(String BankName)
         {
-            Sql = "Insert into BANK (BANK_NAME) values( '" + BankName + "');";
+            Sql = "Insert into BANK (BANK_NAME) values( '" + BankName.ToUpper() + "');";
             dt = Dbcon.Sqlconnection(Sql, "Insert");
         }
         public void DeleteBank(string BankId)
@@ -36,7 +36,7 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void UpdateBank(Bank bank)
         {
-            Sql = "UPDATE BANK set BANK_NAME='" + bank.BANK_NAME + "' WHERE BANK_ID="+bank.BANK_ID.ToString();
+            Sql = "UPDATE BANK set BANK_NAME='" + bank.BANK_NAME.ToUpper() + "' WHERE BANK_ID="+bank.BANK_ID.ToString();
             dt = Dbcon.Sqlconnection(Sql, "Update");
         }
         

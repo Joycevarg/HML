@@ -16,7 +16,7 @@ namespace Harrison.Inventory.Data.SqlClient
         public DataTable GetClusterDistrictDetails()
         {
 
-            Sql = "SELECT D.DISTRICT_NAME,C.CLUSTER_NAME FROM DISTRICT D,CLUSTER C,CLUS_DIST_MAP M WHERE (D.DISTRICT_ID=M.DISTRICT_ID) AND (C.CLUSTER_ID=M.CLUSTER_ID) ";
+            Sql = "SELECT * FROM CLUS_DIST_MAP ";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);

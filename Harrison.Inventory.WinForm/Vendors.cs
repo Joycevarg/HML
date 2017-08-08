@@ -104,6 +104,43 @@ namespace Harrison.Inventory.WinForm
             vendorpresenter.setEdistrictNames(estatecombo.SelectedValue);
             
         }
+        private object ID;
+        private void vendorgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            editbtn.Enabled = true;
+            dltbtn.Enabled = true;
+            ID = vendorgrid.Rows[e.RowIndex].Cells[0].Value;
+           ventorNametxt.Text = vendorgrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+           homeAddresstxt.Text=vendorgrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+           hdistrictcombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[3].Value;
+           hstatecombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+           estateAddresstxt.Text=vendorgrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+           edistrictcombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[6].Value;
+           estatecombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[7].Value;
+           oAddresstxt.Text=vendorgrid.Rows[e.RowIndex].Cells[8].Value.ToString();
+           tapperNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[9].Value.ToString();
+           occuptxt.Text=vendorgrid.Rows[e.RowIndex].Cells[10].Value.ToString();
+           ownerNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[11].Value.ToString();
+           LicenNotxt.Text= vendorgrid.Rows[e.RowIndex].Cells[13].Value.ToString();
+           TinNotxt.Text= vendorgrid.Rows[e.RowIndex].Cells[14].Value.ToString();
+           cstNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[15].Value.ToString();
+           remarktxt.Text=vendorgrid.Rows[e.RowIndex].Cells[16].Value.ToString();
+           Bankcombo.SelectedValue = vendorgrid.Rows[e.RowIndex].Cells[20].Value;
+           Branchcombo.SelectedValue = vendorgrid.Rows[e.RowIndex].Cells[21].Value;
+           acctxt.Text = vendorgrid.Rows[e.RowIndex].Cells[22].Value.ToString();
+           if (vendorgrid.Rows[e.RowIndex].Cells[23].Value.ToString() == "1")
+           {
+               regcheckbox.Checked = true;
+               if (vendorgrid.Rows[e.RowIndex].Cells[22].Value.ToString() == "1")
+                   growerRbtn.Checked = true;
+               else if (vendorgrid.Rows[e.RowIndex].Cells[22].Value.ToString() == "2")
+                   dealerRbtn.Checked = false;
+           }
+           else
+               {   regcheckbox.Checked = false;
+               growerRbtn.Checked = true;
+               }
+           }
 
         private void savebtn_Click(object sender, EventArgs e)
         {
@@ -149,6 +186,10 @@ namespace Harrison.Inventory.WinForm
                 TinNotxt.Enabled = false;
                 cstNotxt.Enabled = false;
                 remarktxt.Enabled = false;
+                growerRbtn.Checked = true;
+                LicenNotxt.Text = "";
+                TinNotxt.Text = "";
+                cstNotxt.Text = "";
             }
             else
             {

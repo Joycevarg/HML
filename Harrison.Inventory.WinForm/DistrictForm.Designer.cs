@@ -93,7 +93,7 @@
             this.districtgrid.RowTemplate.Height = 24;
             this.districtgrid.Size = new System.Drawing.Size(490, 177);
             this.districtgrid.TabIndex = 6;
-            this.districtgrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DistrictGrid_CellContentClick);
+            this.districtgrid.RowHeaderMouseClick +=new System.Windows.Forms.DataGridViewCellMouseEventHandler(districtgrid_RowHeaderMouseClick);
             // 
             // label2
             // 
