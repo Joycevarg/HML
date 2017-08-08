@@ -16,7 +16,7 @@ namespace Harrison.Inventory.WinForm
     public partial class DistrictForm : Form,IDistrictView
     {
         IDistrictPresenter _idistrictpresenter;
-        string ID;
+        object ID;
         public DistrictForm()
         {
             InitializeComponent();
@@ -41,7 +41,9 @@ namespace Harrison.Inventory.WinForm
         }
         private void districtgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ID = districtgrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            editbtn.Enabled = true;
+            dltbtn.Enabled = true;
+            ID = districtgrid.Rows[e.RowIndex].Cells[0].Value;
             districttxt.Text = districtgrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             statecombo.SelectedValue = districtgrid.Rows[e.RowIndex].Cells[2].Value;
         }
@@ -71,6 +73,18 @@ namespace Harrison.Inventory.WinForm
                 _idistrictpresenter.DefaultDistrictOrder();
 
             }
+        }
+
+        private void editbtn_Click(object sender, EventArgs e)
+        {
+            _idistrictpresenter.UpdateDistrict(int.Parse(ID.ToString()), districttxt.Text, int.Parse(statecombo.SelectedValue.ToString()));
+            _idistrictpresenter.DefaultDistrictOrder();
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            _idistrictpresenter.DeleteDistrict(ID);
+            _idistrictpresenter.DefaultDistrictOrder();
         }
     }
 }

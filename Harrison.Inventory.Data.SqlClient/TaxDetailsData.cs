@@ -27,7 +27,7 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void DeleteTaxDetails(string finyear)
         {
-            Sql = "Delete TAX_DETAILS where FIN_YEAR=" + finyear;
+            Sql = "Delete TAX_DETAILS where FIN_YEAR_ID=" + finyear;
             dt = Dbcon.Sqlconnection(Sql, "Delete");
         }
         public void UpdateTaxDetails(TaxDetails taxdetails)

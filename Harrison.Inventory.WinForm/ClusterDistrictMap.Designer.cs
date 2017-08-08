@@ -73,7 +73,6 @@
             this.ClusterCombo.Name = "ClusterCombo";
             this.ClusterCombo.Size = new System.Drawing.Size(301, 24);
             this.ClusterCombo.TabIndex = 1;
-           
             // 
             // Addbtn
             // 
@@ -103,25 +102,29 @@
             this.clusterdistrictgrid.RowTemplate.Height = 24;
             this.clusterdistrictgrid.Size = new System.Drawing.Size(484, 190);
             this.clusterdistrictgrid.TabIndex = 6;
-            this.clusterdistrictgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(clusterdistrictgrid_RowHeaderMouseClick);
+            this.clusterdistrictgrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.clusterdistrictgrid_RowHeaderMouseClick);
             // 
             // edtbtn
             // 
+            this.edtbtn.Enabled = false;
             this.edtbtn.Location = new System.Drawing.Point(295, 136);
             this.edtbtn.Name = "edtbtn";
             this.edtbtn.Size = new System.Drawing.Size(102, 40);
             this.edtbtn.TabIndex = 5;
             this.edtbtn.Text = "Edit";
             this.edtbtn.UseVisualStyleBackColor = true;
+            this.edtbtn.Click += new System.EventHandler(this.edtbtn_Click);
             // 
             // dltbtn
             // 
+            this.dltbtn.Enabled = false;
             this.dltbtn.Location = new System.Drawing.Point(427, 136);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(102, 40);
             this.dltbtn.TabIndex = 6;
             this.dltbtn.Text = "Remove";
             this.dltbtn.UseVisualStyleBackColor = true;
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // ClusterDistrictMap
             // 

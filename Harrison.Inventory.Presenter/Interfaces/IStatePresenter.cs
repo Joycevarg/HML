@@ -12,5 +12,6 @@ namespace Harrison.Inventory.Presenter
         void ChangeStateOrder(SortType sortType, SortFieldType sortField);
         void AddState(String StateName);
         void UpdateState(int stateid, string statename);
-    }
+        void DeleteState(object Stateid);
+     }
 }

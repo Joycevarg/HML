@@ -22,7 +22,7 @@ namespace Harrison.Inventory.WinForm
         private IFinancialYearsPresenter _iFinancialYearsPresenter;
         static bool flag = true;
         #endregion
-
+        object ID;
         public FinancialYear()
         {
            
@@ -90,7 +90,22 @@ namespace Harrison.Inventory.WinForm
 
         private void FinancialYear_Grid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            finYeartxt.Text =  FinancialYear_Grid.Rows[e.RowIndex].Cells[1].Value.ToString(); 
+            editbtn.Enabled = true;
+            dltbtn.Enabled = true;
+            ID = FinancialYear_Grid.Rows[e.RowIndex].Cells[0].Value;
+            finYeartxt.Text = FinancialYear_Grid.Rows[e.RowIndex].Cells[1].Value.ToString(); 
+        }
+
+        private void editbtn_Click(object sender, EventArgs e)
+        {
+            _iFinancialYearsPresenter.UpdateFinancialYears(int.Parse(ID.ToString()), finYeartxt.Text);
+            _iFinancialYearsPresenter.init();
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            _iFinancialYearsPresenter.DeleteFinYear(ID);
+            _iFinancialYearsPresenter.init();
         }
 
        

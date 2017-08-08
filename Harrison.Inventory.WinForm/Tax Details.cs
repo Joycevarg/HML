@@ -81,5 +81,17 @@ namespace Harrison.Inventory.WinForm
             endDate.Text = enddate;
         }
 
+        private void editbtn_Click(object sender, EventArgs e)
+        {
+            taxpresenter.UpdateTaxDetails(int.Parse(finYeartxt.SelectedValue.ToString()), effectDate.Value.ToString("yyyy-MM-dd"), endDate.Value.ToString("yyyy-MM-dd"), float.Parse(CGSTtxt.Text), float.Parse(SGSTtxt.Text));
+            taxpresenter.DefaultTaxDetailsOrder();
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            taxpresenter.DeleteTaxDetails(finYeartxt.SelectedValue);
+            taxpresenter.DefaultTaxDetailsOrder();
+        }
+
     }
 }

@@ -42,8 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.VendorNameCombo = new System.Windows.Forms.ComboBox();
             this.rpsNametxt = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.edtbtn = new System.Windows.Forms.Button();
+            this.rmvbtn = new System.Windows.Forms.Button();
             this.rpsgrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.rpsgrid)).BeginInit();
             this.SuspendLayout();
@@ -169,23 +169,27 @@
             this.rpsNametxt.Size = new System.Drawing.Size(309, 22);
             this.rpsNametxt.TabIndex = 20;
             // 
-            // button1
+            // edtbtn
             // 
-            this.button1.Location = new System.Drawing.Point(321, 413);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 44);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.edtbtn.Enabled = false;
+            this.edtbtn.Location = new System.Drawing.Point(321, 413);
+            this.edtbtn.Name = "edtbtn";
+            this.edtbtn.Size = new System.Drawing.Size(111, 44);
+            this.edtbtn.TabIndex = 21;
+            this.edtbtn.Text = "Edit";
+            this.edtbtn.UseVisualStyleBackColor = true;
+            this.edtbtn.Click += new System.EventHandler(this.edtbtn_Click);
             // 
-            // button2
+            // rmvbtn
             // 
-            this.button2.Location = new System.Drawing.Point(475, 413);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 44);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = true;
+            this.rmvbtn.Enabled = false;
+            this.rmvbtn.Location = new System.Drawing.Point(475, 413);
+            this.rmvbtn.Name = "rmvbtn";
+            this.rmvbtn.Size = new System.Drawing.Size(111, 44);
+            this.rmvbtn.TabIndex = 22;
+            this.rmvbtn.Text = "Remove";
+            this.rmvbtn.UseVisualStyleBackColor = true;
+            this.rmvbtn.Click += new System.EventHandler(this.rmvbtn_Click);
             // 
             // rpsgrid
             // 
@@ -196,16 +200,16 @@
             this.rpsgrid.RowTemplate.Height = 24;
             this.rpsgrid.Size = new System.Drawing.Size(527, 150);
             this.rpsgrid.TabIndex = 23;
-            this.rpsgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(rpsgrid_RowHeaderMouseClick);
+            this.rpsgrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.rpsgrid_RowHeaderMouseClick);
             // 
             // RPSdetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 674);
+            this.Controls.Add(this.edtbtn);
             this.Controls.Add(this.rpsgrid);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rmvbtn);
             this.Controls.Add(this.rpsNametxt);
             this.Controls.Add(this.VendorNameCombo);
             this.Controls.Add(this.label1);
@@ -246,8 +250,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox VendorNameCombo;
         private System.Windows.Forms.TextBox rpsNametxt;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button edtbtn;
+        private System.Windows.Forms.Button rmvbtn;
         private System.Windows.Forms.DataGridView rpsgrid;
 
     }

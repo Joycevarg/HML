@@ -32,9 +32,14 @@ namespace Harrison.Inventory.WinForm
         {
            
         }
+        object ID;
         private void stategrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            edtbtn.Enabled = true;
+            rmvbtn.Enabled = true;
+            ID=stategrid.Rows[e.RowIndex].Cells[0].Value;
             statetxt.Text = stategrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+
         }
         
         private void savebtn_Click(object sender, EventArgs e)
@@ -62,6 +67,18 @@ namespace Harrison.Inventory.WinForm
         private void cnclbtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void edtbtn_Click(object sender, EventArgs e)
+        {
+            _statepresenter.UpdateState(int.Parse(ID.ToString()), statetxt.Text);
+            _statepresenter.DefaultStateOrder();
+        }
+
+        private void rmvbtn_Click(object sender, EventArgs e)
+        {
+            _statepresenter.DeleteState(ID);
+            _statepresenter.DefaultStateOrder();
         }
     }
 }

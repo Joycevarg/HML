@@ -153,6 +153,7 @@
             this.editbtn.TabIndex = 11;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // label5
             // 
@@ -179,6 +180,7 @@
             this.dltbtn.TabIndex = 18;
             this.dltbtn.Text = "Remove";
             this.dltbtn.UseVisualStyleBackColor = true;
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // taxgrid
             // 
@@ -188,7 +190,7 @@
             this.taxgrid.RowTemplate.Height = 24;
             this.taxgrid.Size = new System.Drawing.Size(537, 150);
             this.taxgrid.TabIndex = 19;
-            this.taxgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(taxgrid_RowHeaderMouseClick);
+            this.taxgrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.taxgrid_RowHeaderMouseClick);
             // 
             // Tax_Details
             // 

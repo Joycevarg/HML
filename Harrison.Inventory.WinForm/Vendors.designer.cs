@@ -512,6 +512,7 @@
             // editbtn
             // 
             this.editbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.editbtn.Enabled = false;
             this.editbtn.Location = new System.Drawing.Point(1349, 481);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
@@ -519,6 +520,7 @@
             this.editbtn.TabIndex = 43;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // groupBox4
             // 
@@ -611,12 +613,14 @@
             // dltbtn
             // 
             this.dltbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dltbtn.Enabled = false;
             this.dltbtn.Location = new System.Drawing.Point(1511, 481);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(100, 47);
             this.dltbtn.TabIndex = 53;
             this.dltbtn.Text = "Delete";
             this.dltbtn.UseVisualStyleBackColor = true;
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // vendorgrid
             // 
@@ -627,7 +631,7 @@
             this.vendorgrid.RowTemplate.Height = 24;
             this.vendorgrid.Size = new System.Drawing.Size(1659, 238);
             this.vendorgrid.TabIndex = 54;
-            this.vendorgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(vendorgrid_RowHeaderMouseClick);
+            this.vendorgrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.vendorgrid_RowHeaderMouseClick);
             // 
             // VendorsForm
             // 

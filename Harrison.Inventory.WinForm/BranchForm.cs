@@ -85,6 +85,13 @@ namespace Harrison.Inventory.WinForm
         private void edtbtn_Click(object sender, EventArgs e)
         {
             branchpresenter.UpdateBranch(int.Parse(ID.ToString()), branchnametxt.Text, int.Parse(bankcombo.SelectedValue.ToString()), ifsctxt.Text, bankaddresstxt.Text, contacttxt.Text);
+            branchpresenter.DefaultBranchOrder();
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            branchpresenter.DeleteBranch(ID);
+            branchpresenter.DefaultBranchOrder();
         }
     }
 }

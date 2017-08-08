@@ -50,6 +50,8 @@ namespace Harrison.Inventory.WinForm
         }
         private void clusterdistrictgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            edtbtn.Enabled = true;
+            dltbtn.Enabled = true;
             ClusterCombo.SelectedValue = clusterdistrictgrid.Rows[e.RowIndex].Cells[0].Value;
             DistrictCombo.SelectedValue = clusterdistrictgrid.Rows[e.RowIndex].Cells[1].Value;
         }
@@ -65,6 +67,18 @@ namespace Harrison.Inventory.WinForm
             _clusterdistrictpresenter.DefaultClusterDistrictOrder();
             FormFunctions form = new FormFunctions();
             form.ClearTextBoxes(this);
+        }
+
+        private void edtbtn_Click(object sender, EventArgs e)
+        {
+            _clusterdistrictpresenter.UpdateClusterDistrict(int.Parse(DistrictCombo.SelectedValue.ToString()), int.Parse(ClusterCombo.SelectedValue.ToString()));
+            _clusterdistrictpresenter.DefaultClusterDistrictOrder();
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            _clusterdistrictpresenter.DeleteClusterDistrict(DistrictCombo.SelectedValue);
+            _clusterdistrictpresenter.DefaultClusterDistrictOrder();
         }
 
        

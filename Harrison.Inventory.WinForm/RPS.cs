@@ -16,7 +16,7 @@ namespace Harrison.Inventory.WinForm
     public partial class RPSdetails : Form, IRPSView
     {
         private IRPSPresenter rpspresenter;
-        GridForm gridfrm;
+        object ID;
         public RPSdetails()
         {
             InitializeComponent();
@@ -30,7 +30,10 @@ namespace Harrison.Inventory.WinForm
 
         }
         private void rpsgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        { 
+        {
+            edtbtn.Enabled = true;
+            rmvbtn.Enabled = true;
+            ID = rpsgrid.Rows[e.RowIndex].Cells[0].Value;
             VendorNameCombo.SelectedValue=rpsgrid.Rows[e.RowIndex].Cells[1].Value;
             rpsNametxt.Text = rpsgrid.Rows[e.RowIndex].Cells[2].Value.ToString();
             contactNametxt.Text=rpsgrid.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -74,6 +77,18 @@ namespace Harrison.Inventory.WinForm
 
 
 
+        }
+
+        private void edtbtn_Click(object sender, EventArgs e)
+        {
+            rpspresenter.UpdateRPS(int.Parse(ID.ToString()),int.Parse(VendorNameCombo.SelectedValue.ToString()), rpsNametxt.Text, contactNametxt.Text, contactNotxt.Text, routeDetlstxt.Text, remarktxt.Text);
+            rpspresenter.DefaultRPSOrder();
+        }
+
+        private void rmvbtn_Click(object sender, EventArgs e)
+        {
+            rpspresenter.DeleteRPS(ID);
+            rpspresenter.DefaultRPSOrder();
         }
     }
 }

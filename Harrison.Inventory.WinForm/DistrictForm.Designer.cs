@@ -61,12 +61,14 @@
             // 
             // editbtn
             // 
+            this.editbtn.Enabled = false;
             this.editbtn.Location = new System.Drawing.Point(326, 121);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(105, 35);
             this.editbtn.TabIndex = 3;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // cancelbtn
             // 
@@ -93,7 +95,7 @@
             this.districtgrid.RowTemplate.Height = 24;
             this.districtgrid.Size = new System.Drawing.Size(490, 177);
             this.districtgrid.TabIndex = 6;
-            this.districtgrid.RowHeaderMouseClick +=new System.Windows.Forms.DataGridViewCellMouseEventHandler(districtgrid_RowHeaderMouseClick);
+            this.districtgrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.districtgrid_RowHeaderMouseClick);
             // 
             // label2
             // 
@@ -115,12 +117,14 @@
             // 
             // dltbtn
             // 
+            this.dltbtn.Enabled = false;
             this.dltbtn.Location = new System.Drawing.Point(453, 121);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(105, 35);
             this.dltbtn.TabIndex = 9;
             this.dltbtn.Text = "Delete";
             this.dltbtn.UseVisualStyleBackColor = true;
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // DistrictForm
             // 

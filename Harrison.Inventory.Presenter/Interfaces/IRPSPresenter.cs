@@ -13,5 +13,6 @@ namespace Harrison.Inventory.Presenter
         void setVendorNames();
         void AddRPS(int vendid, string rpsname, string contname, string contno, string route, string remark);
         void UpdateRPS(int rpsid, int vendid, string rpsname, string contname, string contno, string route, string remark);
+        void DeleteRPS(object RPSid);
     }
 }

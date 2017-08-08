@@ -166,10 +166,11 @@
             this.branchgrid.RowTemplate.Height = 24;
             this.branchgrid.Size = new System.Drawing.Size(674, 238);
             this.branchgrid.TabIndex = 17;
-            this.branchgrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(branchgrid_RowHeaderMouseClick);
+            this.branchgrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.branchgrid_RowHeaderMouseClick);
             // 
             // edtbtn
             // 
+            this.edtbtn.Enabled = false;
             this.edtbtn.Location = new System.Drawing.Point(405, 278);
             this.edtbtn.Name = "edtbtn";
             this.edtbtn.Size = new System.Drawing.Size(113, 40);
@@ -180,12 +181,14 @@
             // 
             // dltbtn
             // 
+            this.dltbtn.Enabled = false;
             this.dltbtn.Location = new System.Drawing.Point(576, 278);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(113, 40);
             this.dltbtn.TabIndex = 9;
             this.dltbtn.Text = "Remove";
             this.dltbtn.UseVisualStyleBackColor = true;
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // branchDetails
             // 

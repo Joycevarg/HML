@@ -69,6 +69,7 @@
             // 
             // editbtn
             // 
+            this.editbtn.Enabled = false;
             this.editbtn.Location = new System.Drawing.Point(279, 85);
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
@@ -76,6 +77,7 @@
             this.editbtn.TabIndex = 3;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // Cancelbtn
             // 
@@ -96,16 +98,18 @@
             this.FinancialYear_Grid.Name = "FinancialYear_Grid";
             this.FinancialYear_Grid.Size = new System.Drawing.Size(402, 155);
             this.FinancialYear_Grid.TabIndex = 5;
-            this.FinancialYear_Grid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(FinancialYear_Grid_RowHeaderMouseClick);
+            this.FinancialYear_Grid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FinancialYear_Grid_RowHeaderMouseClick);
             // 
             // dltbtn
             // 
+            this.dltbtn.Enabled = false;
             this.dltbtn.Location = new System.Drawing.Point(392, 85);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(91, 37);
             this.dltbtn.TabIndex = 6;
             this.dltbtn.Text = "Delete";
             this.dltbtn.UseVisualStyleBackColor = true;
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // FinancialYear
             // 

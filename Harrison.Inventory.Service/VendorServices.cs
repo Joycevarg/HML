@@ -26,9 +26,9 @@ namespace Harrison.Inventory.Service
             _vendordata.AddVendor(vendor);
 
         }
-        public void UpdateVendor(int vendorid,string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendcrdate, string vendupdate, string vendstat, int bankid, int branchid, string accno, int register)
+        public void UpdateVendor(int vendorid,string vendorname, string homeaddr, int homedist, int homestat, string estateaddr, int estatdist, int estatstat, string owneraddr, string tappno, string occup, string ownerno, int dealgrow, string licenno, string tinno, string cstno, string remark, string vendupdate, string vendstat, int bankid, int branchid, string accno, int register)
         {
-            Vendor vendor = new Vendor(vendorid,vendorname, homeaddr, homedist, homestat, estateaddr, estatdist, estatstat, owneraddr, tappno, occup, ownerno, dealgrow, licenno, tinno, cstno, remark, vendcrdate, vendupdate, vendstat, bankid, branchid, accno, register);
+            Vendor vendor = new Vendor(vendorid,vendorname, homeaddr, homedist, homestat, estateaddr, estatdist, estatstat, owneraddr, tappno, occup, ownerno, dealgrow, licenno, tinno, cstno, remark, "", vendupdate, vendstat, bankid, branchid, accno, register);
             _vendordata.UpdateVendor(vendor);
 
         }

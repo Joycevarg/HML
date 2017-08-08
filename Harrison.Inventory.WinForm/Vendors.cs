@@ -201,6 +201,27 @@ namespace Harrison.Inventory.WinForm
             }
         }
 
+        private void editbtn_Click(object sender, EventArgs e)
+        {
+            int dealer_grower, register;//if dealer-2,grower-1
+            if (growerRbtn.Checked == true)
+                dealer_grower = 1;
+            else
+                dealer_grower = 2;
+            if (regcheckbox.Checked == true)
+                register = 1;
+            else
+                register = 0;
+            vendorpresenter.UpdateVendor(int.Parse(ID.ToString()),ventorNametxt.Text, homeAddresstxt.Text, int.Parse(hdistrictcombo.SelectedValue.ToString()), int.Parse(hstatecombo.SelectedValue.ToString()), estateAddresstxt.Text, int.Parse(edistrictcombo.SelectedValue.ToString()), int.Parse(estatecombo.SelectedValue.ToString()), oAddresstxt.Text, tapperNotxt.Text, occuptxt.Text, ownerNotxt.Text, dealer_grower, LicenNotxt.Text, TinNotxt.Text, cstNotxt.Text, remarktxt.Text, DateTime.Now.Date.ToString("yyyy-MM-dd"), "notnow", int.Parse(Bankcombo.SelectedValue.ToString()), int.Parse(Branchcombo.SelectedValue.ToString()), acctxt.Text, register);
+            vendorpresenter.DefaultVendorOrder();       
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            vendorpresenter.DeleteVendor(ID);
+            vendorpresenter.DefaultVendorOrder();
+        }
+
      
        
 

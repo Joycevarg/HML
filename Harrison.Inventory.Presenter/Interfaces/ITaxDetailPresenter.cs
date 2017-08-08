@@ -13,5 +13,6 @@ namespace Harrison.Inventory.Presenter
         void AddTaxDetails(int finid,string effectdate,string enddate,float cgst,float sgst);
         void SetFinancialYears();
         void UpdateTaxDetails(int finid, string effectdate, string enddate, float cgst, float sgst);
+        void DeleteTaxDetails(object Finid);
     }
 }

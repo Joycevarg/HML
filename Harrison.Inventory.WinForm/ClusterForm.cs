@@ -16,6 +16,7 @@ namespace Harrison.Inventory.WinForm
     public partial class clusterMaster : Form,IClusterView
     {
         IClusterPresenter _iclusterpresenter;
+        object ID;
         public clusterMaster()
         {   
             InitializeComponent();
@@ -42,6 +43,9 @@ namespace Harrison.Inventory.WinForm
         }
         private void clustergrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            editbtn.Enabled = true;
+            dltbtn.Enabled = true;
+            ID = clustergrid.Rows[e.RowIndex].Cells[0].Value;
             clustertxt.Text = clustergrid.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
         private void addbtn_Click(object sender, EventArgs e)
@@ -56,6 +60,18 @@ namespace Harrison.Inventory.WinForm
                 _iclusterpresenter.DefaultClusterOrder();
 
             }
+        }
+
+        private void editbtn_Click(object sender, EventArgs e)
+        {
+            _iclusterpresenter.UpdateCluster(int.Parse(ID.ToString()), clustertxt.Text);
+            _iclusterpresenter.DefaultClusterOrder();
+        }
+
+        private void dltbtn_Click(object sender, EventArgs e)
+        {
+            _iclusterpresenter.DeleteCluster(ID);
+            _iclusterpresenter.DefaultClusterOrder();
         }
     }
 }

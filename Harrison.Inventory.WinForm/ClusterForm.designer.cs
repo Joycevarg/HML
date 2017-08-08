@@ -76,12 +76,14 @@
             // 
             // editbtn
             // 
+            this.editbtn.Enabled = false;
             this.editbtn.Location = new System.Drawing.Point(291, 106);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(94, 43);
             this.editbtn.TabIndex = 12;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
+            this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
             // clustergrid
             // 
@@ -91,16 +93,18 @@
             this.clustergrid.RowTemplate.Height = 24;
             this.clustergrid.Size = new System.Drawing.Size(430, 199);
             this.clustergrid.TabIndex = 13;
-            this.clustergrid.RowHeaderMouseClick+=new System.Windows.Forms.DataGridViewCellMouseEventHandler(clustergrid_RowHeaderMouseClick);
+            this.clustergrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.clustergrid_RowHeaderMouseClick);
             // 
             // dltbtn
             // 
+            this.dltbtn.Enabled = false;
             this.dltbtn.Location = new System.Drawing.Point(413, 108);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(94, 41);
             this.dltbtn.TabIndex = 14;
             this.dltbtn.Text = "Delete";
             this.dltbtn.UseVisualStyleBackColor = true;
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // clusterMaster
             // 

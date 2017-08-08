@@ -36,7 +36,7 @@ namespace Harrison.Inventory.Data.SqlClient
         }
         public void UpdateCluster(Cluster cluster)
         {
-            Sql = "UPDATE CLUSTER set CLUSTER_NAME='" + cluster.CLUSTER_NAME.ToUpper() + "WHERE CLUSTER_ID=" + cluster.CLUSTER_ID.ToString();
+            Sql = "UPDATE CLUSTER set CLUSTER_NAME='" + cluster.CLUSTER_NAME.ToUpper() + "' WHERE CLUSTER_ID=" + cluster.CLUSTER_ID.ToString();
             dt = Dbcon.Sqlconnection(Sql, "Update");
         }
         
