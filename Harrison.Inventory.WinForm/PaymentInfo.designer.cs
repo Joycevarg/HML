@@ -52,6 +52,8 @@
             this.TotaltoPaytxt = new System.Windows.Forms.TextBox();
             this.VendorNametxt = new System.Windows.Forms.TextBox();
             this.gridbtn = new System.Windows.Forms.Button();
+            this.hoerrlbl = new System.Windows.Forms.Label();
+            this.otdeberrlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // paidDatelbl
@@ -68,7 +70,7 @@
             this.paymentdatetxt.Location = new System.Drawing.Point(185, 126);
             this.paymentdatetxt.Name = "paymentdatetxt";
             this.paymentdatetxt.Size = new System.Drawing.Size(200, 22);
-            this.paymentdatetxt.TabIndex = 1;
+            this.paymentdatetxt.TabIndex = 3;
             // 
             // label2
             // 
@@ -113,7 +115,8 @@
             this.TotAmntPaidtxt.Name = "TotAmntPaidtxt";
             this.TotAmntPaidtxt.ReadOnly = true;
             this.TotAmntPaidtxt.Size = new System.Drawing.Size(172, 22);
-            this.TotAmntPaidtxt.TabIndex = 10;
+            this.TotAmntPaidtxt.TabIndex = 7;
+            this.TotAmntPaidtxt.Text = "0";
             this.TotAmntPaidtxt.TextChanged += new System.EventHandler(this.TotAmntPaidtxt_TextChanged);
             // 
             // label7
@@ -141,7 +144,8 @@
             this.Balancetxt.Name = "Balancetxt";
             this.Balancetxt.ReadOnly = true;
             this.Balancetxt.Size = new System.Drawing.Size(172, 22);
-            this.Balancetxt.TabIndex = 15;
+            this.Balancetxt.TabIndex = 9;
+            this.Balancetxt.Text = "0";
             // 
             // Remarktxt
             // 
@@ -149,7 +153,7 @@
             this.Remarktxt.Multiline = true;
             this.Remarktxt.Name = "Remarktxt";
             this.Remarktxt.Size = new System.Drawing.Size(479, 67);
-            this.Remarktxt.TabIndex = 16;
+            this.Remarktxt.TabIndex = 10;
             // 
             // PaymentModeCombo
             // 
@@ -157,7 +161,7 @@
             this.PaymentModeCombo.Location = new System.Drawing.Point(519, 261);
             this.PaymentModeCombo.Name = "PaymentModeCombo";
             this.PaymentModeCombo.Size = new System.Drawing.Size(245, 24);
-            this.PaymentModeCombo.TabIndex = 21;
+            this.PaymentModeCombo.TabIndex = 8;
             this.PaymentModeCombo.SelectedIndexChanged += new System.EventHandler(this.PaymentModeCombo_SelectedIndexChanged);
             // 
             // label1
@@ -171,10 +175,10 @@
             // 
             // donebtn
             // 
-            this.donebtn.Location = new System.Drawing.Point(232, 439);
+            this.donebtn.Location = new System.Drawing.Point(83, 439);
             this.donebtn.Name = "donebtn";
             this.donebtn.Size = new System.Drawing.Size(125, 35);
-            this.donebtn.TabIndex = 24;
+            this.donebtn.TabIndex = 11;
             this.donebtn.Text = "Save";
             this.donebtn.UseVisualStyleBackColor = true;
             this.donebtn.Click += new System.EventHandler(this.donebtn_Click);
@@ -184,16 +188,17 @@
             this.clrbtn.Location = new System.Drawing.Point(424, 439);
             this.clrbtn.Name = "clrbtn";
             this.clrbtn.Size = new System.Drawing.Size(119, 35);
-            this.clrbtn.TabIndex = 25;
+            this.clrbtn.TabIndex = 13;
             this.clrbtn.Text = "Clear";
             this.clrbtn.UseVisualStyleBackColor = true;
+            this.clrbtn.Click += new System.EventHandler(this.clrbtn_Click);
             // 
             // cancelbtn
             // 
             this.cancelbtn.Location = new System.Drawing.Point(600, 439);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(122, 35);
-            this.cancelbtn.TabIndex = 26;
+            this.cancelbtn.TabIndex = 14;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -212,7 +217,7 @@
             this.HOtxt.Location = new System.Drawing.Point(185, 219);
             this.HOtxt.Name = "HOtxt";
             this.HOtxt.Size = new System.Drawing.Size(172, 22);
-            this.HOtxt.TabIndex = 28;
+            this.HOtxt.TabIndex = 5;
             this.HOtxt.TextChanged += new System.EventHandler(this.HOtxt_TextChanged);
             // 
             // label8
@@ -229,7 +234,7 @@
             this.OtherDebittxt.Location = new System.Drawing.Point(519, 219);
             this.OtherDebittxt.Name = "OtherDebittxt";
             this.OtherDebittxt.Size = new System.Drawing.Size(245, 22);
-            this.OtherDebittxt.TabIndex = 30;
+            this.OtherDebittxt.TabIndex = 6;
             this.OtherDebittxt.TextChanged += new System.EventHandler(this.OtherDebittxt_TextChanged);
             // 
             // InvNoCombo
@@ -238,7 +243,7 @@
             this.InvNoCombo.Location = new System.Drawing.Point(185, 31);
             this.InvNoCombo.Name = "InvNoCombo";
             this.InvNoCombo.Size = new System.Drawing.Size(200, 24);
-            this.InvNoCombo.TabIndex = 32;
+            this.InvNoCombo.TabIndex = 1;
             this.InvNoCombo.SelectedIndexChanged += new System.EventHandler(this.InvNoCombo_SelectedIndexChanged);
             // 
             // TotaltoPaytxt
@@ -248,7 +253,7 @@
             this.TotaltoPaytxt.Name = "TotaltoPaytxt";
             this.TotaltoPaytxt.ReadOnly = true;
             this.TotaltoPaytxt.Size = new System.Drawing.Size(172, 22);
-            this.TotaltoPaytxt.TabIndex = 33;
+            this.TotaltoPaytxt.TabIndex = 4;
             // 
             // VendorNametxt
             // 
@@ -257,23 +262,43 @@
             this.VendorNametxt.Name = "VendorNametxt";
             this.VendorNametxt.ReadOnly = true;
             this.VendorNametxt.Size = new System.Drawing.Size(200, 22);
-            this.VendorNametxt.TabIndex = 34;
+            this.VendorNametxt.TabIndex = 2;
             // 
             // gridbtn
             // 
-            this.gridbtn.Location = new System.Drawing.Point(55, 440);
+            this.gridbtn.Location = new System.Drawing.Point(251, 439);
             this.gridbtn.Name = "gridbtn";
             this.gridbtn.Size = new System.Drawing.Size(124, 34);
-            this.gridbtn.TabIndex = 35;
+            this.gridbtn.TabIndex = 12;
             this.gridbtn.Text = "View Grid";
             this.gridbtn.UseVisualStyleBackColor = true;
             this.gridbtn.Click += new System.EventHandler(this.gridbtn_Click);
+            // 
+            // hoerrlbl
+            // 
+            this.hoerrlbl.AutoSize = true;
+            this.hoerrlbl.ForeColor = System.Drawing.Color.Red;
+            this.hoerrlbl.Location = new System.Drawing.Point(192, 244);
+            this.hoerrlbl.Name = "hoerrlbl";
+            this.hoerrlbl.Size = new System.Drawing.Size(0, 17);
+            this.hoerrlbl.TabIndex = 30;
+            // 
+            // otdeberrlbl
+            // 
+            this.otdeberrlbl.AutoSize = true;
+            this.otdeberrlbl.ForeColor = System.Drawing.Color.Red;
+            this.otdeberrlbl.Location = new System.Drawing.Point(523, 244);
+            this.otdeberrlbl.Name = "otdeberrlbl";
+            this.otdeberrlbl.Size = new System.Drawing.Size(0, 17);
+            this.otdeberrlbl.TabIndex = 31;
             // 
             // PaymentInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 507);
+            this.Controls.Add(this.otdeberrlbl);
+            this.Controls.Add(this.hoerrlbl);
             this.Controls.Add(this.gridbtn);
             this.Controls.Add(this.VendorNametxt);
             this.Controls.Add(this.TotaltoPaytxt);
@@ -333,5 +358,7 @@
         private System.Windows.Forms.TextBox VendorNametxt;
         private System.Windows.Forms.Button gridbtn;
         private System.Windows.Forms.ComboBox InvNoCombo;
+        private System.Windows.Forms.Label hoerrlbl;
+        private System.Windows.Forms.Label otdeberrlbl;
     }
 }

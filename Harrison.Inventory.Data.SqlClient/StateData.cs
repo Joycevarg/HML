@@ -18,7 +18,7 @@ namespace Harrison.Inventory.Data.SqlClient
         {
            
             
-            Sql = "Select * from STATE";
+            Sql = "Select STATE_ID,STATE_NAME as 'STATE NAME' from STATE";
             dt = Dbcon.Sqlconnection(Sql,"Select");
             //da.Fill(dt);
             return (dt);

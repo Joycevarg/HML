@@ -11,6 +11,7 @@ using Harrison.Inventory.Data.SqlClient;
 using Harrison.Inventory.Service;
 using Harrison.Inventory.Data.Model;
 using Harrison.Inventory.Presenter;
+using System.Text.RegularExpressions;
 
 namespace Harrison.Inventory.WinForm
 {
@@ -19,7 +20,7 @@ namespace Harrison.Inventory.WinForm
     {   IInvoicePresenter _invoicepresenter;
         int reg;
         TaxDetails tax = new TaxDetails(0, "null", "null", 0, 0);
-            
+        float wetwt, drywt, drc, rate, dwt, amnt,lumb, price;
         GridForm gridfrm;
         public InvoiceForm()
         {
@@ -43,7 +44,7 @@ namespace Harrison.Inventory.WinForm
         public void setVendorValues(DataTable vendors)
         {
             VendorNamecombo.ValueMember="VENDOR_ID";
-            VendorNamecombo.DisplayMember="VENDOR_NAME";         
+            VendorNamecombo.DisplayMember="VENDOR NAME";         
             VendorNamecombo.DataSource=vendors;
         }
 
@@ -62,9 +63,9 @@ namespace Harrison.Inventory.WinForm
             RPScombo.DisplayMember = "RPS_NAME";
             RPScombo.DataSource = rpss;
         }
-        public void givearrdata(DataTable branchs)
+        public void givearrdata(DataTable invoices)
         {
-            gridfrm = new GridForm(branchs);
+            Invoicegrid.DataSource = invoices;
         }
 
         private void InvoiceForm_Load(object sender, EventArgs e)
@@ -84,60 +85,51 @@ namespace Harrison.Inventory.WinForm
 
         private void wetwttxt_TextChanged(object sender, EventArgs e)
         {
-            float wetwt, drywt, drc;
-            if (this.drctxt.Text == "")
-                drc = 0;
+            bool wetwtval = float.TryParse(this.wetwttxt.Text, out wetwt);
+            if (wetwtval||(string.IsNullOrWhiteSpace(this.wetwttxt.Text)))
+                wetwterrlbl.Text = "";
             else
-                drc = float.Parse(this.drctxt.Text);
-            if (this.wetwttxt.Text == "")
-                wetwt = 0;
-            else
-                wetwt = float.Parse(this.wetwttxt.Text);
+                wetwterrlbl.Text = "Invalid input";
             drywt = drc * wetwt / 100;
             drywttxt.Text = drywt.ToString();
         }
 
         private void drctxt_TextChanged(object sender, EventArgs e)
         {
-            float wetwt, drywt, drc;
-            if (this.drctxt.Text == "")
-                drc = 0;
+            bool drcval = float.TryParse(this.drctxt.Text, out drc);
+            if (drcval || (string.IsNullOrWhiteSpace(this.drctxt.Text)))
+                drcerrlbl.Text = "";
             else
-                drc = float.Parse(this.drctxt.Text);
-            if (this.wetwttxt.Text == "")
-                wetwt = 0;
-            else
-                wetwt = float.Parse(this.wetwttxt.Text);
+                drcerrlbl.Text = "Invalid input";
             drywt = drc * wetwt / 100;
             drywttxt.Text = drywt.ToString();
         }
 
         private void ratetxt_TextChanged(object sender, EventArgs e)
         {
-            float rate, dwt, amnt;
-            if (this.drywttxt.Text == "")
-                dwt = 0;
+            bool rateval = float.TryParse(this.ratetxt.Text, out rate);
+            if (rateval || (string.IsNullOrWhiteSpace(this.ratetxt.Text)))
+                rateerrlbl.Text = "";
             else
-                dwt = float.Parse(this.drywttxt.Text);
-            if (this.ratetxt.Text == "")
-                rate = 0;
-            else
-                rate = float.Parse(this.ratetxt.Text);
+                rateerrlbl.Text = "Invalid input";
+            amnt = dwt * rate;
+            amnttxt.Text = amnt.ToString();
+        }
+        private void drywttxt_TextChanged(object sender, EventArgs e)
+        {
+
+            bool dryval = float.TryParse(this.drywttxt.Text, out dwt);                
             amnt = dwt * rate;
             amnttxt.Text = amnt.ToString();
         }
 
         private void lumpqtytxt_TextChanged(object sender, EventArgs e)
         {
-            float lumb, price,amnt;
-            if (lumpqtytxt.Text == "")
-                lumb = 0;
+            bool lqtyerrval = float.TryParse(this.lumpqtytxt.Text, out lumb);
+            if (lqtyerrval || (string.IsNullOrWhiteSpace(this.lumpqtytxt.Text)))
+                lumbqtyerrlbl.Text = "";
             else
-            lumb = float.Parse(lumpqtytxt.Text);
-            if (LumbPricetxt.Text == "")
-                price = 0;
-            else
-                price = float.Parse(LumbPricetxt.Text);
+                lumbqtyerrlbl.Text = "Invalid input";
             amnt = lumb * price;
             LumbAmnttxt.Text = amnt.ToString();
 
@@ -145,15 +137,11 @@ namespace Harrison.Inventory.WinForm
 
         private void LumbPricetxt_TextChanged(object sender, EventArgs e)
         {
-            float lumb, price, amnt;
-            if (lumpqtytxt.Text == "")
-                lumb = 0;
+            bool lpriceval = float.TryParse(this.LumbPricetxt.Text, out price);
+            if (lpriceval ||(string.IsNullOrWhiteSpace(this.LumbPricetxt.Text)))
+                lumbpriceerrlbl.Text = "";
             else
-                lumb = float.Parse(lumpqtytxt.Text);
-            if (LumbPricetxt.Text == "")
-                price = 0;
-            else
-                price = float.Parse(LumbPricetxt.Text);
+                lumbpriceerrlbl.Text = "Invalid input";
             amnt = lumb * price;
             LumbAmnttxt.Text = amnt.ToString();
 
@@ -174,15 +162,21 @@ namespace Harrison.Inventory.WinForm
             if (RPScombo.SelectedValue != null)
                 rps = int.Parse(RPScombo.SelectedValue.ToString());
             if (!string.IsNullOrWhiteSpace(barrelqtytxt.Text))
-                barrel = int.Parse(barrelqtytxt.Text);
+                int.TryParse(barrelqtytxt.Text,out barrel);
             if (!string.IsNullOrWhiteSpace(lumpqtytxt.Text))
-                lump = int.Parse(lumpqtytxt.Text);
+                int.TryParse(lumpqtytxt.Text,out lump);
             if (!string.IsNullOrWhiteSpace(emptyqtytxt.Text))
-                empty = int.Parse(emptyqtytxt.Text);
-            _invoicepresenter.AddInvoice(moved, Datetxt.Value.ToString("yyyy-MM-dd"), int.Parse(VendorNamecombo.SelectedValue.ToString()), rps, commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, barrel,lump,empty, float.Parse(wetwttxt.Text), float.Parse(drctxt.Text), float.Parse(ratetxt.Text), int.Parse(spotContractCombo.SelectedValue.ToString()), codetxt.Text, float.Parse(drywttxt.Text), float.Parse(amnttxt.Text), float.Parse(LumbPricetxt.Text), float.Parse(LumbAmnttxt.Text), float.Parse(TotAmntNotTaxestxt.Text), cgst,sgst, float.Parse(TotAmntwithTaxestxt.Text));
+                int.TryParse(emptyqtytxt.Text,out empty);
+            float.TryParse(this.wetwttxt.Text, out wetwt);
+            float.TryParse(this.drctxt.Text, out drc);
+            float.TryParse(this.ratetxt.Text, out rate);
+            float.TryParse(this.drywttxt.Text, out dwt);
+            float.TryParse(this.LumbPricetxt.Text, out price);
+            _invoicepresenter.AddInvoice(moved, Datetxt.Value.ToString("yyyy-MM-dd"), int.Parse(VendorNamecombo.SelectedValue.ToString()), rps, commcombo.Text, traded, commCodecombo.Text, FrrNotxt.Text, lpcNotxt.Text, vfatxt.Text, barrel,lump,empty, wetwt, drc, rate, int.Parse(spotContractCombo.SelectedValue.ToString()), codetxt.Text, dwt, float.Parse(amnttxt.Text), price, float.Parse(LumbAmnttxt.Text), float.Parse(TotAmntNotTaxestxt.Text), cgst,sgst, float.Parse(TotAmntwithTaxestxt.Text));
             MessageBox.Show("Invoice added");
             FormFunctions func = new FormFunctions();
             func.ClearTextBoxes(this);
+            _invoicepresenter.DefaultInvoiceOrder();
             _invoicepresenter.setInvID();
            
         }
@@ -274,21 +268,27 @@ namespace Harrison.Inventory.WinForm
 
         }
 
-        private void drywttxt_TextChanged(object sender, EventArgs e)
-        {
-            float rate, dwt, amnt;
-            if (this.drywttxt.Text == "")
-                dwt = 0;
+        private void barrelqtytxt_TextChanged(object sender, EventArgs e)
+        { 
+            int barelqty;
+            if (int.TryParse(this.barrelqtytxt.Text, out barelqty)||string.IsNullOrWhiteSpace(barrelqtytxt.Text))
+                brlqtyerrlbl.Text = "";
             else
-                dwt = float.Parse(this.drywttxt.Text);
-            if (this.ratetxt.Text == "")
-                rate = 0;
-            else
-                rate = float.Parse(this.ratetxt.Text);
-            amnt = dwt * rate;
-            amnttxt.Text = amnt.ToString();
+                brlqtyerrlbl.Text = "Invalid input";
         }
 
+        private void emptyqtytxt_TextChanged(object sender, EventArgs e)
+        {
+
+            int empqty;
+            if (int.TryParse(this.emptyqtytxt.Text, out empqty) || string.IsNullOrWhiteSpace(emptyqtytxt.Text))
+                empqtyerrlbl.Text = "";
+            else
+                empqtyerrlbl.Text = "Invalid input";
+        }
+
+
+     
             
     }
 }

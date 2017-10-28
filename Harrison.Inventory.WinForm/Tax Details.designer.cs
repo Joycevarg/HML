@@ -54,7 +54,7 @@
             this.finYeartxt.Margin = new System.Windows.Forms.Padding(4);
             this.finYeartxt.Name = "finYeartxt";
             this.finYeartxt.Size = new System.Drawing.Size(307, 24);
-            this.finYeartxt.TabIndex = 0;
+            this.finYeartxt.TabIndex = 1;
             // 
             // label1
             // 
@@ -83,7 +83,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 17);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 12;
             this.label2.Text = "With Effect From";
             // 
             // label3
@@ -93,7 +93,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 17);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 12;
             this.label3.Text = "CGST in(%)";
             // 
             // label4
@@ -103,7 +103,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 17);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 12;
             this.label4.Text = "SGST in(%)";
             // 
             // CGSTtxt
@@ -112,7 +112,7 @@
             this.CGSTtxt.Margin = new System.Windows.Forms.Padding(4);
             this.CGSTtxt.Name = "CGSTtxt";
             this.CGSTtxt.Size = new System.Drawing.Size(307, 22);
-            this.CGSTtxt.TabIndex = 6;
+            this.CGSTtxt.TabIndex = 4;
             // 
             // SGSTtxt
             // 
@@ -120,7 +120,7 @@
             this.SGSTtxt.Margin = new System.Windows.Forms.Padding(4);
             this.SGSTtxt.Name = "SGSTtxt";
             this.SGSTtxt.Size = new System.Drawing.Size(307, 22);
-            this.SGSTtxt.TabIndex = 7;
+            this.SGSTtxt.TabIndex = 5;
             // 
             // savebtn
             // 
@@ -128,7 +128,7 @@
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(95, 48);
-            this.savebtn.TabIndex = 8;
+            this.savebtn.TabIndex = 6;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
             this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
@@ -139,7 +139,7 @@
             this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(85, 48);
-            this.cancelbtn.TabIndex = 9;
+            this.cancelbtn.TabIndex = 7;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.button2_Click);
@@ -150,7 +150,7 @@
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(88, 48);
-            this.editbtn.TabIndex = 11;
+            this.editbtn.TabIndex = 8;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
             this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
@@ -170,14 +170,14 @@
             this.endDate.Location = new System.Drawing.Point(286, 110);
             this.endDate.Name = "endDate";
             this.endDate.Size = new System.Drawing.Size(307, 22);
-            this.endDate.TabIndex = 16;
+            this.endDate.TabIndex = 3;
             // 
             // dltbtn
             // 
             this.dltbtn.Location = new System.Drawing.Point(525, 224);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(88, 48);
-            this.dltbtn.TabIndex = 18;
+            this.dltbtn.TabIndex = 9;
             this.dltbtn.Text = "Remove";
             this.dltbtn.UseVisualStyleBackColor = true;
             this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);

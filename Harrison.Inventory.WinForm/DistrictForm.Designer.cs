@@ -54,7 +54,7 @@
             this.addbtn.Location = new System.Drawing.Point(50, 121);
             this.addbtn.Name = "addbtn";
             this.addbtn.Size = new System.Drawing.Size(105, 35);
-            this.addbtn.TabIndex = 2;
+            this.addbtn.TabIndex = 3;
             this.addbtn.Text = "Add";
             this.addbtn.UseVisualStyleBackColor = true;
             this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
@@ -65,7 +65,7 @@
             this.editbtn.Location = new System.Drawing.Point(326, 121);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(105, 35);
-            this.editbtn.TabIndex = 3;
+            this.editbtn.TabIndex = 5;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
             this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
@@ -85,7 +85,7 @@
             this.districttxt.Location = new System.Drawing.Point(166, 27);
             this.districttxt.Name = "districttxt";
             this.districttxt.Size = new System.Drawing.Size(304, 22);
-            this.districttxt.TabIndex = 5;
+            this.districttxt.TabIndex = 1;
             // 
             // districtgrid
             // 
@@ -113,7 +113,7 @@
             this.statecombo.Location = new System.Drawing.Point(166, 69);
             this.statecombo.Name = "statecombo";
             this.statecombo.Size = new System.Drawing.Size(304, 24);
-            this.statecombo.TabIndex = 8;
+            this.statecombo.TabIndex = 2;
             // 
             // dltbtn
             // 
@@ -121,7 +121,7 @@
             this.dltbtn.Location = new System.Drawing.Point(453, 121);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(105, 35);
-            this.dltbtn.TabIndex = 9;
+            this.dltbtn.TabIndex = 6;
             this.dltbtn.Text = "Delete";
             this.dltbtn.UseVisualStyleBackColor = true;
             this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);

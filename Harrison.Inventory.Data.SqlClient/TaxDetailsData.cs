@@ -15,7 +15,7 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public DataTable GetTaxDetails()
         {
-            Sql = "Select * from TAX_DETAILS";
+            Sql = "Select T.FIN_YEAR_ID,FIN_YEAR_NAME AS 'FINANCIAL YEAR NAME',EFFECT_DATE AS 'EFFECT DATE',END_DATE AS 'END DATE',CGST,SGST from TAX_DETAILS T,FIN_YEAR F WHERE T.FIN_YEAR_ID=F.FIN_YEAR_ID";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);

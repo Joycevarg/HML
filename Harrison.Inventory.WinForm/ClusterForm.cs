@@ -19,10 +19,10 @@ namespace Harrison.Inventory.WinForm
         object ID;
         public clusterMaster()
         {   
-            InitializeComponent();
+            InitializeComponent();            
             _iclusterpresenter = new ClusterPresenter(this, new ClusterServices(new ClusterData()));
             _iclusterpresenter.DefaultClusterOrder();
-            
+            this.clustergrid.Columns[0].Visible = false;
         }
        
         public SortType SortDirection { get; set; }

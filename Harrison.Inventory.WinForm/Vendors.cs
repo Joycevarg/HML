@@ -30,6 +30,13 @@ namespace Harrison.Inventory.WinForm
             vendorpresenter.DefaultVendorOrder();
             ownerNotxt.MaxLength = 10;
             tapperNotxt.MaxLength = 10;
+            vendorgrid.Columns[3].Visible = false;
+            vendorgrid.Columns[5].Visible = false;
+            vendorgrid.Columns[8].Visible = false;
+            vendorgrid.Columns[10].Visible = false;
+            vendorgrid.Columns[24].Visible = false;
+            vendorgrid.Columns[26].Visible = false;
+            vendorgrid.Columns[0].Visible = false;
         }
 
             public SortType SortDirection { get; set; }
@@ -58,13 +65,13 @@ namespace Harrison.Inventory.WinForm
         public void setHStateValues(DataTable states)
         {
             hstatecombo.ValueMember = "STATE_ID";
-            hstatecombo.DisplayMember = "STATE_NAME";
+            hstatecombo.DisplayMember = "STATE NAME";
             hstatecombo.DataSource = states;
         }
         public void setEStateValues(DataTable states)
         {
             estatecombo.ValueMember = "STATE_ID";
-            estatecombo.DisplayMember = "STATE_NAME";
+            estatecombo.DisplayMember = "STATE NAME";
             estatecombo.DataSource = states;
         }
         public void setHDistrictValues(DataTable districts)
@@ -83,7 +90,7 @@ namespace Harrison.Inventory.WinForm
         public void setBankValues(DataTable banks)
         {
             Bankcombo.ValueMember = "BANK_ID";
-            Bankcombo.DisplayMember = "BANK_NAME";
+            Bankcombo.DisplayMember = "BANK NAME";
             Bankcombo.DataSource = banks;
 
         }
@@ -107,46 +114,50 @@ namespace Harrison.Inventory.WinForm
         private object ID;
         private void vendorgrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            editbtn.Enabled = true;
+            editbtn.Enabled = true; 
+            savebtn.Text = "Save as new";
             dltbtn.Enabled = true;
             ID = vendorgrid.Rows[e.RowIndex].Cells[0].Value;
            ventorNametxt.Text = vendorgrid.Rows[e.RowIndex].Cells[1].Value.ToString();
            homeAddresstxt.Text=vendorgrid.Rows[e.RowIndex].Cells[2].Value.ToString();
            hdistrictcombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[3].Value;
-           hstatecombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[4].Value.ToString();
-           estateAddresstxt.Text=vendorgrid.Rows[e.RowIndex].Cells[5].Value.ToString();
-           edistrictcombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[6].Value;
-           estatecombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[7].Value;
-           oAddresstxt.Text=vendorgrid.Rows[e.RowIndex].Cells[8].Value.ToString();
-           tapperNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[9].Value.ToString();
-           occuptxt.Text=vendorgrid.Rows[e.RowIndex].Cells[10].Value.ToString();
-           ownerNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[11].Value.ToString();
-           LicenNotxt.Text= vendorgrid.Rows[e.RowIndex].Cells[13].Value.ToString();
-           TinNotxt.Text= vendorgrid.Rows[e.RowIndex].Cells[14].Value.ToString();
-           cstNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[15].Value.ToString();
-           remarktxt.Text=vendorgrid.Rows[e.RowIndex].Cells[16].Value.ToString();
-           Bankcombo.SelectedValue = vendorgrid.Rows[e.RowIndex].Cells[20].Value;
-           Branchcombo.SelectedValue = vendorgrid.Rows[e.RowIndex].Cells[21].Value;
-           acctxt.Text = vendorgrid.Rows[e.RowIndex].Cells[22].Value.ToString();
-           if (vendorgrid.Rows[e.RowIndex].Cells[23].Value.ToString() == "1")
+           hstatecombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+           estateAddresstxt.Text=vendorgrid.Rows[e.RowIndex].Cells[7].Value.ToString();
+           edistrictcombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[8].Value;
+           estatecombo.SelectedValue=vendorgrid.Rows[e.RowIndex].Cells[10].Value;
+           oAddresstxt.Text=vendorgrid.Rows[e.RowIndex].Cells[12].Value.ToString();
+           tapperNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[13].Value.ToString();
+           occuptxt.Text=vendorgrid.Rows[e.RowIndex].Cells[14].Value.ToString();
+           ownerNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[15].Value.ToString();
+           LicenNotxt.Text= vendorgrid.Rows[e.RowIndex].Cells[17].Value.ToString();
+           TinNotxt.Text= vendorgrid.Rows[e.RowIndex].Cells[18].Value.ToString();
+           cstNotxt.Text=vendorgrid.Rows[e.RowIndex].Cells[19].Value.ToString();
+           remarktxt.Text=vendorgrid.Rows[e.RowIndex].Cells[20].Value.ToString();
+           Bankcombo.SelectedValue = vendorgrid.Rows[e.RowIndex].Cells[24].Value;
+           Branchcombo.SelectedValue = vendorgrid.Rows[e.RowIndex].Cells[26].Value;
+           acctxt.Text = vendorgrid.Rows[e.RowIndex].Cells[28].Value.ToString();
+           if (vendorgrid.Rows[e.RowIndex].Cells[29].Value.ToString() == "1")
            {
                regcheckbox.Checked = true;
-               if (vendorgrid.Rows[e.RowIndex].Cells[22].Value.ToString() == "1")
+               if (vendorgrid.Rows[e.RowIndex].Cells[16].Value.ToString() == "1")
                    growerRbtn.Checked = true;
-               else if (vendorgrid.Rows[e.RowIndex].Cells[22].Value.ToString() == "2")
+               else if (vendorgrid.Rows[e.RowIndex].Cells[16].Value.ToString() == "2")
                    dealerRbtn.Checked = false;
            }
            else
                {   regcheckbox.Checked = false;
                growerRbtn.Checked = true;
                }
+          
            }
 
         private void savebtn_Click(object sender, EventArgs e)
         {
             int dealer_grower,register;//if dealer-2,grower-1
             Regex phone = new Regex("^[0-9]{10}$");
-           
+            editbtn.Enabled = false;
+            dltbtn.Enabled = false;
+            savebtn.Text = "Save";
             if (growerRbtn.Checked == true)
                 dealer_grower = 1;
             else
@@ -165,6 +176,7 @@ namespace Harrison.Inventory.WinForm
             {
                 vendorpresenter.AddVendor(ventorNametxt.Text, homeAddresstxt.Text, int.Parse(hdistrictcombo.SelectedValue.ToString()), int.Parse(hstatecombo.SelectedValue.ToString()), estateAddresstxt.Text, int.Parse(edistrictcombo.SelectedValue.ToString()), int.Parse(estatecombo.SelectedValue.ToString()), oAddresstxt.Text, tapperNotxt.Text, occuptxt.Text, ownerNotxt.Text, dealer_grower, LicenNotxt.Text, TinNotxt.Text, cstNotxt.Text, remarktxt.Text, DateTime.Now.Date.ToString("yyyy-MM-dd"), DateTime.Now.Date.ToString("yyyy-MM-dd"), "notnow", int.Parse(Bankcombo.SelectedValue.ToString()), int.Parse(Branchcombo.SelectedValue.ToString()), acctxt.Text, register);
                 MessageBox.Show("Vendor added");
+                vendorpresenter.DefaultVendorOrder();
                 FormFunctions func = new FormFunctions();
                 func.ClearTextBoxes(this);
             }
@@ -212,6 +224,9 @@ namespace Harrison.Inventory.WinForm
                 register = 1;
             else
                 register = 0;
+            editbtn.Enabled = false;
+            dltbtn.Enabled = false;
+            savebtn.Text = "Save";
             vendorpresenter.UpdateVendor(int.Parse(ID.ToString()),ventorNametxt.Text, homeAddresstxt.Text, int.Parse(hdistrictcombo.SelectedValue.ToString()), int.Parse(hstatecombo.SelectedValue.ToString()), estateAddresstxt.Text, int.Parse(edistrictcombo.SelectedValue.ToString()), int.Parse(estatecombo.SelectedValue.ToString()), oAddresstxt.Text, tapperNotxt.Text, occuptxt.Text, ownerNotxt.Text, dealer_grower, LicenNotxt.Text, TinNotxt.Text, cstNotxt.Text, remarktxt.Text, DateTime.Now.Date.ToString("yyyy-MM-dd"), "notnow", int.Parse(Bankcombo.SelectedValue.ToString()), int.Parse(Branchcombo.SelectedValue.ToString()), acctxt.Text, register);
             vendorpresenter.DefaultVendorOrder();       
         }
@@ -220,6 +235,16 @@ namespace Harrison.Inventory.WinForm
         {
             vendorpresenter.DeleteVendor(ID);
             vendorpresenter.DefaultVendorOrder();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ownerNotxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
      

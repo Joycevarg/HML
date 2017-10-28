@@ -32,7 +32,7 @@ namespace Harrison.Inventory.WinForm
         public void SetVendorValues(DataTable vendors)
         {
             VendorNameCombo.ValueMember = "VENDOR_ID";
-            VendorNameCombo.DisplayMember = "VENDOR_NAME";
+            VendorNameCombo.DisplayMember = "VENDOR NAME";
             VendorNameCombo.DataSource = vendors;
         }
 

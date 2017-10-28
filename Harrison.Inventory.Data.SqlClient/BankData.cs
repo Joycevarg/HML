@@ -19,7 +19,7 @@ namespace Harrison.Inventory.Data.SqlClient
         public DataTable GetBankDetails()
         {
             
-            Sql = "Select * from BANK";
+            Sql = "Select BANK_ID,BANK_NAME AS 'BANK NAME' from BANK";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);

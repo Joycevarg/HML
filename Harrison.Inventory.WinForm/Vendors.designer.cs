@@ -93,7 +93,7 @@
             this.ventorNametxt.Margin = new System.Windows.Forms.Padding(4);
             this.ventorNametxt.Name = "ventorNametxt";
             this.ventorNametxt.Size = new System.Drawing.Size(663, 22);
-            this.ventorNametxt.TabIndex = 0;
+            this.ventorNametxt.TabIndex = 1;
             // 
             // label1
             // 
@@ -102,7 +102,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 17);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Vendor Name";
             // 
             // regcheckbox
@@ -114,7 +114,7 @@
             this.regcheckbox.Margin = new System.Windows.Forms.Padding(4);
             this.regcheckbox.Name = "regcheckbox";
             this.regcheckbox.Size = new System.Drawing.Size(279, 21);
-            this.regcheckbox.TabIndex = 2;
+            this.regcheckbox.TabIndex = 1;
             this.regcheckbox.Text = "     Registered (UnTick if UnRegistered)";
             this.regcheckbox.UseVisualStyleBackColor = true;
             this.regcheckbox.CheckedChanged += new System.EventHandler(this.rgstrchkbox_CheckedChanged);
@@ -126,7 +126,7 @@
             this.homeAddresstxt.Multiline = true;
             this.homeAddresstxt.Name = "homeAddresstxt";
             this.homeAddresstxt.Size = new System.Drawing.Size(663, 109);
-            this.homeAddresstxt.TabIndex = 3;
+            this.homeAddresstxt.TabIndex = 2;
             // 
             // label2
             // 
@@ -135,7 +135,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 17);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 10;
             this.label2.Text = "Home Address";
             // 
             // label3
@@ -145,7 +145,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 10;
             this.label3.Text = "District";
             // 
             // hdistrictcombo
@@ -156,7 +156,7 @@
             this.hdistrictcombo.Margin = new System.Windows.Forms.Padding(4);
             this.hdistrictcombo.Name = "hdistrictcombo";
             this.hdistrictcombo.Size = new System.Drawing.Size(312, 24);
-            this.hdistrictcombo.TabIndex = 6;
+            this.hdistrictcombo.TabIndex = 4;
             // 
             // hstatecombo
             // 
@@ -166,7 +166,7 @@
             this.hstatecombo.Margin = new System.Windows.Forms.Padding(4);
             this.hstatecombo.Name = "hstatecombo";
             this.hstatecombo.Size = new System.Drawing.Size(253, 24);
-            this.hstatecombo.TabIndex = 7;
+            this.hstatecombo.TabIndex = 3;
             this.hstatecombo.SelectedIndexChanged += new System.EventHandler(this.hstatecombo_SelectedIndexChanged);
             // 
             // label4
@@ -176,7 +176,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
-            this.label4.TabIndex = 8;
+            this.label4.TabIndex = 10;
             this.label4.Text = "State";
             // 
             // label5
@@ -186,7 +186,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 17);
-            this.label5.TabIndex = 9;
+            this.label5.TabIndex = 8;
             this.label5.Text = "Owner Phone no";
             // 
             // ownerNotxt
@@ -195,7 +195,8 @@
             this.ownerNotxt.Margin = new System.Windows.Forms.Padding(4);
             this.ownerNotxt.Name = "ownerNotxt";
             this.ownerNotxt.Size = new System.Drawing.Size(231, 22);
-            this.ownerNotxt.TabIndex = 10;
+            this.ownerNotxt.TabIndex = 3;
+            this.ownerNotxt.TextChanged += new System.EventHandler(this.ownerNotxt_TextChanged);
             // 
             // occuptxt
             // 
@@ -203,7 +204,7 @@
             this.occuptxt.Margin = new System.Windows.Forms.Padding(4);
             this.occuptxt.Name = "occuptxt";
             this.occuptxt.Size = new System.Drawing.Size(228, 22);
-            this.occuptxt.TabIndex = 11;
+            this.occuptxt.TabIndex = 2;
             // 
             // oEmailtxt
             // 
@@ -211,7 +212,7 @@
             this.oEmailtxt.Margin = new System.Windows.Forms.Padding(4);
             this.oEmailtxt.Name = "oEmailtxt";
             this.oEmailtxt.Size = new System.Drawing.Size(231, 22);
-            this.oEmailtxt.TabIndex = 12;
+            this.oEmailtxt.TabIndex = 4;
             // 
             // TinNotxt
             // 
@@ -219,7 +220,7 @@
             this.TinNotxt.Margin = new System.Windows.Forms.Padding(4);
             this.TinNotxt.Name = "TinNotxt";
             this.TinNotxt.Size = new System.Drawing.Size(180, 22);
-            this.TinNotxt.TabIndex = 13;
+            this.TinNotxt.TabIndex = 4;
             // 
             // tapperNotxt
             // 
@@ -227,7 +228,7 @@
             this.tapperNotxt.Margin = new System.Windows.Forms.Padding(4);
             this.tapperNotxt.Name = "tapperNotxt";
             this.tapperNotxt.Size = new System.Drawing.Size(231, 22);
-            this.tapperNotxt.TabIndex = 14;
+            this.tapperNotxt.TabIndex = 5;
             // 
             // dealerRbtn
             // 
@@ -236,7 +237,7 @@
             this.dealerRbtn.Margin = new System.Windows.Forms.Padding(4);
             this.dealerRbtn.Name = "dealerRbtn";
             this.dealerRbtn.Size = new System.Drawing.Size(71, 21);
-            this.dealerRbtn.TabIndex = 15;
+            this.dealerRbtn.TabIndex = 2;
             this.dealerRbtn.Text = "Dealer";
             this.dealerRbtn.UseVisualStyleBackColor = true;
             // 
@@ -248,7 +249,7 @@
             this.growerRbtn.Margin = new System.Windows.Forms.Padding(4);
             this.growerRbtn.Name = "growerRbtn";
             this.growerRbtn.Size = new System.Drawing.Size(75, 21);
-            this.growerRbtn.TabIndex = 16;
+            this.growerRbtn.TabIndex = 1;
             this.growerRbtn.TabStop = true;
             this.growerRbtn.Text = "Grower";
             this.growerRbtn.UseVisualStyleBackColor = true;
@@ -260,7 +261,7 @@
             this.oAddresstxt.Multiline = true;
             this.oAddresstxt.Name = "oAddresstxt";
             this.oAddresstxt.Size = new System.Drawing.Size(304, 112);
-            this.oAddresstxt.TabIndex = 17;
+            this.oAddresstxt.TabIndex = 1;
             // 
             // LicenNotxt
             // 
@@ -268,7 +269,7 @@
             this.LicenNotxt.Margin = new System.Windows.Forms.Padding(4);
             this.LicenNotxt.Name = "LicenNotxt";
             this.LicenNotxt.Size = new System.Drawing.Size(167, 22);
-            this.LicenNotxt.TabIndex = 18;
+            this.LicenNotxt.TabIndex = 3;
             // 
             // remarktxt
             // 
@@ -277,7 +278,7 @@
             this.remarktxt.Multiline = true;
             this.remarktxt.Name = "remarktxt";
             this.remarktxt.Size = new System.Drawing.Size(680, 62);
-            this.remarktxt.TabIndex = 19;
+            this.remarktxt.TabIndex = 6;
             // 
             // label6
             // 
@@ -286,7 +287,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 17);
-            this.label6.TabIndex = 23;
+            this.label6.TabIndex = 9;
             this.label6.Text = "Occupation";
             // 
             // label7
@@ -296,7 +297,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 17);
-            this.label7.TabIndex = 24;
+            this.label7.TabIndex = 6;
             this.label7.Text = "Tapper Phone No";
             // 
             // label8
@@ -306,7 +307,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 17);
-            this.label8.TabIndex = 25;
+            this.label8.TabIndex = 10;
             this.label8.Text = "Owner Address";
             // 
             // label9
@@ -316,7 +317,7 @@
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 17);
-            this.label9.TabIndex = 26;
+            this.label9.TabIndex = 10;
             this.label9.Text = "Licence No";
             // 
             // label10
@@ -326,7 +327,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 17);
-            this.label10.TabIndex = 27;
+            this.label10.TabIndex = 8;
             this.label10.Text = "CST No";
             // 
             // label11
@@ -336,7 +337,7 @@
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 17);
-            this.label11.TabIndex = 28;
+            this.label11.TabIndex = 9;
             this.label11.Text = "Tin No";
             // 
             // label12
@@ -346,7 +347,7 @@
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 17);
-            this.label12.TabIndex = 29;
+            this.label12.TabIndex = 7;
             this.label12.Text = "Remarks";
             // 
             // label13
@@ -366,7 +367,7 @@
             this.estateAddresstxt.Multiline = true;
             this.estateAddresstxt.Name = "estateAddresstxt";
             this.estateAddresstxt.Size = new System.Drawing.Size(660, 109);
-            this.estateAddresstxt.TabIndex = 31;
+            this.estateAddresstxt.TabIndex = 2;
             // 
             // edistrictcombo
             // 
@@ -376,7 +377,7 @@
             this.edistrictcombo.Margin = new System.Windows.Forms.Padding(4);
             this.edistrictcombo.Name = "edistrictcombo";
             this.edistrictcombo.Size = new System.Drawing.Size(312, 24);
-            this.edistrictcombo.TabIndex = 32;
+            this.edistrictcombo.TabIndex = 4;
             // 
             // label14
             // 
@@ -414,8 +415,9 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(801, 230);
-            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // box
             // 
@@ -432,7 +434,7 @@
             this.box.Name = "box";
             this.box.Padding = new System.Windows.Forms.Padding(4);
             this.box.Size = new System.Drawing.Size(801, 230);
-            this.box.TabIndex = 37;
+            this.box.TabIndex = 2;
             this.box.TabStop = false;
             // 
             // estatecombo
@@ -443,7 +445,7 @@
             this.estatecombo.Margin = new System.Windows.Forms.Padding(4);
             this.estatecombo.Name = "estatecombo";
             this.estatecombo.Size = new System.Drawing.Size(253, 24);
-            this.estatecombo.TabIndex = 33;
+            this.estatecombo.TabIndex = 3;
             this.estatecombo.SelectedIndexChanged += new System.EventHandler(this.estatecombo_SelectedIndexChanged);
             // 
             // label16
@@ -453,7 +455,7 @@
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(104, 17);
-            this.label16.TabIndex = 38;
+            this.label16.TabIndex = 7;
             this.label16.Text = "Owner Email ID";
             // 
             // groupBox3
@@ -474,7 +476,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(801, 158);
-            this.groupBox3.TabIndex = 39;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
             // cstNotxt
@@ -483,7 +485,7 @@
             this.cstNotxt.Margin = new System.Windows.Forms.Padding(4);
             this.cstNotxt.Name = "cstNotxt";
             this.cstNotxt.Size = new System.Drawing.Size(177, 22);
-            this.cstNotxt.TabIndex = 40;
+            this.cstNotxt.TabIndex = 5;
             // 
             // savebtn
             // 
@@ -492,7 +494,7 @@
             this.savebtn.Margin = new System.Windows.Forms.Padding(4);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(100, 47);
-            this.savebtn.TabIndex = 41;
+            this.savebtn.TabIndex = 6;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
             this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
@@ -504,7 +506,7 @@
             this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(100, 47);
-            this.cancelbtn.TabIndex = 42;
+            this.cancelbtn.TabIndex = 7;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.button2_Click);
@@ -517,8 +519,8 @@
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(100, 47);
-            this.editbtn.TabIndex = 43;
-            this.editbtn.Text = "Edit";
+            this.editbtn.TabIndex = 8;
+            this.editbtn.Text = "Save changes";
             this.editbtn.UseVisualStyleBackColor = true;
             this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
             // 
@@ -540,7 +542,7 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(800, 158);
-            this.groupBox4.TabIndex = 44;
+            this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             // 
             // label17
@@ -549,7 +551,7 @@
             this.label17.Location = new System.Drawing.Point(55, 21);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(44, 17);
-            this.label17.TabIndex = 46;
+            this.label17.TabIndex = 6;
             this.label17.Text = "Bank:";
             // 
             // label18
@@ -558,7 +560,7 @@
             this.label18.Location = new System.Drawing.Point(429, 20);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(57, 17);
-            this.label18.TabIndex = 47;
+            this.label18.TabIndex = 5;
             this.label18.Text = "Branch:";
             // 
             // Bankcombo
@@ -567,7 +569,7 @@
             this.Bankcombo.Location = new System.Drawing.Point(113, 17);
             this.Bankcombo.Name = "Bankcombo";
             this.Bankcombo.Size = new System.Drawing.Size(255, 24);
-            this.Bankcombo.TabIndex = 48;
+            this.Bankcombo.TabIndex = 1;
             this.Bankcombo.SelectedIndexChanged += new System.EventHandler(this.Bankcombo_SelectedIndexChanged);
             // 
             // Branchcombo
@@ -577,7 +579,7 @@
             this.Branchcombo.Location = new System.Drawing.Point(492, 18);
             this.Branchcombo.Name = "Branchcombo";
             this.Branchcombo.Size = new System.Drawing.Size(261, 24);
-            this.Branchcombo.TabIndex = 49;
+            this.Branchcombo.TabIndex = 2;
             // 
             // label19
             // 
@@ -585,7 +587,7 @@
             this.label19.Location = new System.Drawing.Point(14, 77);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(85, 17);
-            this.label19.TabIndex = 50;
+            this.label19.TabIndex = 4;
             this.label19.Text = "Account No:";
             // 
             // acctxt
@@ -593,7 +595,7 @@
             this.acctxt.Location = new System.Drawing.Point(113, 74);
             this.acctxt.Name = "acctxt";
             this.acctxt.Size = new System.Drawing.Size(321, 22);
-            this.acctxt.TabIndex = 51;
+            this.acctxt.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -607,7 +609,7 @@
             this.groupBox2.Location = new System.Drawing.Point(19, 443);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(801, 117);
-            this.groupBox2.TabIndex = 52;
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
             // dltbtn
@@ -617,7 +619,7 @@
             this.dltbtn.Location = new System.Drawing.Point(1511, 481);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(100, 47);
-            this.dltbtn.TabIndex = 53;
+            this.dltbtn.TabIndex = 9;
             this.dltbtn.Text = "Delete";
             this.dltbtn.UseVisualStyleBackColor = true;
             this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);

@@ -21,6 +21,7 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             _statepresenter = new StatePresenter(this, new StateServices(new StateData()));
             _statepresenter.DefaultStateOrder();
+            this.stategrid.Columns[0].Visible = false;
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }

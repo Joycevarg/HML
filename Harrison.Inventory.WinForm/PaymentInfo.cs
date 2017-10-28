@@ -17,6 +17,7 @@ namespace Harrison.Inventory.WinForm
     {
         IPaymentInfoPresenter _paymentinfopresenter; 
         GridForm gridview;
+        float total, HO, OtDeb;
         public PaymentInfoForm()
         {
             InitializeComponent();
@@ -51,30 +52,29 @@ namespace Harrison.Inventory.WinForm
 
         private void HOtxt_TextChanged(object sender, EventArgs e)
         {
-            float total, HO, OtDeb;
-            if (string.IsNullOrWhiteSpace(HOtxt.Text))
-                HO = 0;
-            else
-                HO=float.Parse(HOtxt.Text);
-            if(string.IsNullOrWhiteSpace(OtherDebittxt.Text))
-                OtDeb=0;
-            else
-                OtDeb=float.Parse(OtherDebittxt.Text);
+            bool hoval=float.TryParse(HOtxt.Text, out HO);
+            if (hoval || string.IsNullOrWhiteSpace(HOtxt.Text))
+            {
+                hoerrlbl.Text = "";
+            }
+            else {
+                hoerrlbl.Text = "Invalid input";
+            }
             total=HO+OtDeb;
             TotAmntPaidtxt.Text=total.ToString();
         }
 
         private void OtherDebittxt_TextChanged(object sender, EventArgs e)
         {
-            float total, HO, OtDeb;
-            if (string.IsNullOrWhiteSpace(HOtxt.Text))
-                HO = 0;
-            else
-                HO = float.Parse(HOtxt.Text);
-            if (string.IsNullOrWhiteSpace(OtherDebittxt.Text))
-                OtDeb = 0;
-            else
-                OtDeb = float.Parse(OtherDebittxt.Text);
+            bool otdebval=float.TryParse(OtherDebittxt.Text, out OtDeb);
+            if (otdebval || string.IsNullOrWhiteSpace(OtherDebittxt.Text))
+            {
+                otdeberrlbl.Text = "";
+            }
+            else 
+            {
+                otdeberrlbl.Text = "Invalid input";
+            }
             total = HO + OtDeb;
             TotAmntPaidtxt.Text = total.ToString();
         }
@@ -103,7 +103,14 @@ namespace Harrison.Inventory.WinForm
 
         private void donebtn_Click(object sender, EventArgs e)
         {
-            _paymentinfopresenter.AddPaymentInfo(int.Parse(InvNoCombo.SelectedValue.ToString()),0, paymentdatetxt.Value.ToString("yyyy-MM-dd"), 0, float.Parse(HOtxt.Text), float.Parse(OtherDebittxt.Text), PaymentModeCombo.Text, 0, float.Parse(Balancetxt.Text), Remarktxt.Text);
+            float.TryParse(OtherDebittxt.Text, out OtDeb);
+            float.TryParse(HOtxt.Text, out HO);
+            _paymentinfopresenter.AddPaymentInfo(int.Parse(InvNoCombo.SelectedValue.ToString()),0, paymentdatetxt.Value.ToString("yyyy-MM-dd"), float.Parse(TotaltoPaytxt.Text),HO, OtDeb, PaymentModeCombo.Text,float.Parse(TotAmntPaidtxt.Text), float.Parse(Balancetxt.Text), Remarktxt.Text);
+            MessageBox.Show("Payment added");
+            FormFunctions form = new FormFunctions();
+            form.ClearTextBoxes(this);
+            TotAmntPaidtxt.Text = "0";
+            Balancetxt.Text = "0";
         }
 
      
@@ -125,6 +132,11 @@ namespace Harrison.Inventory.WinForm
         public void SetToPayAmount(float topayamnt)
         {
             TotaltoPaytxt.Text = topayamnt.ToString();
+        }
+
+        private void clrbtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

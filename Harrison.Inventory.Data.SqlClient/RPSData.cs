@@ -17,8 +17,8 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public DataTable GetRPSDetails()
         {
-           
-            Sql = "Select * from RPS";
+
+            Sql = "Select RPS_ID,R.VENDOR_ID,V.VENDOR_NAME as 'VENDOR NAME',RPS_NAME as 'RPS NAME',CONTACT_NAME AS 'CONTACT NAME',CONTACT_NO AS 'CONTACT NO',ROUTE_DETAILS AS 'ROUTE DETAILS',R.REMARKS AS 'REMARKS'from RPS R,VENDOR V WHERE R.VENDOR_ID=V.VENDOR_ID";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);

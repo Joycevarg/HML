@@ -59,7 +59,7 @@ namespace Harrison.Inventory.Service
             {
                 if (int.Parse(row["VENDOR_ID"].ToString()) == vendorid)
                 {
-                    vendorname = row["VENDOR_NAME"].ToString();
+                    vendorname = row["VENDOR NAME"].ToString();
                     break;
                 }
             }
@@ -68,16 +68,16 @@ namespace Harrison.Inventory.Service
         public string GetTIN(int vendorid)
         {
             DataTable vendors = _vendordata.GetVendorDetails();
-            string vendorname = "";
+            string tinno = "";
             foreach (DataRow row in vendors.Rows)
             {
                 if (int.Parse(row["VENDOR_ID"].ToString()) == vendorid)
                 {
-                    vendorname = row["TIN_NO"].ToString();
+                    tinno = row["TIN NO"].ToString();
                     break;
                 }
             }
-            return vendorname;
+            return tinno;
         }
     }
 

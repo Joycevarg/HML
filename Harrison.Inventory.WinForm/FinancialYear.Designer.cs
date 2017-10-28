@@ -44,7 +44,7 @@
             this.finYeartxt.Margin = new System.Windows.Forms.Padding(4);
             this.finYeartxt.Name = "finYeartxt";
             this.finYeartxt.Size = new System.Drawing.Size(265, 22);
-            this.finYeartxt.TabIndex = 0;
+            this.finYeartxt.TabIndex = 1;
             // 
             // label1
             // 
@@ -74,7 +74,7 @@
             this.editbtn.Margin = new System.Windows.Forms.Padding(4);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(91, 37);
-            this.editbtn.TabIndex = 3;
+            this.editbtn.TabIndex = 4;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
             this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
@@ -85,7 +85,7 @@
             this.Cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Cancelbtn.Name = "Cancelbtn";
             this.Cancelbtn.Size = new System.Drawing.Size(91, 37);
-            this.Cancelbtn.TabIndex = 4;
+            this.Cancelbtn.TabIndex = 3;
             this.Cancelbtn.Text = "Cancel";
             this.Cancelbtn.UseVisualStyleBackColor = true;
             this.Cancelbtn.Click += new System.EventHandler(this.button3_Click);
@@ -106,7 +106,7 @@
             this.dltbtn.Location = new System.Drawing.Point(392, 85);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(91, 37);
-            this.dltbtn.TabIndex = 6;
+            this.dltbtn.TabIndex = 5;
             this.dltbtn.Text = "Delete";
             this.dltbtn.UseVisualStyleBackColor = true;
             this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);

@@ -54,7 +54,7 @@
             this.rmvbtn.Location = new System.Drawing.Point(395, 77);
             this.rmvbtn.Name = "rmvbtn";
             this.rmvbtn.Size = new System.Drawing.Size(98, 37);
-            this.rmvbtn.TabIndex = 2;
+            this.rmvbtn.TabIndex = 5;
             this.rmvbtn.Text = "Remove";
             this.rmvbtn.UseVisualStyleBackColor = true;
             this.rmvbtn.Click += new System.EventHandler(this.rmvbtn_Click);
@@ -76,7 +76,7 @@
             this.stategrid.Name = "stategrid";
             this.stategrid.RowTemplate.Height = 24;
             this.stategrid.Size = new System.Drawing.Size(423, 126);
-            this.stategrid.TabIndex = 4;
+            this.stategrid.TabIndex = 6;
             this.stategrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.stategrid_RowHeaderMouseClick);
             // 
             // label1
@@ -85,7 +85,7 @@
             this.label1.Location = new System.Drawing.Point(53, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 17);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 6;
             this.label1.Text = "State Name:";
             // 
             // statetxt
@@ -101,7 +101,7 @@
             this.edtbtn.Location = new System.Drawing.Point(276, 77);
             this.edtbtn.Name = "edtbtn";
             this.edtbtn.Size = new System.Drawing.Size(92, 37);
-            this.edtbtn.TabIndex = 7;
+            this.edtbtn.TabIndex = 4;
             this.edtbtn.Text = "Edit";
             this.edtbtn.UseVisualStyleBackColor = true;
             this.edtbtn.Click += new System.EventHandler(this.edtbtn_Click);

@@ -29,6 +29,7 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             _iFinancialYearsPresenter = new FinancialYearsPresenter(this,new FinancialYearsService(new FinancialYearsDAL()));
             _iFinancialYearsPresenter.init();
+            this.FinancialYear_Grid.Columns[0].Visible = false;
            
        
          }

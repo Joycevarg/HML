@@ -70,7 +70,7 @@ namespace Harrison.Inventory.Service
             foreach (DataRow row in dt.Rows)
             {
                 if (int.Parse(row["INVOICE_ID"].ToString()) ==invno)
-                { topayamnt = float.Parse(row["TOTAL_AMOUNT"].ToString()); break; }
+                { topayamnt = float.Parse(row["TOTAL AMOUNT"].ToString()); break; }
 
             }
             return topayamnt;

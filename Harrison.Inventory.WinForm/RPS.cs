@@ -23,6 +23,8 @@ namespace Harrison.Inventory.WinForm
             rpspresenter = new RPSPresenter(this, new RPSServices(new RPSData()));
             rpspresenter.setVendorNames();
             rpspresenter.DefaultRPSOrder();
+            this.rpsgrid.Columns[0].Visible = false;
+            this.rpsgrid.Columns[1].Visible = false;
         }
 
         private void RPS_Load(object sender, EventArgs e)
@@ -44,7 +46,7 @@ namespace Harrison.Inventory.WinForm
         public void setVendorValues(DataTable vendors)
         {
             VendorNameCombo.ValueMember = "VENDOR_ID";
-            VendorNameCombo.DisplayMember = "VENDOR_NAME";
+            VendorNameCombo.DisplayMember = "VENDOR NAME";
             VendorNameCombo.DataSource = vendors;
 
         }

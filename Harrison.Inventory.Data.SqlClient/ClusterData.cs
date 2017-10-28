@@ -17,7 +17,7 @@ namespace Harrison.Inventory.Data.SqlClient
         public DataTable GetClusterDetails()
         {
             
-            Sql = "Select * from CLUSTER";
+            Sql = "Select CLUSTER_ID,CLUSTER_NAME as 'CLUSTER NAME' from CLUSTER";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);

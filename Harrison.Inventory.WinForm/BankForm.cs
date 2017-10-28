@@ -23,6 +23,7 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             _bankpresenter = new BankPresenter(this, new BankServices(new BankData()));
             _bankpresenter.DefaultBankOrder();
+            this.bankgrid.Columns[0].Visible = false;
 
         }
         public SortType SortDirection { get; set; }

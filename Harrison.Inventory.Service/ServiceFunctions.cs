@@ -71,10 +71,20 @@ namespace Harrison.Inventory.Service
                     // to do: format datetime values before printing
                     for (var j = 0; j < tbl.Columns.Count; j++)
                     {
-                        workSheet.Cells[i + 2+start, j + 1] = tbl.Rows[i][j];
+                                                                            
+                        workSheet.Cells[i + 2+start, j + 1] = tbl.Rows[i][j].ToString();
                     }
                 }
-
+                if (headerformat == 1) //changing date format
+                {
+                    for (var i = 0; i < tbl.Rows.Count; i++)
+                    {
+                        if(tbl.Rows[i][1].ToString()!="")
+                        workSheet.Cells[i + 2 + start, 2] = tbl.Rows[i][1].ToString().Substring(0,10);
+                        if(tbl.Rows[i][18].ToString()!="")
+                        workSheet.Cells[i + 2 + start, 19] = tbl.Rows[i][18].ToString().Substring(0,10);
+                    }  
+                } 
                 // check file path
                 if (!string.IsNullOrEmpty(excelFilePath))
                 {

@@ -81,6 +81,9 @@
             this.drywttxt = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.empqtyerrlbl = new System.Windows.Forms.Label();
+            this.brlqtyerrlbl = new System.Windows.Forms.Label();
+            this.lumbqtyerrlbl = new System.Windows.Forms.Label();
             this.Savebtn = new System.Windows.Forms.Button();
             this.closebtn = new System.Windows.Forms.Button();
             this.Invoiceviewbtn = new System.Windows.Forms.Button();
@@ -88,8 +91,14 @@
             this.LumbPricetxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Invoicelbl = new System.Windows.Forms.Label();
+            this.wetwterrlbl = new System.Windows.Forms.Label();
+            this.drcerrlbl = new System.Windows.Forms.Label();
+            this.rateerrlbl = new System.Windows.Forms.Label();
+            this.lumbpriceerrlbl = new System.Windows.Forms.Label();
+            this.Invoicegrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Invoicegrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -295,6 +304,7 @@
             this.barrelqtytxt.Name = "barrelqtytxt";
             this.barrelqtytxt.Size = new System.Drawing.Size(132, 22);
             this.barrelqtytxt.TabIndex = 1;
+            this.barrelqtytxt.TextChanged += new System.EventHandler(this.barrelqtytxt_TextChanged);
             // 
             // label11
             // 
@@ -332,6 +342,7 @@
             this.emptyqtytxt.Name = "emptyqtytxt";
             this.emptyqtytxt.Size = new System.Drawing.Size(132, 22);
             this.emptyqtytxt.TabIndex = 5;
+            this.emptyqtytxt.TextChanged += new System.EventHandler(this.emptyqtytxt_TextChanged);
             // 
             // label13
             // 
@@ -478,6 +489,7 @@
             this.TotAmntNotTaxestxt.ReadOnly = true;
             this.TotAmntNotTaxestxt.Size = new System.Drawing.Size(137, 22);
             this.TotAmntNotTaxestxt.TabIndex = 13;
+            this.TotAmntNotTaxestxt.Text = "0";
             this.TotAmntNotTaxestxt.TextChanged += new System.EventHandler(this.TotAmntNotTaxestxt_TextChanged);
             // 
             // label25
@@ -501,11 +513,12 @@
             // LumbAmnttxt
             // 
             this.LumbAmnttxt.BackColor = System.Drawing.SystemColors.Window;
-            this.LumbAmnttxt.Location = new System.Drawing.Point(752, 22);
+            this.LumbAmnttxt.Location = new System.Drawing.Point(752, 27);
             this.LumbAmnttxt.Name = "LumbAmnttxt";
             this.LumbAmnttxt.ReadOnly = true;
             this.LumbAmnttxt.Size = new System.Drawing.Size(162, 22);
             this.LumbAmnttxt.TabIndex = 10;
+            this.LumbAmnttxt.Text = "0";
             this.LumbAmnttxt.TextChanged += new System.EventHandler(this.LumbAmnttxt_TextChanged);
             // 
             // TotAmntwithTaxestxt
@@ -517,6 +530,7 @@
             this.TotAmntwithTaxestxt.ReadOnly = true;
             this.TotAmntwithTaxestxt.Size = new System.Drawing.Size(253, 22);
             this.TotAmntwithTaxestxt.TabIndex = 9;
+            this.TotAmntwithTaxestxt.Text = "0";
             // 
             // label22
             // 
@@ -537,6 +551,7 @@
             this.SGSTtxt.ReadOnly = true;
             this.SGSTtxt.Size = new System.Drawing.Size(162, 22);
             this.SGSTtxt.TabIndex = 7;
+            this.SGSTtxt.Text = "0";
             // 
             // label21
             // 
@@ -557,6 +572,7 @@
             this.CGSTtxt.ReadOnly = true;
             this.CGSTtxt.Size = new System.Drawing.Size(132, 22);
             this.CGSTtxt.TabIndex = 5;
+            this.CGSTtxt.Text = "0";
             // 
             // label20
             // 
@@ -587,6 +603,7 @@
             this.amnttxt.ReadOnly = true;
             this.amnttxt.Size = new System.Drawing.Size(132, 22);
             this.amnttxt.TabIndex = 2;
+            this.amnttxt.Text = "0";
             this.amnttxt.TextChanged += new System.EventHandler(this.amnttxt_TextChanged);
             // 
             // drywttxt
@@ -598,6 +615,7 @@
             this.drywttxt.ReadOnly = true;
             this.drywttxt.Size = new System.Drawing.Size(137, 22);
             this.drywttxt.TabIndex = 1;
+            this.drywttxt.Text = "0";
             this.drywttxt.TextChanged += new System.EventHandler(this.drywttxt_TextChanged);
             // 
             // label18
@@ -613,6 +631,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.empqtyerrlbl);
+            this.panel2.Controls.Add(this.brlqtyerrlbl);
+            this.panel2.Controls.Add(this.lumbqtyerrlbl);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.emptyqtytxt);
             this.panel2.Controls.Add(this.label12);
@@ -624,6 +645,33 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(961, 81);
             this.panel2.TabIndex = 34;
+            // 
+            // empqtyerrlbl
+            // 
+            this.empqtyerrlbl.AutoSize = true;
+            this.empqtyerrlbl.ForeColor = System.Drawing.Color.Red;
+            this.empqtyerrlbl.Location = new System.Drawing.Point(736, 56);
+            this.empqtyerrlbl.Name = "empqtyerrlbl";
+            this.empqtyerrlbl.Size = new System.Drawing.Size(0, 17);
+            this.empqtyerrlbl.TabIndex = 8;
+            // 
+            // brlqtyerrlbl
+            // 
+            this.brlqtyerrlbl.AutoSize = true;
+            this.brlqtyerrlbl.ForeColor = System.Drawing.Color.Red;
+            this.brlqtyerrlbl.Location = new System.Drawing.Point(108, 56);
+            this.brlqtyerrlbl.Name = "brlqtyerrlbl";
+            this.brlqtyerrlbl.Size = new System.Drawing.Size(0, 17);
+            this.brlqtyerrlbl.TabIndex = 7;
+            // 
+            // lumbqtyerrlbl
+            // 
+            this.lumbqtyerrlbl.AutoSize = true;
+            this.lumbqtyerrlbl.ForeColor = System.Drawing.Color.Red;
+            this.lumbqtyerrlbl.Location = new System.Drawing.Point(401, 55);
+            this.lumbqtyerrlbl.Name = "lumbqtyerrlbl";
+            this.lumbqtyerrlbl.Size = new System.Drawing.Size(0, 17);
+            this.lumbqtyerrlbl.TabIndex = 6;
             // 
             // Savebtn
             // 
@@ -692,11 +740,61 @@
             this.Invoicelbl.Size = new System.Drawing.Size(0, 17);
             this.Invoicelbl.TabIndex = 41;
             // 
+            // wetwterrlbl
+            // 
+            this.wetwterrlbl.AutoSize = true;
+            this.wetwterrlbl.ForeColor = System.Drawing.Color.Red;
+            this.wetwterrlbl.Location = new System.Drawing.Point(139, 376);
+            this.wetwterrlbl.Name = "wetwterrlbl";
+            this.wetwterrlbl.Size = new System.Drawing.Size(0, 17);
+            this.wetwterrlbl.TabIndex = 42;
+            // 
+            // drcerrlbl
+            // 
+            this.drcerrlbl.AutoSize = true;
+            this.drcerrlbl.ForeColor = System.Drawing.Color.Red;
+            this.drcerrlbl.Location = new System.Drawing.Point(423, 375);
+            this.drcerrlbl.Name = "drcerrlbl";
+            this.drcerrlbl.Size = new System.Drawing.Size(0, 17);
+            this.drcerrlbl.TabIndex = 43;
+            // 
+            // rateerrlbl
+            // 
+            this.rateerrlbl.AutoSize = true;
+            this.rateerrlbl.ForeColor = System.Drawing.Color.Red;
+            this.rateerrlbl.Location = new System.Drawing.Point(748, 374);
+            this.rateerrlbl.Name = "rateerrlbl";
+            this.rateerrlbl.Size = new System.Drawing.Size(0, 17);
+            this.rateerrlbl.TabIndex = 44;
+            // 
+            // lumbpriceerrlbl
+            // 
+            this.lumbpriceerrlbl.AutoSize = true;
+            this.lumbpriceerrlbl.ForeColor = System.Drawing.Color.Red;
+            this.lumbpriceerrlbl.Location = new System.Drawing.Point(754, 424);
+            this.lumbpriceerrlbl.Name = "lumbpriceerrlbl";
+            this.lumbpriceerrlbl.Size = new System.Drawing.Size(0, 17);
+            this.lumbpriceerrlbl.TabIndex = 45;
+            // 
+            // Invoicegrid
+            // 
+            this.Invoicegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Invoicegrid.Location = new System.Drawing.Point(22, 687);
+            this.Invoicegrid.Name = "Invoicegrid";
+            this.Invoicegrid.RowTemplate.Height = 24;
+            this.Invoicegrid.Size = new System.Drawing.Size(943, 179);
+            this.Invoicegrid.TabIndex = 46;
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 685);
+            this.ClientSize = new System.Drawing.Size(995, 917);
+            this.Controls.Add(this.Invoicegrid);
+            this.Controls.Add(this.lumbpriceerrlbl);
+            this.Controls.Add(this.rateerrlbl);
+            this.Controls.Add(this.drcerrlbl);
+            this.Controls.Add(this.wetwterrlbl);
             this.Controls.Add(this.Invoicelbl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LumbPricetxt);
@@ -739,11 +837,13 @@
             this.Name = "InvoiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InvoiceForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Invoicegrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -811,5 +911,13 @@
         private System.Windows.Forms.Label sgstpercentlbl;
         private System.Windows.Forms.Label cgstpercentlbl;
         private System.Windows.Forms.Label Invoicelbl;
+        private System.Windows.Forms.Label lumbqtyerrlbl;
+        private System.Windows.Forms.Label wetwterrlbl;
+        private System.Windows.Forms.Label drcerrlbl;
+        private System.Windows.Forms.Label rateerrlbl;
+        private System.Windows.Forms.Label lumbpriceerrlbl;
+        private System.Windows.Forms.Label empqtyerrlbl;
+        private System.Windows.Forms.Label brlqtyerrlbl;
+        private System.Windows.Forms.DataGridView Invoicegrid;
     }
 }

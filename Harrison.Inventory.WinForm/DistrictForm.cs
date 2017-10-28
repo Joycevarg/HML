@@ -22,6 +22,8 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             _idistrictpresenter= new DistrictPresenter(this,new DistrictServices(new DistrictData()));
             _idistrictpresenter.DefaultDistrictOrder();
+            this.districtgrid.Columns[0].Visible = false;
+            this.districtgrid.Columns[2].Visible = false;
             _idistrictpresenter.setStateNames();
             
 
@@ -31,7 +33,7 @@ namespace Harrison.Inventory.WinForm
         public void setStateValues(DataTable states)
         {
             statecombo.ValueMember = "STATE_ID";
-            statecombo.DisplayMember = "STATE_NAME";
+            statecombo.DisplayMember = "STATE NAME";
             statecombo.DataSource = states;
 
         }

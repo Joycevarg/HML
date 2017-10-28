@@ -15,7 +15,7 @@ namespace Harrison.Inventory.Data.SqlClient
 
         public DataTable GetAllFinancialYears()
         {
-            Sql = "Select * from FIN_YEAR";
+            Sql = "Select FIN_YEAR_ID,FIN_YEAR_NAME as 'FINANCIAL YEAR' from FIN_YEAR";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             // da.Fill(dt);
             return (dt);

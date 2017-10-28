@@ -17,7 +17,7 @@ namespace Harrison.Inventory.Data.SqlClient
         public DataTable GetBranchDetails()
         {
            
-            Sql = "Select * from BRANCH";
+            Sql = "Select BRANCH_ID,BRANCH_NAME as 'BRANCH NAME',BA.BANK_ID ,BANK_NAME AS 'BANK NAME',IFSC_CODE AS 'IFSC CODE',BRANCH_ADDRESS AS 'BRANCH ADDRESS',CONTACT_NO AS 'CONTACT NO' from BRANCH BR,BANK BA WHERE BR.BANK_ID=BA.BANK_ID";
             dt = Dbcon.Sqlconnection(Sql, "Select");
             //da.Fill(dt);
             return (dt);

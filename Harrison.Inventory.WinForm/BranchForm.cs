@@ -24,6 +24,8 @@ namespace Harrison.Inventory.WinForm
             branchpresenter = new BranchPresenter(this, new BranchServices(new BranchData()));
             branchpresenter.setBankNames();
             branchpresenter.DefaultBranchOrder();
+            this.branchgrid.Columns[0].Visible = false;
+            this.branchgrid.Columns[2].Visible = false;
         }
         public SortType SortDirection { get; set; }
         public SortFieldType SortField { get; set; }
@@ -37,7 +39,7 @@ namespace Harrison.Inventory.WinForm
         {
           
             bankcombo.ValueMember="BANK_ID";
-            bankcombo.DisplayMember = "BANK_NAME";
+            bankcombo.DisplayMember = "BANK NAME";
             bankcombo.DataSource = banks; 
 
         
@@ -78,9 +80,9 @@ namespace Harrison.Inventory.WinForm
             ID = branchgrid.Rows[e.RowIndex].Cells[0].Value;
             branchnametxt.Text = branchgrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             bankcombo.SelectedValue = branchgrid.Rows[e.RowIndex].Cells[2].Value;
-            ifsctxt.Text = branchgrid.Rows[e.RowIndex].Cells[3].Value.ToString();
-            bankaddresstxt.Text = branchgrid.Rows[e.RowIndex].Cells[4].Value.ToString();
-            contacttxt.Text=branchgrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+            ifsctxt.Text = branchgrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+            bankaddresstxt.Text = branchgrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+            contacttxt.Text=branchgrid.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
         private void edtbtn_Click(object sender, EventArgs e)
         {

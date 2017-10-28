@@ -23,6 +23,7 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             taxpresenter.DefaultTaxDetailsOrder();
             taxpresenter.SetFinancialYears();
+            this.taxgrid.Columns[0].Visible = false;
             effectDate.Value = DateTime.Today;
         }
         public void givearrdata(DataTable taxdetails)
@@ -60,7 +61,7 @@ namespace Harrison.Inventory.WinForm
         public void setFinancialYears(DataTable finyears)
         {
             finYeartxt.ValueMember = "FIN_YEAR_ID";
-            finYeartxt.DisplayMember = "FIN_YEAR_NAME";
+            finYeartxt.DisplayMember = "FINANCIAL YEAR";
             finYeartxt.DataSource = finyears;
         }
 

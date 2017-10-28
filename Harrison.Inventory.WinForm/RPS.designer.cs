@@ -71,7 +71,7 @@
             this.contactNametxt.Location = new System.Drawing.Point(160, 127);
             this.contactNametxt.Name = "contactNametxt";
             this.contactNametxt.Size = new System.Drawing.Size(309, 22);
-            this.contactNametxt.TabIndex = 5;
+            this.contactNametxt.TabIndex = 3;
             // 
             // contactNolbl
             // 
@@ -87,7 +87,7 @@
             this.contactNotxt.Location = new System.Drawing.Point(160, 176);
             this.contactNotxt.Name = "contactNotxt";
             this.contactNotxt.Size = new System.Drawing.Size(261, 22);
-            this.contactNotxt.TabIndex = 6;
+            this.contactNotxt.TabIndex = 4;
             // 
             // routeDetlslbl
             // 
@@ -105,7 +105,7 @@
             this.routeDetlstxt.Name = "routeDetlstxt";
             this.routeDetlstxt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.routeDetlstxt.Size = new System.Drawing.Size(403, 82);
-            this.routeDetlstxt.TabIndex = 7;
+            this.routeDetlstxt.TabIndex = 5;
             // 
             // remarklbl
             // 
@@ -122,14 +122,14 @@
             this.remarktxt.Multiline = true;
             this.remarktxt.Name = "remarktxt";
             this.remarktxt.Size = new System.Drawing.Size(403, 56);
-            this.remarktxt.TabIndex = 8;
+            this.remarktxt.TabIndex = 6;
             // 
             // donebtn
             // 
             this.donebtn.Location = new System.Drawing.Point(23, 413);
             this.donebtn.Name = "donebtn";
             this.donebtn.Size = new System.Drawing.Size(111, 44);
-            this.donebtn.TabIndex = 10;
+            this.donebtn.TabIndex = 7;
             this.donebtn.Text = "Save";
             this.donebtn.UseVisualStyleBackColor = true;
             this.donebtn.Click += new System.EventHandler(this.donebtn_Click);
@@ -139,7 +139,7 @@
             this.cancelbtn.Location = new System.Drawing.Point(172, 413);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(111, 44);
-            this.cancelbtn.TabIndex = 17;
+            this.cancelbtn.TabIndex = 8;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -160,14 +160,14 @@
             this.VendorNameCombo.Location = new System.Drawing.Point(160, 30);
             this.VendorNameCombo.Name = "VendorNameCombo";
             this.VendorNameCombo.Size = new System.Drawing.Size(309, 24);
-            this.VendorNameCombo.TabIndex = 19;
+            this.VendorNameCombo.TabIndex = 1;
             // 
             // rpsNametxt
             // 
             this.rpsNametxt.Location = new System.Drawing.Point(160, 83);
             this.rpsNametxt.Name = "rpsNametxt";
             this.rpsNametxt.Size = new System.Drawing.Size(309, 22);
-            this.rpsNametxt.TabIndex = 20;
+            this.rpsNametxt.TabIndex = 2;
             // 
             // edtbtn
             // 
@@ -175,7 +175,7 @@
             this.edtbtn.Location = new System.Drawing.Point(321, 413);
             this.edtbtn.Name = "edtbtn";
             this.edtbtn.Size = new System.Drawing.Size(111, 44);
-            this.edtbtn.TabIndex = 21;
+            this.edtbtn.TabIndex = 9;
             this.edtbtn.Text = "Edit";
             this.edtbtn.UseVisualStyleBackColor = true;
             this.edtbtn.Click += new System.EventHandler(this.edtbtn_Click);
@@ -186,7 +186,7 @@
             this.rmvbtn.Location = new System.Drawing.Point(475, 413);
             this.rmvbtn.Name = "rmvbtn";
             this.rmvbtn.Size = new System.Drawing.Size(111, 44);
-            this.rmvbtn.TabIndex = 22;
+            this.rmvbtn.TabIndex = 10;
             this.rmvbtn.Text = "Remove";
             this.rmvbtn.UseVisualStyleBackColor = true;
             this.rmvbtn.Click += new System.EventHandler(this.rmvbtn_Click);

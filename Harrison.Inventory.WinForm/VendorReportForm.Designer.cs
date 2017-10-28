@@ -47,14 +47,14 @@
             this.FromDatetxt.Location = new System.Drawing.Point(102, 19);
             this.FromDatetxt.Name = "FromDatetxt";
             this.FromDatetxt.Size = new System.Drawing.Size(243, 22);
-            this.FromDatetxt.TabIndex = 1;
+            this.FromDatetxt.TabIndex = 2;
             // 
             // ToDatetxt
             // 
             this.ToDatetxt.Location = new System.Drawing.Point(102, 56);
             this.ToDatetxt.Name = "ToDatetxt";
             this.ToDatetxt.Size = new System.Drawing.Size(243, 22);
-            this.ToDatetxt.TabIndex = 2;
+            this.ToDatetxt.TabIndex = 3;
             // 
             // AllDateschkbox
             // 
@@ -62,7 +62,7 @@
             this.AllDateschkbox.Location = new System.Drawing.Point(374, 44);
             this.AllDateschkbox.Name = "AllDateschkbox";
             this.AllDateschkbox.Size = new System.Drawing.Size(111, 21);
-            this.AllDateschkbox.TabIndex = 3;
+            this.AllDateschkbox.TabIndex = 4;
             this.AllDateschkbox.Text = "All Payments";
             this.AllDateschkbox.UseVisualStyleBackColor = true;
             this.AllDateschkbox.CheckedChanged += new System.EventHandler(this.AllDateschkbox_CheckedChanged);
@@ -93,7 +93,7 @@
             this.label1.Location = new System.Drawing.Point(32, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 17);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Vendor Name:";
             // 
             // label2
@@ -102,7 +102,7 @@
             this.label2.Location = new System.Drawing.Point(52, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 17);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 0;
             this.label2.Text = "From:";
             // 
             // label3
@@ -111,7 +111,7 @@
             this.label3.Location = new System.Drawing.Point(67, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 17);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 1;
             this.label3.Text = "To:";
             // 
             // label4
@@ -120,7 +120,7 @@
             this.label4.Location = new System.Drawing.Point(46, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 17);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 10;
             this.label4.Text = "Generate Reports";
             // 
             // panel1
@@ -134,7 +134,7 @@
             this.panel1.Location = new System.Drawing.Point(35, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 91);
-            this.panel1.TabIndex = 10;
+            this.panel1.TabIndex = 2;
             // 
             // VendorNameCombo
             // 
@@ -142,7 +142,7 @@
             this.VendorNameCombo.Location = new System.Drawing.Point(150, 19);
             this.VendorNameCombo.Name = "VendorNameCombo";
             this.VendorNameCombo.Size = new System.Drawing.Size(231, 24);
-            this.VendorNameCombo.TabIndex = 11;
+            this.VendorNameCombo.TabIndex = 1;
             // 
             // VendorReportForm
             // 
@@ -156,6 +156,7 @@
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.Generbtn);
             this.Name = "VendorReportForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendor Report ";
             this.Load += new System.EventHandler(this.VendorReportForm_Load);
             this.panel1.ResumeLayout(false);

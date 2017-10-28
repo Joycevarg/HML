@@ -52,14 +52,14 @@
             this.clustertxt.Location = new System.Drawing.Point(162, 47);
             this.clustertxt.Name = "clustertxt";
             this.clustertxt.Size = new System.Drawing.Size(299, 22);
-            this.clustertxt.TabIndex = 3;
+            this.clustertxt.TabIndex = 1;
             // 
             // addbtn
             // 
             this.addbtn.Location = new System.Drawing.Point(39, 106);
             this.addbtn.Name = "addbtn";
             this.addbtn.Size = new System.Drawing.Size(94, 43);
-            this.addbtn.TabIndex = 6;
+            this.addbtn.TabIndex = 2;
             this.addbtn.Text = "Add";
             this.addbtn.UseVisualStyleBackColor = true;
             this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
@@ -69,7 +69,7 @@
             this.cancelbtn.Location = new System.Drawing.Point(162, 106);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(94, 43);
-            this.cancelbtn.TabIndex = 7;
+            this.cancelbtn.TabIndex = 3;
             this.cancelbtn.Text = "Cancel";
             this.cancelbtn.UseVisualStyleBackColor = true;
             this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
@@ -80,7 +80,7 @@
             this.editbtn.Location = new System.Drawing.Point(291, 106);
             this.editbtn.Name = "editbtn";
             this.editbtn.Size = new System.Drawing.Size(94, 43);
-            this.editbtn.TabIndex = 12;
+            this.editbtn.TabIndex = 4;
             this.editbtn.Text = "Edit";
             this.editbtn.UseVisualStyleBackColor = true;
             this.editbtn.Click += new System.EventHandler(this.editbtn_Click);
@@ -101,7 +101,7 @@
             this.dltbtn.Location = new System.Drawing.Point(413, 108);
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(94, 41);
-            this.dltbtn.TabIndex = 14;
+            this.dltbtn.TabIndex = 5;
             this.dltbtn.Text = "Delete";
             this.dltbtn.UseVisualStyleBackColor = true;
             this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);

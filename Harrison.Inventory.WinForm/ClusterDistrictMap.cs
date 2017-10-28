@@ -21,6 +21,8 @@ namespace Harrison.Inventory.WinForm
             InitializeComponent();
             _clusterdistrictpresenter = new ClusterDistrictPresenter(this, new ClusterDistrictservice(new ClusterDistrictData()));
             _clusterdistrictpresenter.DefaultClusterDistrictOrder();
+            this.clusterdistrictgrid.Columns[0].Visible = false;
+            this.clusterdistrictgrid.Columns[1].Visible = false;
             _clusterdistrictpresenter.SetClusterNames();
             _clusterdistrictpresenter.SetDistrictNames();
             
@@ -34,13 +36,13 @@ namespace Harrison.Inventory.WinForm
         public void setDistrictValues(DataTable districts)
         {
             DistrictCombo.ValueMember = "DISTRICT_ID";
-            DistrictCombo.DisplayMember = "DISTRICT_NAME";
+            DistrictCombo.DisplayMember = "DISTRICT NAME";
             DistrictCombo.DataSource = districts;
         }
         public void setClusterValues(DataTable clusters)
         {
             ClusterCombo.ValueMember = "CLUSTER_ID";
-            ClusterCombo.DisplayMember = "CLUSTER_NAME";
+            ClusterCombo.DisplayMember = "CLUSTER NAME";
             ClusterCombo.DataSource = clusters;
         }
 
